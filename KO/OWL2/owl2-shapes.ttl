@@ -1,0 +1,233 @@
+@prefix rcpp: <https://zioni715.github.io/ontology/rcpp#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+rcpp:OntologyStructureShape a sh:NodeShape ;
+    sh:targetNode <https://zioni715.github.io/ontology/rcpp> ;
+    sh:property [
+        sh:path rdf:type ;
+        sh:hasValue owl:Ontology ;
+        sh:message "RCPP 온톨로지 IRI에는 owl:Ontology 선언이 필요하다."@ko
+    ] ;
+    sh:sparql [
+        sh:message "RCPP 명명 클래스는 31개여야 한다."@ko ;
+        sh:select """
+            PREFIX owl: <http://www.w3.org/2002/07/owl#>
+            SELECT $this WHERE {
+                { SELECT (COUNT(DISTINCT ?class) AS ?count)
+                  WHERE { ?class a owl:Class . FILTER(isIRI(?class)) } }
+                FILTER(?count != 31)
+            }
+        """
+    ] ;
+    sh:sparql [
+        sh:message "RCPP Object Property는 18개여야 한다."@ko ;
+        sh:select """
+            PREFIX owl: <http://www.w3.org/2002/07/owl#>
+            SELECT $this WHERE {
+                { SELECT (COUNT(DISTINCT ?property) AS ?count)
+                  WHERE { ?property a owl:ObjectProperty . } }
+                FILTER(?count != 18)
+            }
+        """
+    ] ;
+    sh:sparql [
+        sh:message "RCPP Datatype Property는 37개여야 한다."@ko ;
+        sh:select """
+            PREFIX owl: <http://www.w3.org/2002/07/owl#>
+            SELECT $this WHERE {
+                { SELECT (COUNT(DISTINCT ?property) AS ?count)
+                  WHERE { ?property a owl:DatatypeProperty . } }
+                FILTER(?count != 37)
+            }
+        """
+    ] ;
+    sh:sparql [
+        sh:message "OWL Restriction은 47개여야 한다."@ko ;
+        sh:select """
+            PREFIX owl: <http://www.w3.org/2002/07/owl#>
+            SELECT $this WHERE {
+                { SELECT (COUNT(DISTINCT ?restriction) AS ?count)
+                  WHERE { ?restriction a owl:Restriction . } }
+                FILTER(?count != 47)
+            }
+        """
+    ] ;
+    sh:sparql [
+        sh:message "RCPP Named Individual은 9개여야 한다."@ko ;
+        sh:select """
+            PREFIX owl: <http://www.w3.org/2002/07/owl#>
+            SELECT $this WHERE {
+                { SELECT (COUNT(DISTINCT ?individual) AS ?count)
+                  WHERE { ?individual a owl:NamedIndividual . } }
+                FILTER(?count != 9)
+            }
+        """
+    ] .
+
+rcpp:OWLClassShape a sh:NodeShape ;
+    sh:targetClass owl:Class ;
+    sh:or (
+        [ sh:nodeKind sh:BlankNode ]
+        [
+            sh:nodeKind sh:IRI ;
+            sh:pattern "^https://zioni715\\.github\\.io/ontology/rcpp#" ;
+            sh:property [
+                sh:path rdfs:label ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+                sh:uniqueLang true ;
+                sh:message "명명 클래스에는 한국어 label이 정확히 하나 필요하다."@ko
+            ] ;
+            sh:property [
+                sh:path rdfs:comment ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+                sh:uniqueLang true ;
+                sh:message "명명 클래스에는 한국어 정의가 정확히 하나 필요하다."@ko
+            ]
+        ]
+    ) .
+
+rcpp:ObjectPropertyShape a sh:NodeShape ;
+    sh:targetClass owl:ObjectProperty ;
+    sh:nodeKind sh:IRI ;
+    sh:pattern "^https://zioni715\\.github\\.io/ontology/rcpp#" ;
+    sh:property [
+        sh:path rdfs:label ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:uniqueLang true ;
+        sh:message "Object Property에는 label이 정확히 하나 필요하다."@ko
+    ] ;
+    sh:property [
+        sh:path rdfs:comment ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:uniqueLang true ;
+        sh:message "Object Property에는 정의가 정확히 하나 필요하다."@ko
+    ] ;
+    sh:property [
+        sh:path rdfs:domain ;
+        sh:maxCount 1 ;
+        sh:class owl:Class ;
+        sh:message "Object Property의 domain은 최대 하나의 OWL 클래스여야 한다."@ko
+    ] ;
+    sh:property [
+        sh:path rdfs:range ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class owl:Class ;
+        sh:message "Object Property의 range는 정확히 하나의 OWL 클래스여야 한다."@ko
+    ] .
+
+rcpp:DatatypePropertyShape a sh:NodeShape ;
+    sh:targetClass owl:DatatypeProperty ;
+    sh:nodeKind sh:IRI ;
+    sh:pattern "^https://zioni715\\.github\\.io/ontology/rcpp#" ;
+    sh:property [
+        sh:path rdfs:label ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:uniqueLang true ;
+        sh:message "Datatype Property에는 label이 정확히 하나 필요하다."@ko
+    ] ;
+    sh:property [
+        sh:path rdfs:comment ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:uniqueLang true ;
+        sh:message "Datatype Property에는 정의가 정확히 하나 필요하다."@ko
+    ] ;
+    sh:property [
+        sh:path rdfs:domain ;
+        sh:maxCount 1 ;
+        sh:class owl:Class ;
+        sh:message "Datatype Property의 domain은 최대 하나의 OWL 클래스여야 한다."@ko
+    ] ;
+    sh:property [
+        sh:path rdfs:range ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:in (xsd:string xsd:decimal xsd:integer) ;
+        sh:message "Datatype Property의 range는 허용된 XSD 데이터형이어야 한다."@ko
+    ] .
+
+rcpp:RestrictionShape a sh:NodeShape ;
+    sh:targetClass owl:Restriction ;
+    sh:nodeKind sh:BlankNode ;
+    sh:property [
+        sh:path owl:onProperty ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:or (
+            [ sh:class owl:ObjectProperty ]
+            [ sh:class owl:DatatypeProperty ]
+            [
+                sh:nodeKind sh:BlankNode ;
+                sh:property [
+                    sh:path owl:inverseOf ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                    sh:class owl:ObjectProperty
+                ]
+            ]
+        ) ;
+        sh:message "Restriction에는 선언된 Object 또는 Datatype Property가 정확히 하나 필요하다."@ko
+    ] ;
+    sh:sparql [
+        sh:message "Restriction에는 하나 이상의 제약 술어가 필요하다."@ko ;
+        sh:select """
+            PREFIX owl: <http://www.w3.org/2002/07/owl#>
+            SELECT $this WHERE {
+                FILTER NOT EXISTS {
+                    $this ?constraint ?value .
+                    FILTER(?constraint IN (
+                        owl:allValuesFrom, owl:someValuesFrom, owl:hasValue,
+                        owl:qualifiedCardinality, owl:maxQualifiedCardinality
+                    ))
+                }
+            }
+        """
+    ] ;
+    sh:sparql [
+        sh:message "Qualified cardinality restriction에는 onClass 또는 onDataRange가 필요하다."@ko ;
+        sh:select """
+            PREFIX owl: <http://www.w3.org/2002/07/owl#>
+            SELECT $this WHERE {
+                $this ?cardinality ?value .
+                FILTER(?cardinality IN (
+                    owl:qualifiedCardinality, owl:maxQualifiedCardinality
+                ))
+                FILTER NOT EXISTS { $this owl:onClass|owl:onDataRange ?range . }
+            }
+        """
+    ] .
+
+rcpp:NamedIndividualShape a sh:NodeShape ;
+    sh:targetClass owl:NamedIndividual ;
+    sh:nodeKind sh:IRI ;
+    sh:pattern "^https://zioni715\\.github\\.io/ontology/rcpp#" ;
+    sh:property [
+        sh:path rdfs:label ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:uniqueLang true ;
+        sh:message "Named Individual에는 label이 정확히 하나 필요하다."@ko
+    ] ;
+    sh:sparql [
+        sh:message "Named Individual에는 owl:NamedIndividual 외의 업무 클래스 유형이 필요하다."@ko ;
+        sh:select """
+            PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+            PREFIX owl: <http://www.w3.org/2002/07/owl#>
+            SELECT $this WHERE {
+                FILTER NOT EXISTS {
+                    $this rdf:type ?type .
+                    FILTER(?type != owl:NamedIndividual)
+                }
+            }
+        """
+    ] .

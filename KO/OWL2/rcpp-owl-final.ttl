@@ -1,0 +1,1041 @@
+@prefix : <https://zioni715.github.io/ontology/rcpp#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rcpp: <https://zioni715.github.io/ontology/rcpp#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <https://zioni715.github.io/ontology/rcpp#> .
+
+<https://zioni715.github.io/ontology/rcpp> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/source
+dcterms:source rdf:type owl:AnnotationProperty .
+
+
+###  https://zioni715.github.io/ontology/rcpp#validationStatus
+rcpp:validationStatus rdf:type owl:AnnotationProperty ;
+                      rdfs:comment "관계 또는 규칙의 확정 여부를 confirmed 또는 provisional로 표시"@ko ;
+                      rdfs:label "검증 상태"@ko .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://zioni715.github.io/ontology/rcpp#belongsToProgressRound
+rcpp:belongsToProgressRound rdf:type owl:ObjectProperty ;
+                            rdfs:domain rcpp:ProgressPaymentStatement ;
+                            rdfs:range rcpp:ProgressPaymentRound ;
+                            rdfs:comment "공사기성부분내역서가 적용되는 기성회차"@ko ;
+                            rdfs:label "기성회차 소속"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#belongsToWorkCategory
+rcpp:belongsToWorkCategory rdf:type owl:ObjectProperty ;
+                           rdfs:range rcpp:WorkCategory ;
+                           rdfs:comment "비용항목 또는 집계항목을 철근·콘크리트·거푸집·동바리 중 하나로 분류"@ko ;
+                           rdfs:label "공종 소속"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#containsItem
+rcpp:containsItem rdf:type owl:ObjectProperty ;
+                  rdfs:domain rcpp:ProgressDocument ;
+                  rdfs:range rcpp:DocumentItem ;
+                  rdfs:comment "기성서류가 포함하는 비용정보 항목"@ko ;
+                  rdfs:label "항목 포함"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#contributesContractAmountTo
+rcpp:contributesContractAmountTo rdf:type owl:ObjectProperty ;
+                                 rdfs:domain rcpp:WorkCategoryDetailItem ;
+                                 rdfs:range rcpp:ContractSummaryItem ;
+                                 rdfs:comment "공종별내역항목의 계약금액을 계약집계항목으로 합산"@ko ;
+                                 rdfs:label "계약금액 → 공종별 계약집계"@ko ;
+                                 rcpp:validationStatus "confirmed" .
+
+
+###  https://zioni715.github.io/ontology/rcpp#contributesCurrentAmountTo
+rcpp:contributesCurrentAmountTo rdf:type owl:ObjectProperty ;
+                                rdfs:domain rcpp:ProgressPaymentItem ;
+                                rdfs:range rcpp:ProgressPaymentSummaryItem ;
+                                rdfs:comment "기성내역항목의 금회금액을 기성집계항목으로 합산"@ko ;
+                                rdfs:label "금회금액 → 공종별 기성집계"@ko ;
+                                rcpp:validationStatus "confirmed" .
+
+
+###  https://zioni715.github.io/ontology/rcpp#previousProgressRound
+rcpp:previousProgressRound rdf:type owl:ObjectProperty ,
+                                    owl:AsymmetricProperty ,
+                                    owl:IrreflexiveProperty ;
+                           rdfs:domain rcpp:ProgressPaymentRound ;
+                           rdfs:range rcpp:ProgressPaymentRound ;
+                           rdfs:comment "현재 회차가 이월값을 참조하는 직전 회차"@ko ;
+                           rdfs:label "이전 기성회차"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#providesCalculatedQuantityTo
+rcpp:providesCalculatedQuantityTo rdf:type owl:ObjectProperty ;
+                                  rdfs:domain rcpp:CalculatedQuantityItem ;
+                                  rdfs:range rcpp:ContractItem ;
+                                  rdfs:comment "수량산출항목의 calculatedQuantity를 계약항목의 contractQuantity 근거로 전달"@ko ;
+                                  rdfs:label "산출수량 → 계약수량"@ko ;
+                                  rcpp:validationStatus "confirmed" .
+
+
+###  https://zioni715.github.io/ontology/rcpp#providesContractAmountTo
+rcpp:providesContractAmountTo rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf rcpp:providesContractValueTo ;
+                              rdfs:domain rcpp:ContractItem ;
+                              rdfs:range rcpp:WorkCategoryDetailItem ;
+                              rdfs:comment "계약항목의 contractAmount를 공종별내역항목의 contractAmount로 전달"@ko ;
+                              rdfs:label "계약금액 → 공종별내역 계약금액"@ko ;
+                              rcpp:validationStatus "confirmed" .
+
+
+###  https://zioni715.github.io/ontology/rcpp#providesContractAmountToProgressPaymentItem
+rcpp:providesContractAmountToProgressPaymentItem rdf:type owl:ObjectProperty ;
+                                                 rdfs:domain rcpp:ContractItem ;
+                                                 rdfs:range rcpp:ProgressPaymentItem ;
+                                                 rdfs:comment "계약항목의 contractAmount를 기성내역항목의 contractAmount로 전달"@ko ;
+                                                 rdfs:label "계약금액 → 기성내역 계약금액"@ko ;
+                                                 rcpp:validationStatus "confirmed" .
+
+
+###  https://zioni715.github.io/ontology/rcpp#providesContractQuantityTo
+rcpp:providesContractQuantityTo rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf rcpp:providesContractValueTo ;
+                                rdfs:domain rcpp:ContractItem ;
+                                rdfs:range rcpp:WorkCategoryDetailItem ;
+                                rdfs:comment "계약항목의 contractQuantity를 공종별내역항목의 contractQuantity로 전달"@ko ;
+                                rdfs:label "계약수량 → 공종별내역 계약수량"@ko ;
+                                rcpp:validationStatus "confirmed" .
+
+
+###  https://zioni715.github.io/ontology/rcpp#providesContractQuantityToProgressPaymentItem
+rcpp:providesContractQuantityToProgressPaymentItem rdf:type owl:ObjectProperty ;
+                                                   rdfs:domain rcpp:ContractItem ;
+                                                   rdfs:range rcpp:ProgressPaymentItem ;
+                                                   rdfs:comment "계약항목의 contractQuantity를 기성내역항목의 contractQuantity로 전달"@ko ;
+                                                   rdfs:label "계약수량 → 기성내역 계약수량"@ko ;
+                                                   rcpp:validationStatus "confirmed" .
+
+
+###  https://zioni715.github.io/ontology/rcpp#providesContractUnitPriceTo
+rcpp:providesContractUnitPriceTo rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf rcpp:providesContractValueTo ;
+                                 rdfs:domain rcpp:ContractItem ;
+                                 rdfs:range rcpp:WorkCategoryDetailItem ;
+                                 rdfs:comment "계약항목의 contractUnitPrice를 공종별내역항목의 contractUnitPrice로 전달"@ko ;
+                                 rdfs:label "계약단가 → 공종별내역 계약단가"@ko ;
+                                 rcpp:validationStatus "confirmed" .
+
+
+###  https://zioni715.github.io/ontology/rcpp#providesContractUnitPriceToProgressPaymentItem
+rcpp:providesContractUnitPriceToProgressPaymentItem rdf:type owl:ObjectProperty ;
+                                                    rdfs:domain rcpp:ContractItem ;
+                                                    rdfs:range rcpp:ProgressPaymentItem ;
+                                                    rdfs:comment "계약항목의 contractUnitPrice를 기성내역항목의 contractUnitPrice로 전달"@ko ;
+                                                    rdfs:label "계약단가 → 기성내역 계약단가"@ko ;
+                                                    rcpp:validationStatus "confirmed" .
+
+
+###  https://zioni715.github.io/ontology/rcpp#providesContractValueTo
+rcpp:providesContractValueTo rdf:type owl:ObjectProperty ;
+                             rdfs:domain rcpp:ContractItem ;
+                             rdfs:range rcpp:WorkCategoryDetailItem ;
+                             rdfs:comment "계약항목의 수량·단가·금액을 공종별내역항목으로 전달"@ko ;
+                             rdfs:label "계약값 전달"@ko ;
+                             rcpp:validationStatus "confirmed" .
+
+
+###  https://zioni715.github.io/ontology/rcpp#providesCumulativeValuesTo
+rcpp:providesCumulativeValuesTo rdf:type owl:ObjectProperty ,
+                                         owl:IrreflexiveProperty ;
+                                rdfs:domain rcpp:ProgressPaymentItem ;
+                                rdfs:range rcpp:ProgressPaymentItem ;
+                                rdfs:comment "이전 기성내역항목의 누계수량·누계금액을 현재 기성내역항목의 전회누계값으로 전달"@ko ;
+                                rdfs:label "이전 누계 → 현재 전회값"@ko ;
+                                rcpp:validationStatus "confirmed" .
+
+
+###  https://zioni715.github.io/ontology/rcpp#representsCostItem
+rcpp:representsCostItem rdf:type owl:ObjectProperty ;
+                        rdfs:domain rcpp:DocumentItem ;
+                        rdfs:range rcpp:CostItem ;
+                        rdfs:comment "서류항목이 의미하는 표준 비용항목"@ko ;
+                        rdfs:label "비용항목 표현"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#subWorkCategoryOf
+rcpp:subWorkCategoryOf rdf:type owl:ObjectProperty ;
+                       rdfs:domain rcpp:WorkCategory ;
+                       rdfs:range rcpp:WorkCategory ;
+                       rdfs:comment "세부 공종이 속하는 상위 공종"@ko ;
+                       rdfs:label "상위 공종"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#usesUnit
+rcpp:usesUnit rdf:type owl:ObjectProperty ;
+              rdfs:domain rcpp:DetailItem ;
+              rdfs:range rcpp:Unit ;
+              rdfs:comment "비용 수량에 적용되는 측정 단위"@ko ;
+              rdfs:label "단위 사용"@ko .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://zioni715.github.io/ontology/rcpp#applicationPart
+rcpp:applicationPart rdf:type owl:DatatypeProperty ;
+                     rdfs:domain rcpp:FormworkCostItem ;
+                     rdfs:range xsd:string ;
+                     dcterms:source rcpp:KCSFormworkShoringReference ;
+                     rdfs:comment "거푸집 비용항목의 구조 적용부위"@ko ;
+                     rdfs:label "적용부위"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#calculatedQuantity
+rcpp:calculatedQuantity rdf:type owl:DatatypeProperty ;
+                        rdfs:range xsd:decimal ;
+                        rdfs:comment "수량산출서에서 계산된 계약수량 근거값"@ko ;
+                        rdfs:label "산출수량"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#calculatedUnitPrice
+rcpp:calculatedUnitPrice rdf:type owl:DatatypeProperty ;
+                         rdfs:domain rcpp:CostCalculationItem ;
+                         rdfs:range xsd:decimal ;
+                         rdfs:comment "단위당 재료비·노무비·경비 합계로 산출된 단가"@ko ;
+                         rdfs:label "산출단가"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#complexityClass
+rcpp:complexityClass rdf:type owl:DatatypeProperty ;
+                     rdfs:domain rcpp:FormworkCostItem ;
+                     rdfs:range xsd:string ;
+                     dcterms:source rcpp:StandardEstimatingReference ;
+                     rdfs:comment "거푸집 품을 구분하는 작업 복잡도"@ko ;
+                     rdfs:label "복잡도 구분"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#contractAmount
+rcpp:contractAmount rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:decimal ;
+                    rdfs:comment "계약내역서에 확정된 금액"@ko ;
+                    rdfs:label "계약금액"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#contractQuantity
+rcpp:contractQuantity rdf:type owl:DatatypeProperty ;
+                      rdfs:range xsd:decimal ;
+                      rdfs:comment "계약내역서에 확정된 수량"@ko ;
+                      rdfs:label "계약수량"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#contractUnitPrice
+rcpp:contractUnitPrice rdf:type owl:DatatypeProperty ;
+                       rdfs:range xsd:decimal ;
+                       rdfs:comment "계약내역서에 확정된 단가"@ko ;
+                       rdfs:label "계약단가"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#cumulativeAmount
+rcpp:cumulativeAmount rdf:type owl:DatatypeProperty ;
+                      rdfs:range xsd:decimal ;
+                      rdfs:comment "전회누계금액과 금회금액의 합"@ko ;
+                      rdfs:label "누계금액"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#cumulativeQuantity
+rcpp:cumulativeQuantity rdf:type owl:DatatypeProperty ;
+                        rdfs:range xsd:decimal ;
+                        rdfs:comment "전회누계수량과 금회수량의 합"@ko ;
+                        rdfs:label "누계수량"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#currentAmount
+rcpp:currentAmount rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:decimal ;
+                   rdfs:comment "현재 기성회차에서 인정되며 누계기성금액 산정에 반영되는 금액"@ko ;
+                   rdfs:label "금회금액"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#currentQuantity
+rcpp:currentQuantity rdf:type owl:DatatypeProperty ;
+                     rdfs:domain rcpp:ProgressPaymentItem ;
+                     rdfs:range xsd:decimal ;
+                     rdfs:comment "기성내역 한 행에서 현재 회차에 인정된 수량"@ko ;
+                     rdfs:label "금회수량"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#documentIdentifier
+rcpp:documentIdentifier rdf:type owl:DatatypeProperty ;
+                        rdfs:domain rcpp:ProgressDocument ;
+                        rdfs:range xsd:string ;
+                        rdfs:comment "업무에서 서류를 식별하는 문자열"@ko ;
+                        rdfs:label "서류 식별자"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#expenseUnitCost
+rcpp:expenseUnitCost rdf:type owl:DatatypeProperty ;
+                     rdfs:domain rcpp:CostCalculationItem ;
+                     rdfs:range xsd:decimal ;
+                     rdfs:comment "비용항목 한 단위당 경비"@ko ;
+                     rdfs:label "단위당 경비"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#fabricationAssemblyType
+rcpp:fabricationAssemblyType rdf:type owl:DatatypeProperty ;
+                             rdfs:domain rcpp:RebarFabricationAssemblyCostItem ;
+                             rdfs:range xsd:string ;
+                             dcterms:source rcpp:StandardEstimatingReference ;
+                             rdfs:comment "철근 가공·조립 품을 구분하는 작업 유형"@ko ;
+                             rdfs:label "가공·조립 유형"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#formworkType
+rcpp:formworkType rdf:type owl:DatatypeProperty ;
+                  rdfs:domain rcpp:FormworkCostItem ;
+                  rdfs:range xsd:string ;
+                  dcterms:source rcpp:KCSFormworkShoringReference ,
+                                 rcpp:StandardEstimatingReference ;
+                  rdfs:comment "거푸집 비용을 구분하는 형식 또는 재료"@ko ;
+                  rdfs:label "거푸집 종류"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#itemCode
+rcpp:itemCode rdf:type owl:DatatypeProperty ;
+              rdfs:domain rcpp:CostItem ;
+              rdfs:range xsd:string ;
+              rdfs:comment "비용항목의 식별 코드"@ko ;
+              rdfs:label "항목 코드"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#itemName
+rcpp:itemName rdf:type owl:DatatypeProperty ;
+              rdfs:range xsd:string ;
+              rdfs:comment "서류항목과 비용항목에서 공통으로 사용하는 품명"@ko ;
+              rdfs:label "항목명"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#laborUnitCost
+rcpp:laborUnitCost rdf:type owl:DatatypeProperty ;
+                   rdfs:domain rcpp:CostCalculationItem ;
+                   rdfs:range xsd:decimal ;
+                   rdfs:comment "비용항목 한 단위당 노무비"@ko ;
+                   rdfs:label "단위당 노무비"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#materialUnitCost
+rcpp:materialUnitCost rdf:type owl:DatatypeProperty ;
+                      rdfs:domain rcpp:CostCalculationItem ;
+                      rdfs:range xsd:decimal ;
+                      rdfs:comment "비용항목 한 단위당 재료비"@ko ;
+                      rdfs:label "단위당 재료비"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#maximumAggregateSizeMm
+rcpp:maximumAggregateSizeMm rdf:type owl:DatatypeProperty ;
+                            rdfs:domain rcpp:ReadyMixedConcreteMaterialCostItem ;
+                            rdfs:range xsd:decimal ;
+                            dcterms:source rcpp:KSF4009Reference ;
+                            rdfs:comment "레미콘 규격의 굵은골재 최대치수"@ko ;
+                            rdfs:label "굵은골재 최대치수(mm)"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#maximumInstallationHeightM
+rcpp:maximumInstallationHeightM rdf:type owl:DatatypeProperty ;
+                                rdfs:domain rcpp:ShoringCostItem ;
+                                rdfs:range xsd:decimal ;
+                                dcterms:source rcpp:KCSFormworkShoringReference ,
+                                               rcpp:StandardEstimatingReference ;
+                                rdfs:comment "동바리 비용을 구분하는 최대 설치높이 수치"@ko ;
+                                rdfs:label "최대 설치높이(m)"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#nominalDiameterMm
+rcpp:nominalDiameterMm rdf:type owl:DatatypeProperty ;
+                       rdfs:domain rcpp:RebarCostItem ;
+                       rdfs:range xsd:decimal ;
+                       dcterms:source rcpp:KCSRebarReference ,
+                                      rcpp:StandardEstimatingReference ;
+                       rdfs:comment "철근 규격의 호칭지름 수치"@ko ;
+                       rdfs:label "호칭지름(mm)"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#nominalStrengthMPa
+rcpp:nominalStrengthMPa rdf:type owl:DatatypeProperty ;
+                        rdfs:domain rcpp:ReadyMixedConcreteMaterialCostItem ;
+                        rdfs:range xsd:decimal ;
+                        dcterms:source rcpp:KSF4009Reference ;
+                        rdfs:comment "레미콘 규격의 호칭강도"@ko ;
+                        rdfs:label "호칭강도(MPa)"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#placementMethod
+rcpp:placementMethod rdf:type owl:DatatypeProperty ;
+                     rdfs:domain rcpp:ConcretePlacementCostItem ;
+                     rdfs:range xsd:string ;
+                     dcterms:source rcpp:StandardEstimatingReference ;
+                     rdfs:comment "콘크리트 타설비를 구분하는 장비 또는 시공방법"@ko ;
+                     rdfs:label "타설방법"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#previousCumulativeAmount
+rcpp:previousCumulativeAmount rdf:type owl:DatatypeProperty ;
+                              rdfs:range xsd:decimal ;
+                              rdfs:comment "직전 회차까지 인정된 누계금액"@ko ;
+                              rdfs:label "전회누계금액"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#previousCumulativeQuantity
+rcpp:previousCumulativeQuantity rdf:type owl:DatatypeProperty ;
+                                rdfs:range xsd:decimal ;
+                                rdfs:comment "직전 회차까지 인정된 누계수량"@ko ;
+                                rdfs:label "전회누계수량"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#processingLocation
+rcpp:processingLocation rdf:type owl:DatatypeProperty ;
+                        rdfs:domain rcpp:RebarFabricationAssemblyCostItem ;
+                        rdfs:range xsd:string ;
+                        dcterms:source rcpp:StandardEstimatingReference ;
+                        rdfs:comment "현장가공 또는 공장가공 구분"@ko ;
+                        rdfs:label "가공 장소"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#quantityBasis
+rcpp:quantityBasis rdf:type owl:DatatypeProperty ;
+                   rdfs:domain rcpp:ShoringCostItem ;
+                   rdfs:range xsd:string ;
+                   dcterms:source rcpp:StandardEstimatingReference ;
+                   rdfs:comment "면적 또는 공간체적으로 한정한 동바리 수량산정 기준"@ko ;
+                   rdfs:label "수량산정 기준"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#rebarGrade
+rcpp:rebarGrade rdf:type owl:DatatypeProperty ;
+                rdfs:domain rcpp:RebarCostItem ;
+                rdfs:range xsd:string ;
+                dcterms:source rcpp:KCSRebarReference ,
+                               rcpp:StandardEstimatingReference ;
+                rdfs:comment "철근 비용항목을 구분하는 강종"@ko ;
+                rdfs:label "철근 강종"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#remainingAmount
+rcpp:remainingAmount rdf:type owl:DatatypeProperty ;
+                     rdfs:range xsd:decimal ;
+                     rdfs:comment "계약금액에서 누계금액을 뺀 값"@ko ;
+                     rdfs:label "잔여금액"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#remainingQuantity
+rcpp:remainingQuantity rdf:type owl:DatatypeProperty ;
+                       rdfs:range xsd:decimal ;
+                       rdfs:comment "계약수량에서 누계수량을 뺀 값"@ko ;
+                       rdfs:label "잔여수량"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#reuseCount
+rcpp:reuseCount rdf:type owl:DatatypeProperty ;
+                rdfs:domain rcpp:FormworkCostItem ;
+                rdfs:range xsd:integer ;
+                dcterms:source rcpp:StandardEstimatingReference ;
+                rdfs:comment "거푸집 비용을 구분하는 전용횟수"@ko ;
+                rdfs:label "전용횟수"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#roundNumber
+rcpp:roundNumber rdf:type owl:DatatypeProperty ;
+                 rdfs:domain rcpp:ProgressPaymentRound ;
+                 rdfs:range xsd:integer ;
+                 rdfs:comment "기성회차의 순번"@ko ;
+                 rdfs:label "회차 번호"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#shoringType
+rcpp:shoringType rdf:type owl:DatatypeProperty ;
+                 rdfs:domain rcpp:ShoringCostItem ;
+                 rdfs:range xsd:string ;
+                 dcterms:source rcpp:KCSFormworkShoringReference ,
+                                rcpp:StandardEstimatingReference ;
+                 rdfs:comment "동바리 비용을 구분하는 형식"@ko ;
+                 rdfs:label "동바리 종류"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#slumpMm
+rcpp:slumpMm rdf:type owl:DatatypeProperty ;
+             rdfs:domain rcpp:ReadyMixedConcreteMaterialCostItem ;
+             rdfs:range xsd:decimal ;
+             dcterms:source rcpp:KSF4009Reference ;
+             rdfs:comment "레미콘 규격의 슬럼프"@ko ;
+             rdfs:label "슬럼프(mm)"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#specification
+rcpp:specification rdf:type owl:DatatypeProperty ;
+                   rdfs:domain rcpp:CostItem ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "공종 다음에 비용항목을 구분하는 규격 문자열"@ko ;
+                   rdfs:label "규격"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#structureType
+rcpp:structureType rdf:type owl:DatatypeProperty ;
+                   rdfs:domain rcpp:ConcretePlacementCostItem ;
+                   rdfs:range xsd:string ;
+                   dcterms:source rcpp:StandardEstimatingReference ;
+                   rdfs:comment "콘크리트 타설비를 구분하는 구조물 유형"@ko ;
+                   rdfs:label "구조물 유형"@ko .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://zioni715.github.io/ontology/rcpp#CalculatedQuantityItem
+rcpp:CalculatedQuantityItem rdf:type owl:Class ;
+                            rdfs:subClassOf rcpp:DetailItem ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty rcpp:calculatedQuantity ;
+                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                              owl:onDataRange xsd:decimal
+                                            ] ;
+                            rdfs:comment "수량산출서에서 계약수량의 근거가 되는 산출수량 항목"@ko ;
+                            rdfs:label "수량산출항목"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#ConcreteCostItem
+rcpp:ConcreteCostItem rdf:type owl:Class ;
+                      rdfs:subClassOf rcpp:CostItem ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty rcpp:belongsToWorkCategory ;
+                                        owl:hasValue rcpp:ConcreteWork
+                                      ] ;
+                      owl:disjointUnionOf ( rcpp:ConcretePlacementCostItem
+                                            rcpp:ReadyMixedConcreteMaterialCostItem
+                                          ) ;
+                      rdfs:comment "레미콘 재료와 콘크리트 타설 단가를 구분하는 비용항목"@ko ;
+                      rdfs:label "콘크리트 비용항목"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#ConcretePlacementCostItem
+rcpp:ConcretePlacementCostItem rdf:type owl:Class ;
+                               rdfs:subClassOf rcpp:ConcreteCostItem ;
+                               rdfs:comment "타설방법과 구조물 유형으로 구분하는 콘크리트 시공 단가 항목"@ko ;
+                               rdfs:label "콘크리트 타설비항목"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#ContractItem
+rcpp:ContractItem rdf:type owl:Class ;
+                  rdfs:subClassOf rcpp:DetailItem ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty [ owl:inverseOf rcpp:providesCalculatedQuantityTo
+                                                   ] ;
+                                    owl:someValuesFrom rcpp:CalculatedQuantityItem
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty rcpp:contractAmount ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:decimal
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty rcpp:contractQuantity ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:decimal
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty rcpp:contractUnitPrice ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:decimal
+                                  ] ;
+                  rdfs:comment "계약수량·계약단가·계약금액을 제공하는 계약내역서 항목"@ko ;
+                  rdfs:label "계약항목"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#ContractStatement
+rcpp:ContractStatement rdf:type owl:Class ;
+                       rdfs:subClassOf rcpp:EvidenceDocument ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty rcpp:containsItem ;
+                                         owl:allValuesFrom rcpp:ContractItem
+                                       ] ;
+                       rdfs:comment "확정된 계약수량·계약단가·계약금액을 제공하는 근거서류"@ko ;
+                       rdfs:label "계약내역서"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#ContractSummaryItem
+rcpp:ContractSummaryItem rdf:type owl:Class ;
+                         rdfs:subClassOf rcpp:SummaryItem ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty [ owl:inverseOf rcpp:contributesContractAmountTo
+                                                          ] ;
+                                           owl:someValuesFrom rcpp:WorkCategoryDetailItem
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty rcpp:contractAmount ;
+                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                           owl:onDataRange xsd:decimal
+                                         ] ;
+                         rdfs:comment "공종별내역항목의 계약금액을 공종별로 합산한 공종별집계표 항목"@ko ;
+                         rdfs:label "계약집계항목"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#CostCalculationItem
+rcpp:CostCalculationItem rdf:type owl:Class ;
+                         rdfs:subClassOf rcpp:DetailItem ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty rcpp:calculatedUnitPrice ;
+                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                           owl:onDataRange xsd:decimal
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty rcpp:expenseUnitCost ;
+                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                           owl:onDataRange xsd:decimal
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty rcpp:laborUnitCost ;
+                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                           owl:onDataRange xsd:decimal
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty rcpp:materialUnitCost ;
+                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                           owl:onDataRange xsd:decimal
+                                         ] ;
+                         rdfs:comment "원가계산서에서 비용 산정 근거를 제공하는 항목"@ko ;
+                         rdfs:label "원가계산항목"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#CostCalculationStatement
+rcpp:CostCalculationStatement rdf:type owl:Class ;
+                              rdfs:subClassOf rcpp:EvidenceDocument ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty rcpp:containsItem ;
+                                                owl:allValuesFrom rcpp:CostCalculationItem
+                                              ] ;
+                              rdfs:comment "비용항목의 원가 구성과 산정금액을 제공하는 근거서류"@ko ;
+                              rdfs:label "원가계산서"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#CostItem
+rcpp:CostItem rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty rcpp:belongsToWorkCategory ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onClass rcpp:WorkCategory
+                              ] ;
+              owl:disjointUnionOf ( rcpp:ConcreteCostItem
+                                    rcpp:FormworkCostItem
+                                    rcpp:RebarCostItem
+                                    rcpp:ShoringCostItem
+                                  ) ;
+              rdfs:comment "서류별 항목이 공통으로 나타내는 표준 비용 대상"@ko ;
+              rdfs:label "비용항목"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#DetailItem
+rcpp:DetailItem rdf:type owl:Class ;
+                rdfs:subClassOf rcpp:DocumentItem ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty rcpp:representsCostItem ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onClass rcpp:CostItem
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty rcpp:usesUnit ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onClass rcpp:Unit
+                                ] ;
+                rdfs:comment "집계 전 개별 비용항목"@ko ;
+                rdfs:label "상세비용항목"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#DocumentItem
+rcpp:DocumentItem rdf:type owl:Class ;
+                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty [ owl:inverseOf rcpp:containsItem
+                                                   ] ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onClass rcpp:ProgressDocument
+                                  ] ;
+                  rdfs:comment "기성서류에 포함되는 비용정보의 의미 단위"@ko ;
+                  rdfs:label "기성서류항목"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#EvidenceDocument
+rcpp:EvidenceDocument rdf:type owl:Class ;
+                      rdfs:subClassOf rcpp:ProgressDocument ;
+                      owl:disjointUnionOf ( rcpp:ContractStatement
+                                            rcpp:CostCalculationStatement
+                                            rcpp:QuantityCalculationSheet
+                                            rcpp:WorkCategoryDetailStatement
+                                            rcpp:WorkCategorySummaryStatement
+                                          ) ;
+                      rdfs:comment "기성금액 산정에 필요한 수량·단가·금액의 근거를 제공하는 서류"@ko ;
+                      rdfs:label "근거서류"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#FormworkCostItem
+rcpp:FormworkCostItem rdf:type owl:Class ;
+                      rdfs:subClassOf rcpp:CostItem ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty rcpp:belongsToWorkCategory ;
+                                        owl:hasValue rcpp:FormworkWork
+                                      ] ;
+                      rdfs:comment "거푸집 설치·해체 단가를 구분하는 비용항목"@ko ;
+                      rdfs:label "거푸집 비용항목"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#OutputDocument
+rcpp:OutputDocument rdf:type owl:Class ;
+                    rdfs:subClassOf rcpp:ProgressDocument ;
+                    rdfs:comment "근거서류의 정보를 사용해 기성금액 산정 결과를 제시하는 서류"@ko ;
+                    rdfs:label "산출서류"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#ProgressDocument
+rcpp:ProgressDocument rdf:type owl:Class ;
+                      owl:disjointUnionOf ( rcpp:EvidenceDocument
+                                            rcpp:OutputDocument
+                                          ) ;
+                      rdfs:comment "철근콘크리트 기성금액 산정에 직접 사용하는 서류의 최상위 클래스"@ko ;
+                      rdfs:label "기성서류"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#ProgressPaymentItem
+rcpp:ProgressPaymentItem rdf:type owl:Class ;
+                         rdfs:subClassOf rcpp:DetailItem ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty [ owl:inverseOf rcpp:providesContractAmountToProgressPaymentItem
+                                                          ] ;
+                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                           owl:onClass rcpp:ContractItem
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty [ owl:inverseOf rcpp:providesContractQuantityToProgressPaymentItem
+                                                          ] ;
+                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                           owl:onClass rcpp:ContractItem
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty [ owl:inverseOf rcpp:providesContractUnitPriceToProgressPaymentItem
+                                                          ] ;
+                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                           owl:onClass rcpp:ContractItem
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty [ owl:inverseOf rcpp:providesCumulativeValuesTo
+                                                          ] ;
+                                           owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                           owl:onClass rcpp:ProgressPaymentItem
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty rcpp:contractAmount ;
+                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                           owl:onDataRange xsd:decimal
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty rcpp:contractQuantity ;
+                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                           owl:onDataRange xsd:decimal
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty rcpp:contractUnitPrice ;
+                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                           owl:onDataRange xsd:decimal
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty rcpp:cumulativeAmount ;
+                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                           owl:onDataRange xsd:decimal
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty rcpp:cumulativeQuantity ;
+                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                           owl:onDataRange xsd:decimal
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty rcpp:currentAmount ;
+                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                           owl:onDataRange xsd:decimal
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty rcpp:currentQuantity ;
+                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                           owl:onDataRange xsd:decimal
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty rcpp:previousCumulativeAmount ;
+                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                           owl:onDataRange xsd:decimal
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty rcpp:previousCumulativeQuantity ;
+                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                           owl:onDataRange xsd:decimal
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty rcpp:remainingAmount ;
+                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                           owl:onDataRange xsd:decimal
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty rcpp:remainingQuantity ;
+                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                           owl:onDataRange xsd:decimal
+                                         ] ;
+                         rdfs:comment "공사기성부분내역서에서 전회·금회·누계·잔여 수량과 금액을 산정하는 항목"@ko ;
+                         rdfs:label "기성내역항목"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#ProgressPaymentRound
+rcpp:ProgressPaymentRound rdf:type owl:Class ;
+                          rdfs:comment "기성 산정과 청구의 시간 단위"@ko ;
+                          rdfs:label "기성회차"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#ProgressPaymentStatement
+rcpp:ProgressPaymentStatement rdf:type owl:Class ;
+                              rdfs:subClassOf rcpp:OutputDocument ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty rcpp:containsItem ;
+                                                owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                    owl:unionOf ( rcpp:ProgressPaymentItem
+                                                                                  rcpp:ProgressPaymentSummaryItem
+                                                                                )
+                                                                  ]
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty rcpp:belongsToProgressRound ;
+                                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                owl:onClass rcpp:ProgressPaymentRound
+                                              ] ;
+                              rdfs:comment "회차별 기성수량과 기성금액을 산정해 제시하는 유일한 산출서류"@ko ;
+                              rdfs:label "공사기성부분내역서"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#ProgressPaymentSummaryItem
+rcpp:ProgressPaymentSummaryItem rdf:type owl:Class ;
+                                rdfs:subClassOf rcpp:SummaryItem ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty rcpp:currentAmount ;
+                                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                  owl:onDataRange xsd:decimal
+                                                ] ;
+                                rdfs:comment "기성금액항목의 금회금액을 공종별로 합산한 공사기성부분내역서 항목"@ko ;
+                                rdfs:label "기성집계항목"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#QuantityCalculationSheet
+rcpp:QuantityCalculationSheet rdf:type owl:Class ;
+                              rdfs:subClassOf rcpp:EvidenceDocument ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty rcpp:containsItem ;
+                                                owl:allValuesFrom rcpp:CalculatedQuantityItem
+                                              ] ;
+                              rdfs:comment "계약수량의 산출 근거를 제공하는 근거서류"@ko ;
+                              rdfs:label "수량산출서"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#ReadyMixedConcreteMaterialCostItem
+rcpp:ReadyMixedConcreteMaterialCostItem rdf:type owl:Class ;
+                                        rdfs:subClassOf rcpp:ConcreteCostItem ;
+                                        rdfs:comment "골재크기·강도·슬럼프로 구분하는 레디믹스트콘크리트 재료 단가 항목"@ko ;
+                                        rdfs:label "레디믹스트콘크리트 재료비항목"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#RebarCostItem
+rcpp:RebarCostItem rdf:type owl:Class ;
+                   rdfs:subClassOf rcpp:CostItem ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty rcpp:belongsToWorkCategory ;
+                                     owl:hasValue rcpp:RebarWork
+                                   ] ;
+                   owl:disjointUnionOf ( rcpp:RebarFabricationAssemblyCostItem
+                                         rcpp:RebarMaterialCostItem
+                                       ) ;
+                   rdfs:comment "철근 재료 또는 가공·조립 단가를 구분하는 비용항목"@ko ;
+                   rdfs:label "철근 비용항목"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#RebarFabricationAssemblyCostItem
+rcpp:RebarFabricationAssemblyCostItem rdf:type owl:Class ;
+                                      rdfs:subClassOf rcpp:RebarCostItem ;
+                                      rdfs:comment "가공·조립 유형과 가공 장소로 구분하는 철근 시공 단가 항목"@ko ;
+                                      rdfs:label "철근 가공·조립비항목"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#RebarMaterialCostItem
+rcpp:RebarMaterialCostItem rdf:type owl:Class ;
+                           rdfs:subClassOf rcpp:RebarCostItem ;
+                           rdfs:comment "강종과 지름으로 구분하는 철근 재료 단가 항목"@ko ;
+                           rdfs:label "철근 재료비항목"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#ShoringCostItem
+rcpp:ShoringCostItem rdf:type owl:Class ;
+                     rdfs:subClassOf rcpp:CostItem ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty rcpp:belongsToWorkCategory ;
+                                       owl:hasValue rcpp:ShoringWork
+                                     ] ;
+                     rdfs:comment "동바리 설치·해체 단가를 구분하는 비용항목"@ko ;
+                     rdfs:label "동바리 비용항목"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#SummaryItem
+rcpp:SummaryItem rdf:type owl:Class ;
+                 rdfs:subClassOf rcpp:DocumentItem ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty rcpp:belongsToWorkCategory ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onClass rcpp:WorkCategory
+                                 ] ;
+                 rdfs:comment "계약 또는 기성 상세항목의 금액을 동일 공종별로 합산한 항목"@ko ;
+                 rdfs:label "집계항목"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#Unit
+rcpp:Unit rdf:type owl:Class ;
+          rdfs:comment "비용항목 수량을 측정하는 단위"@ko ;
+          rdfs:label "단위"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#WorkCategory
+rcpp:WorkCategory rdf:type owl:Class ;
+                  rdfs:comment "철근콘크리트공사와 그 하위 네 공종을 표현하는 통제 분류"@ko ;
+                  rdfs:label "공종"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#WorkCategoryDetailItem
+rcpp:WorkCategoryDetailItem rdf:type owl:Class ;
+                            rdfs:subClassOf rcpp:DetailItem ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty [ owl:inverseOf rcpp:providesContractValueTo
+                                                             ] ;
+                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                              owl:onClass rcpp:ContractItem
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty rcpp:contractAmount ;
+                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                              owl:onDataRange xsd:decimal
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty rcpp:contractQuantity ;
+                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                              owl:onDataRange xsd:decimal
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty rcpp:contractUnitPrice ;
+                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                              owl:onDataRange xsd:decimal
+                                            ] ;
+                            rdfs:comment "공종별내역서에 수량·단가·금액을 나타내는 항목"@ko ;
+                            rdfs:label "공종별내역항목"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#WorkCategoryDetailStatement
+rcpp:WorkCategoryDetailStatement rdf:type owl:Class ;
+                                 rdfs:subClassOf rcpp:EvidenceDocument ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty rcpp:containsItem ;
+                                                   owl:allValuesFrom rcpp:WorkCategoryDetailItem
+                                                 ] ;
+                                 rdfs:comment "공종별 비용항목의 수량·단가·금액을 제시하는 근거서류"@ko ;
+                                 rdfs:label "공종별내역서"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#WorkCategorySummaryStatement
+rcpp:WorkCategorySummaryStatement rdf:type owl:Class ;
+                                  rdfs:subClassOf rcpp:EvidenceDocument ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty rcpp:containsItem ;
+                                                    owl:allValuesFrom rcpp:ContractSummaryItem
+                                                  ] ;
+                                  rdfs:comment "공종별 상세 비용을 합산해 제시하는 근거서류"@ko ;
+                                  rdfs:label "공종별집계표"@ko .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://zioni715.github.io/ontology/rcpp#ConcreteWork
+rcpp:ConcreteWork rdf:type owl:NamedIndividual ,
+                           rcpp:WorkCategory ;
+                  rcpp:subWorkCategoryOf rcpp:ReinforcedConcreteWork ;
+                  rdfs:comment "레미콘 재료와 콘크리트 타설 비용 공종"@ko ;
+                  rdfs:label "콘크리트공사"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#CubicMetre
+rcpp:CubicMetre rdf:type owl:NamedIndividual ,
+                         rcpp:Unit ;
+                rdfs:comment "콘크리트 수량에 사용하는 체적 단위 m³"@ko ;
+                rdfs:label "세제곱미터"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#CubicMetreSpace
+rcpp:CubicMetreSpace rdf:type owl:NamedIndividual ,
+                              rcpp:Unit ;
+                     rdfs:comment "시스템동바리 수량산정에 사용하는 공간체적 단위 공m³"@ko ;
+                     rdfs:label "공간세제곱미터"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#FormworkWork
+rcpp:FormworkWork rdf:type owl:NamedIndividual ,
+                           rcpp:WorkCategory ;
+                  rcpp:subWorkCategoryOf rcpp:ReinforcedConcreteWork ;
+                  rdfs:comment "거푸집 설치·해체 비용 공종"@ko ;
+                  rdfs:label "거푸집공사"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#RebarWork
+rcpp:RebarWork rdf:type owl:NamedIndividual ,
+                        rcpp:WorkCategory ;
+               rcpp:subWorkCategoryOf rcpp:ReinforcedConcreteWork ;
+               rdfs:comment "철근 재료와 가공·조립 비용 공종"@ko ;
+               rdfs:label "철근공사"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#ReinforcedConcreteWork
+rcpp:ReinforcedConcreteWork rdf:type owl:NamedIndividual ,
+                                     rcpp:WorkCategory ;
+                            rdfs:comment "본 온톨로지가 다루는 최상위 공종"@ko ;
+                            rdfs:label "철근콘크리트공사"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#ShoringWork
+rcpp:ShoringWork rdf:type owl:NamedIndividual ,
+                          rcpp:WorkCategory ;
+                 rcpp:subWorkCategoryOf rcpp:ReinforcedConcreteWork ;
+                 rdfs:comment "동바리 설치·해체 비용 공종"@ko ;
+                 rdfs:label "동바리공사"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#SquareMetre
+rcpp:SquareMetre rdf:type owl:NamedIndividual ,
+                          rcpp:Unit ;
+                 rdfs:comment "거푸집과 동바리 수량에 사용하는 면적 단위 m²"@ko ;
+                 rdfs:label "제곱미터"@ko .
+
+
+###  https://zioni715.github.io/ontology/rcpp#Tonne
+rcpp:Tonne rdf:type owl:NamedIndividual ,
+                    rcpp:Unit ;
+           rdfs:comment "철근 수량에 사용하는 질량 단위 t"@ko ;
+           rdfs:label "톤"@ko .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

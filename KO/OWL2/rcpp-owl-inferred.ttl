@@ -1,0 +1,261 @@
+@prefix : <https://zioni715.github.io/ontology/rcpp/inferred#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://zioni715.github.io/ontology/rcpp/inferred> .
+
+<https://zioni715.github.io/ontology/rcpp/inferred> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://zioni715.github.io/ontology/rcpp#providesContractAmountTo
+<https://zioni715.github.io/ontology/rcpp#providesContractAmountTo> rdf:type owl:ObjectProperty ;
+                                                                    rdfs:subPropertyOf <https://zioni715.github.io/ontology/rcpp#providesContractValueTo> .
+
+
+###  https://zioni715.github.io/ontology/rcpp#providesContractQuantityTo
+<https://zioni715.github.io/ontology/rcpp#providesContractQuantityTo> rdf:type owl:ObjectProperty ;
+                                                                      rdfs:subPropertyOf <https://zioni715.github.io/ontology/rcpp#providesContractValueTo> .
+
+
+###  https://zioni715.github.io/ontology/rcpp#providesContractUnitPriceTo
+<https://zioni715.github.io/ontology/rcpp#providesContractUnitPriceTo> rdf:type owl:ObjectProperty ;
+                                                                       rdfs:subPropertyOf <https://zioni715.github.io/ontology/rcpp#providesContractValueTo> .
+
+
+###  https://zioni715.github.io/ontology/rcpp#providesContractValueTo
+<https://zioni715.github.io/ontology/rcpp#providesContractValueTo> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://zioni715.github.io/ontology/rcpp#calculatedUnitPrice
+<https://zioni715.github.io/ontology/rcpp#calculatedUnitPrice> rdf:type owl:DatatypeProperty ,
+                                                                        owl:FunctionalProperty .
+
+
+###  https://zioni715.github.io/ontology/rcpp#currentQuantity
+<https://zioni715.github.io/ontology/rcpp#currentQuantity> rdf:type owl:DatatypeProperty ,
+                                                                    owl:FunctionalProperty .
+
+
+###  https://zioni715.github.io/ontology/rcpp#expenseUnitCost
+<https://zioni715.github.io/ontology/rcpp#expenseUnitCost> rdf:type owl:DatatypeProperty ,
+                                                                    owl:FunctionalProperty .
+
+
+###  https://zioni715.github.io/ontology/rcpp#laborUnitCost
+<https://zioni715.github.io/ontology/rcpp#laborUnitCost> rdf:type owl:DatatypeProperty ,
+                                                                  owl:FunctionalProperty .
+
+
+###  https://zioni715.github.io/ontology/rcpp#materialUnitCost
+<https://zioni715.github.io/ontology/rcpp#materialUnitCost> rdf:type owl:DatatypeProperty ,
+                                                                     owl:FunctionalProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://zioni715.github.io/ontology/rcpp#CalculatedQuantityItem
+<https://zioni715.github.io/ontology/rcpp#CalculatedQuantityItem> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <https://zioni715.github.io/ontology/rcpp#DetailItem> .
+
+
+###  https://zioni715.github.io/ontology/rcpp#ConcreteCostItem
+<https://zioni715.github.io/ontology/rcpp#ConcreteCostItem> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <https://zioni715.github.io/ontology/rcpp#CostItem> .
+
+
+###  https://zioni715.github.io/ontology/rcpp#ConcretePlacementCostItem
+<https://zioni715.github.io/ontology/rcpp#ConcretePlacementCostItem> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <https://zioni715.github.io/ontology/rcpp#ConcreteCostItem> .
+
+
+###  https://zioni715.github.io/ontology/rcpp#ContractItem
+<https://zioni715.github.io/ontology/rcpp#ContractItem> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <https://zioni715.github.io/ontology/rcpp#DetailItem> .
+
+
+###  https://zioni715.github.io/ontology/rcpp#ContractStatement
+<https://zioni715.github.io/ontology/rcpp#ContractStatement> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <https://zioni715.github.io/ontology/rcpp#EvidenceDocument> .
+
+
+###  https://zioni715.github.io/ontology/rcpp#ContractSummaryItem
+<https://zioni715.github.io/ontology/rcpp#ContractSummaryItem> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <https://zioni715.github.io/ontology/rcpp#SummaryItem> .
+
+
+###  https://zioni715.github.io/ontology/rcpp#CostCalculationItem
+<https://zioni715.github.io/ontology/rcpp#CostCalculationItem> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <https://zioni715.github.io/ontology/rcpp#DetailItem> .
+
+
+###  https://zioni715.github.io/ontology/rcpp#CostCalculationStatement
+<https://zioni715.github.io/ontology/rcpp#CostCalculationStatement> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <https://zioni715.github.io/ontology/rcpp#EvidenceDocument> .
+
+
+###  https://zioni715.github.io/ontology/rcpp#CostItem
+<https://zioni715.github.io/ontology/rcpp#CostItem> rdf:type owl:Class .
+
+
+###  https://zioni715.github.io/ontology/rcpp#DetailItem
+<https://zioni715.github.io/ontology/rcpp#DetailItem> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <https://zioni715.github.io/ontology/rcpp#DocumentItem> .
+
+
+###  https://zioni715.github.io/ontology/rcpp#DocumentItem
+<https://zioni715.github.io/ontology/rcpp#DocumentItem> rdf:type owl:Class .
+
+
+###  https://zioni715.github.io/ontology/rcpp#EvidenceDocument
+<https://zioni715.github.io/ontology/rcpp#EvidenceDocument> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <https://zioni715.github.io/ontology/rcpp#ProgressDocument> .
+
+
+###  https://zioni715.github.io/ontology/rcpp#FormworkCostItem
+<https://zioni715.github.io/ontology/rcpp#FormworkCostItem> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <https://zioni715.github.io/ontology/rcpp#CostItem> .
+
+
+###  https://zioni715.github.io/ontology/rcpp#OutputDocument
+<https://zioni715.github.io/ontology/rcpp#OutputDocument> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <https://zioni715.github.io/ontology/rcpp#ProgressDocument> .
+
+
+###  https://zioni715.github.io/ontology/rcpp#ProgressDocument
+<https://zioni715.github.io/ontology/rcpp#ProgressDocument> rdf:type owl:Class .
+
+
+###  https://zioni715.github.io/ontology/rcpp#ProgressPaymentItem
+<https://zioni715.github.io/ontology/rcpp#ProgressPaymentItem> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <https://zioni715.github.io/ontology/rcpp#DetailItem> .
+
+
+###  https://zioni715.github.io/ontology/rcpp#ProgressPaymentStatement
+<https://zioni715.github.io/ontology/rcpp#ProgressPaymentStatement> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <https://zioni715.github.io/ontology/rcpp#OutputDocument> .
+
+
+###  https://zioni715.github.io/ontology/rcpp#ProgressPaymentSummaryItem
+<https://zioni715.github.io/ontology/rcpp#ProgressPaymentSummaryItem> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <https://zioni715.github.io/ontology/rcpp#SummaryItem> .
+
+
+###  https://zioni715.github.io/ontology/rcpp#QuantityCalculationSheet
+<https://zioni715.github.io/ontology/rcpp#QuantityCalculationSheet> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <https://zioni715.github.io/ontology/rcpp#EvidenceDocument> .
+
+
+###  https://zioni715.github.io/ontology/rcpp#ReadyMixedConcreteMaterialCostItem
+<https://zioni715.github.io/ontology/rcpp#ReadyMixedConcreteMaterialCostItem> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <https://zioni715.github.io/ontology/rcpp#ConcreteCostItem> .
+
+
+###  https://zioni715.github.io/ontology/rcpp#RebarCostItem
+<https://zioni715.github.io/ontology/rcpp#RebarCostItem> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <https://zioni715.github.io/ontology/rcpp#CostItem> .
+
+
+###  https://zioni715.github.io/ontology/rcpp#RebarFabricationAssemblyCostItem
+<https://zioni715.github.io/ontology/rcpp#RebarFabricationAssemblyCostItem> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <https://zioni715.github.io/ontology/rcpp#RebarCostItem> .
+
+
+###  https://zioni715.github.io/ontology/rcpp#RebarMaterialCostItem
+<https://zioni715.github.io/ontology/rcpp#RebarMaterialCostItem> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <https://zioni715.github.io/ontology/rcpp#RebarCostItem> .
+
+
+###  https://zioni715.github.io/ontology/rcpp#ShoringCostItem
+<https://zioni715.github.io/ontology/rcpp#ShoringCostItem> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <https://zioni715.github.io/ontology/rcpp#CostItem> .
+
+
+###  https://zioni715.github.io/ontology/rcpp#SummaryItem
+<https://zioni715.github.io/ontology/rcpp#SummaryItem> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <https://zioni715.github.io/ontology/rcpp#DocumentItem> .
+
+
+###  https://zioni715.github.io/ontology/rcpp#Unit
+<https://zioni715.github.io/ontology/rcpp#Unit> rdf:type owl:Class .
+
+
+###  https://zioni715.github.io/ontology/rcpp#WorkCategory
+<https://zioni715.github.io/ontology/rcpp#WorkCategory> rdf:type owl:Class .
+
+
+###  https://zioni715.github.io/ontology/rcpp#WorkCategoryDetailItem
+<https://zioni715.github.io/ontology/rcpp#WorkCategoryDetailItem> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <https://zioni715.github.io/ontology/rcpp#DetailItem> .
+
+
+###  https://zioni715.github.io/ontology/rcpp#WorkCategoryDetailStatement
+<https://zioni715.github.io/ontology/rcpp#WorkCategoryDetailStatement> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf <https://zioni715.github.io/ontology/rcpp#EvidenceDocument> .
+
+
+###  https://zioni715.github.io/ontology/rcpp#WorkCategorySummaryStatement
+<https://zioni715.github.io/ontology/rcpp#WorkCategorySummaryStatement> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <https://zioni715.github.io/ontology/rcpp#EvidenceDocument> .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://zioni715.github.io/ontology/rcpp#ConcreteWork
+<https://zioni715.github.io/ontology/rcpp#ConcreteWork> rdf:type owl:NamedIndividual ,
+                                                                 <https://zioni715.github.io/ontology/rcpp#WorkCategory> .
+
+
+###  https://zioni715.github.io/ontology/rcpp#CubicMetre
+<https://zioni715.github.io/ontology/rcpp#CubicMetre> rdf:type owl:NamedIndividual ,
+                                                               <https://zioni715.github.io/ontology/rcpp#Unit> .
+
+
+###  https://zioni715.github.io/ontology/rcpp#CubicMetreSpace
+<https://zioni715.github.io/ontology/rcpp#CubicMetreSpace> rdf:type owl:NamedIndividual ,
+                                                                    <https://zioni715.github.io/ontology/rcpp#Unit> .
+
+
+###  https://zioni715.github.io/ontology/rcpp#FormworkWork
+<https://zioni715.github.io/ontology/rcpp#FormworkWork> rdf:type owl:NamedIndividual ,
+                                                                 <https://zioni715.github.io/ontology/rcpp#WorkCategory> .
+
+
+###  https://zioni715.github.io/ontology/rcpp#RebarWork
+<https://zioni715.github.io/ontology/rcpp#RebarWork> rdf:type owl:NamedIndividual ,
+                                                              <https://zioni715.github.io/ontology/rcpp#WorkCategory> .
+
+
+###  https://zioni715.github.io/ontology/rcpp#ReinforcedConcreteWork
+<https://zioni715.github.io/ontology/rcpp#ReinforcedConcreteWork> rdf:type owl:NamedIndividual ,
+                                                                           <https://zioni715.github.io/ontology/rcpp#WorkCategory> .
+
+
+###  https://zioni715.github.io/ontology/rcpp#ShoringWork
+<https://zioni715.github.io/ontology/rcpp#ShoringWork> rdf:type owl:NamedIndividual ,
+                                                                <https://zioni715.github.io/ontology/rcpp#WorkCategory> .
+
+
+###  https://zioni715.github.io/ontology/rcpp#SquareMetre
+<https://zioni715.github.io/ontology/rcpp#SquareMetre> rdf:type owl:NamedIndividual ,
+                                                                <https://zioni715.github.io/ontology/rcpp#Unit> .
+
+
+###  https://zioni715.github.io/ontology/rcpp#Tonne
+<https://zioni715.github.io/ontology/rcpp#Tonne> rdf:type owl:NamedIndividual ,
+                                                          <https://zioni715.github.io/ontology/rcpp#Unit> .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
