@@ -1,0 +1,26 @@
+name: T-Box validation
+
+on:
+  push:
+    branches: [main, "release/**"]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - run: python -m pip install -r requirements-validation.txt
+      - run: python -m pip install pip-audit==2.10.1
+      - run: pip-audit -r requirements-validation.txt
+      - run: python -m unittest discover -s final_tbox/tests -v
+      - run: python final_tbox/release_multitrade.py --stress-cycles 3 --skip-source-audit

@@ -2,7 +2,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix tbox: <https://example.org/kicem/architecture/tile#> .
 
-<https://example.org/kicem/architecture/tile> a owl:Ontology .
+<https://example.org/kicem/architecture/tile> a owl:Ontology ;
+    owl:versionInfo "3.1.0" .
 
 tbox:AdhesiveFloorTileInstallation a owl:Class ;
     rdfs:label "바닥타일 접착 붙이기"@ko ;
@@ -11,6 +12,7 @@ tbox:AdhesiveFloorTileInstallation a owl:Class ;
     tbox:evidenceSection "3.3.4" ;
     tbox:evidenceSourceId "KCS-41-48-01" ;
     tbox:predictedDirectParent tbox:FloorTileInstallation ;
+    tbox:predictionMethod "lexical-taxonomic-v1:identifier-suffix" ;
     tbox:validationStatus "candidate" .
 
 tbox:AdhesiveWallTileInstallation a owl:Class ;
@@ -20,6 +22,7 @@ tbox:AdhesiveWallTileInstallation a owl:Class ;
     tbox:evidenceSection "3.2.5" ;
     tbox:evidenceSourceId "KCS-41-48-01" ;
     tbox:predictedDirectParent tbox:WallTileInstallation ;
+    tbox:predictionMethod "lexical-taxonomic-v1:identifier-suffix" ;
     tbox:validationStatus "candidate" .
 
 tbox:CeilingTileInstallation a owl:Class ;
@@ -29,6 +32,7 @@ tbox:CeilingTileInstallation a owl:Class ;
     tbox:evidenceSection "3.4" ;
     tbox:evidenceSourceId "KCS-41-48-01" ;
     tbox:predictedDirectParent tbox:TileInstallation ;
+    tbox:predictionMethod "lexical-taxonomic-v1:identifier-suffix" ;
     tbox:validationStatus "candidate" .
 
 tbox:CementPasteFloorTileInstallation a owl:Class ;
@@ -38,6 +42,7 @@ tbox:CementPasteFloorTileInstallation a owl:Class ;
     tbox:evidenceSection "3.3.1" ;
     tbox:evidenceSourceId "KCS-41-48-01" ;
     tbox:predictedDirectParent tbox:FloorTileInstallation ;
+    tbox:predictionMethod "lexical-taxonomic-v1:identifier-suffix" ;
     tbox:validationStatus "candidate" .
 
 tbox:FloatingBedWallTileInstallation a owl:Class ;
@@ -47,6 +52,7 @@ tbox:FloatingBedWallTileInstallation a owl:Class ;
     tbox:evidenceSection "3.2.1" ;
     tbox:evidenceSourceId "KCS-41-48-01" ;
     tbox:predictedDirectParent tbox:WallTileInstallation ;
+    tbox:predictionMethod "lexical-taxonomic-v1:identifier-suffix" ;
     tbox:validationStatus "candidate" .
 
 tbox:GeneralTileInstallation a owl:Class ;
@@ -56,6 +62,7 @@ tbox:GeneralTileInstallation a owl:Class ;
     tbox:evidenceSection "3.1" ;
     tbox:evidenceSourceId "KCS-41-48-01" ;
     tbox:predictedDirectParent tbox:TileInstallation ;
+    tbox:predictionMethod "lexical-taxonomic-v1:identifier-suffix" ;
     tbox:validationStatus "candidate" .
 
 tbox:ImprovedPressureFloorTileInstallation a owl:Class ;
@@ -65,6 +72,7 @@ tbox:ImprovedPressureFloorTileInstallation a owl:Class ;
     tbox:evidenceSection "3.3.3" ;
     tbox:evidenceSourceId "KCS-41-48-01" ;
     tbox:predictedDirectParent tbox:FloorTileInstallation ;
+    tbox:predictionMethod "lexical-taxonomic-v1:identifier-suffix" ;
     tbox:validationStatus "candidate" .
 
 tbox:ImprovedPressureWallTileInstallation a owl:Class ;
@@ -74,6 +82,7 @@ tbox:ImprovedPressureWallTileInstallation a owl:Class ;
     tbox:evidenceSection "3.2.3" ;
     tbox:evidenceSourceId "KCS-41-48-01" ;
     tbox:predictedDirectParent tbox:WallTileInstallation ;
+    tbox:predictionMethod "lexical-taxonomic-v1:identifier-suffix" ;
     tbox:validationStatus "candidate" .
 
 tbox:InProcessTileInspection a owl:Class ;
@@ -83,6 +92,7 @@ tbox:InProcessTileInspection a owl:Class ;
     tbox:evidenceSection "3.6.1" ;
     tbox:evidenceSourceId "KCS-41-48-01" ;
     tbox:predictedDirectParent tbox:TileInspection ;
+    tbox:predictionMethod "lexical-taxonomic-v1:identifier-suffix" ;
     tbox:validationStatus "candidate" .
 
 tbox:InstallationTask a owl:Class ;
@@ -100,6 +110,7 @@ tbox:MosaicWallTileInstallation a owl:Class ;
     tbox:evidenceSection "3.2.7" ;
     tbox:evidenceSourceId "KCS-41-48-01" ;
     tbox:predictedDirectParent tbox:WallTileInstallation ;
+    tbox:predictionMethod "lexical-taxonomic-v1:identifier-suffix" ;
     tbox:validationStatus "candidate" .
 
 tbox:PreparationTask a owl:Class ;
@@ -117,6 +128,7 @@ tbox:PressureFloorTileInstallation a owl:Class ;
     tbox:evidenceSection "3.3.2" ;
     tbox:evidenceSourceId "KCS-41-48-01" ;
     tbox:predictedDirectParent tbox:FloorTileInstallation ;
+    tbox:predictionMethod "lexical-taxonomic-v1:identifier-suffix" ;
     tbox:validationStatus "candidate" .
 
 tbox:PressureWallTileInstallation a owl:Class ;
@@ -126,6 +138,7 @@ tbox:PressureWallTileInstallation a owl:Class ;
     tbox:evidenceSection "3.2.2" ;
     tbox:evidenceSourceId "KCS-41-48-01" ;
     tbox:predictedDirectParent tbox:WallTileInstallation ;
+    tbox:predictionMethod "lexical-taxonomic-v1:identifier-suffix" ;
     tbox:validationStatus "candidate" .
 
 tbox:SheetWallTileInstallation a owl:Class ;
@@ -135,6 +148,7 @@ tbox:SheetWallTileInstallation a owl:Class ;
     tbox:evidenceSection "3.2.4" ;
     tbox:evidenceSourceId "KCS-41-48-01" ;
     tbox:predictedDirectParent tbox:WallTileInstallation ;
+    tbox:predictionMethod "lexical-taxonomic-v1:identifier-suffix" ;
     tbox:validationStatus "candidate" .
 
 tbox:SimultaneousJointWallTileInstallation a owl:Class ;
@@ -144,6 +158,7 @@ tbox:SimultaneousJointWallTileInstallation a owl:Class ;
     tbox:evidenceSection "3.2.6" ;
     tbox:evidenceSourceId "KCS-41-48-01" ;
     tbox:predictedDirectParent tbox:WallTileInstallation ;
+    tbox:predictionMethod "lexical-taxonomic-v1:identifier-suffix" ;
     tbox:validationStatus "candidate" .
 
 tbox:TileAdhesionTest a owl:Class ;
@@ -153,6 +168,7 @@ tbox:TileAdhesionTest a owl:Class ;
     tbox:evidenceSection "3.6.3" ;
     tbox:evidenceSourceId "KCS-41-48-01" ;
     tbox:predictedDirectParent tbox:TileInspection ;
+    tbox:predictionMethod "lexical-taxonomic-v1:inspection-anchor" ;
     tbox:validationStatus "candidate" .
 
 tbox:TileCleaning a owl:Class ;
@@ -162,6 +178,7 @@ tbox:TileCleaning a owl:Class ;
     tbox:evidenceSection "3.5.2" ;
     tbox:evidenceSourceId "KCS-41-48-01" ;
     tbox:predictedDirectParent tbox:TileProtectionAndCleaning ;
+    tbox:predictionMethod "lexical-taxonomic-v1:composite-lifecycle-parent" ;
     tbox:validationStatus "candidate" .
 
 tbox:TileProtection a owl:Class ;
@@ -171,6 +188,7 @@ tbox:TileProtection a owl:Class ;
     tbox:evidenceSection "3.5.1" ;
     tbox:evidenceSourceId "KCS-41-48-01" ;
     tbox:predictedDirectParent tbox:TileProtectionAndCleaning ;
+    tbox:predictionMethod "lexical-taxonomic-v1:composite-lifecycle-parent" ;
     tbox:validationStatus "candidate" .
 
 tbox:TileTappingInspection a owl:Class ;
@@ -180,6 +198,7 @@ tbox:TileTappingInspection a owl:Class ;
     tbox:evidenceSection "3.6.2" ;
     tbox:evidenceSourceId "KCS-41-48-01" ;
     tbox:predictedDirectParent tbox:TileInspection ;
+    tbox:predictionMethod "lexical-taxonomic-v1:inspection-anchor" ;
     tbox:validationStatus "candidate" .
 
 tbox:evidenceSection a owl:AnnotationProperty ;
@@ -190,6 +209,9 @@ tbox:evidenceSourceId a owl:AnnotationProperty ;
 
 tbox:predictedDirectParent a owl:AnnotationProperty ;
     rdfs:label "모델 예측 직접 부모"@ko .
+
+tbox:predictionMethod a owl:AnnotationProperty ;
+    rdfs:label "부모 예측 방법"@ko .
 
 tbox:validationStatus a owl:AnnotationProperty ;
     rdfs:label "검증 상태"@ko .
@@ -226,6 +248,7 @@ tbox:TileProtectionAndCleaning a owl:Class ;
     tbox:evidenceSection "3.5" ;
     tbox:evidenceSourceId "KCS-41-48-01" ;
     tbox:predictedDirectParent tbox:FinishingTask ;
+    tbox:predictionMethod "lexical-taxonomic-v1:upper-tbox-lifecycle" ;
     tbox:validationStatus "candidate" .
 
 tbox:TileWork a owl:Class ;
@@ -235,6 +258,7 @@ tbox:TileWork a owl:Class ;
     tbox:evidenceSection "3" ;
     tbox:evidenceSourceId "KCS-41-48-01" ;
     tbox:predictedDirectParent tbox:ConstructionTask ;
+    tbox:predictionMethod "lexical-taxonomic-v1:trade-root" ;
     tbox:validationStatus "candidate" .
 
 tbox:WorkTask a owl:Class ;
@@ -252,6 +276,7 @@ tbox:TileInspection a owl:Class ;
     tbox:evidenceSection "3.6" ;
     tbox:evidenceSourceId "KCS-41-48-01" ;
     tbox:predictedDirectParent tbox:InspectionTask ;
+    tbox:predictionMethod "lexical-taxonomic-v1:upper-tbox-lifecycle" ;
     tbox:validationStatus "candidate" .
 
 tbox:FloorTileInstallation a owl:Class ;
@@ -261,6 +286,7 @@ tbox:FloorTileInstallation a owl:Class ;
     tbox:evidenceSection "3.3" ;
     tbox:evidenceSourceId "KCS-41-48-01" ;
     tbox:predictedDirectParent tbox:TileInstallation ;
+    tbox:predictionMethod "lexical-taxonomic-v1:identifier-suffix" ;
     tbox:validationStatus "candidate" .
 
 tbox:TileInstallation a owl:Class ;
@@ -270,6 +296,7 @@ tbox:TileInstallation a owl:Class ;
     tbox:evidenceSection "3.1-3.4" ;
     tbox:evidenceSourceId "KCS-41-48-01" ;
     tbox:predictedDirectParent tbox:TileWork ;
+    tbox:predictionMethod "lexical-taxonomic-v1:trade-operation-anchor" ;
     tbox:validationStatus "candidate" .
 
 tbox:WallTileInstallation a owl:Class ;
@@ -279,4 +306,5 @@ tbox:WallTileInstallation a owl:Class ;
     tbox:evidenceSection "3.2" ;
     tbox:evidenceSourceId "KCS-41-48-01" ;
     tbox:predictedDirectParent tbox:TileInstallation ;
+    tbox:predictionMethod "lexical-taxonomic-v1:identifier-suffix" ;
     tbox:validationStatus "candidate" .

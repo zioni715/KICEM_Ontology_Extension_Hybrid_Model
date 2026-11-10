@@ -2,7 +2,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix tbox: <https://example.org/kicem/civil/stormwater#> .
 
-<https://example.org/kicem/civil/stormwater> a owl:Ontology .
+<https://example.org/kicem/civil/stormwater> a owl:Ontology ;
+    owl:versionInfo "3.1.0" .
 
 tbox:CatchBasinInstallation a owl:Class ;
     rdfs:label "집수정 설치"@ko ;
@@ -12,6 +13,7 @@ tbox:CatchBasinInstallation a owl:Class ;
     tbox:evidenceSection "3.1.3" ;
     tbox:evidenceSourceId "KCS-11-40-25" ;
     tbox:predictedDirectParent tbox:InstallationTask ;
+    tbox:predictionMethod "lexical-taxonomic-v1:upper-tbox-lifecycle" ;
     tbox:validationStatus "candidate" .
 
 tbox:DrainageDitchConstruction a owl:Class ;
@@ -22,6 +24,7 @@ tbox:DrainageDitchConstruction a owl:Class ;
     tbox:evidenceSection "3.1.1" ;
     tbox:evidenceSourceId "KCS-11-40-25" ;
     tbox:predictedDirectParent tbox:InstallationTask ;
+    tbox:predictionMethod "lexical-taxonomic-v1:upper-tbox-lifecycle" ;
     tbox:validationStatus "candidate" .
 
 tbox:DrainageSlopeControl a owl:Class ;
@@ -32,6 +35,7 @@ tbox:DrainageSlopeControl a owl:Class ;
     tbox:evidenceSection "3.1.1(9)" ;
     tbox:evidenceSourceId "KCS-11-40-25" ;
     tbox:predictedDirectParent tbox:InspectionTask ;
+    tbox:predictionMethod "lexical-taxonomic-v1:upper-tbox-lifecycle" ;
     tbox:validationStatus "candidate" .
 
 tbox:DrainageWatertightJointConstruction a owl:Class ;
@@ -42,6 +46,7 @@ tbox:DrainageWatertightJointConstruction a owl:Class ;
     tbox:evidenceSection "3.1.1" ;
     tbox:evidenceSourceId "KCS-11-40-25" ;
     tbox:predictedDirectParent tbox:InstallationTask ;
+    tbox:predictionMethod "lexical-taxonomic-v1:upper-tbox-lifecycle" ;
     tbox:validationStatus "candidate" .
 
 tbox:SteelGratingInstallation a owl:Class ;
@@ -52,6 +57,7 @@ tbox:SteelGratingInstallation a owl:Class ;
     tbox:evidenceSection "3.1.3(3)③" ;
     tbox:evidenceSourceId "KCS-11-40-25" ;
     tbox:predictedDirectParent tbox:InstallationTask ;
+    tbox:predictionMethod "lexical-taxonomic-v1:upper-tbox-lifecycle" ;
     tbox:validationStatus "candidate" .
 
 tbox:StormDrainPipeInstallation a owl:Class ;
@@ -62,6 +68,7 @@ tbox:StormDrainPipeInstallation a owl:Class ;
     tbox:evidenceSection "3.1.1(9)" ;
     tbox:evidenceSourceId "KCS-11-40-25" ;
     tbox:predictedDirectParent tbox:InstallationTask ;
+    tbox:predictionMethod "lexical-taxonomic-v1:upper-tbox-lifecycle" ;
     tbox:validationStatus "candidate" .
 
 tbox:StormwaterBackfillingCompaction a owl:Class ;
@@ -72,6 +79,7 @@ tbox:StormwaterBackfillingCompaction a owl:Class ;
     tbox:evidenceSection "3.1.3(3)④" ;
     tbox:evidenceSourceId "KCS-11-40-25" ;
     tbox:predictedDirectParent tbox:FinishingTask ;
+    tbox:predictionMethod "lexical-taxonomic-v1:upper-tbox-lifecycle" ;
     tbox:validationStatus "candidate" .
 
 tbox:StormwaterInletInstallation a owl:Class ;
@@ -82,6 +90,7 @@ tbox:StormwaterInletInstallation a owl:Class ;
     tbox:evidenceSection "3.1.3" ;
     tbox:evidenceSourceId "KCS-11-40-25" ;
     tbox:predictedDirectParent tbox:InstallationTask ;
+    tbox:predictionMethod "lexical-taxonomic-v1:upper-tbox-lifecycle" ;
     tbox:validationStatus "candidate" .
 
 tbox:StormwaterInstallationInspection a owl:Class ;
@@ -92,6 +101,7 @@ tbox:StormwaterInstallationInspection a owl:Class ;
     tbox:evidenceSection "3.1.3(1)" ;
     tbox:evidenceSourceId "KCS-11-40-25" ;
     tbox:predictedDirectParent tbox:InspectionTask ;
+    tbox:predictionMethod "lexical-taxonomic-v1:upper-tbox-lifecycle" ;
     tbox:validationStatus "candidate" .
 
 tbox:StormwaterManholeInstallation a owl:Class ;
@@ -102,6 +112,7 @@ tbox:StormwaterManholeInstallation a owl:Class ;
     tbox:evidenceSection "2.5, 3.1" ;
     tbox:evidenceSourceId "KCS-11-40-25" ;
     tbox:predictedDirectParent tbox:InstallationTask ;
+    tbox:predictionMethod "lexical-taxonomic-v1:upper-tbox-lifecycle" ;
     tbox:validationStatus "candidate" .
 
 tbox:StormwaterPipelineSurvey a owl:Class ;
@@ -112,6 +123,7 @@ tbox:StormwaterPipelineSurvey a owl:Class ;
     tbox:evidenceSection "3.2.2(1)" ;
     tbox:evidenceSourceId "KCS-12-20-10" ;
     tbox:predictedDirectParent tbox:PreparationTask ;
+    tbox:predictionMethod "lexical-taxonomic-v1:upper-tbox-lifecycle" ;
     tbox:validationStatus "candidate" .
 
 tbox:evidenceSection a owl:AnnotationProperty ;
@@ -122,6 +134,9 @@ tbox:evidenceSourceId a owl:AnnotationProperty ;
 
 tbox:predictedDirectParent a owl:AnnotationProperty ;
     rdfs:label "모델 예측 직접 부모"@ko .
+
+tbox:predictionMethod a owl:AnnotationProperty ;
+    rdfs:label "부모 예측 방법"@ko .
 
 tbox:validationStatus a owl:AnnotationProperty ;
     rdfs:label "검증 상태"@ko .
@@ -172,6 +187,7 @@ tbox:StormwaterWork a owl:Class ;
     tbox:evidenceSection "KCS 11 40 25" ;
     tbox:evidenceSourceId "KCS-11-40-25" ;
     tbox:predictedDirectParent tbox:ConstructionTask ;
+    tbox:predictionMethod "lexical-taxonomic-v1:trade-root" ;
     tbox:validationStatus "candidate" .
 
 tbox:InstallationTask a owl:Class ;

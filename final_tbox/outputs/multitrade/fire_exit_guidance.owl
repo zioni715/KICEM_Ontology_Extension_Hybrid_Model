@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:tbox="https://example.org/kicem/fire/exit-guidance#">
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:tbox="https://example.org/kicem/fire/exit-guidance#">
   <rdf:Description rdf:about="https://example.org/kicem/fire/exit-guidance">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology" />
+    <owl:versionInfo>3.1.0</owl:versionInfo>
   </rdf:Description>
   <rdf:Description rdf:about="https://example.org/kicem/fire/exit-guidance#AuditoriumGuidanceLightInstallation">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
@@ -12,6 +13,7 @@
     <tbox:evidenceSection>2.4</tbox:evidenceSection>
     <tbox:evidenceSourceId>NFTC-303</tbox:evidenceSourceId>
     <tbox:predictedDirectParent rdf:resource="https://example.org/kicem/fire/exit-guidance#InstallationTask" />
+    <tbox:predictionMethod>lexical-taxonomic-v1:upper-tbox-lifecycle</tbox:predictionMethod>
     <tbox:validationStatus>candidate</tbox:validationStatus>
   </rdf:Description>
   <rdf:Description rdf:about="https://example.org/kicem/fire/exit-guidance#ConstructionTask">
@@ -31,6 +33,7 @@
     <tbox:evidenceSection>2.3.1</tbox:evidenceSection>
     <tbox:evidenceSourceId>NFTC-303</tbox:evidenceSourceId>
     <tbox:predictedDirectParent rdf:resource="https://example.org/kicem/fire/exit-guidance#PassageGuidanceLightInstallation" />
+    <tbox:predictionMethod>lexical-taxonomic-v1:label-containment</tbox:predictionMethod>
     <tbox:validationStatus>candidate</tbox:validationStatus>
   </rdf:Description>
   <rdf:Description rdf:about="https://example.org/kicem/fire/exit-guidance#EvacuationGuidanceLineInstallation">
@@ -42,6 +45,7 @@
     <tbox:evidenceSection>2.6</tbox:evidenceSection>
     <tbox:evidenceSourceId>NFTC-303</tbox:evidenceSourceId>
     <tbox:predictedDirectParent rdf:resource="https://example.org/kicem/fire/exit-guidance#InstallationTask" />
+    <tbox:predictionMethod>lexical-taxonomic-v1:upper-tbox-lifecycle</tbox:predictionMethod>
     <tbox:validationStatus>candidate</tbox:validationStatus>
   </rdf:Description>
   <rdf:Description rdf:about="https://example.org/kicem/fire/exit-guidance#ExitGuidanceEquipmentWork">
@@ -52,6 +56,7 @@
     <tbox:evidenceSection>1.1</tbox:evidenceSection>
     <tbox:evidenceSourceId>NFTC-303</tbox:evidenceSourceId>
     <tbox:predictedDirectParent rdf:resource="https://example.org/kicem/fire/exit-guidance#ConstructionTask" />
+    <tbox:predictionMethod>lexical-taxonomic-v1:trade-root</tbox:predictionMethod>
     <tbox:validationStatus>candidate</tbox:validationStatus>
   </rdf:Description>
   <rdf:Description rdf:about="https://example.org/kicem/fire/exit-guidance#ExitGuidanceLightInstallation">
@@ -63,6 +68,7 @@
     <tbox:evidenceSection>2.2</tbox:evidenceSection>
     <tbox:evidenceSourceId>NFTC-303</tbox:evidenceSourceId>
     <tbox:predictedDirectParent rdf:resource="https://example.org/kicem/fire/exit-guidance#InstallationTask" />
+    <tbox:predictionMethod>lexical-taxonomic-v1:upper-tbox-lifecycle</tbox:predictionMethod>
     <tbox:validationStatus>candidate</tbox:validationStatus>
   </rdf:Description>
   <rdf:Description rdf:about="https://example.org/kicem/fire/exit-guidance#ExitGuidanceLightMounting">
@@ -73,6 +79,7 @@
     <tbox:evidenceSection>2.2.2</tbox:evidenceSection>
     <tbox:evidenceSourceId>NFTC-303</tbox:evidenceSourceId>
     <tbox:predictedDirectParent rdf:resource="https://example.org/kicem/fire/exit-guidance#ExitGuidanceLightInstallation" />
+    <tbox:predictionMethod>lexical-taxonomic-v1:lifecycle-rewrite</tbox:predictionMethod>
     <tbox:validationStatus>candidate</tbox:validationStatus>
   </rdf:Description>
   <rdf:Description rdf:about="https://example.org/kicem/fire/exit-guidance#ExitGuidanceSignInstallation">
@@ -83,6 +90,7 @@
     <tbox:evidenceSection>2.5.1.2</tbox:evidenceSection>
     <tbox:evidenceSourceId>NFTC-303</tbox:evidenceSourceId>
     <tbox:predictedDirectParent rdf:resource="https://example.org/kicem/fire/exit-guidance#GuidanceSignInstallation" />
+    <tbox:predictionMethod>lexical-taxonomic-v1:identifier-suffix</tbox:predictionMethod>
     <tbox:validationStatus>candidate</tbox:validationStatus>
   </rdf:Description>
   <rdf:Description rdf:about="https://example.org/kicem/fire/exit-guidance#FinishingTask">
@@ -103,6 +111,7 @@
     <tbox:evidenceSection>제10조/2.7</tbox:evidenceSection>
     <tbox:evidenceSourceId>NFPC-303</tbox:evidenceSourceId>
     <tbox:predictedDirectParent rdf:resource="https://example.org/kicem/fire/exit-guidance#InspectionTask" />
+    <tbox:predictionMethod>lexical-taxonomic-v1:upper-tbox-lifecycle</tbox:predictionMethod>
     <tbox:validationStatus>candidate</tbox:validationStatus>
   </rdf:Description>
   <rdf:Description rdf:about="https://example.org/kicem/fire/exit-guidance#GuidanceLightPowerInstallation">
@@ -114,6 +123,7 @@
     <tbox:evidenceSection>2.7.1-2.7.2</tbox:evidenceSection>
     <tbox:evidenceSourceId>NFTC-303</tbox:evidenceSourceId>
     <tbox:predictedDirectParent rdf:resource="https://example.org/kicem/fire/exit-guidance#InstallationTask" />
+    <tbox:predictionMethod>lexical-taxonomic-v1:upper-tbox-lifecycle</tbox:predictionMethod>
     <tbox:validationStatus>candidate</tbox:validationStatus>
   </rdf:Description>
   <rdf:Description rdf:about="https://example.org/kicem/fire/exit-guidance#GuidanceLightWiring">
@@ -125,6 +135,7 @@
     <tbox:evidenceSection>2.7.3</tbox:evidenceSection>
     <tbox:evidenceSourceId>NFTC-303</tbox:evidenceSourceId>
     <tbox:predictedDirectParent rdf:resource="https://example.org/kicem/fire/exit-guidance#InstallationTask" />
+    <tbox:predictionMethod>lexical-taxonomic-v1:upper-tbox-lifecycle</tbox:predictionMethod>
     <tbox:validationStatus>candidate</tbox:validationStatus>
   </rdf:Description>
   <rdf:Description rdf:about="https://example.org/kicem/fire/exit-guidance#GuidanceSignInstallation">
@@ -136,6 +147,7 @@
     <tbox:evidenceSection>2.5</tbox:evidenceSection>
     <tbox:evidenceSourceId>NFTC-303</tbox:evidenceSourceId>
     <tbox:predictedDirectParent rdf:resource="https://example.org/kicem/fire/exit-guidance#InstallationTask" />
+    <tbox:predictionMethod>lexical-taxonomic-v1:upper-tbox-lifecycle</tbox:predictionMethod>
     <tbox:validationStatus>candidate</tbox:validationStatus>
   </rdf:Description>
   <rdf:Description rdf:about="https://example.org/kicem/fire/exit-guidance#InspectionTask">
@@ -165,6 +177,7 @@
     <tbox:evidenceSection>2.3</tbox:evidenceSection>
     <tbox:evidenceSourceId>NFTC-303</tbox:evidenceSourceId>
     <tbox:predictedDirectParent rdf:resource="https://example.org/kicem/fire/exit-guidance#InstallationTask" />
+    <tbox:predictionMethod>lexical-taxonomic-v1:upper-tbox-lifecycle</tbox:predictionMethod>
     <tbox:validationStatus>candidate</tbox:validationStatus>
   </rdf:Description>
   <rdf:Description rdf:about="https://example.org/kicem/fire/exit-guidance#PassageGuidanceSignInstallation">
@@ -175,6 +188,7 @@
     <tbox:evidenceSection>2.5.1</tbox:evidenceSection>
     <tbox:evidenceSourceId>NFTC-303</tbox:evidenceSourceId>
     <tbox:predictedDirectParent rdf:resource="https://example.org/kicem/fire/exit-guidance#GuidanceSignInstallation" />
+    <tbox:predictionMethod>lexical-taxonomic-v1:identifier-suffix</tbox:predictionMethod>
     <tbox:validationStatus>candidate</tbox:validationStatus>
   </rdf:Description>
   <rdf:Description rdf:about="https://example.org/kicem/fire/exit-guidance#PreparationTask">
@@ -194,6 +208,7 @@
     <tbox:evidenceSection>2.3.2</tbox:evidenceSection>
     <tbox:evidenceSourceId>NFTC-303</tbox:evidenceSourceId>
     <tbox:predictedDirectParent rdf:resource="https://example.org/kicem/fire/exit-guidance#PassageGuidanceLightInstallation" />
+    <tbox:predictionMethod>lexical-taxonomic-v1:identifier-suffix</tbox:predictionMethod>
     <tbox:validationStatus>candidate</tbox:validationStatus>
   </rdf:Description>
   <rdf:Description rdf:about="https://example.org/kicem/fire/exit-guidance#StairPassageGuidanceLightInstallation">
@@ -204,6 +219,7 @@
     <tbox:evidenceSection>2.3.3</tbox:evidenceSection>
     <tbox:evidenceSourceId>NFTC-303</tbox:evidenceSourceId>
     <tbox:predictedDirectParent rdf:resource="https://example.org/kicem/fire/exit-guidance#PassageGuidanceLightInstallation" />
+    <tbox:predictionMethod>lexical-taxonomic-v1:identifier-suffix</tbox:predictionMethod>
     <tbox:validationStatus>candidate</tbox:validationStatus>
   </rdf:Description>
   <rdf:Description rdf:about="https://example.org/kicem/fire/exit-guidance#WorkTask">
@@ -225,6 +241,10 @@
   <rdf:Description rdf:about="https://example.org/kicem/fire/exit-guidance#predictedDirectParent">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty" />
     <rdfs:label xml:lang="ko">모델 예측 직접 부모</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/fire/exit-guidance#predictionMethod">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty" />
+    <rdfs:label xml:lang="ko">부모 예측 방법</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://example.org/kicem/fire/exit-guidance#validationStatus">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty" />

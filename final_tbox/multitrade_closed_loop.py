@@ -18,6 +18,7 @@ def fingerprint(manifest: dict, validation: dict) -> dict:
     return {
         "output_hashes": {case["trade_id"]: case["outputs"] for case in manifest["cases"]},
         "candidate_count": validation["candidate_count"],
+        "candidate_input_parent_free": validation["candidate_input_parent_free"],
         "aggregate_taxonomy": validation["aggregate_taxonomy"],
         "competency_questions": validation["competency_questions"],
         "mutation_controls": {key: validation["mutation_controls"][key] for key in ("passed", "total")},
@@ -33,7 +34,11 @@ def run(max_cycles: int = 3, stable_required: int = 2) -> dict:
         manifest = build_all()
         validation = validate_all()
         current = fingerprint(manifest, validation)
-        passed = validation["status"] == "PASSED" and validation["builder_gold_separation_verified"]
+        passed = (
+            validation["status"] == "PASSED"
+            and validation["builder_gold_separation_verified"]
+            and validation["candidate_input_parent_free"]
+        )
         same = passed and previous == current
         stable = stable + 1 if same else 1 if passed else 0
         cycles.append({"cycle": number, "passed": passed, "stable_with_previous": same,

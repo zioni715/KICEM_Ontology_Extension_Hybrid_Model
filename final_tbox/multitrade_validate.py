@@ -158,7 +158,7 @@ def validate_all() -> dict:
             recall = tp / (tp + fn) if tp + fn else 0.0
             f1 = 2 * precision * recall / (precision + recall) if precision + recall else 0.0
             candidate_ids = set(expected)
-            trade_root = case["candidates"][0][0]
+            trade_root = case["trade_root_id"]
             hierarchy_edges = [(local(child), local(parent))
                                for child, parent in turtle.subject_objects(RDFS.subClassOf)
                                if isinstance(child, URIRef) and isinstance(parent, URIRef)]
@@ -243,6 +243,10 @@ def validate_all() -> dict:
         "status": "PASSED" if all(item["passed"] for item in results) and
                   all(item["passed"] for item in mutation_results) else "FAILED",
         "builder_gold_separation_verified": builder_gold_separated,
+        "candidate_input_parent_free": all(
+            set(record) == {"id", "label", "section", "definition", "source_id"}
+            for case in candidates["cases"] for record in case["candidates"]
+        ),
         "builder_sha256": sha256(HERE / "multitrade_build.py"),
         "trade_count": len(results),
         "candidate_count": sum(item["candidate_count"] for item in results),
@@ -259,7 +263,9 @@ def validate_all() -> dict:
     }
     REPORT.parent.mkdir(parents=True, exist_ok=True)
     REPORT.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    if report["status"] != "PASSED" or not report["builder_gold_separation_verified"]:
+    if (report["status"] != "PASSED"
+            or not report["builder_gold_separation_verified"]
+            or not report["candidate_input_parent_free"]):
         raise SystemExit("Multitrade validation failed")
     return report
 

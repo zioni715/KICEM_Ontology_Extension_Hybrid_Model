@@ -2,7 +2,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix tbox: <https://example.org/kicem/fire/exit-guidance#> .
 
-<https://example.org/kicem/fire/exit-guidance> a owl:Ontology .
+<https://example.org/kicem/fire/exit-guidance> a owl:Ontology ;
+    owl:versionInfo "3.1.0" .
 
 tbox:AuditoriumGuidanceLightInstallation a owl:Class ;
     rdfs:label "객석유도등 설치"@ko ;
@@ -12,6 +13,7 @@ tbox:AuditoriumGuidanceLightInstallation a owl:Class ;
     tbox:evidenceSection "2.4" ;
     tbox:evidenceSourceId "NFTC-303" ;
     tbox:predictedDirectParent tbox:InstallationTask ;
+    tbox:predictionMethod "lexical-taxonomic-v1:upper-tbox-lifecycle" ;
     tbox:validationStatus "candidate" .
 
 tbox:CorridorGuidanceLightInstallation a owl:Class ;
@@ -21,6 +23,7 @@ tbox:CorridorGuidanceLightInstallation a owl:Class ;
     tbox:evidenceSection "2.3.1" ;
     tbox:evidenceSourceId "NFTC-303" ;
     tbox:predictedDirectParent tbox:PassageGuidanceLightInstallation ;
+    tbox:predictionMethod "lexical-taxonomic-v1:label-containment" ;
     tbox:validationStatus "candidate" .
 
 tbox:EvacuationGuidanceLineInstallation a owl:Class ;
@@ -31,6 +34,7 @@ tbox:EvacuationGuidanceLineInstallation a owl:Class ;
     tbox:evidenceSection "2.6" ;
     tbox:evidenceSourceId "NFTC-303" ;
     tbox:predictedDirectParent tbox:InstallationTask ;
+    tbox:predictionMethod "lexical-taxonomic-v1:upper-tbox-lifecycle" ;
     tbox:validationStatus "candidate" .
 
 tbox:ExitGuidanceLightMounting a owl:Class ;
@@ -40,6 +44,7 @@ tbox:ExitGuidanceLightMounting a owl:Class ;
     tbox:evidenceSection "2.2.2" ;
     tbox:evidenceSourceId "NFTC-303" ;
     tbox:predictedDirectParent tbox:ExitGuidanceLightInstallation ;
+    tbox:predictionMethod "lexical-taxonomic-v1:lifecycle-rewrite" ;
     tbox:validationStatus "candidate" .
 
 tbox:ExitGuidanceSignInstallation a owl:Class ;
@@ -49,6 +54,7 @@ tbox:ExitGuidanceSignInstallation a owl:Class ;
     tbox:evidenceSection "2.5.1.2" ;
     tbox:evidenceSourceId "NFTC-303" ;
     tbox:predictedDirectParent tbox:GuidanceSignInstallation ;
+    tbox:predictionMethod "lexical-taxonomic-v1:identifier-suffix" ;
     tbox:validationStatus "candidate" .
 
 tbox:FinishingTask a owl:Class ;
@@ -67,6 +73,7 @@ tbox:GuidanceEquipmentFunctionalInspection a owl:Class ;
     tbox:evidenceSection "제10조/2.7" ;
     tbox:evidenceSourceId "NFPC-303" ;
     tbox:predictedDirectParent tbox:InspectionTask ;
+    tbox:predictionMethod "lexical-taxonomic-v1:upper-tbox-lifecycle" ;
     tbox:validationStatus "candidate" .
 
 tbox:GuidanceLightPowerInstallation a owl:Class ;
@@ -77,6 +84,7 @@ tbox:GuidanceLightPowerInstallation a owl:Class ;
     tbox:evidenceSection "2.7.1-2.7.2" ;
     tbox:evidenceSourceId "NFTC-303" ;
     tbox:predictedDirectParent tbox:InstallationTask ;
+    tbox:predictionMethod "lexical-taxonomic-v1:upper-tbox-lifecycle" ;
     tbox:validationStatus "candidate" .
 
 tbox:GuidanceLightWiring a owl:Class ;
@@ -87,6 +95,7 @@ tbox:GuidanceLightWiring a owl:Class ;
     tbox:evidenceSection "2.7.3" ;
     tbox:evidenceSourceId "NFTC-303" ;
     tbox:predictedDirectParent tbox:InstallationTask ;
+    tbox:predictionMethod "lexical-taxonomic-v1:upper-tbox-lifecycle" ;
     tbox:validationStatus "candidate" .
 
 tbox:PassageGuidanceSignInstallation a owl:Class ;
@@ -96,6 +105,7 @@ tbox:PassageGuidanceSignInstallation a owl:Class ;
     tbox:evidenceSection "2.5.1" ;
     tbox:evidenceSourceId "NFTC-303" ;
     tbox:predictedDirectParent tbox:GuidanceSignInstallation ;
+    tbox:predictionMethod "lexical-taxonomic-v1:identifier-suffix" ;
     tbox:validationStatus "candidate" .
 
 tbox:PreparationTask a owl:Class ;
@@ -113,6 +123,7 @@ tbox:RoomPassageGuidanceLightInstallation a owl:Class ;
     tbox:evidenceSection "2.3.2" ;
     tbox:evidenceSourceId "NFTC-303" ;
     tbox:predictedDirectParent tbox:PassageGuidanceLightInstallation ;
+    tbox:predictionMethod "lexical-taxonomic-v1:identifier-suffix" ;
     tbox:validationStatus "candidate" .
 
 tbox:StairPassageGuidanceLightInstallation a owl:Class ;
@@ -122,6 +133,7 @@ tbox:StairPassageGuidanceLightInstallation a owl:Class ;
     tbox:evidenceSection "2.3.3" ;
     tbox:evidenceSourceId "NFTC-303" ;
     tbox:predictedDirectParent tbox:PassageGuidanceLightInstallation ;
+    tbox:predictionMethod "lexical-taxonomic-v1:identifier-suffix" ;
     tbox:validationStatus "candidate" .
 
 tbox:evidenceSection a owl:AnnotationProperty ;
@@ -132,6 +144,9 @@ tbox:evidenceSourceId a owl:AnnotationProperty ;
 
 tbox:predictedDirectParent a owl:AnnotationProperty ;
     rdfs:label "모델 예측 직접 부모"@ko .
+
+tbox:predictionMethod a owl:AnnotationProperty ;
+    rdfs:label "부모 예측 방법"@ko .
 
 tbox:validationStatus a owl:AnnotationProperty ;
     rdfs:label "검증 상태"@ko .
@@ -152,6 +167,7 @@ tbox:ExitGuidanceLightInstallation a owl:Class ;
     tbox:evidenceSection "2.2" ;
     tbox:evidenceSourceId "NFTC-303" ;
     tbox:predictedDirectParent tbox:InstallationTask ;
+    tbox:predictionMethod "lexical-taxonomic-v1:upper-tbox-lifecycle" ;
     tbox:validationStatus "candidate" .
 
 tbox:InspectionTask a owl:Class ;
@@ -170,6 +186,7 @@ tbox:GuidanceSignInstallation a owl:Class ;
     tbox:evidenceSection "2.5" ;
     tbox:evidenceSourceId "NFTC-303" ;
     tbox:predictedDirectParent tbox:InstallationTask ;
+    tbox:predictionMethod "lexical-taxonomic-v1:upper-tbox-lifecycle" ;
     tbox:validationStatus "candidate" .
 
 tbox:WorkTask a owl:Class ;
@@ -187,6 +204,7 @@ tbox:PassageGuidanceLightInstallation a owl:Class ;
     tbox:evidenceSection "2.3" ;
     tbox:evidenceSourceId "NFTC-303" ;
     tbox:predictedDirectParent tbox:InstallationTask ;
+    tbox:predictionMethod "lexical-taxonomic-v1:upper-tbox-lifecycle" ;
     tbox:validationStatus "candidate" .
 
 tbox:ExitGuidanceEquipmentWork a owl:Class ;
@@ -196,6 +214,7 @@ tbox:ExitGuidanceEquipmentWork a owl:Class ;
     tbox:evidenceSection "1.1" ;
     tbox:evidenceSourceId "NFTC-303" ;
     tbox:predictedDirectParent tbox:ConstructionTask ;
+    tbox:predictionMethod "lexical-taxonomic-v1:trade-root" ;
     tbox:validationStatus "candidate" .
 
 tbox:InstallationTask a owl:Class ;

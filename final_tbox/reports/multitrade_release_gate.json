@@ -1,16 +1,23 @@
 {
-  "timestamp": "2026-11-10T01:44:01.022938+00:00",
+  "timestamp": "2026-11-10T02:13:15.126991+00:00",
   "status": "INTERNAL_RELEASE_READY_EXTERNAL_REVIEW_PENDING",
   "passed": true,
   "checks": {
     "three_trades_validated": true,
     "bounded_gold_agreement_passed": true,
     "builder_gold_separated": true,
+    "candidate_input_parent_free": true,
     "closed_loop_converged": true,
     "all_adversarial_controls_detected": true,
+    "unit_tests_passed": true,
+    "dependency_audit_passed": true,
+    "dependency_audit_matches_requirements": true,
+    "current_builder_matches_validation": true,
+    "current_candidate_input_matches_manifest": true,
     "cold_process_stress_passed": true,
     "stress_outputs_deterministic": true,
-    "authoritative_urls_reachable": true
+    "authoritative_urls_reachable": true,
+    "current_artifacts_match_stress_baseline": true
   },
   "scope": {
     "trades": [
@@ -19,7 +26,7 @@
       "소방-유도등 설비공사"
     ],
     "candidate_classes": 51,
-    "benchmark": "bounded internal benchmark"
+    "benchmark": "bounded internal benchmark with parent-free builder input"
   },
   "metrics": {
     "taxonomy": {
@@ -41,5 +48,66 @@
     "cold_process_cycles": 10
   },
   "claim_boundary": "The artifacts are internally reproducible, structurally valid and consistent with the fixed three-trade benchmark. This is not independent expert validation and does not estimate accuracy on an unseen fourth trade.",
+  "expert_review": {
+    "status": "PENDING_EXPERT_ADJUDICATION",
+    "metrics": null,
+    "identities_complete": false,
+    "incomplete_count": 51,
+    "incomplete_items": [
+      "architecture_tile:TileWork",
+      "architecture_tile:TileInstallation",
+      "architecture_tile:GeneralTileInstallation",
+      "architecture_tile:WallTileInstallation",
+      "architecture_tile:FloatingBedWallTileInstallation",
+      "architecture_tile:PressureWallTileInstallation",
+      "architecture_tile:ImprovedPressureWallTileInstallation",
+      "architecture_tile:SheetWallTileInstallation",
+      "architecture_tile:AdhesiveWallTileInstallation",
+      "architecture_tile:SimultaneousJointWallTileInstallation",
+      "architecture_tile:MosaicWallTileInstallation",
+      "architecture_tile:FloorTileInstallation",
+      "architecture_tile:CementPasteFloorTileInstallation",
+      "architecture_tile:PressureFloorTileInstallation",
+      "architecture_tile:ImprovedPressureFloorTileInstallation",
+      "architecture_tile:AdhesiveFloorTileInstallation",
+      "architecture_tile:CeilingTileInstallation",
+      "architecture_tile:TileProtectionAndCleaning",
+      "architecture_tile:TileProtection",
+      "architecture_tile:TileCleaning",
+      "architecture_tile:TileInspection",
+      "architecture_tile:InProcessTileInspection",
+      "architecture_tile:TileTappingInspection",
+      "architecture_tile:TileAdhesionTest",
+      "civil_stormwater:StormwaterWork",
+      "civil_stormwater:StormwaterPipelineSurvey",
+      "civil_stormwater:DrainageDitchConstruction",
+      "civil_stormwater:StormwaterInletInstallation",
+      "civil_stormwater:CatchBasinInstallation",
+      "civil_stormwater:StormDrainPipeInstallation",
+      "civil_stormwater:StormwaterManholeInstallation",
+      "civil_stormwater:SteelGratingInstallation",
+      "civil_stormwater:DrainageWatertightJointConstruction",
+      "civil_stormwater:StormwaterBackfillingCompaction",
+      "civil_stormwater:DrainageSlopeControl",
+      "civil_stormwater:StormwaterInstallationInspection",
+      "fire_exit_guidance:ExitGuidanceEquipmentWork",
+      "fire_exit_guidance:ExitGuidanceLightInstallation",
+      "fire_exit_guidance:ExitGuidanceLightMounting",
+      "fire_exit_guidance:PassageGuidanceLightInstallation",
+      "fire_exit_guidance:CorridorGuidanceLightInstallation",
+      "fire_exit_guidance:RoomPassageGuidanceLightInstallation",
+      "fire_exit_guidance:StairPassageGuidanceLightInstallation",
+      "fire_exit_guidance:AuditoriumGuidanceLightInstallation",
+      "fire_exit_guidance:GuidanceSignInstallation",
+      "fire_exit_guidance:ExitGuidanceSignInstallation",
+      "fire_exit_guidance:PassageGuidanceSignInstallation",
+      "fire_exit_guidance:EvacuationGuidanceLineInstallation",
+      "fire_exit_guidance:GuidanceLightPowerInstallation",
+      "fire_exit_guidance:GuidanceLightWiring",
+      "fire_exit_guidance:GuidanceEquipmentFunctionalInspection"
+    ],
+    "selection_recall": null,
+    "selection_recall_reason": "Rejected/non-generated concepts are not included in this packet."
+  },
   "remaining_external_gate": "independent domain-expert adjudication of classes and direct parents"
 }

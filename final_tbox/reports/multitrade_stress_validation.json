@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-11-10T01:42:43.039880+00:00",
+  "timestamp": "2026-11-10T02:13:15.124764+00:00",
   "status": "PASSED",
   "cold_process_cycles": 10,
   "all_cycles_identical": true,
   "all_cycles_passed": true,
   "baseline_fingerprint": {
     "artifact_hashes": {
-      "architecture_tile.owl": "a9fbda75fdd1553588d8950db735164dd7e9c3bd36ffe10cf05de32b0c310c02",
-      "architecture_tile.ttl": "bafa5718a079ed3dee0f78d1948e202fd9a8fc24d7de4cf9258b13c088b825e7",
-      "civil_stormwater.owl": "d749a765b4fbd17fef53aa791ac62ad62b68ceccda6b25dad487a8422f1b844d",
-      "civil_stormwater.ttl": "a1e86ac2c2c549517afc2defbc4d6e24f15bafca2ac44ce5e629c2222a1fc157",
-      "fire_exit_guidance.owl": "9933c74d5d68c5d096f6d96778c3ad98711a303ba8e7e957fd2595631322bddc",
-      "fire_exit_guidance.ttl": "5e77655df4bb1f8e2677a68ed13c11fea7210c2f6aeae7da5ea6fed97f875f16"
+      "architecture_tile.owl": "ad8ee9e923b99b38a47e8f44f3f275ca63dcf01de76c601c6f7803a5ccc50118",
+      "architecture_tile.ttl": "55500a8fc8ca6bab337fed7779a13eba02547cdb15e7c8dde031a64985fca7e3",
+      "civil_stormwater.owl": "6bc91ef4600a2018c0106f1fda78a58095fda0635414a04f8ca8d7295035ff92",
+      "civil_stormwater.ttl": "f15e3e4b9a5ba2f41f2379f3f4aad672366ac8f1d2954a63cfab985a2fba6862",
+      "fire_exit_guidance.owl": "8a53c0d256eb5d3f86b73de3f9fced6d32e257a35448db9e4b8f10bbc43f409f",
+      "fire_exit_guidance.ttl": "df9e278457051cef885a8db206c4ed4b33a332d6e96b84e9a4bc74724bc5ce81"
     },
     "validation": {
       "status": "PASSED",
@@ -33,6 +33,7 @@
         "total": 9
       },
       "gold_separated": true,
+      "candidate_input_parent_free": true,
       "trade_checks": {
         "architecture_tile": {
           "serializations_isomorphic": true,

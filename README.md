@@ -11,8 +11,8 @@ python final_tbox/release_multitrade.py --stress-cycles 10
 ```
 
 2026-11-10 격리 환경 재검증 결과, 건축-타일·토목-우수·소방-유도등
-3개 공종의 후보 51개와 competency question 51개가 고정 내부 벤치마크와
-일치했다. 전체 빌드·검증은 냉간 프로세스 10회에서 동일 해시를 재현했고 후보별
+3개 공종의 후보 51개와 competency question 51개가 부모 정답이 없는 입력에서
+고정 내부 벤치마크와 일치했다. 전체 빌드·검증은 냉간 프로세스 10회에서 동일 해시를 재현했고 후보별
 결함 주입 312/312를 검출했다. 최종 내부 판정은
 `INTERNAL_RELEASE_READY_EXTERNAL_REVIEW_PENDING`이다. 이는 독립 외부 전문가
 정확도 또는 보지 않은 공종의 일반화 정확도 100%를 뜻하지 않는다. 세부 내용은

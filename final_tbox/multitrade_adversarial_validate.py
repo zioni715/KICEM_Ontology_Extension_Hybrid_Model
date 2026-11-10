@@ -92,7 +92,7 @@ def run() -> dict:
         ns = Namespace(case["namespace"])
         graph = Graph().parse(OUT / f"{trade_id}.ttl")
         expected = gold[trade_id]["expected"]
-        root = case["candidates"][0][0]
+        root = case["trade_root_id"]
         sources = {source["source_id"] for source in case["sources"]}
         foreign = {value for key, value in namespaces.items() if key != trade_id}
         baseline = violations(graph, ns, expected, sources, root, foreign)

@@ -43,6 +43,7 @@ def validation_fingerprint() -> dict:
         "competency_questions": result["competency_questions"],
         "mutation_controls": {key: result["mutation_controls"][key] for key in ("passed", "total")},
         "gold_separated": result["builder_gold_separation_verified"],
+        "candidate_input_parent_free": result["candidate_input_parent_free"],
         "trade_checks": {trade["trade_id"]: trade["checks"] for trade in result["trades"]},
     }
 

@@ -15,6 +15,11 @@ python final_tbox/release_multitrade.py --stress-cycles 10
 `owlready2` package. Generated Java classes and temporary reasoner files stay in
 `final_tbox/.runtime/` and are ignored by Git.
 
+The Conda environment also includes `pip-audit`. The authoritative release command
+audits `requirements-validation.txt` and binds the audit to that file's SHA-256;
+the release gate fails if known vulnerabilities are reported or the requirements
+change after the audit.
+
 For a pip-managed Python environment, install `requirements-validation.txt` and
 provide Java 17 separately. `TBOX_JAVA` and `TBOX_JAVAC` can override executable
 discovery.

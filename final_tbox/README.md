@@ -32,6 +32,9 @@ RC→타일 단일 사례까지 함께 재현하는 호환용 워크플로다.
 - `reports/multitrade_stress_validation.json`: 새 프로세스 10회 반복 및 공식 출처 접근성 감사
 - `reports/multitrade_adversarial_validation.json`: 후보별 근거·의미·계층 결함 전수 주입 검사
 - `reports/multitrade_release_gate.json`: 위 검사를 합친 보수적 최종 내부 릴리스 판정
+- `reports/multitrade_expert_score.json`: 51개 후보의 독립 전문가 검토 상태와 채점 결과
+- `reports/multitrade_unit_tests.json`: gold 없는 격리 빌드 및 변조 차단 테스트
+- `reports/dependency_audit.json`: 최소 검증 환경의 알려진 취약점 감사
 - `WBS_EVIDENCE.md`: 공종별 공식 기준, WBS 범위와 제외 범위
 
 ## 최종 게이트
@@ -47,7 +50,7 @@ RC→타일 단일 사례까지 함께 재현하는 호환용 워크플로다.
 7. HermiT 일관성 및 만족 불가능한 명명 클래스 부재
 8. 동일 입력 연속 빌드의 Turtle/RDF/XML 바이트 해시 동일성
 9. A-Box·순환·보류 후보·근거 삭제·RC 클래스·nominal 오류 주입 검출
-10. 3개 공종 후보와 검증 gold의 입력 분리 및 공종별 직접 부모 일치
+10. 부모 필드가 없는 3개 공종 후보 입력, builder의 gold 비참조 및 예측 부모 일치
 11. 공종별 A-Box·계층 순환·근거 삭제 오류 주입 검출
 
 ## 판정 해석
@@ -66,7 +69,7 @@ RC→타일 단일 사례까지 함께 재현하는 호환용 워크플로다.
 평가가 완료됐다는 뜻은 아니다. 각 공종은 독립 namespace와 산출물을 가지며, 모든
 작업 클래스는 해당 공종 루트 아래에서도 조회 가능하다.
 
-일관성과 OWL 2 DL 적합성은 잘못된 상·하위 의미를 자동으로 증명하지 않는다. 따라서 독립 전문가가 타일 후보의 채택 여부와 직접 부모를 라벨링하기 전에는 “자동확장 정확도가 검증 완료됐다”고 주장하지 않는다.
+일관성과 OWL 2 DL 적합성은 잘못된 상·하위 의미를 자동으로 증명하지 않는다. 후보 입력의 부모 정답은 제거했지만 현재 규칙은 동일한 세 공종 gold를 보며 개발했다. 따라서 [`MULTITRADE_EXPERT_REVIEW_PROTOCOL.md`](MULTITRADE_EXPERT_REVIEW_PROTOCOL.md)의 독립 검토 전에는 “미지 공종 자동확장 정확도가 검증 완료됐다”고 주장하지 않는다.
 
 ## 데모에서 최종본으로 변경한 내용
 
@@ -80,3 +83,4 @@ RC→타일 단일 사례까지 함께 재현하는 호환용 워크플로다.
 
 - `reports/expert_review.json`의 후보 20개에 대해 독립 전문가 2인과 판정자의 검토가 필요하다. 절차와 채점 방법은 [`EXPERT_REVIEW_PROTOCOL.md`](EXPERT_REVIEW_PROTOCOL.md)에 있다.
 - 현재 GPU 드라이버가 응답하지 않고 `requirements.txt` 해시가 원실험 기록과 달라 Module1~5의 완전 재실행 준비 상태는 실패다. 저장 산출물 기반 최종 T-Box 빌드·검증과 원 모델 전체 재실행은 구분한다.
+- 3개 공종 후보 51개의 독립 전문가 2인+판정자 검토가 남아 있다. 패킷과 채점기는 `MULTITRADE_EXPERT_REVIEW_PROTOCOL.md`에 설명되어 있다.

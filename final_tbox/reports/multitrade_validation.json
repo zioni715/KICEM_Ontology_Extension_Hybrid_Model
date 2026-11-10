@@ -1,8 +1,9 @@
 {
-  "timestamp": "2026-11-10T01:43:33.997254+00:00",
+  "timestamp": "2026-11-10T02:13:14.755233+00:00",
   "status": "PASSED",
   "builder_gold_separation_verified": true,
-  "builder_sha256": "52688e33fe6adfe8d1e30c2d9043aa12e9b1a5f08dc36fde10215984ff805f04",
+  "candidate_input_parent_free": true,
+  "builder_sha256": "9bbc7853f2b7031d5658bd6e8a8192775023593b172718500c5ed4276d2bb11d",
   "trade_count": 3,
   "candidate_count": 51,
   "aggregate_taxonomy": {
