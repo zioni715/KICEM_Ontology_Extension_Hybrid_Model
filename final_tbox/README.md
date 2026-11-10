@@ -49,7 +49,7 @@ final_tbox/
 - 후보별 결함 주입 312/312 검출
 - 냉간 프로세스 10회 동일 해시
 - 현재 산출물과 스트레스 기준 해시 결속
-- 공식 근거 URL 5개 접근성 감사
+- 공식 근거 URL 8개 접근성 감사
 - 최소 Python 의존성 알려진 취약점 감사
 - gold 없는 임시 디렉터리 빌드 및 변조 차단 단위검사
 
@@ -63,4 +63,4 @@ final_tbox/
 누락 개념에 대한 selection recall은 별도의 누락 개념 표본이 있어야 계산할 수 있다.
 
 배포 전 항목은 `RELEASE_CHECKLIST.md`, 상세 결과는 `FINAL_REPORT.md`, 기준 근거는
-`WBS_EVIDENCE.md`를 따른다.
+`WBS_EVIDENCE.md`, 사람이 읽는 계층형 작업분류는 `WBS.md`를 따른다.
