@@ -1,0 +1,98 @@
+{
+  "timestamp": "2026-11-10T01:43:33.998044+00:00",
+  "status": "CONVERGED",
+  "converged": true,
+  "cycles_executed": 2,
+  "stable_cycles_required": 2,
+  "cycles": [
+    {
+      "cycle": 1,
+      "passed": true,
+      "stable_with_previous": false,
+      "stable_run_length": 1,
+      "fingerprint": {
+        "output_hashes": {
+          "architecture_tile": {
+            "architecture_tile.ttl": "bafa5718a079ed3dee0f78d1948e202fd9a8fc24d7de4cf9258b13c088b825e7",
+            "architecture_tile.owl": "a9fbda75fdd1553588d8950db735164dd7e9c3bd36ffe10cf05de32b0c310c02"
+          },
+          "civil_stormwater": {
+            "civil_stormwater.ttl": "a1e86ac2c2c549517afc2defbc4d6e24f15bafca2ac44ce5e629c2222a1fc157",
+            "civil_stormwater.owl": "d749a765b4fbd17fef53aa791ac62ad62b68ceccda6b25dad487a8422f1b844d"
+          },
+          "fire_exit_guidance": {
+            "fire_exit_guidance.ttl": "5e77655df4bb1f8e2677a68ed13c11fea7210c2f6aeae7da5ea6fed97f875f16",
+            "fire_exit_guidance.owl": "9933c74d5d68c5d096f6d96778c3ad98711a303ba8e7e957fd2595631322bddc"
+          }
+        },
+        "candidate_count": 51,
+        "aggregate_taxonomy": {
+          "tp": 51,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "micro_f1": 1.0
+        },
+        "competency_questions": {
+          "passed": 51,
+          "total": 51
+        },
+        "mutation_controls": {
+          "passed": 9,
+          "total": 9
+        },
+        "trade_results": {
+          "architecture_tile": true,
+          "civil_stormwater": true,
+          "fire_exit_guidance": true
+        }
+      }
+    },
+    {
+      "cycle": 2,
+      "passed": true,
+      "stable_with_previous": true,
+      "stable_run_length": 2,
+      "fingerprint": {
+        "output_hashes": {
+          "architecture_tile": {
+            "architecture_tile.ttl": "bafa5718a079ed3dee0f78d1948e202fd9a8fc24d7de4cf9258b13c088b825e7",
+            "architecture_tile.owl": "a9fbda75fdd1553588d8950db735164dd7e9c3bd36ffe10cf05de32b0c310c02"
+          },
+          "civil_stormwater": {
+            "civil_stormwater.ttl": "a1e86ac2c2c549517afc2defbc4d6e24f15bafca2ac44ce5e629c2222a1fc157",
+            "civil_stormwater.owl": "d749a765b4fbd17fef53aa791ac62ad62b68ceccda6b25dad487a8422f1b844d"
+          },
+          "fire_exit_guidance": {
+            "fire_exit_guidance.ttl": "5e77655df4bb1f8e2677a68ed13c11fea7210c2f6aeae7da5ea6fed97f875f16",
+            "fire_exit_guidance.owl": "9933c74d5d68c5d096f6d96778c3ad98711a303ba8e7e957fd2595631322bddc"
+          }
+        },
+        "candidate_count": 51,
+        "aggregate_taxonomy": {
+          "tp": 51,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "micro_f1": 1.0
+        },
+        "competency_questions": {
+          "passed": 51,
+          "total": 51
+        },
+        "mutation_controls": {
+          "passed": 9,
+          "total": 9
+        },
+        "trade_results": {
+          "architecture_tile": true,
+          "civil_stormwater": true,
+          "fire_exit_guidance": true
+        }
+      }
+    }
+  ],
+  "scope": "closed-loop release validation of three T-Box cases; not an online learning loop"
+}

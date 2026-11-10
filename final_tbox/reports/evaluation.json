@@ -1,0 +1,189 @@
+{
+  "evaluation_scope": "saved single-case tile run; no expert gold labels",
+  "candidate_count": 20,
+  "accepted_count": 11,
+  "held_count": 9,
+  "accepted_by_origin": {
+    "LLM_document_proposal": 8,
+    "LLM_WBS_proposal": 2,
+    "TaxoAdapt": 1
+  },
+  "strict_lorex_agreement": {
+    "count": 8,
+    "denominator": 11,
+    "rate": 0.7272727272727273
+  },
+  "evidence": {
+    "citations": 22,
+    "exact_source_matches": 22,
+    "all_exact": true,
+    "checks": [
+      {
+        "candidate": "CeramicTileCostItem",
+        "source_id": "건내:389",
+        "exact_substring": true
+      },
+      {
+        "candidate": "CeramicTileCostItem",
+        "source_id": "건내:390",
+        "exact_substring": true
+      },
+      {
+        "candidate": "CeramicTileCostItem",
+        "source_id": "건내:391",
+        "exact_substring": true
+      },
+      {
+        "candidate": "PorcelainTileCostItem",
+        "source_id": "건내:387",
+        "exact_substring": true
+      },
+      {
+        "candidate": "PorcelainTileCostItem",
+        "source_id": "건내:421",
+        "exact_substring": true
+      },
+      {
+        "candidate": "MosaicTileCostItem",
+        "source_id": "건내:414",
+        "exact_substring": true
+      },
+      {
+        "candidate": "MosaicTileCostItem",
+        "source_id": "건내:415",
+        "exact_substring": true
+      },
+      {
+        "candidate": "NonSlipTileCostItem",
+        "source_id": "건내:403",
+        "exact_substring": true
+      },
+      {
+        "candidate": "NonSlipTileCostItem",
+        "source_id": "건내:404",
+        "exact_substring": true
+      },
+      {
+        "candidate": "NonSlipTileCostItem",
+        "source_id": "건내:405",
+        "exact_substring": true
+      },
+      {
+        "candidate": "StoneTileAdhesiveCostItem",
+        "source_id": "건내:386",
+        "exact_substring": true
+      },
+      {
+        "candidate": "PorcelainTileAdhesiveCostItem",
+        "source_id": "건내:388",
+        "exact_substring": true
+      },
+      {
+        "candidate": "CeramicTileAdhesiveCostItem",
+        "source_id": "건내:398",
+        "exact_substring": true
+      },
+      {
+        "candidate": "CeramicTileAdhesiveCostItem",
+        "source_id": "건내:399",
+        "exact_substring": true
+      },
+      {
+        "candidate": "CeramicTileAdhesiveCostItem",
+        "source_id": "건내:400",
+        "exact_substring": true
+      },
+      {
+        "candidate": "MosaicTileAdhesiveCostItem",
+        "source_id": "건내:416",
+        "exact_substring": true
+      },
+      {
+        "candidate": "TileInstallation",
+        "source_id": "WBS:3.2",
+        "exact_substring": true
+      },
+      {
+        "candidate": "TileInspection",
+        "source_id": "WBS:3.6",
+        "exact_substring": true
+      },
+      {
+        "candidate": "TA_ac621fe07583",
+        "source_id": "WBS:3.2.1",
+        "exact_substring": true
+      },
+      {
+        "candidate": "TA_ac621fe07583",
+        "source_id": "WBS:3.2.4",
+        "exact_substring": true
+      },
+      {
+        "candidate": "TA_ac621fe07583",
+        "source_id": "WBS:3.2.6",
+        "exact_substring": true
+      },
+      {
+        "candidate": "TA_ac621fe07583",
+        "source_id": "WBS:3.2.7",
+        "exact_substring": true
+      }
+    ]
+  },
+  "taxonomy": {
+    "named_classes": 40,
+    "named_subclass_edges": 30,
+    "roots_in_named_edge_graph": 4,
+    "maximum_named_depth": 2,
+    "acyclic": true
+  },
+  "reproducibility": {
+    "two_consecutive_build_hashes_equal": true,
+    "first": {
+      "tile_tbox_final.ttl": "966e4bf1bd5a90fd1643225f8e8fb2c093c2b1f743630c8564b5e77dc45b6e13",
+      "tile_tbox_final.owl": "f50ef363ecf3ce87e750f1e32aa36c2c679b035b3cf4bc063da446141b7ca9da"
+    },
+    "second": {
+      "tile_tbox_final.ttl": "966e4bf1bd5a90fd1643225f8e8fb2c093c2b1f743630c8564b5e77dc45b6e13",
+      "tile_tbox_final.owl": "f50ef363ecf3ce87e750f1e32aa36c2c679b035b3cf4bc063da446141b7ca9da"
+    }
+  },
+  "rc_heldout_parent_prediction": {
+    "sample_count": 4,
+    "top1_correct": 2,
+    "top1_accuracy": 0.5,
+    "top1_accuracy_wilson_95": [
+      0.15003898915214947,
+      0.8499610108478506
+    ],
+    "hierarchical_micro_f1": 0.5,
+    "mrr": 0.6666666666666666,
+    "hits_at": {
+      "1": 0.5,
+      "3": 0.75,
+      "5": 0.75,
+      "10": 1.0
+    },
+    "warning": "Only four RC seed edges; not a tile generalisation estimate."
+  },
+  "tile_semantic_metrics": {
+    "precision": null,
+    "recall": null,
+    "f1": null,
+    "parent_accuracy": null,
+    "reason": "Independent expert-labelled tile reference is absent."
+  },
+  "claims_supported": [
+    "The saved run emits a pure, reproducible and logically consistent T-Box.",
+    "Every exported candidate has an exact document/WBS citation.",
+    "Held candidates do not enter the release taxonomy."
+  ],
+  "claims_not_supported": [
+    "General tile extension accuracy or recall.",
+    "Expert-level semantic correctness.",
+    "Cross-project or cross-trade generalisation."
+  ],
+  "source_metrics": {
+    "lorex_expert_validated": false
+  }
+}

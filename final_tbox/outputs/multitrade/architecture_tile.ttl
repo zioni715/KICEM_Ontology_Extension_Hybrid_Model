@@ -1,0 +1,282 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tbox: <https://example.org/kicem/architecture/tile#> .
+
+<https://example.org/kicem/architecture/tile> a owl:Ontology .
+
+tbox:AdhesiveFloorTileInstallation a owl:Class ;
+    rdfs:label "바닥타일 접착 붙이기"@ko ;
+    rdfs:comment "접착제로 바닥타일을 붙이는 작업."@ko ;
+    rdfs:subClassOf tbox:FloorTileInstallation ;
+    tbox:evidenceSection "3.3.4" ;
+    tbox:evidenceSourceId "KCS-41-48-01" ;
+    tbox:predictedDirectParent tbox:FloorTileInstallation ;
+    tbox:validationStatus "candidate" .
+
+tbox:AdhesiveWallTileInstallation a owl:Class ;
+    rdfs:label "벽타일 접착 붙이기"@ko ;
+    rdfs:comment "접착제로 벽타일을 붙이는 작업."@ko ;
+    rdfs:subClassOf tbox:WallTileInstallation ;
+    tbox:evidenceSection "3.2.5" ;
+    tbox:evidenceSourceId "KCS-41-48-01" ;
+    tbox:predictedDirectParent tbox:WallTileInstallation ;
+    tbox:validationStatus "candidate" .
+
+tbox:CeilingTileInstallation a owl:Class ;
+    rdfs:label "천장 타일 붙이기"@ko ;
+    rdfs:comment "천장면에 타일을 붙이는 작업."@ko ;
+    rdfs:subClassOf tbox:TileInstallation ;
+    tbox:evidenceSection "3.4" ;
+    tbox:evidenceSourceId "KCS-41-48-01" ;
+    tbox:predictedDirectParent tbox:TileInstallation ;
+    tbox:validationStatus "candidate" .
+
+tbox:CementPasteFloorTileInstallation a owl:Class ;
+    rdfs:label "바닥타일 시멘트 페이스트 붙이기"@ko ;
+    rdfs:comment "시멘트 페이스트로 바닥타일을 붙이는 작업."@ko ;
+    rdfs:subClassOf tbox:FloorTileInstallation ;
+    tbox:evidenceSection "3.3.1" ;
+    tbox:evidenceSourceId "KCS-41-48-01" ;
+    tbox:predictedDirectParent tbox:FloorTileInstallation ;
+    tbox:validationStatus "candidate" .
+
+tbox:FloatingBedWallTileInstallation a owl:Class ;
+    rdfs:label "벽타일 떠붙이기"@ko ;
+    rdfs:comment "벽타일을 떠붙임 공법으로 시공하는 작업."@ko ;
+    rdfs:subClassOf tbox:WallTileInstallation ;
+    tbox:evidenceSection "3.2.1" ;
+    tbox:evidenceSourceId "KCS-41-48-01" ;
+    tbox:predictedDirectParent tbox:WallTileInstallation ;
+    tbox:validationStatus "candidate" .
+
+tbox:GeneralTileInstallation a owl:Class ;
+    rdfs:label "타일 붙이기 일반사항"@ko ;
+    rdfs:comment "타일 붙이기의 공통 시공 작업."@ko ;
+    rdfs:subClassOf tbox:TileInstallation ;
+    tbox:evidenceSection "3.1" ;
+    tbox:evidenceSourceId "KCS-41-48-01" ;
+    tbox:predictedDirectParent tbox:TileInstallation ;
+    tbox:validationStatus "candidate" .
+
+tbox:ImprovedPressureFloorTileInstallation a owl:Class ;
+    rdfs:label "바닥타일 개량압착 붙이기"@ko ;
+    rdfs:comment "개량압착 공법으로 바닥타일을 붙이는 작업."@ko ;
+    rdfs:subClassOf tbox:FloorTileInstallation ;
+    tbox:evidenceSection "3.3.3" ;
+    tbox:evidenceSourceId "KCS-41-48-01" ;
+    tbox:predictedDirectParent tbox:FloorTileInstallation ;
+    tbox:validationStatus "candidate" .
+
+tbox:ImprovedPressureWallTileInstallation a owl:Class ;
+    rdfs:label "벽타일 개량압착 붙이기"@ko ;
+    rdfs:comment "벽타일을 개량압착 공법으로 시공하는 작업."@ko ;
+    rdfs:subClassOf tbox:WallTileInstallation ;
+    tbox:evidenceSection "3.2.3" ;
+    tbox:evidenceSourceId "KCS-41-48-01" ;
+    tbox:predictedDirectParent tbox:WallTileInstallation ;
+    tbox:validationStatus "candidate" .
+
+tbox:InProcessTileInspection a owl:Class ;
+    rdfs:label "타일 시공 중 검사"@ko ;
+    rdfs:comment "타일 시공 중 수행하는 검사."@ko ;
+    rdfs:subClassOf tbox:TileInspection ;
+    tbox:evidenceSection "3.6.1" ;
+    tbox:evidenceSourceId "KCS-41-48-01" ;
+    tbox:predictedDirectParent tbox:TileInspection ;
+    tbox:validationStatus "candidate" .
+
+tbox:InstallationTask a owl:Class ;
+    rdfs:label "설치 작업"@ko ;
+    rdfs:comment "시설 또는 마감재를 설치하는 작업 유형."@ko ;
+    rdfs:subClassOf tbox:WorkTask ;
+    tbox:evidenceSection "common upper T-Box" ;
+    tbox:evidenceSourceId "SYSTEM-SCHEMA" ;
+    tbox:validationStatus "candidate" .
+
+tbox:MosaicWallTileInstallation a owl:Class ;
+    rdfs:label "모자이크 타일 붙이기"@ko ;
+    rdfs:comment "모자이크 벽타일을 붙이는 작업."@ko ;
+    rdfs:subClassOf tbox:WallTileInstallation ;
+    tbox:evidenceSection "3.2.7" ;
+    tbox:evidenceSourceId "KCS-41-48-01" ;
+    tbox:predictedDirectParent tbox:WallTileInstallation ;
+    tbox:validationStatus "candidate" .
+
+tbox:PreparationTask a owl:Class ;
+    rdfs:label "준비 작업"@ko ;
+    rdfs:comment "본 시공 전에 수행되는 준비 작업 유형."@ko ;
+    rdfs:subClassOf tbox:WorkTask ;
+    tbox:evidenceSection "common upper T-Box" ;
+    tbox:evidenceSourceId "SYSTEM-SCHEMA" ;
+    tbox:validationStatus "candidate" .
+
+tbox:PressureFloorTileInstallation a owl:Class ;
+    rdfs:label "바닥타일 압착 붙이기"@ko ;
+    rdfs:comment "압착 공법으로 바닥타일을 붙이는 작업."@ko ;
+    rdfs:subClassOf tbox:FloorTileInstallation ;
+    tbox:evidenceSection "3.3.2" ;
+    tbox:evidenceSourceId "KCS-41-48-01" ;
+    tbox:predictedDirectParent tbox:FloorTileInstallation ;
+    tbox:validationStatus "candidate" .
+
+tbox:PressureWallTileInstallation a owl:Class ;
+    rdfs:label "벽타일 압착 붙이기"@ko ;
+    rdfs:comment "벽타일을 압착 공법으로 시공하는 작업."@ko ;
+    rdfs:subClassOf tbox:WallTileInstallation ;
+    tbox:evidenceSection "3.2.2" ;
+    tbox:evidenceSourceId "KCS-41-48-01" ;
+    tbox:predictedDirectParent tbox:WallTileInstallation ;
+    tbox:validationStatus "candidate" .
+
+tbox:SheetWallTileInstallation a owl:Class ;
+    rdfs:label "벽타일 판형 붙이기"@ko ;
+    rdfs:comment "판형 벽타일을 붙이는 작업."@ko ;
+    rdfs:subClassOf tbox:WallTileInstallation ;
+    tbox:evidenceSection "3.2.4" ;
+    tbox:evidenceSourceId "KCS-41-48-01" ;
+    tbox:predictedDirectParent tbox:WallTileInstallation ;
+    tbox:validationStatus "candidate" .
+
+tbox:SimultaneousJointWallTileInstallation a owl:Class ;
+    rdfs:label "벽타일 동시 줄눈 붙이기"@ko ;
+    rdfs:comment "붙임과 줄눈을 함께 수행하는 벽타일 작업."@ko ;
+    rdfs:subClassOf tbox:WallTileInstallation ;
+    tbox:evidenceSection "3.2.6" ;
+    tbox:evidenceSourceId "KCS-41-48-01" ;
+    tbox:predictedDirectParent tbox:WallTileInstallation ;
+    tbox:validationStatus "candidate" .
+
+tbox:TileAdhesionTest a owl:Class ;
+    rdfs:label "타일 접착력 시험"@ko ;
+    rdfs:comment "타일의 접착 성능을 확인하는 시험."@ko ;
+    rdfs:subClassOf tbox:TileInspection ;
+    tbox:evidenceSection "3.6.3" ;
+    tbox:evidenceSourceId "KCS-41-48-01" ;
+    tbox:predictedDirectParent tbox:TileInspection ;
+    tbox:validationStatus "candidate" .
+
+tbox:TileCleaning a owl:Class ;
+    rdfs:label "타일 청소"@ko ;
+    rdfs:comment "타일 표면을 청소하는 작업."@ko ;
+    rdfs:subClassOf tbox:TileProtectionAndCleaning ;
+    tbox:evidenceSection "3.5.2" ;
+    tbox:evidenceSourceId "KCS-41-48-01" ;
+    tbox:predictedDirectParent tbox:TileProtectionAndCleaning ;
+    tbox:validationStatus "candidate" .
+
+tbox:TileProtection a owl:Class ;
+    rdfs:label "타일 보양"@ko ;
+    rdfs:comment "시공된 타일을 손상과 오염에서 보호하는 작업."@ko ;
+    rdfs:subClassOf tbox:TileProtectionAndCleaning ;
+    tbox:evidenceSection "3.5.1" ;
+    tbox:evidenceSourceId "KCS-41-48-01" ;
+    tbox:predictedDirectParent tbox:TileProtectionAndCleaning ;
+    tbox:validationStatus "candidate" .
+
+tbox:TileTappingInspection a owl:Class ;
+    rdfs:label "타일 두들김 검사"@ko ;
+    rdfs:comment "두들김으로 타일 붙임 상태를 확인하는 검사."@ko ;
+    rdfs:subClassOf tbox:TileInspection ;
+    tbox:evidenceSection "3.6.2" ;
+    tbox:evidenceSourceId "KCS-41-48-01" ;
+    tbox:predictedDirectParent tbox:TileInspection ;
+    tbox:validationStatus "candidate" .
+
+tbox:evidenceSection a owl:AnnotationProperty ;
+    rdfs:label "근거 조항"@ko .
+
+tbox:evidenceSourceId a owl:AnnotationProperty ;
+    rdfs:label "근거 출처 식별자"@ko .
+
+tbox:predictedDirectParent a owl:AnnotationProperty ;
+    rdfs:label "모델 예측 직접 부모"@ko .
+
+tbox:validationStatus a owl:AnnotationProperty ;
+    rdfs:label "검증 상태"@ko .
+
+tbox:ConstructionTask a owl:Class ;
+    rdfs:label "공종 작업"@ko ;
+    rdfs:comment "특정 공종을 구성하는 작업 유형."@ko ;
+    rdfs:subClassOf tbox:WorkTask ;
+    tbox:evidenceSection "common upper T-Box" ;
+    tbox:evidenceSourceId "SYSTEM-SCHEMA" ;
+    tbox:validationStatus "candidate" .
+
+tbox:FinishingTask a owl:Class ;
+    rdfs:label "마무리 작업"@ko ;
+    rdfs:comment "본 시공 이후 수행되는 마무리 작업 유형."@ko ;
+    rdfs:subClassOf tbox:WorkTask ;
+    tbox:evidenceSection "common upper T-Box" ;
+    tbox:evidenceSourceId "SYSTEM-SCHEMA" ;
+    tbox:validationStatus "candidate" .
+
+tbox:InspectionTask a owl:Class ;
+    rdfs:label "검사 작업"@ko ;
+    rdfs:comment "시공 상태나 성능을 확인하는 작업 유형."@ko ;
+    rdfs:subClassOf tbox:WorkTask ;
+    tbox:evidenceSection "common upper T-Box" ;
+    tbox:evidenceSourceId "SYSTEM-SCHEMA" ;
+    tbox:validationStatus "candidate" .
+
+tbox:TileProtectionAndCleaning a owl:Class ;
+    rdfs:label "타일 보양 및 청소"@ko ;
+    rdfs:comment "시공된 타일의 보양과 청소 작업."@ko ;
+    rdfs:subClassOf tbox:FinishingTask,
+        tbox:TileWork ;
+    tbox:evidenceSection "3.5" ;
+    tbox:evidenceSourceId "KCS-41-48-01" ;
+    tbox:predictedDirectParent tbox:FinishingTask ;
+    tbox:validationStatus "candidate" .
+
+tbox:TileWork a owl:Class ;
+    rdfs:label "타일공사"@ko ;
+    rdfs:comment "타일 시공 전반을 포괄하는 작업 유형."@ko ;
+    rdfs:subClassOf tbox:ConstructionTask ;
+    tbox:evidenceSection "3" ;
+    tbox:evidenceSourceId "KCS-41-48-01" ;
+    tbox:predictedDirectParent tbox:ConstructionTask ;
+    tbox:validationStatus "candidate" .
+
+tbox:WorkTask a owl:Class ;
+    rdfs:label "건설 작업"@ko ;
+    rdfs:comment "건설 과정에서 수행되는 작업 유형."@ko ;
+    tbox:evidenceSection "common upper T-Box" ;
+    tbox:evidenceSourceId "SYSTEM-SCHEMA" ;
+    tbox:validationStatus "candidate" .
+
+tbox:TileInspection a owl:Class ;
+    rdfs:label "타일 검사"@ko ;
+    rdfs:comment "타일 시공 결과를 검사하는 작업."@ko ;
+    rdfs:subClassOf tbox:InspectionTask,
+        tbox:TileWork ;
+    tbox:evidenceSection "3.6" ;
+    tbox:evidenceSourceId "KCS-41-48-01" ;
+    tbox:predictedDirectParent tbox:InspectionTask ;
+    tbox:validationStatus "candidate" .
+
+tbox:FloorTileInstallation a owl:Class ;
+    rdfs:label "바닥 타일 붙이기"@ko ;
+    rdfs:comment "바닥면에 타일을 붙이는 작업."@ko ;
+    rdfs:subClassOf tbox:TileInstallation ;
+    tbox:evidenceSection "3.3" ;
+    tbox:evidenceSourceId "KCS-41-48-01" ;
+    tbox:predictedDirectParent tbox:TileInstallation ;
+    tbox:validationStatus "candidate" .
+
+tbox:TileInstallation a owl:Class ;
+    rdfs:label "타일 붙이기"@ko ;
+    rdfs:comment "바탕에 타일을 붙이는 설치 작업 유형."@ko ;
+    rdfs:subClassOf tbox:TileWork ;
+    tbox:evidenceSection "3.1-3.4" ;
+    tbox:evidenceSourceId "KCS-41-48-01" ;
+    tbox:predictedDirectParent tbox:TileWork ;
+    tbox:validationStatus "candidate" .
+
+tbox:WallTileInstallation a owl:Class ;
+    rdfs:label "벽타일 붙이기"@ko ;
+    rdfs:comment "벽면에 타일을 붙이는 작업."@ko ;
+    rdfs:subClassOf tbox:TileInstallation ;
+    tbox:evidenceSection "3.2" ;
+    tbox:evidenceSourceId "KCS-41-48-01" ;
+    tbox:predictedDirectParent tbox:TileInstallation ;
+    tbox:validationStatus "candidate" .

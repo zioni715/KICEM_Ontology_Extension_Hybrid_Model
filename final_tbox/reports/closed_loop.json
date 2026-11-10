@@ -1,0 +1,140 @@
+{
+  "timestamp": "2026-11-10T01:43:28.245463+00:00",
+  "status": "CONVERGED",
+  "converged": true,
+  "cycles_executed": 2,
+  "stable_cycles_required": 2,
+  "cycles": [
+    {
+      "cycle": 1,
+      "passed": true,
+      "stable_with_previous": false,
+      "stable_run_length": 1,
+      "reference_not_builder_input": true,
+      "fingerprint": {
+        "output_sha256": {
+          "tile_tbox_final.ttl": "966e4bf1bd5a90fd1643225f8e8fb2c093c2b1f743630c8564b5e77dc45b6e13",
+          "tile_tbox_final.owl": "f50ef363ecf3ce87e750f1e32aa36c2c679b035b3cf4bc063da446141b7ca9da"
+        },
+        "class_count": 40,
+        "technical_checks": [
+          23,
+          0
+        ],
+        "mutation_controls": [
+          6,
+          true
+        ],
+        "candidate_confusion": {
+          "tp": 11,
+          "fp": 0,
+          "fn": 0,
+          "tn": 9,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "accepted_parent_accuracy": 1.0
+        },
+        "competency_questions": [
+          10,
+          10
+        ],
+        "evidence": [
+          22,
+          22
+        ],
+        "taxonomy": {
+          "named_classes": 40,
+          "named_subclass_edges": 30,
+          "roots_in_named_edge_graph": 4,
+          "maximum_named_depth": 2,
+          "acyclic": true
+        }
+      },
+      "release_status": "FINAL_INTERNAL_VALIDATION_COMPLETE",
+      "external_environment_ready": false,
+      "deterministic_transformations": {
+        "identifier_renames": {
+          "StoneTileAdhesiveCostItem": "StoneTilePressureBondingCostItem",
+          "PorcelainTileAdhesiveCostItem": "PorcelainTilePressureBondingCostItem",
+          "CeramicTileAdhesiveCostItem": "CeramicTilePressureBondingCostItem",
+          "MosaicTileAdhesiveCostItem": "MosaicTilePressureBondingCostItem",
+          "TA_ac621fe07583": "WallTileInstallation"
+        },
+        "parent_overrides": {
+          "WallTileInstallation": "TileInstallation"
+        },
+        "excluded_seed_entities": 24,
+        "removed_seed_axioms": 12
+      }
+    },
+    {
+      "cycle": 2,
+      "passed": true,
+      "stable_with_previous": true,
+      "stable_run_length": 2,
+      "reference_not_builder_input": true,
+      "fingerprint": {
+        "output_sha256": {
+          "tile_tbox_final.ttl": "966e4bf1bd5a90fd1643225f8e8fb2c093c2b1f743630c8564b5e77dc45b6e13",
+          "tile_tbox_final.owl": "f50ef363ecf3ce87e750f1e32aa36c2c679b035b3cf4bc063da446141b7ca9da"
+        },
+        "class_count": 40,
+        "technical_checks": [
+          23,
+          0
+        ],
+        "mutation_controls": [
+          6,
+          true
+        ],
+        "candidate_confusion": {
+          "tp": 11,
+          "fp": 0,
+          "fn": 0,
+          "tn": 9,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "accepted_parent_accuracy": 1.0
+        },
+        "competency_questions": [
+          10,
+          10
+        ],
+        "evidence": [
+          22,
+          22
+        ],
+        "taxonomy": {
+          "named_classes": 40,
+          "named_subclass_edges": 30,
+          "roots_in_named_edge_graph": 4,
+          "maximum_named_depth": 2,
+          "acyclic": true
+        }
+      },
+      "release_status": "FINAL_INTERNAL_VALIDATION_COMPLETE",
+      "external_environment_ready": false,
+      "deterministic_transformations": {
+        "identifier_renames": {
+          "StoneTileAdhesiveCostItem": "StoneTilePressureBondingCostItem",
+          "PorcelainTileAdhesiveCostItem": "PorcelainTilePressureBondingCostItem",
+          "CeramicTileAdhesiveCostItem": "CeramicTilePressureBondingCostItem",
+          "MosaicTileAdhesiveCostItem": "MosaicTilePressureBondingCostItem",
+          "TA_ac621fe07583": "WallTileInstallation"
+        },
+        "parent_overrides": {
+          "WallTileInstallation": "TileInstallation"
+        },
+        "excluded_seed_entities": 24,
+        "removed_seed_axioms": 12
+      }
+    }
+  ],
+  "scope": "release-time iterative self-validation; no online model self-training",
+  "external_gates_are_not_auto_repaired": [
+    "independent external expert adjudication",
+    "GPU/locked-environment full Module1-5 rerun"
+  ]
+}

@@ -8,7 +8,8 @@
 # Install from the project root. See docs/dependency-compatibility.md.
 # ============================================================
 
-# Freeze the complete dependency resolution validated with this stack.
+# Apply the known compatibility boundaries. This is not a complete historical
+# transitive lock; see docs/dependency-compatibility.md.
 -c constraints.txt
 
 # ----- Deep Learning / Hugging Face -----

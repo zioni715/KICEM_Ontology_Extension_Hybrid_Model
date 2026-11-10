@@ -1,0 +1,45 @@
+{
+  "timestamp": "2026-11-10T01:44:01.022938+00:00",
+  "status": "INTERNAL_RELEASE_READY_EXTERNAL_REVIEW_PENDING",
+  "passed": true,
+  "checks": {
+    "three_trades_validated": true,
+    "bounded_gold_agreement_passed": true,
+    "builder_gold_separated": true,
+    "closed_loop_converged": true,
+    "all_adversarial_controls_detected": true,
+    "cold_process_stress_passed": true,
+    "stress_outputs_deterministic": true,
+    "authoritative_urls_reachable": true
+  },
+  "scope": {
+    "trades": [
+      "건축-타일공사",
+      "토목-우수공",
+      "소방-유도등 설비공사"
+    ],
+    "candidate_classes": 51,
+    "benchmark": "bounded internal benchmark"
+  },
+  "metrics": {
+    "taxonomy": {
+      "tp": 51,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "micro_f1": 1.0
+    },
+    "competency_questions": {
+      "passed": 51,
+      "total": 51
+    },
+    "adversarial_controls": {
+      "passed": 312,
+      "total": 312
+    },
+    "cold_process_cycles": 10
+  },
+  "claim_boundary": "The artifacts are internally reproducible, structurally valid and consistent with the fixed three-trade benchmark. This is not independent expert validation and does not estimate accuracy on an unseen fourth trade.",
+  "remaining_external_gate": "independent domain-expert adjudication of classes and direct parents"
+}

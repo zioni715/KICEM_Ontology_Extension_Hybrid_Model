@@ -1,0 +1,114 @@
+{
+  "benchmark_version": "1.0.0",
+  "scope": "Three evidence-grounded T-Box extension cases; candidate outputs are separated from validation gold.",
+  "cases": [
+    {
+      "trade_id": "architecture_tile",
+      "trade_label": "건축-타일공사",
+      "namespace": "https://example.org/kicem/architecture/tile#",
+      "sources": [
+        {
+          "source_id": "KCS-41-48-01",
+          "title": "KCS 41 48 01 타일공사",
+          "effective_date": "2024-01-26",
+          "url": "https://www.kcsc.re.kr/standardCode/viewer/KCS%2041%2048%2001%3A2024-01-26"
+        }
+      ],
+      "candidates": [
+        ["TileWork", "타일공사", "ConstructionTask", "3", "타일 시공 전반을 포괄하는 작업 유형."],
+        ["TileInstallation", "타일 붙이기", "TileWork", "3.1-3.4", "바탕에 타일을 붙이는 설치 작업 유형."],
+        ["GeneralTileInstallation", "타일 붙이기 일반사항", "TileInstallation", "3.1", "타일 붙이기의 공통 시공 작업."],
+        ["WallTileInstallation", "벽타일 붙이기", "TileInstallation", "3.2", "벽면에 타일을 붙이는 작업."],
+        ["FloatingBedWallTileInstallation", "벽타일 떠붙이기", "WallTileInstallation", "3.2.1", "벽타일을 떠붙임 공법으로 시공하는 작업."],
+        ["PressureWallTileInstallation", "벽타일 압착 붙이기", "WallTileInstallation", "3.2.2", "벽타일을 압착 공법으로 시공하는 작업."],
+        ["ImprovedPressureWallTileInstallation", "벽타일 개량압착 붙이기", "WallTileInstallation", "3.2.3", "벽타일을 개량압착 공법으로 시공하는 작업."],
+        ["SheetWallTileInstallation", "벽타일 판형 붙이기", "WallTileInstallation", "3.2.4", "판형 벽타일을 붙이는 작업."],
+        ["AdhesiveWallTileInstallation", "벽타일 접착 붙이기", "WallTileInstallation", "3.2.5", "접착제로 벽타일을 붙이는 작업."],
+        ["SimultaneousJointWallTileInstallation", "벽타일 동시 줄눈 붙이기", "WallTileInstallation", "3.2.6", "붙임과 줄눈을 함께 수행하는 벽타일 작업."],
+        ["MosaicWallTileInstallation", "모자이크 타일 붙이기", "WallTileInstallation", "3.2.7", "모자이크 벽타일을 붙이는 작업."],
+        ["FloorTileInstallation", "바닥 타일 붙이기", "TileInstallation", "3.3", "바닥면에 타일을 붙이는 작업."],
+        ["CementPasteFloorTileInstallation", "바닥타일 시멘트 페이스트 붙이기", "FloorTileInstallation", "3.3.1", "시멘트 페이스트로 바닥타일을 붙이는 작업."],
+        ["PressureFloorTileInstallation", "바닥타일 압착 붙이기", "FloorTileInstallation", "3.3.2", "압착 공법으로 바닥타일을 붙이는 작업."],
+        ["ImprovedPressureFloorTileInstallation", "바닥타일 개량압착 붙이기", "FloorTileInstallation", "3.3.3", "개량압착 공법으로 바닥타일을 붙이는 작업."],
+        ["AdhesiveFloorTileInstallation", "바닥타일 접착 붙이기", "FloorTileInstallation", "3.3.4", "접착제로 바닥타일을 붙이는 작업."],
+        ["CeilingTileInstallation", "천장 타일 붙이기", "TileInstallation", "3.4", "천장면에 타일을 붙이는 작업."],
+        ["TileProtectionAndCleaning", "타일 보양 및 청소", "FinishingTask", "3.5", "시공된 타일의 보양과 청소 작업."],
+        ["TileProtection", "타일 보양", "TileProtectionAndCleaning", "3.5.1", "시공된 타일을 손상과 오염에서 보호하는 작업."],
+        ["TileCleaning", "타일 청소", "TileProtectionAndCleaning", "3.5.2", "타일 표면을 청소하는 작업."],
+        ["TileInspection", "타일 검사", "InspectionTask", "3.6", "타일 시공 결과를 검사하는 작업."],
+        ["InProcessTileInspection", "타일 시공 중 검사", "TileInspection", "3.6.1", "타일 시공 중 수행하는 검사."],
+        ["TileTappingInspection", "타일 두들김 검사", "TileInspection", "3.6.2", "두들김으로 타일 붙임 상태를 확인하는 검사."],
+        ["TileAdhesionTest", "타일 접착력 시험", "TileInspection", "3.6.3", "타일의 접착 성능을 확인하는 시험."]
+      ]
+    },
+    {
+      "trade_id": "civil_stormwater",
+      "trade_label": "토목-우수공",
+      "namespace": "https://example.org/kicem/civil/stormwater#",
+      "sources": [
+        {
+          "source_id": "KCS-11-40-25",
+          "title": "KCS 11 40 25 배수공사",
+          "effective_date": "2025-12-30",
+          "url": "https://www.kcsc.re.kr/standardCode/viewer/KCS%2011%2040%2025%3A2025-12-30"
+        },
+        {
+          "source_id": "KCS-12-20-10",
+          "title": "KCS 12 20 10 건설공사 측량",
+          "effective_date": "2024-11-15",
+          "url": "https://www.kcsc.re.kr/standardCode/viewer/KCS%2012%2020%2010%3A2024-11-15"
+        }
+      ],
+      "candidates": [
+        ["StormwaterWork", "우수공", "ConstructionTask", "KCS 11 40 25", "우수를 집수하고 배제하는 토목 작업 유형.", "KCS-11-40-25"],
+        ["StormwaterPipelineSurvey", "우수관로 중심선 및 수준 측량", "PreparationTask", "3.2.2(1)", "우수관로의 위치와 계획고를 확인하는 측량 작업.", "KCS-12-20-10"],
+        ["DrainageDitchConstruction", "배수 측구 시공", "InstallationTask", "3.1.1", "설계 선형과 경사에 따라 측구를 시공하는 작업.", "KCS-11-40-25"],
+        ["StormwaterInletInstallation", "우수받이 설치", "InstallationTask", "3.1.3", "우수받이를 계획 위치와 높이에 설치하는 작업.", "KCS-11-40-25"],
+        ["CatchBasinInstallation", "집수정 설치", "InstallationTask", "3.1.3", "집수정을 계획 위치와 높이에 설치하는 작업.", "KCS-11-40-25"],
+        ["StormDrainPipeInstallation", "우수 배수관 설치", "InstallationTask", "3.1.1(9)", "계획 경사를 유지하여 우수 배수관을 설치하는 작업.", "KCS-11-40-25"],
+        ["StormwaterManholeInstallation", "우수 맨홀 설치", "InstallationTask", "2.5, 3.1", "우수관로 점검을 위한 맨홀과 뚜껑을 설치하는 작업.", "KCS-11-40-25"],
+        ["SteelGratingInstallation", "스틸그레이팅 설치", "InstallationTask", "3.1.3(3)③", "우수받이 또는 집수정에 스틸그레이팅을 설치하는 작업.", "KCS-11-40-25"],
+        ["DrainageWatertightJointConstruction", "배수관 접합부 수밀 시공", "InstallationTask", "3.1.1", "배수관 접합부를 수밀하게 마감하는 작업.", "KCS-11-40-25"],
+        ["StormwaterBackfillingCompaction", "우수 구조물 되메우기 및 다짐", "FinishingTask", "3.1.3(3)④", "우수 구조물 주위를 되메우고 다지는 작업.", "KCS-11-40-25"],
+        ["DrainageSlopeControl", "배수 경사 관리", "InspectionTask", "3.1.1(9)", "측구와 관로의 계획 경사가 유지되는지 확인하는 검사.", "KCS-11-40-25"],
+        ["StormwaterInstallationInspection", "우수시설 설치 검사", "InspectionTask", "3.1.3(1)", "기초면·철근·매설물과 설치 상태를 확인하는 검사.", "KCS-11-40-25"]
+      ]
+    },
+    {
+      "trade_id": "fire_exit_guidance",
+      "trade_label": "소방-유도등 설비공사",
+      "namespace": "https://example.org/kicem/fire/exit-guidance#",
+      "sources": [
+        {
+          "source_id": "NFPC-303",
+          "title": "유도등 및 유도표지의 화재안전성능기준(NFPC 303)",
+          "effective_date": "2024-01-01",
+          "url": "https://www.law.go.kr/admRulLsInfoP.do?admRulId=35319&efYd=0"
+        },
+        {
+          "source_id": "NFTC-303",
+          "title": "유도등 및 유도표지의 화재안전기술기준(NFTC 303)",
+          "effective_date": "2024-07-01",
+          "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000233434&chrClsCd=010201"
+        }
+      ],
+      "candidates": [
+        ["ExitGuidanceEquipmentWork", "유도등 및 유도표지 설비공사", "ConstructionTask", "1.1", "유도등·유도표지·피난유도선의 설치 및 관리 작업.", "NFTC-303"],
+        ["ExitGuidanceLightInstallation", "피난구유도등 설치", "InstallationTask", "2.2", "피난구에 유도등을 설치하는 작업.", "NFTC-303"],
+        ["ExitGuidanceLightMounting", "피난구유도등 부착", "ExitGuidanceLightInstallation", "2.2.2", "출입구에 인접한 규정 높이에 피난구유도등을 부착하는 작업.", "NFTC-303"],
+        ["PassageGuidanceLightInstallation", "통로유도등 설치", "InstallationTask", "2.3", "피난 통로에 유도등을 설치하는 작업.", "NFTC-303"],
+        ["CorridorGuidanceLightInstallation", "복도통로유도등 설치", "PassageGuidanceLightInstallation", "2.3.1", "복도와 구부러진 모퉁이에 통로유도등을 설치하는 작업.", "NFTC-303"],
+        ["RoomPassageGuidanceLightInstallation", "거실통로유도등 설치", "PassageGuidanceLightInstallation", "2.3.2", "거실의 피난 통로에 유도등을 설치하는 작업.", "NFTC-303"],
+        ["StairPassageGuidanceLightInstallation", "계단통로유도등 설치", "PassageGuidanceLightInstallation", "2.3.3", "계단과 경사로의 바닥면을 비추도록 유도등을 설치하는 작업.", "NFTC-303"],
+        ["AuditoriumGuidanceLightInstallation", "객석유도등 설치", "InstallationTask", "2.4", "객석의 통로·바닥 또는 벽에 유도등을 설치하는 작업.", "NFTC-303"],
+        ["GuidanceSignInstallation", "유도표지 설치", "InstallationTask", "2.5", "피난구 또는 통로에 유도표지를 설치하는 작업.", "NFTC-303"],
+        ["ExitGuidanceSignInstallation", "피난구유도표지 설치", "GuidanceSignInstallation", "2.5.1.2", "출입구 상단에 피난구유도표지를 설치하는 작업.", "NFTC-303"],
+        ["PassageGuidanceSignInstallation", "통로유도표지 설치", "GuidanceSignInstallation", "2.5.1", "피난 통로에 통로유도표지를 설치하는 작업.", "NFTC-303"],
+        ["EvacuationGuidanceLineInstallation", "피난유도선 설치", "InstallationTask", "2.6", "피난 경로에 띠 형태의 피난유도선을 설치하는 작업.", "NFTC-303"],
+        ["GuidanceLightPowerInstallation", "유도등 전원 설치", "InstallationTask", "2.7.1-2.7.2", "유도등의 상용전원과 비상전원을 설치하는 작업.", "NFTC-303"],
+        ["GuidanceLightWiring", "유도등 배선", "InstallationTask", "2.7.3", "유도등 인입선과 옥내배선을 설치·연결하는 작업.", "NFTC-303"],
+        ["GuidanceEquipmentFunctionalInspection", "유도설비 기능 검사", "InspectionTask", "제10조/2.7", "점등·전원·배선과 피난 유도 기능을 확인하는 검사.", "NFPC-303"]
+      ]
+    }
+  ]
+}

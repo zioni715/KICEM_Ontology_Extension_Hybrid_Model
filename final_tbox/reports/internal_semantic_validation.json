@@ -1,0 +1,278 @@
+{
+  "status": "INTERNAL_SEMANTIC_VALIDATION_COMPLETE",
+  "passed": true,
+  "reference_kind": "source-grounded internal adjudication; not independent expert gold",
+  "candidate_metrics": {
+    "tp": 11,
+    "fp": 0,
+    "fn": 0,
+    "tn": 9,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "accepted_parent_accuracy": 1.0
+  },
+  "candidate_results": [
+    {
+      "candidate_id": "CeramicTileCostItem",
+      "gold_accept": true,
+      "predicted_accept": true,
+      "gold_parent": "TileMaterialCostItem",
+      "predicted_parent": "TileMaterialCostItem",
+      "acceptance_match": true,
+      "parent_match": true,
+      "reason": "material cost rows explicitly name ceramic tile"
+    },
+    {
+      "candidate_id": "PorcelainTileCostItem",
+      "gold_accept": true,
+      "predicted_accept": true,
+      "gold_parent": "TileMaterialCostItem",
+      "predicted_parent": "TileMaterialCostItem",
+      "acceptance_match": true,
+      "parent_match": true,
+      "reason": "material cost rows explicitly name porcelain tile"
+    },
+    {
+      "candidate_id": "MosaicTileCostItem",
+      "gold_accept": true,
+      "predicted_accept": true,
+      "gold_parent": "TileMaterialCostItem",
+      "predicted_parent": "TileMaterialCostItem",
+      "acceptance_match": true,
+      "parent_match": true,
+      "reason": "material cost rows explicitly name mosaic tile"
+    },
+    {
+      "candidate_id": "NonSlipTileCostItem",
+      "gold_accept": true,
+      "predicted_accept": true,
+      "gold_parent": "TileMaterialCostItem",
+      "predicted_parent": "TileMaterialCostItem",
+      "acceptance_match": true,
+      "parent_match": true,
+      "reason": "material cost rows explicitly name non-slip tile"
+    },
+    {
+      "candidate_id": "StoneTilePressureBondingCostItem",
+      "gold_accept": true,
+      "predicted_accept": true,
+      "gold_parent": "TileInstallationCostItem",
+      "predicted_parent": "TileInstallationCostItem",
+      "acceptance_match": true,
+      "parent_match": true,
+      "reason": "installation cost row explicitly states stone-tile pressure bonding"
+    },
+    {
+      "candidate_id": "PorcelainTilePressureBondingCostItem",
+      "gold_accept": true,
+      "predicted_accept": true,
+      "gold_parent": "TileInstallationCostItem",
+      "predicted_parent": "TileInstallationCostItem",
+      "acceptance_match": true,
+      "parent_match": true,
+      "reason": "installation cost row explicitly states porcelain-tile pressure bonding"
+    },
+    {
+      "candidate_id": "CeramicTilePressureBondingCostItem",
+      "gold_accept": true,
+      "predicted_accept": true,
+      "gold_parent": "TileInstallationCostItem",
+      "predicted_parent": "TileInstallationCostItem",
+      "acceptance_match": true,
+      "parent_match": true,
+      "reason": "installation cost rows explicitly state ceramic-tile pressure bonding"
+    },
+    {
+      "candidate_id": "MosaicTilePressureBondingCostItem",
+      "gold_accept": true,
+      "predicted_accept": true,
+      "gold_parent": "TileInstallationCostItem",
+      "predicted_parent": "TileInstallationCostItem",
+      "acceptance_match": true,
+      "parent_match": true,
+      "reason": "installation cost row explicitly states mosaic-tile pressure bonding"
+    },
+    {
+      "candidate_id": "TileInstallation",
+      "gold_accept": true,
+      "predicted_accept": true,
+      "gold_parent": "WorkTask",
+      "predicted_parent": "WorkTask",
+      "acceptance_match": true,
+      "parent_match": true,
+      "reason": "WBS explicitly represents tile installation activity"
+    },
+    {
+      "candidate_id": "TilePreparation",
+      "gold_accept": false,
+      "predicted_accept": false,
+      "gold_parent": null,
+      "predicted_parent": "WorkTask",
+      "acceptance_match": true,
+      "parent_match": null,
+      "reason": "sources do not explicitly state the proposed defining preparation activity"
+    },
+    {
+      "candidate_id": "TileInspection",
+      "gold_accept": true,
+      "predicted_accept": true,
+      "gold_parent": "WorkTask",
+      "predicted_parent": "WorkTask",
+      "acceptance_match": true,
+      "parent_match": true,
+      "reason": "WBS explicitly represents tile inspection activity"
+    },
+    {
+      "candidate_id": "TA_ac705e03918e",
+      "gold_accept": false,
+      "predicted_accept": false,
+      "gold_parent": null,
+      "predicted_parent": null,
+      "acceptance_match": true,
+      "parent_match": null,
+      "reason": "duplicate of the already grounded ceramic material-cost class"
+    },
+    {
+      "candidate_id": "TA_8aa3c72e6957",
+      "gold_accept": false,
+      "predicted_accept": false,
+      "gold_parent": null,
+      "predicted_parent": "PorcelainTilePressureBondingCostItem",
+      "acceptance_match": true,
+      "parent_match": null,
+      "reason": "duplicate label with an unsupported installation-cost parent"
+    },
+    {
+      "candidate_id": "TA_5cc2d7bc611f",
+      "gold_accept": false,
+      "predicted_accept": false,
+      "gold_parent": null,
+      "predicted_parent": null,
+      "acceptance_match": true,
+      "parent_match": null,
+      "reason": "no distinct grounded stone material-cost concept in the cited source"
+    },
+    {
+      "candidate_id": "WallTileInstallation",
+      "gold_accept": true,
+      "predicted_accept": true,
+      "gold_parent": "TileInstallation",
+      "predicted_parent": "TileInstallation",
+      "acceptance_match": true,
+      "parent_match": true,
+      "reason": "wall context and installation activity are explicit; TileInstallation is the most specific accepted parent"
+    },
+    {
+      "candidate_id": "TA_83ffbbd89d4f",
+      "gold_accept": false,
+      "predicted_accept": false,
+      "gold_parent": null,
+      "predicted_parent": "TileInstallation",
+      "acceptance_match": true,
+      "parent_match": null,
+      "reason": "pressure bonding does not establish a distinct adhesive-application class"
+    },
+    {
+      "candidate_id": "TA_f6d0c246b998",
+      "gold_accept": false,
+      "predicted_accept": false,
+      "gold_parent": null,
+      "predicted_parent": "WorkTask",
+      "acceptance_match": true,
+      "parent_match": null,
+      "reason": "no explicit surface-preparation activity in the cited source"
+    },
+    {
+      "candidate_id": "H_TileSurfacePreparation",
+      "gold_accept": false,
+      "predicted_accept": false,
+      "gold_parent": null,
+      "predicted_parent": null,
+      "acceptance_match": true,
+      "parent_match": null,
+      "reason": "hypothesis has no verified source support"
+    },
+    {
+      "candidate_id": "H_TileLayoutPlanning",
+      "gold_accept": false,
+      "predicted_accept": false,
+      "gold_parent": null,
+      "predicted_parent": null,
+      "acceptance_match": true,
+      "parent_match": null,
+      "reason": "hypothesis has no verified source support"
+    },
+    {
+      "candidate_id": "H_PostInstallationSealing",
+      "gold_accept": false,
+      "predicted_accept": false,
+      "gold_parent": null,
+      "predicted_parent": null,
+      "acceptance_match": true,
+      "parent_match": null,
+      "reason": "hypothesis has no verified source support"
+    }
+  ],
+  "competency_questions": {
+    "passed": 10,
+    "total": 10,
+    "items": [
+      {
+        "id": "CQ01",
+        "question": "Material-specific tile costs are material cost items",
+        "passed": true
+      },
+      {
+        "id": "CQ02",
+        "question": "Pressure-bonding costs are installation cost items",
+        "passed": true
+      },
+      {
+        "id": "CQ03",
+        "question": "Wall tile installation is a tile installation and work task",
+        "passed": true
+      },
+      {
+        "id": "CQ04",
+        "question": "Cost objects and work activities are disjoint",
+        "passed": true
+      },
+      {
+        "id": "CQ05",
+        "question": "Five tile observation text properties target CostItem/string",
+        "passed": true
+      },
+      {
+        "id": "CQ06",
+        "question": "Work decomposition remains a WorkTask-to-WorkTask relation",
+        "passed": true
+      },
+      {
+        "id": "CQ07",
+        "question": "Cost-to-WBS linkage has CostItem/WorkTask signature",
+        "passed": true
+      },
+      {
+        "id": "CQ08",
+        "question": "No rejected candidate is exported",
+        "passed": true
+      },
+      {
+        "id": "CQ09",
+        "question": "Every accepted candidate is exported with evidence",
+        "passed": true
+      },
+      {
+        "id": "CQ10",
+        "question": "Named hierarchy is acyclic",
+        "passed": true
+      }
+    ]
+  },
+  "limitations": [
+    "Reference was created from the same supplied sources and is not independent.",
+    "Perfect agreement measures conformance to explicit final rules, not generalisation.",
+    "External domain-expert adjudication remains required for an independent accuracy claim."
+  ]
+}

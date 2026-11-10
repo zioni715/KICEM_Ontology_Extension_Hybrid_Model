@@ -1,0 +1,11 @@
+name: kicem-tbox-validation
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - openjdk=17
+  - pip
+  - pip:
+      - rdflib==7.0.0
+      - owlready2==0.48
+      - networkx==3.3

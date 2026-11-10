@@ -1,0 +1,4 @@
+# Minimal, CPU-only dependency set for the three-trade T-Box release.
+rdflib==7.0.0
+owlready2==0.48
+networkx==3.3

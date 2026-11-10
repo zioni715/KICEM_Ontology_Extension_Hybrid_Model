@@ -1,5 +1,25 @@
 # KICEM Ontology Extension Hybrid Model
 
+## 최종 T-Box 릴리스
+
+데모의 A-Box 포함 산출물과 별도로, 자동확장 결과를 클래스·속성·공리만으로 내보내는 최종본은 [`final_tbox/`](final_tbox/)에 있다.
+
+```bash
+conda env create -f environment.yml
+conda activate kicem-tbox-validation
+python final_tbox/release_multitrade.py --stress-cycles 10
+```
+
+2026-11-10 격리 환경 재검증 결과, 건축-타일·토목-우수·소방-유도등
+3개 공종의 후보 51개와 competency question 51개가 고정 내부 벤치마크와
+일치했다. 전체 빌드·검증은 냉간 프로세스 10회에서 동일 해시를 재현했고 후보별
+결함 주입 312/312를 검출했다. 최종 내부 판정은
+`INTERNAL_RELEASE_READY_EXTERNAL_REVIEW_PENDING`이다. 이는 독립 외부 전문가
+정확도 또는 보지 않은 공종의 일반화 정확도 100%를 뜻하지 않는다. 세부 내용은
+[`final_tbox/FINAL_REPORT.md`](final_tbox/FINAL_REPORT.md),
+[`final_tbox/MODEL_CARD.md`](final_tbox/MODEL_CARD.md),
+[`final_tbox/WBS_EVIDENCE.md`](final_tbox/WBS_EVIDENCE.md)를 참조한다.
+
 ## 1. 프로젝트
 
 - 목적: 기존 철근콘크리트 OWL2 기반의 독립 타일공사 온톨로지 구축

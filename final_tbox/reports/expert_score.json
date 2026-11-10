@@ -1,0 +1,27 @@
+{
+  "status": "PENDING_EXPERT_ADJUDICATION",
+  "metrics": null,
+  "incomplete_count": 20,
+  "incomplete_candidates": [
+    "CeramicTileCostItem",
+    "PorcelainTileCostItem",
+    "MosaicTileCostItem",
+    "NonSlipTileCostItem",
+    "StoneTilePressureBondingCostItem",
+    "PorcelainTilePressureBondingCostItem",
+    "CeramicTilePressureBondingCostItem",
+    "MosaicTilePressureBondingCostItem",
+    "TileInstallation",
+    "TilePreparation",
+    "TileInspection",
+    "TA_ac705e03918e",
+    "TA_8aa3c72e6957",
+    "TA_5cc2d7bc611f",
+    "WallTileInstallation",
+    "TA_83ffbbd89d4f",
+    "TA_f6d0c246b998",
+    "H_TileSurfacePreparation",
+    "H_TileLayoutPlanning",
+    "H_PostInstallationSealing"
+  ]
+}

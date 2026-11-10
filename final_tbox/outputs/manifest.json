@@ -1,0 +1,124 @@
+{
+  "release": "2.0.0",
+  "scope": "direct T-Box only; no A-Box source ontology",
+  "namespace": "https://example.org/kicem/tile/final#",
+  "triples": 691,
+  "named_classes": 40,
+  "object_properties": 20,
+  "datatype_properties": 26,
+  "annotation_properties": 5,
+  "retained_seed_classes": 23,
+  "foundation_classes_added": 6,
+  "accepted_candidate_classes": 11,
+  "held_candidate_classes": 9,
+  "excluded_seed_entities": [
+    "ConcreteCostItem",
+    "ConcretePlacementCostItem",
+    "FormworkCostItem",
+    "ReadyMixedConcreteMaterialCostItem",
+    "RebarCostItem",
+    "RebarFabricationAssemblyCostItem",
+    "RebarMaterialCostItem",
+    "ShoringCostItem",
+    "applicationPart",
+    "complexityClass",
+    "fabricationAssemblyType",
+    "formworkType",
+    "maximumAggregateSizeMm",
+    "maximumInstallationHeightM",
+    "nominalDiameterMm",
+    "nominalStrengthMPa",
+    "placementMethod",
+    "processingLocation",
+    "quantityBasis",
+    "rebarGrade",
+    "reuseCount",
+    "shoringType",
+    "slumpMm",
+    "structureType"
+  ],
+  "removed_seed_axioms": [
+    {
+      "subject": "CostItem",
+      "predicate": "http://www.w3.org/2002/07/owl#disjointUnionOf",
+      "reason": "references RC-only or A-Box entity"
+    },
+    {
+      "subject": "contributesContractAmountTo",
+      "predicate": "https://zioni715.github.io/ontology/rcpp#validationStatus",
+      "reason": "references RC-only or A-Box entity"
+    },
+    {
+      "subject": "contributesCurrentAmountTo",
+      "predicate": "https://zioni715.github.io/ontology/rcpp#validationStatus",
+      "reason": "references RC-only or A-Box entity"
+    },
+    {
+      "subject": "providesCalculatedQuantityTo",
+      "predicate": "https://zioni715.github.io/ontology/rcpp#validationStatus",
+      "reason": "references RC-only or A-Box entity"
+    },
+    {
+      "subject": "providesContractAmountTo",
+      "predicate": "https://zioni715.github.io/ontology/rcpp#validationStatus",
+      "reason": "references RC-only or A-Box entity"
+    },
+    {
+      "subject": "providesContractAmountToProgressPaymentItem",
+      "predicate": "https://zioni715.github.io/ontology/rcpp#validationStatus",
+      "reason": "references RC-only or A-Box entity"
+    },
+    {
+      "subject": "providesContractQuantityTo",
+      "predicate": "https://zioni715.github.io/ontology/rcpp#validationStatus",
+      "reason": "references RC-only or A-Box entity"
+    },
+    {
+      "subject": "providesContractQuantityToProgressPaymentItem",
+      "predicate": "https://zioni715.github.io/ontology/rcpp#validationStatus",
+      "reason": "references RC-only or A-Box entity"
+    },
+    {
+      "subject": "providesContractUnitPriceTo",
+      "predicate": "https://zioni715.github.io/ontology/rcpp#validationStatus",
+      "reason": "references RC-only or A-Box entity"
+    },
+    {
+      "subject": "providesContractUnitPriceToProgressPaymentItem",
+      "predicate": "https://zioni715.github.io/ontology/rcpp#validationStatus",
+      "reason": "references RC-only or A-Box entity"
+    },
+    {
+      "subject": "providesContractValueTo",
+      "predicate": "https://zioni715.github.io/ontology/rcpp#validationStatus",
+      "reason": "references RC-only or A-Box entity"
+    },
+    {
+      "subject": "providesCumulativeValuesTo",
+      "predicate": "https://zioni715.github.io/ontology/rcpp#validationStatus",
+      "reason": "references RC-only or A-Box entity"
+    }
+  ],
+  "identifier_renames": {
+    "StoneTileAdhesiveCostItem": "StoneTilePressureBondingCostItem",
+    "PorcelainTileAdhesiveCostItem": "PorcelainTilePressureBondingCostItem",
+    "CeramicTileAdhesiveCostItem": "CeramicTilePressureBondingCostItem",
+    "MosaicTileAdhesiveCostItem": "MosaicTilePressureBondingCostItem",
+    "TA_ac621fe07583": "WallTileInstallation"
+  },
+  "parent_overrides": {
+    "WallTileInstallation": "TileInstallation"
+  },
+  "grounding_report_accepted_ids_if_available": [],
+  "input_sha256": {
+    "KO/OWL2/rcpp-owl-final.ttl": "a6643cba50ce8e7e089e838764a9db32f90608cafd54fbf1951c1c6937cfcf73",
+    "test2/shared/seed_elements.json": "d0d011aa4a8c7117a060c926c94539bc2a6c8a289dae2649940f4a18a9a48c82",
+    "test2/module1/outputs/initial_schema.json": "6146c7cf2c132ff4c938a4de4540f068b7f87687a518ad17caea0e2563792140",
+    "test2/module5/outputs/decisions.json": "019b38ad506445f364d5b03295c492560b8b3d091055ce843276f02199a79a6a",
+    "test2/module5/reports/grounding_rules.json": "cf46f370afa3743c6f12452f404044a316e9b8f1ef5831c28deef7bd517c8937"
+  },
+  "output_sha256": {
+    "tile_tbox_final.ttl": "966e4bf1bd5a90fd1643225f8e8fb2c093c2b1f743630c8564b5e77dc45b6e13",
+    "tile_tbox_final.owl": "f50ef363ecf3ce87e750f1e32aa36c2c679b035b3cf4bc063da446141b7ca9da"
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "timestamp": "2026-11-10T01:43:27.957716+00:00",
+  "release_status": "TECHNICALLY_VALIDATED_SEMANTICALLY_PROVISIONAL",
+  "technical_validation_passed": true,
+  "semantic_validation_passed": false,
+  "tbox_only": true,
+  "checks_total": 23,
+  "checks_failed": 0,
+  "checks": [
+    {
+      "check": "Turtle and RDF/XML are isomorphic",
+      "passed": true
+    },
+    {
+      "check": "Manifest hashes match release files",
+      "passed": true
+    },
+    {
+      "check": "No named A-Box class assertions",
+      "passed": true,
+      "violations": []
+    },
+    {
+      "check": "No owl:NamedIndividual declarations",
+      "passed": true
+    },
+    {
+      "check": "No nominals (hasValue/oneOf)",
+      "passed": true
+    },
+    {
+      "check": "No pilot namespace remains",
+      "passed": true
+    },
+    {
+      "check": "Expected T-Box cardinalities",
+      "passed": true,
+      "classes": 40,
+      "object_properties": 20,
+      "datatype_properties": 26
+    },
+    {
+      "check": "Named class hierarchy is acyclic",
+      "passed": true
+    },
+    {
+      "check": "All named subclass endpoints are declared classes",
+      "passed": true
+    },
+    {
+      "check": "Every named class has label and definition",
+      "passed": true
+    },
+    {
+      "check": "RC-only classes are absent",
+      "passed": true
+    },
+    {
+      "check": "All and only accepted candidate classes exported",
+      "passed": true,
+      "accepted": [
+        "CeramicTileCostItem",
+        "CeramicTilePressureBondingCostItem",
+        "MosaicTileCostItem",
+        "MosaicTilePressureBondingCostItem",
+        "NonSlipTileCostItem",
+        "PorcelainTileCostItem",
+        "PorcelainTilePressureBondingCostItem",
+        "StoneTilePressureBondingCostItem",
+        "TileInspection",
+        "TileInstallation",
+        "WallTileInstallation"
+      ],
+      "held_leaks": []
+    },
+    {
+      "check": "Every accepted candidate has final evidence",
+      "passed": true
+    },
+    {
+      "check": "Wall tile installation has the specific installation parent",
+      "passed": true
+    },
+    {
+      "check": "Pressure-bonding identifiers are semantically aligned",
+      "passed": true
+    },
+    {
+      "check": "Fail-closed release invariants",
+      "passed": true,
+      "violations": []
+    },
+    {
+      "check": "Every object/data property has label and definition",
+      "passed": true
+    },
+    {
+      "check": "OWLAPI OWL 2 DL profile",
+      "passed": true,
+      "violations": []
+    },
+    {
+      "check": "OWLAPI serialization equivalence",
+      "passed": true
+    },
+    {
+      "check": "OWLAPI validation controls pass",
+      "passed": true
+    },
+    {
+      "check": "HermiT ontology consistency",
+      "passed": true,
+      "error": null
+    },
+    {
+      "check": "HermiT reports no unsatisfiable named class",
+      "passed": true,
+      "unsatisfiable": []
+    },
+    {
+      "check": "Validation did not mutate release inputs",
+      "passed": true
+    }
+  ],
+  "expansion": {
+    "retained_seed_classes": 23,
+    "foundation_classes_added": 6,
+    "candidate_classes_accepted": 11,
+    "candidate_classes_held": 9,
+    "accepted_with_evidence": 11,
+    "candidate_acceptance_rate": 0.55
+  },
+  "model_evaluation": {
+    "rc_heldout_sample_count": 4,
+    "rc_parent_top1_accuracy": 0.5,
+    "rc_hierarchical_micro_f1": 0.5,
+    "tile_extension_hierarchical_f1": null,
+    "warning": "No independent expert reference hierarchy; final decisions are not gold"
+  },
+  "reasoner": {
+    "input": "/home/sil-jiwon/KICEM_Ontology_Extension_Hybrid_Model/final_tbox/outputs/tile_tbox_final.owl",
+    "invocation": "HermiT Java OWLReasoner API",
+    "java_version": "17.0.20.1",
+    "error": null,
+    "consistent": true,
+    "unsatisfiable_named_classes": [],
+    "reasoner_name": "HermiT",
+    "reasoner_version": "1.3.8.1099",
+    "classes_in_signature": 40,
+    "logical_axioms": 167,
+    "imports_count": 0,
+    "unsatisfiable_named_class_count": 0,
+    "class_hierarchy_precomputed": true,
+    "seconds_including_load_and_reasoning": 0.446574142
+  },
+  "owlapi_summary": {
+    "in_owl2_dl_profile": true,
+    "serialization_equivalent": true,
+    "controls_passed": true
+  },
+  "input_hashes_before": {
+    "final_tbox/outputs/tile_tbox_final.ttl": "966e4bf1bd5a90fd1643225f8e8fb2c093c2b1f743630c8564b5e77dc45b6e13",
+    "final_tbox/outputs/tile_tbox_final.owl": "f50ef363ecf3ce87e750f1e32aa36c2c679b035b3cf4bc063da446141b7ca9da"
+  },
+  "input_hashes_after": {
+    "final_tbox/outputs/tile_tbox_final.ttl": "966e4bf1bd5a90fd1643225f8e8fb2c093c2b1f743630c8564b5e77dc45b6e13",
+    "final_tbox/outputs/tile_tbox_final.owl": "f50ef363ecf3ce87e750f1e32aa36c2c679b035b3cf4bc063da446141b7ca9da"
+  },
+  "execution": [
+    {
+      "command": [
+        "/home/sil-jiwon/KICEM_Ontology_Extension_Hybrid_Model/test/runtime/java/jdk-17.0.20.1+1-jre/bin/java",
+        "-jar",
+        "/home/sil-jiwon/KICEM_Ontology_Extension_Hybrid_Model/test2/runtime/owlapi/ecj-3.37.0.jar",
+        "-17",
+        "-proc:none",
+        "-cp",
+        "/home/sil-jiwon/anaconda3/envs/hybrid-v1/lib/python3.11/site-packages/owlready2/hermit/HermiT.jar",
+        "-d",
+        "/home/sil-jiwon/KICEM_Ontology_Extension_Hybrid_Model/test2/runtime/owlapi/final_tbox_classes",
+        "/home/sil-jiwon/KICEM_Ontology_Extension_Hybrid_Model/test2/evaluation/owlapi/ValidateOntology.java",
+        "/home/sil-jiwon/KICEM_Ontology_Extension_Hybrid_Model/test2/evaluation/owlapi/ValidateHermit.java"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/sil-jiwon/KICEM_Ontology_Extension_Hybrid_Model/test/runtime/java/jdk-17.0.20.1+1-jre/bin/java",
+        "-cp",
+        "/home/sil-jiwon/KICEM_Ontology_Extension_Hybrid_Model/test2/runtime/owlapi/final_tbox_classes:/home/sil-jiwon/anaconda3/envs/hybrid-v1/lib/python3.11/site-packages/owlready2/hermit/HermiT.jar",
+        "ValidateOntology",
+        "/home/sil-jiwon/KICEM_Ontology_Extension_Hybrid_Model/final_tbox/outputs/tile_tbox_final.owl",
+        "/home/sil-jiwon/KICEM_Ontology_Extension_Hybrid_Model/final_tbox/outputs/tile_tbox_final.ttl",
+        "/home/sil-jiwon/KICEM_Ontology_Extension_Hybrid_Model/test2/runtime/owlapi/final-tbox-6kstolrr/roundtrip.owl",
+        "/home/sil-jiwon/KICEM_Ontology_Extension_Hybrid_Model/test2/runtime/owlapi/final-tbox-6kstolrr/profile.json"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/sil-jiwon/KICEM_Ontology_Extension_Hybrid_Model/test/runtime/java/jdk-17.0.20.1+1-jre/bin/java",
+        "-Xmx2048M",
+        "-cp",
+        "/home/sil-jiwon/KICEM_Ontology_Extension_Hybrid_Model/test2/runtime/owlapi/final_tbox_classes:/home/sil-jiwon/anaconda3/envs/hybrid-v1/lib/python3.11/site-packages/owlready2/hermit/HermiT.jar",
+        "ValidateHermit",
+        "/home/sil-jiwon/KICEM_Ontology_Extension_Hybrid_Model/final_tbox/outputs/tile_tbox_final.owl",
+        "/home/sil-jiwon/KICEM_Ontology_Extension_Hybrid_Model/test2/runtime/owlapi/final-tbox-6kstolrr/hermit.json"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "interpretation": "T-Box purity, serialization, OWL 2 DL profile, consistency, class satisfiability, candidate gating and documentary evidence coverage passed. Independent expert-labelled tile hierarchy evaluation has not been supplied, so semantic quality is provisional."
+}

@@ -1,0 +1,54 @@
+{
+  "release": "3.0.0-multitrade",
+  "scope": "three independent T-Box-only extension cases",
+  "builder_reads_validation_gold": false,
+  "input_sha256": {
+    "benchmarks/multitrade_candidates.json": "2b1f725dd8f77e1adb861c892792f9f4980c33902d75525a766ca3f96852d400"
+  },
+  "cases": [
+    {
+      "trade_id": "architecture_tile",
+      "trade_label": "건축-타일공사",
+      "namespace": "https://example.org/kicem/architecture/tile#",
+      "candidate_classes": 24,
+      "total_classes": 30,
+      "source_ids": [
+        "KCS-41-48-01"
+      ],
+      "outputs": {
+        "architecture_tile.ttl": "bafa5718a079ed3dee0f78d1948e202fd9a8fc24d7de4cf9258b13c088b825e7",
+        "architecture_tile.owl": "a9fbda75fdd1553588d8950db735164dd7e9c3bd36ffe10cf05de32b0c310c02"
+      }
+    },
+    {
+      "trade_id": "civil_stormwater",
+      "trade_label": "토목-우수공",
+      "namespace": "https://example.org/kicem/civil/stormwater#",
+      "candidate_classes": 12,
+      "total_classes": 18,
+      "source_ids": [
+        "KCS-11-40-25",
+        "KCS-12-20-10"
+      ],
+      "outputs": {
+        "civil_stormwater.ttl": "a1e86ac2c2c549517afc2defbc4d6e24f15bafca2ac44ce5e629c2222a1fc157",
+        "civil_stormwater.owl": "d749a765b4fbd17fef53aa791ac62ad62b68ceccda6b25dad487a8422f1b844d"
+      }
+    },
+    {
+      "trade_id": "fire_exit_guidance",
+      "trade_label": "소방-유도등 설비공사",
+      "namespace": "https://example.org/kicem/fire/exit-guidance#",
+      "candidate_classes": 15,
+      "total_classes": 21,
+      "source_ids": [
+        "NFPC-303",
+        "NFTC-303"
+      ],
+      "outputs": {
+        "fire_exit_guidance.ttl": "5e77655df4bb1f8e2677a68ed13c11fea7210c2f6aeae7da5ea6fed97f875f16",
+        "fire_exit_guidance.owl": "9933c74d5d68c5d096f6d96778c3ad98711a303ba8e7e957fd2595631322bddc"
+      }
+    }
+  ]
+}

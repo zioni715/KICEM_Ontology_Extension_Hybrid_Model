@@ -1,0 +1,12 @@
+# Compatibility constraints for the historical full GPU pipeline.
+#
+# The direct packages in requirements.txt are already exact-pinned. This file
+# intentionally does not pretend to be the original transitive lock: that
+# environment was not captured completely, so the release report marks an exact
+# Module1-5 rerun as pending. The independently reproducible T-Box validator uses
+# environment.yml and requirements-validation.txt instead.
+numpy==1.26.4
+httpx==0.27.2
+pydantic==2.11.7
+protobuf==5.28.3
+typing-extensions==4.14.1

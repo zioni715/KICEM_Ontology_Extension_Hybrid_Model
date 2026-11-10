@@ -1,0 +1,181 @@
+{
+  "timestamp": "2026-11-10T01:42:43.039880+00:00",
+  "status": "PASSED",
+  "cold_process_cycles": 10,
+  "all_cycles_identical": true,
+  "all_cycles_passed": true,
+  "baseline_fingerprint": {
+    "artifact_hashes": {
+      "architecture_tile.owl": "a9fbda75fdd1553588d8950db735164dd7e9c3bd36ffe10cf05de32b0c310c02",
+      "architecture_tile.ttl": "bafa5718a079ed3dee0f78d1948e202fd9a8fc24d7de4cf9258b13c088b825e7",
+      "civil_stormwater.owl": "d749a765b4fbd17fef53aa791ac62ad62b68ceccda6b25dad487a8422f1b844d",
+      "civil_stormwater.ttl": "a1e86ac2c2c549517afc2defbc4d6e24f15bafca2ac44ce5e629c2222a1fc157",
+      "fire_exit_guidance.owl": "9933c74d5d68c5d096f6d96778c3ad98711a303ba8e7e957fd2595631322bddc",
+      "fire_exit_guidance.ttl": "5e77655df4bb1f8e2677a68ed13c11fea7210c2f6aeae7da5ea6fed97f875f16"
+    },
+    "validation": {
+      "status": "PASSED",
+      "candidate_count": 51,
+      "taxonomy": {
+        "tp": 51,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "micro_f1": 1.0
+      },
+      "competency_questions": {
+        "passed": 51,
+        "total": 51
+      },
+      "mutation_controls": {
+        "passed": 9,
+        "total": 9
+      },
+      "gold_separated": true,
+      "trade_checks": {
+        "architecture_tile": {
+          "serializations_isomorphic": true,
+          "manifest_hashes_match": true,
+          "pure_tbox_acyclic_and_grounded": true,
+          "labels_and_definitions_complete": true,
+          "evidence_sources_exact": true,
+          "gold_candidate_set_exact": true,
+          "gold_parent_edges_exact": true,
+          "exactly_one_predicted_direct_parent": true,
+          "all_candidates_reachable_from_trade_root": true,
+          "owl2_dl_profile": true,
+          "owlapi_serialization_equivalence": true,
+          "hermit_consistent": true,
+          "hermit_all_named_classes_satisfiable": true
+        },
+        "civil_stormwater": {
+          "serializations_isomorphic": true,
+          "manifest_hashes_match": true,
+          "pure_tbox_acyclic_and_grounded": true,
+          "labels_and_definitions_complete": true,
+          "evidence_sources_exact": true,
+          "gold_candidate_set_exact": true,
+          "gold_parent_edges_exact": true,
+          "exactly_one_predicted_direct_parent": true,
+          "all_candidates_reachable_from_trade_root": true,
+          "owl2_dl_profile": true,
+          "owlapi_serialization_equivalence": true,
+          "hermit_consistent": true,
+          "hermit_all_named_classes_satisfiable": true
+        },
+        "fire_exit_guidance": {
+          "serializations_isomorphic": true,
+          "manifest_hashes_match": true,
+          "pure_tbox_acyclic_and_grounded": true,
+          "labels_and_definitions_complete": true,
+          "evidence_sources_exact": true,
+          "gold_candidate_set_exact": true,
+          "gold_parent_edges_exact": true,
+          "exactly_one_predicted_direct_parent": true,
+          "all_candidates_reachable_from_trade_root": true,
+          "owl2_dl_profile": true,
+          "owlapi_serialization_equivalence": true,
+          "hermit_consistent": true,
+          "hermit_all_named_classes_satisfiable": true
+        }
+      }
+    }
+  },
+  "cycles": [
+    {
+      "cycle": 1,
+      "passed": true,
+      "identical_to_cycle_1": true
+    },
+    {
+      "cycle": 2,
+      "passed": true,
+      "identical_to_cycle_1": true
+    },
+    {
+      "cycle": 3,
+      "passed": true,
+      "identical_to_cycle_1": true
+    },
+    {
+      "cycle": 4,
+      "passed": true,
+      "identical_to_cycle_1": true
+    },
+    {
+      "cycle": 5,
+      "passed": true,
+      "identical_to_cycle_1": true
+    },
+    {
+      "cycle": 6,
+      "passed": true,
+      "identical_to_cycle_1": true
+    },
+    {
+      "cycle": 7,
+      "passed": true,
+      "identical_to_cycle_1": true
+    },
+    {
+      "cycle": 8,
+      "passed": true,
+      "identical_to_cycle_1": true
+    },
+    {
+      "cycle": 9,
+      "passed": true,
+      "identical_to_cycle_1": true
+    },
+    {
+      "cycle": 10,
+      "passed": true,
+      "identical_to_cycle_1": true
+    }
+  ],
+  "authoritative_source_audit": [
+    {
+      "source_id": "KCS-11-40-25",
+      "url": "https://www.kcsc.re.kr/standardCode/viewer/KCS%2011%2040%2025%3A2025-12-30",
+      "http_status": 200,
+      "final_url": "https://www.kcsc.re.kr/standardCode/viewer/KCS%2011%2040%2025%3A2025-12-30",
+      "reachable": true,
+      "error": null
+    },
+    {
+      "source_id": "KCS-12-20-10",
+      "url": "https://www.kcsc.re.kr/standardCode/viewer/KCS%2012%2020%2010%3A2024-11-15",
+      "http_status": 200,
+      "final_url": "https://www.kcsc.re.kr/standardCode/viewer/KCS%2012%2020%2010%3A2024-11-15",
+      "reachable": true,
+      "error": null
+    },
+    {
+      "source_id": "KCS-41-48-01",
+      "url": "https://www.kcsc.re.kr/standardCode/viewer/KCS%2041%2048%2001%3A2024-01-26",
+      "http_status": 200,
+      "final_url": "https://www.kcsc.re.kr/standardCode/viewer/KCS%2041%2048%2001%3A2024-01-26",
+      "reachable": true,
+      "error": null
+    },
+    {
+      "source_id": "NFPC-303",
+      "url": "https://www.law.go.kr/admRulLsInfoP.do?admRulId=35319&efYd=0",
+      "http_status": 200,
+      "final_url": "https://www.law.go.kr/admRulLsInfoP.do?admRulId=35319&efYd=0",
+      "reachable": true,
+      "error": null
+    },
+    {
+      "source_id": "NFTC-303",
+      "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000233434&chrClsCd=010201",
+      "http_status": 200,
+      "final_url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000233434&chrClsCd=010201",
+      "reachable": true,
+      "error": null
+    }
+  ],
+  "source_audit_performed": true,
+  "all_sources_reachable": true
+}

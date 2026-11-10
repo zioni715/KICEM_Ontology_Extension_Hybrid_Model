@@ -1,0 +1,207 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tbox: <https://example.org/kicem/fire/exit-guidance#> .
+
+<https://example.org/kicem/fire/exit-guidance> a owl:Ontology .
+
+tbox:AuditoriumGuidanceLightInstallation a owl:Class ;
+    rdfs:label "객석유도등 설치"@ko ;
+    rdfs:comment "객석의 통로·바닥 또는 벽에 유도등을 설치하는 작업."@ko ;
+    rdfs:subClassOf tbox:ExitGuidanceEquipmentWork,
+        tbox:InstallationTask ;
+    tbox:evidenceSection "2.4" ;
+    tbox:evidenceSourceId "NFTC-303" ;
+    tbox:predictedDirectParent tbox:InstallationTask ;
+    tbox:validationStatus "candidate" .
+
+tbox:CorridorGuidanceLightInstallation a owl:Class ;
+    rdfs:label "복도통로유도등 설치"@ko ;
+    rdfs:comment "복도와 구부러진 모퉁이에 통로유도등을 설치하는 작업."@ko ;
+    rdfs:subClassOf tbox:PassageGuidanceLightInstallation ;
+    tbox:evidenceSection "2.3.1" ;
+    tbox:evidenceSourceId "NFTC-303" ;
+    tbox:predictedDirectParent tbox:PassageGuidanceLightInstallation ;
+    tbox:validationStatus "candidate" .
+
+tbox:EvacuationGuidanceLineInstallation a owl:Class ;
+    rdfs:label "피난유도선 설치"@ko ;
+    rdfs:comment "피난 경로에 띠 형태의 피난유도선을 설치하는 작업."@ko ;
+    rdfs:subClassOf tbox:ExitGuidanceEquipmentWork,
+        tbox:InstallationTask ;
+    tbox:evidenceSection "2.6" ;
+    tbox:evidenceSourceId "NFTC-303" ;
+    tbox:predictedDirectParent tbox:InstallationTask ;
+    tbox:validationStatus "candidate" .
+
+tbox:ExitGuidanceLightMounting a owl:Class ;
+    rdfs:label "피난구유도등 부착"@ko ;
+    rdfs:comment "출입구에 인접한 규정 높이에 피난구유도등을 부착하는 작업."@ko ;
+    rdfs:subClassOf tbox:ExitGuidanceLightInstallation ;
+    tbox:evidenceSection "2.2.2" ;
+    tbox:evidenceSourceId "NFTC-303" ;
+    tbox:predictedDirectParent tbox:ExitGuidanceLightInstallation ;
+    tbox:validationStatus "candidate" .
+
+tbox:ExitGuidanceSignInstallation a owl:Class ;
+    rdfs:label "피난구유도표지 설치"@ko ;
+    rdfs:comment "출입구 상단에 피난구유도표지를 설치하는 작업."@ko ;
+    rdfs:subClassOf tbox:GuidanceSignInstallation ;
+    tbox:evidenceSection "2.5.1.2" ;
+    tbox:evidenceSourceId "NFTC-303" ;
+    tbox:predictedDirectParent tbox:GuidanceSignInstallation ;
+    tbox:validationStatus "candidate" .
+
+tbox:FinishingTask a owl:Class ;
+    rdfs:label "마무리 작업"@ko ;
+    rdfs:comment "본 시공 이후 수행되는 마무리 작업 유형."@ko ;
+    rdfs:subClassOf tbox:WorkTask ;
+    tbox:evidenceSection "common upper T-Box" ;
+    tbox:evidenceSourceId "SYSTEM-SCHEMA" ;
+    tbox:validationStatus "candidate" .
+
+tbox:GuidanceEquipmentFunctionalInspection a owl:Class ;
+    rdfs:label "유도설비 기능 검사"@ko ;
+    rdfs:comment "점등·전원·배선과 피난 유도 기능을 확인하는 검사."@ko ;
+    rdfs:subClassOf tbox:ExitGuidanceEquipmentWork,
+        tbox:InspectionTask ;
+    tbox:evidenceSection "제10조/2.7" ;
+    tbox:evidenceSourceId "NFPC-303" ;
+    tbox:predictedDirectParent tbox:InspectionTask ;
+    tbox:validationStatus "candidate" .
+
+tbox:GuidanceLightPowerInstallation a owl:Class ;
+    rdfs:label "유도등 전원 설치"@ko ;
+    rdfs:comment "유도등의 상용전원과 비상전원을 설치하는 작업."@ko ;
+    rdfs:subClassOf tbox:ExitGuidanceEquipmentWork,
+        tbox:InstallationTask ;
+    tbox:evidenceSection "2.7.1-2.7.2" ;
+    tbox:evidenceSourceId "NFTC-303" ;
+    tbox:predictedDirectParent tbox:InstallationTask ;
+    tbox:validationStatus "candidate" .
+
+tbox:GuidanceLightWiring a owl:Class ;
+    rdfs:label "유도등 배선"@ko ;
+    rdfs:comment "유도등 인입선과 옥내배선을 설치·연결하는 작업."@ko ;
+    rdfs:subClassOf tbox:ExitGuidanceEquipmentWork,
+        tbox:InstallationTask ;
+    tbox:evidenceSection "2.7.3" ;
+    tbox:evidenceSourceId "NFTC-303" ;
+    tbox:predictedDirectParent tbox:InstallationTask ;
+    tbox:validationStatus "candidate" .
+
+tbox:PassageGuidanceSignInstallation a owl:Class ;
+    rdfs:label "통로유도표지 설치"@ko ;
+    rdfs:comment "피난 통로에 통로유도표지를 설치하는 작업."@ko ;
+    rdfs:subClassOf tbox:GuidanceSignInstallation ;
+    tbox:evidenceSection "2.5.1" ;
+    tbox:evidenceSourceId "NFTC-303" ;
+    tbox:predictedDirectParent tbox:GuidanceSignInstallation ;
+    tbox:validationStatus "candidate" .
+
+tbox:PreparationTask a owl:Class ;
+    rdfs:label "준비 작업"@ko ;
+    rdfs:comment "본 시공 전에 수행되는 준비 작업 유형."@ko ;
+    rdfs:subClassOf tbox:WorkTask ;
+    tbox:evidenceSection "common upper T-Box" ;
+    tbox:evidenceSourceId "SYSTEM-SCHEMA" ;
+    tbox:validationStatus "candidate" .
+
+tbox:RoomPassageGuidanceLightInstallation a owl:Class ;
+    rdfs:label "거실통로유도등 설치"@ko ;
+    rdfs:comment "거실의 피난 통로에 유도등을 설치하는 작업."@ko ;
+    rdfs:subClassOf tbox:PassageGuidanceLightInstallation ;
+    tbox:evidenceSection "2.3.2" ;
+    tbox:evidenceSourceId "NFTC-303" ;
+    tbox:predictedDirectParent tbox:PassageGuidanceLightInstallation ;
+    tbox:validationStatus "candidate" .
+
+tbox:StairPassageGuidanceLightInstallation a owl:Class ;
+    rdfs:label "계단통로유도등 설치"@ko ;
+    rdfs:comment "계단과 경사로의 바닥면을 비추도록 유도등을 설치하는 작업."@ko ;
+    rdfs:subClassOf tbox:PassageGuidanceLightInstallation ;
+    tbox:evidenceSection "2.3.3" ;
+    tbox:evidenceSourceId "NFTC-303" ;
+    tbox:predictedDirectParent tbox:PassageGuidanceLightInstallation ;
+    tbox:validationStatus "candidate" .
+
+tbox:evidenceSection a owl:AnnotationProperty ;
+    rdfs:label "근거 조항"@ko .
+
+tbox:evidenceSourceId a owl:AnnotationProperty ;
+    rdfs:label "근거 출처 식별자"@ko .
+
+tbox:predictedDirectParent a owl:AnnotationProperty ;
+    rdfs:label "모델 예측 직접 부모"@ko .
+
+tbox:validationStatus a owl:AnnotationProperty ;
+    rdfs:label "검증 상태"@ko .
+
+tbox:ConstructionTask a owl:Class ;
+    rdfs:label "공종 작업"@ko ;
+    rdfs:comment "특정 공종을 구성하는 작업 유형."@ko ;
+    rdfs:subClassOf tbox:WorkTask ;
+    tbox:evidenceSection "common upper T-Box" ;
+    tbox:evidenceSourceId "SYSTEM-SCHEMA" ;
+    tbox:validationStatus "candidate" .
+
+tbox:ExitGuidanceLightInstallation a owl:Class ;
+    rdfs:label "피난구유도등 설치"@ko ;
+    rdfs:comment "피난구에 유도등을 설치하는 작업."@ko ;
+    rdfs:subClassOf tbox:ExitGuidanceEquipmentWork,
+        tbox:InstallationTask ;
+    tbox:evidenceSection "2.2" ;
+    tbox:evidenceSourceId "NFTC-303" ;
+    tbox:predictedDirectParent tbox:InstallationTask ;
+    tbox:validationStatus "candidate" .
+
+tbox:InspectionTask a owl:Class ;
+    rdfs:label "검사 작업"@ko ;
+    rdfs:comment "시공 상태나 성능을 확인하는 작업 유형."@ko ;
+    rdfs:subClassOf tbox:WorkTask ;
+    tbox:evidenceSection "common upper T-Box" ;
+    tbox:evidenceSourceId "SYSTEM-SCHEMA" ;
+    tbox:validationStatus "candidate" .
+
+tbox:GuidanceSignInstallation a owl:Class ;
+    rdfs:label "유도표지 설치"@ko ;
+    rdfs:comment "피난구 또는 통로에 유도표지를 설치하는 작업."@ko ;
+    rdfs:subClassOf tbox:ExitGuidanceEquipmentWork,
+        tbox:InstallationTask ;
+    tbox:evidenceSection "2.5" ;
+    tbox:evidenceSourceId "NFTC-303" ;
+    tbox:predictedDirectParent tbox:InstallationTask ;
+    tbox:validationStatus "candidate" .
+
+tbox:WorkTask a owl:Class ;
+    rdfs:label "건설 작업"@ko ;
+    rdfs:comment "건설 과정에서 수행되는 작업 유형."@ko ;
+    tbox:evidenceSection "common upper T-Box" ;
+    tbox:evidenceSourceId "SYSTEM-SCHEMA" ;
+    tbox:validationStatus "candidate" .
+
+tbox:PassageGuidanceLightInstallation a owl:Class ;
+    rdfs:label "통로유도등 설치"@ko ;
+    rdfs:comment "피난 통로에 유도등을 설치하는 작업."@ko ;
+    rdfs:subClassOf tbox:ExitGuidanceEquipmentWork,
+        tbox:InstallationTask ;
+    tbox:evidenceSection "2.3" ;
+    tbox:evidenceSourceId "NFTC-303" ;
+    tbox:predictedDirectParent tbox:InstallationTask ;
+    tbox:validationStatus "candidate" .
+
+tbox:ExitGuidanceEquipmentWork a owl:Class ;
+    rdfs:label "유도등 및 유도표지 설비공사"@ko ;
+    rdfs:comment "유도등·유도표지·피난유도선의 설치 및 관리 작업."@ko ;
+    rdfs:subClassOf tbox:ConstructionTask ;
+    tbox:evidenceSection "1.1" ;
+    tbox:evidenceSourceId "NFTC-303" ;
+    tbox:predictedDirectParent tbox:ConstructionTask ;
+    tbox:validationStatus "candidate" .
+
+tbox:InstallationTask a owl:Class ;
+    rdfs:label "설치 작업"@ko ;
+    rdfs:comment "시설 또는 마감재를 설치하는 작업 유형."@ko ;
+    rdfs:subClassOf tbox:WorkTask ;
+    tbox:evidenceSection "common upper T-Box" ;
+    tbox:evidenceSourceId "SYSTEM-SCHEMA" ;
+    tbox:validationStatus "candidate" .

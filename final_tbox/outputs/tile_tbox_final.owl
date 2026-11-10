@@ -1,0 +1,1000 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:tile="https://example.org/kicem/tile/final#">
+  <rdf:Description rdf:nodeID="cb1253578e008ec641828f30247b3042064834176576d568793d99e2077ca515362">
+    <rdf:first rdf:resource="https://example.org/kicem/tile/final#ProgressPaymentSummaryItem" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb144fe1bf0c46800bf357d65d955b44ad800398b7bf8e04c086d0ff70487663b2">
+    <owl:inverseOf rdf:resource="https://example.org/kicem/tile/final#containsItem" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb156b1da2f52997b6d883f82f3e2f4d5f390ef990e2b64eb208acd0b4787a77630">
+    <owl:inverseOf rdf:resource="https://example.org/kicem/tile/final#providesCumulativeValuesTo" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb164c0a54b857d9d80e09f6b977e8d1de51cd8f0ac63e0001ae6c7e885316092a1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:allValuesFrom rdf:resource="https://example.org/kicem/tile/final#WorkCategoryDetailItem" />
+    <owl:onProperty rdf:resource="https://example.org/kicem/tile/final#containsItem" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb1776120d2e8e72e33b056e1ad5e8736dc936a66950f4196f9c1e74c5018190d2e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:allValuesFrom rdf:nodeID="cb1a76773d179e9de9b1d6e65b348375fade38199dfc50dd6311251cf08dad2c4b2" />
+    <owl:onProperty rdf:resource="https://example.org/kicem/tile/final#containsItem" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb19d00372acaef3b6494832506bb7fc41390c6d673359e5856896c3c778dd3c01b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onClass rdf:resource="https://example.org/kicem/tile/final#ContractItem" />
+    <owl:onProperty rdf:nodeID="cbc41f520cd85a20d456e6d8ab2344c5d09eeaaad3a824a08f6a69ed76e8a74b54" />
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb1a76773d179e9de9b1d6e65b348375fade38199dfc50dd6311251cf08dad2c4b2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="cb2364111e276bf55613f3b0e60ad2ecee46e8cc81110d5827fc23cb562b47a244d" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb1b30180da9b689f3a6a300072bc861d65e6e483834a0f8ad6b2ff40e7c652e3d6">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+    <owl:onProperty rdf:resource="https://example.org/kicem/tile/final#calculatedQuantity" />
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb1bbbaa8a3360adcc145461aedc6a32b63e16abe3195c5adbb3ba807f600d2559d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onClass rdf:resource="https://example.org/kicem/tile/final#WorkCategory" />
+    <owl:onProperty rdf:resource="https://example.org/kicem/tile/final#belongsToWorkCategory" />
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb1d811a12d71bd0398f399e3c9ee2811a0f4b9d9d0af74bde3c59f1c9673801816">
+    <rdf:first rdf:resource="https://example.org/kicem/tile/final#EvidenceDocument" />
+    <rdf:rest rdf:nodeID="cb1df5bd14111de32960c659bf9218b5974f75084da24352e2a14877dc668b64189" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb1da6cb7e431d2004dd10505be741e28a3424eae05c282bd43b48db25a81707b7e">
+    <rdf:first rdf:resource="https://example.org/kicem/tile/final#CostCalculationStatement" />
+    <rdf:rest rdf:nodeID="cb21b2262aacb98c11f24fc19709d8995a0ddd2e847c779a9760a9d2aaae561f5e3" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb1daa8c82cb36b5f24d166690f1f160ed61a2413446691a5c03562c8459044cab8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onClass rdf:resource="https://example.org/kicem/tile/final#ContractItem" />
+    <owl:onProperty rdf:nodeID="cbe3686d8b21cdbd9d17949c3a9719aacac37982394b515cc4bed39d9236fbfcf2" />
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb1df5bd14111de32960c659bf9218b5974f75084da24352e2a14877dc668b64189">
+    <rdf:first rdf:resource="https://example.org/kicem/tile/final#OutputDocument" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb1e2fd805a351ea96f21bcd0ba9e0a172e278e6f315ad0774e680a0f480e64cd31">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+    <owl:onClass rdf:resource="https://example.org/kicem/tile/final#ProgressPaymentItem" />
+    <owl:onProperty rdf:nodeID="cb156b1da2f52997b6d883f82f3e2f4d5f390ef990e2b64eb208acd0b4787a77630" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb201fca05a2b0f1896120fcfb59228295b82d7d470ce49f3a69d8d6cf10d792ea5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+    <owl:onProperty rdf:resource="https://example.org/kicem/tile/final#materialUnitCost" />
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb20f40013af9674c349f0350e373f0863996c5fe7bc44f965f6c50179a08d4130f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:allValuesFrom rdf:resource="https://example.org/kicem/tile/final#CostCalculationItem" />
+    <owl:onProperty rdf:resource="https://example.org/kicem/tile/final#containsItem" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb2163160d785db7ef6ad2e2e03f1fda888f181bd14a14c5d685c3c8c50379765bb">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+    <owl:onProperty rdf:resource="https://example.org/kicem/tile/final#currentAmount" />
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb2174c011efe81020a0586e5ad376e12669b0e74bdbe930b76dfeda0d0f43129dc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+    <owl:onProperty rdf:resource="https://example.org/kicem/tile/final#currentQuantity" />
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb21a4d32d284c1aaff630f3c7528cb416857a95a6059c2a844d21c9dba8b35e2ef">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:nodeID="cbeb9915a52791f75fb3090591378c47443cfa7ef5990699d4dbc0f12b5f712a3b" />
+    <owl:someValuesFrom rdf:resource="https://example.org/kicem/tile/final#WorkCategoryDetailItem" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb21b2262aacb98c11f24fc19709d8995a0ddd2e847c779a9760a9d2aaae561f5e3">
+    <rdf:first rdf:resource="https://example.org/kicem/tile/final#QuantityCalculationSheet" />
+    <rdf:rest rdf:nodeID="cbfee3acae451cf67cfc69514e29efc8edc576621936d255304ce55148734ad1ed" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb222cae9cb7fc3d01a152c0a476db909ea1f60cc442f72c3f82bed3d9b31d629db">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+    <owl:onProperty rdf:resource="https://example.org/kicem/tile/final#contractQuantity" />
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb22673c67b3d628d8502add2cfd7a9d1c072805bb4489ee709559536dd894258aa">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:allValuesFrom rdf:resource="https://example.org/kicem/tile/final#CalculatedQuantityItem" />
+    <owl:onProperty rdf:resource="https://example.org/kicem/tile/final#containsItem" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb2270affb3371fdd6c7654c46ca32b6da3b1eb52b45a11dd5c4d85c7ff1829dd36">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onClass rdf:resource="https://example.org/kicem/tile/final#WorkCategory" />
+    <owl:onProperty rdf:resource="https://example.org/kicem/tile/final#belongsToWorkCategory" />
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb23185ea71f27f0a9af12d1a386c48f2144cc3db5cce92e9957890891cb41502a5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+    <owl:onProperty rdf:resource="https://example.org/kicem/tile/final#cumulativeQuantity" />
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb2364111e276bf55613f3b0e60ad2ecee46e8cc81110d5827fc23cb562b47a244d">
+    <rdf:first rdf:resource="https://example.org/kicem/tile/final#ProgressPaymentItem" />
+    <rdf:rest rdf:nodeID="cb1253578e008ec641828f30247b3042064834176576d568793d99e2077ca515362" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb23e1b22a99f1b3e814e84cab8c4dcd7ab5f60ed368887de02b95c841fab83c3f7">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+    <owl:onProperty rdf:resource="https://example.org/kicem/tile/final#calculatedUnitPrice" />
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb2450299c33e37b08c00fdd0180dc902ef633513c4d2dbf0f19a5234e47175bda1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:allValuesFrom rdf:resource="https://example.org/kicem/tile/final#ContractItem" />
+    <owl:onProperty rdf:resource="https://example.org/kicem/tile/final#containsItem" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb25fd5909295066b4b60024070171658797cfec27dfb6a6fd0a028fe2daa30f10d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+    <owl:onProperty rdf:resource="https://example.org/kicem/tile/final#laborUnitCost" />
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb260737acd683ff3da520f4e4fd14f54aca8be091560661161d7e3c96934473478">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+    <owl:onProperty rdf:resource="https://example.org/kicem/tile/final#contractQuantity" />
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb266c579408be9e6716d88bf0f2a1756fbaafd8ffa37dd92457c4a964739725f2d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+    <owl:onProperty rdf:resource="https://example.org/kicem/tile/final#remainingAmount" />
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb2674851a5b61ce1e7cbfe39be4ae66b5472267a6d212c517833eb5ee42528481a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+    <owl:onProperty rdf:resource="https://example.org/kicem/tile/final#currentAmount" />
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb26b4cd6e95f231deb7d9b7cd2fcd3406a974eeea0b337c8e8659ea1fbbeb0dd4c">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+    <owl:onProperty rdf:resource="https://example.org/kicem/tile/final#contractUnitPrice" />
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb26d379248102abc3c314b642fad652ab195a80bcc4b3fab5458d5a812ec1ec8a1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+    <owl:onProperty rdf:resource="https://example.org/kicem/tile/final#contractAmount" />
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb27685a0a421402e7ccf96aa048597aff4a18156efa1c0fb6dd157fb6585eff971">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+    <owl:onProperty rdf:resource="https://example.org/kicem/tile/final#expenseUnitCost" />
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb27e74b6e12d95cf530225450066cbb282c4bd52e2d083f75d286e822caafaa6fa">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onClass rdf:resource="https://example.org/kicem/tile/final#ContractItem" />
+    <owl:onProperty rdf:nodeID="cba0fa75e61dbfb283f504f2838277cd223dd83491e14e49696a5f3e7e0c5a63d3" />
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb2865836da3f2fc13b876f4b677ea854444233be5fa127afa7f9a6b53be0b10be8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onClass rdf:resource="https://example.org/kicem/tile/final#ProgressPaymentRound" />
+    <owl:onProperty rdf:resource="https://example.org/kicem/tile/final#belongsToProgressRound" />
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb28b3d7669315a5505372cb2b57751c8c11beee306ca967f68db54a02efa2003fd">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+    <owl:onProperty rdf:resource="https://example.org/kicem/tile/final#cumulativeAmount" />
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb28e20bc01c5f5842b358c2f1e03fbdbec620174594b38f08e3235e46de2c2ad45">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+    <owl:onProperty rdf:resource="https://example.org/kicem/tile/final#previousCumulativeQuantity" />
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb292c6aac0b6e82ecce2664528d053ad36328105565d1f62bcf133a4ff3c533f1c">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+    <owl:onProperty rdf:resource="https://example.org/kicem/tile/final#contractQuantity" />
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb29335c79156f0ba4632b2149a0340c79de114f12ea0b734c7f4393e126cadd160">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+    <owl:onProperty rdf:resource="https://example.org/kicem/tile/final#remainingQuantity" />
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb295de88a92b94a68563060c647ed5944e0ccc3ad563fc8565cb3e789b997b4c76">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onClass rdf:resource="https://example.org/kicem/tile/final#ContractItem" />
+    <owl:onProperty rdf:nodeID="cb77163aa425c3825cbb82b201979b9579c6eb2024ef4f1028b444d88e3292f4a9" />
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb2a8f567eb479f41abba7ec0db60698b2d20ac2b71e42b165211952dc9c121e7e9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+    <owl:onProperty rdf:resource="https://example.org/kicem/tile/final#contractUnitPrice" />
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb2aae02349f8a6dffc6e2ea83810fb75741f05489d7c32f8be04cc33e0ee8fd33e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+    <owl:onProperty rdf:resource="https://example.org/kicem/tile/final#contractAmount" />
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb2ad83f75e4ba9bbdfb796f4d62cb563825669a5e0e41fdf69750cb757202cc27d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:allValuesFrom rdf:resource="https://example.org/kicem/tile/final#ContractSummaryItem" />
+    <owl:onProperty rdf:resource="https://example.org/kicem/tile/final#containsItem" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb2b1f736fb629aee1b0dc87bd60d194cee6635f128eacfc1e1fb2ada4c2bace400">
+    <rdf:first rdf:resource="https://example.org/kicem/tile/final#WorkCategorySummaryStatement" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb2b67cd1719ae23afbae9276668acf47c2d5495cce0583449374c5ecf556113e04">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+    <owl:onProperty rdf:resource="https://example.org/kicem/tile/final#contractAmount" />
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb2db4897de96477c9e4ad5b7b45f6de3b6aa6f27b2e0e467ad2ae5095fc92df28d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+    <owl:onProperty rdf:resource="https://example.org/kicem/tile/final#contractUnitPrice" />
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb2dd33533d474f1aeefe859f110fffcdfda8c844de78ec4a191e1c0f76f69bdde2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+    <owl:onProperty rdf:resource="https://example.org/kicem/tile/final#contractAmount" />
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb2e4b387f28c5699869c757e22f23f749a03ea7931b5f3bac13e5964b5b5a023b6">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+    <owl:onProperty rdf:resource="https://example.org/kicem/tile/final#previousCumulativeAmount" />
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb2ec8745aa824321cf804df4f6c2e7fe2b6872f5f1afd805ac3e8efd3a4f4a5297">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onClass rdf:resource="https://example.org/kicem/tile/final#CostItem" />
+    <owl:onProperty rdf:resource="https://example.org/kicem/tile/final#representsCostItem" />
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb2fa123e08ec543f9b393d380c46f439a32fcce63ed5d31de0c9b13c91a94c33f4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:nodeID="cbb64c1931d6f67192ef525c02017709e56e08f5ccc943b8e21fc303ba866b72e1" />
+    <owl:someValuesFrom rdf:resource="https://example.org/kicem/tile/final#CalculatedQuantityItem" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb3315085ca370caea242a8aac48613b8f3a4c9d258dab7a50b53ba4273e29e5e7f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onClass rdf:resource="https://example.org/kicem/tile/final#ProgressDocument" />
+    <owl:onProperty rdf:nodeID="cb144fe1bf0c46800bf357d65d955b44ad800398b7bf8e04c086d0ff70487663b2" />
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb3d410eaf7322f6f670649309f48fd6218e7e807d6bf2a86f5fb433a2856ad7f4a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onClass rdf:resource="https://example.org/kicem/tile/final#Unit" />
+    <owl:onProperty rdf:resource="https://example.org/kicem/tile/final#usesUnit" />
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb77163aa425c3825cbb82b201979b9579c6eb2024ef4f1028b444d88e3292f4a9">
+    <owl:inverseOf rdf:resource="https://example.org/kicem/tile/final#providesContractAmountToProgressPaymentItem" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cba0fa75e61dbfb283f504f2838277cd223dd83491e14e49696a5f3e7e0c5a63d3">
+    <owl:inverseOf rdf:resource="https://example.org/kicem/tile/final#providesContractQuantityToProgressPaymentItem" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cbb4274b4d1aa8bf866b66cbbab79cdba82b99cb8bd6abf43749a66fcee40cc363">
+    <rdf:first rdf:resource="https://example.org/kicem/tile/final#ContractStatement" />
+    <rdf:rest rdf:nodeID="cb1da6cb7e431d2004dd10505be741e28a3424eae05c282bd43b48db25a81707b7e" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cbb64c1931d6f67192ef525c02017709e56e08f5ccc943b8e21fc303ba866b72e1">
+    <owl:inverseOf rdf:resource="https://example.org/kicem/tile/final#providesCalculatedQuantityTo" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cbc41f520cd85a20d456e6d8ab2344c5d09eeaaad3a824a08f6a69ed76e8a74b54">
+    <owl:inverseOf rdf:resource="https://example.org/kicem/tile/final#providesContractUnitPriceToProgressPaymentItem" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cbe3686d8b21cdbd9d17949c3a9719aacac37982394b515cc4bed39d9236fbfcf2">
+    <owl:inverseOf rdf:resource="https://example.org/kicem/tile/final#providesContractValueTo" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cbeb9915a52791f75fb3090591378c47443cfa7ef5990699d4dbc0f12b5f712a3b">
+    <owl:inverseOf rdf:resource="https://example.org/kicem/tile/final#contributesContractAmountTo" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cbfee3acae451cf67cfc69514e29efc8edc576621936d255304ce55148734ad1ed">
+    <rdf:first rdf:resource="https://example.org/kicem/tile/final#WorkCategoryDetailStatement" />
+    <rdf:rest rdf:nodeID="cb2b1f736fb629aee1b0dc87bd60d194cee6635f128eacfc1e1fb2ada4c2bace400" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/source">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty" />
+    <rdfs:label xml:lang="ko">출처</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#ApplicationSurface">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment xml:lang="ko">타일이 적용되는 표면의 유형.</rdfs:comment>
+    <rdfs:label xml:lang="ko">타일 적용 표면</rdfs:label>
+    <tile:researchOrigin>researcher_schema_adapter</tile:researchOrigin>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#CalculatedQuantityItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment xml:lang="ko">수량산출서에서 계약수량의 근거가 되는 산출수량 항목</rdfs:comment>
+    <rdfs:label xml:lang="ko">수량산출항목</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="cb1b30180da9b689f3a6a300072bc861d65e6e483834a0f8ad6b2ff40e7c652e3d6" />
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/tile/final#DetailItem" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#CeramicTileCostItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment xml:lang="ko">세라믹타일의 비용을 나타내는 항목으로, 바닥 및 벽에 사용되는 세라믹타일의 가격을 포함한다.</rdfs:comment>
+    <rdfs:label xml:lang="ko">세라믹타일 비용항목</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/tile/final#TileMaterialCostItem" />
+    <tile:evidenceSourceId>건내:389</tile:evidenceSourceId>
+    <tile:evidenceSourceId>건내:390</tile:evidenceSourceId>
+    <tile:evidenceSourceId>건내:391</tile:evidenceSourceId>
+    <tile:researchOrigin>LLM_document_proposal</tile:researchOrigin>
+    <tile:validationStatus>provisional</tile:validationStatus>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#CeramicTilePressureBondingCostItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment xml:lang="ko">세라믹타일 압착붙임 작업의 비용대상.</rdfs:comment>
+    <rdfs:label xml:lang="ko">세라믹타일 압착붙임 비용</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/tile/final#TileInstallationCostItem" />
+    <tile:evidenceSourceId>건내:398</tile:evidenceSourceId>
+    <tile:evidenceSourceId>건내:399</tile:evidenceSourceId>
+    <tile:evidenceSourceId>건내:400</tile:evidenceSourceId>
+    <tile:releaseCuration>identifier normalised from CeramicTileAdhesiveCostItem</tile:releaseCuration>
+    <tile:researchOrigin>LLM_document_proposal</tile:researchOrigin>
+    <tile:validationStatus>provisional</tile:validationStatus>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#ContractItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment xml:lang="ko">계약수량·계약단가·계약금액을 제공하는 계약내역서 항목</rdfs:comment>
+    <rdfs:label xml:lang="ko">계약항목</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="cb292c6aac0b6e82ecce2664528d053ad36328105565d1f62bcf133a4ff3c533f1c" />
+    <rdfs:subClassOf rdf:nodeID="cb2db4897de96477c9e4ad5b7b45f6de3b6aa6f27b2e0e467ad2ae5095fc92df28d" />
+    <rdfs:subClassOf rdf:nodeID="cb2dd33533d474f1aeefe859f110fffcdfda8c844de78ec4a191e1c0f76f69bdde2" />
+    <rdfs:subClassOf rdf:nodeID="cb2fa123e08ec543f9b393d380c46f439a32fcce63ed5d31de0c9b13c91a94c33f4" />
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/tile/final#DetailItem" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#ContractStatement">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment xml:lang="ko">확정된 계약수량·계약단가·계약금액을 제공하는 근거서류</rdfs:comment>
+    <rdfs:label xml:lang="ko">계약내역서</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="cb2450299c33e37b08c00fdd0180dc902ef633513c4d2dbf0f19a5234e47175bda1" />
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/tile/final#EvidenceDocument" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#ContractSummaryItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment xml:lang="ko">공종별내역항목의 계약금액을 공종별로 합산한 공종별집계표 항목</rdfs:comment>
+    <rdfs:label xml:lang="ko">계약집계항목</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="cb21a4d32d284c1aaff630f3c7528cb416857a95a6059c2a844d21c9dba8b35e2ef" />
+    <rdfs:subClassOf rdf:nodeID="cb2b67cd1719ae23afbae9276668acf47c2d5495cce0583449374c5ecf556113e04" />
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/tile/final#SummaryItem" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#CostCalculationItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment xml:lang="ko">원가계산서에서 비용 산정 근거를 제공하는 항목</rdfs:comment>
+    <rdfs:label xml:lang="ko">원가계산항목</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="cb201fca05a2b0f1896120fcfb59228295b82d7d470ce49f3a69d8d6cf10d792ea5" />
+    <rdfs:subClassOf rdf:nodeID="cb23e1b22a99f1b3e814e84cab8c4dcd7ab5f60ed368887de02b95c841fab83c3f7" />
+    <rdfs:subClassOf rdf:nodeID="cb25fd5909295066b4b60024070171658797cfec27dfb6a6fd0a028fe2daa30f10d" />
+    <rdfs:subClassOf rdf:nodeID="cb27685a0a421402e7ccf96aa048597aff4a18156efa1c0fb6dd157fb6585eff971" />
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/tile/final#DetailItem" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#CostCalculationStatement">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment xml:lang="ko">비용항목의 원가 구성과 산정금액을 제공하는 근거서류</rdfs:comment>
+    <rdfs:label xml:lang="ko">원가계산서</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="cb20f40013af9674c349f0350e373f0863996c5fe7bc44f965f6c50179a08d4130f" />
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/tile/final#EvidenceDocument" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#CostItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment xml:lang="ko">서류별 항목이 공통으로 나타내는 표준 비용 대상</rdfs:comment>
+    <rdfs:label xml:lang="ko">비용항목</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="cb1bbbaa8a3360adcc145461aedc6a32b63e16abe3195c5adbb3ba807f600d2559d" />
+    <owl:disjointWith rdf:resource="https://example.org/kicem/tile/final#ApplicationSurface" />
+    <owl:disjointWith rdf:resource="https://example.org/kicem/tile/final#DocumentItem" />
+    <owl:disjointWith rdf:resource="https://example.org/kicem/tile/final#InstallationMethod" />
+    <owl:disjointWith rdf:resource="https://example.org/kicem/tile/final#TileMaterial" />
+    <owl:disjointWith rdf:resource="https://example.org/kicem/tile/final#WorkTask" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#DetailItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment xml:lang="ko">집계 전 개별 비용항목</rdfs:comment>
+    <rdfs:label xml:lang="ko">상세비용항목</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="cb2ec8745aa824321cf804df4f6c2e7fe2b6872f5f1afd805ac3e8efd3a4f4a5297" />
+    <rdfs:subClassOf rdf:nodeID="cb3d410eaf7322f6f670649309f48fd6218e7e807d6bf2a86f5fb433a2856ad7f4a" />
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/tile/final#DocumentItem" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#DocumentItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment xml:lang="ko">기성서류에 포함되는 비용정보의 의미 단위</rdfs:comment>
+    <rdfs:label xml:lang="ko">기성서류항목</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="cb3315085ca370caea242a8aac48613b8f3a4c9d258dab7a50b53ba4273e29e5e7f" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#EvidenceDocument">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment xml:lang="ko">기성금액 산정에 필요한 수량·단가·금액의 근거를 제공하는 서류</rdfs:comment>
+    <rdfs:label xml:lang="ko">근거서류</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/tile/final#ProgressDocument" />
+    <owl:disjointUnionOf rdf:nodeID="cbb4274b4d1aa8bf866b66cbbab79cdba82b99cb8bd6abf43749a66fcee40cc363" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#InstallationMethod">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment xml:lang="ko">타일을 시공하는 방법의 유형.</rdfs:comment>
+    <rdfs:label xml:lang="ko">타일 시공 방법</rdfs:label>
+    <tile:researchOrigin>researcher_schema_adapter</tile:researchOrigin>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#MosaicTileCostItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment xml:lang="ko">모자이크타일의 비용을 나타내는 항목으로, 벽면에 사용되는 모자이크타일의 가격을 포함한다.</rdfs:comment>
+    <rdfs:label xml:lang="ko">모자이크타일 비용항목</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/tile/final#TileMaterialCostItem" />
+    <tile:evidenceSourceId>건내:414</tile:evidenceSourceId>
+    <tile:evidenceSourceId>건내:415</tile:evidenceSourceId>
+    <tile:researchOrigin>LLM_document_proposal</tile:researchOrigin>
+    <tile:validationStatus>provisional</tile:validationStatus>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#MosaicTilePressureBondingCostItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment xml:lang="ko">모자이크타일 압착붙임 작업의 비용대상.</rdfs:comment>
+    <rdfs:label xml:lang="ko">모자이크타일 압착붙임 비용</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/tile/final#TileInstallationCostItem" />
+    <tile:evidenceSourceId>건내:416</tile:evidenceSourceId>
+    <tile:releaseCuration>identifier normalised from MosaicTileAdhesiveCostItem</tile:releaseCuration>
+    <tile:researchOrigin>LLM_document_proposal</tile:researchOrigin>
+    <tile:validationStatus>provisional</tile:validationStatus>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#NonSlipTileCostItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment xml:lang="ko">논슬립타일의 비용을 나타내는 항목으로, 주로 화장실 및 샤워실에 사용되는 논슬립타일의 가격을 포함한다.</rdfs:comment>
+    <rdfs:label xml:lang="ko">논슬립타일 비용항목</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/tile/final#TileMaterialCostItem" />
+    <tile:evidenceSourceId>건내:403</tile:evidenceSourceId>
+    <tile:evidenceSourceId>건내:404</tile:evidenceSourceId>
+    <tile:evidenceSourceId>건내:405</tile:evidenceSourceId>
+    <tile:researchOrigin>LLM_document_proposal</tile:researchOrigin>
+    <tile:validationStatus>provisional</tile:validationStatus>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#OutputDocument">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment xml:lang="ko">근거서류의 정보를 사용해 기성금액 산정 결과를 제시하는 서류</rdfs:comment>
+    <rdfs:label xml:lang="ko">산출서류</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/tile/final#ProgressDocument" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#PorcelainTileCostItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment xml:lang="ko">포세린타일의 비용을 나타내는 항목으로, 주로 화장실 및 바닥에 사용되는 포세린타일의 가격을 포함한다.</rdfs:comment>
+    <rdfs:label xml:lang="ko">포세린타일 비용항목</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/tile/final#TileMaterialCostItem" />
+    <tile:evidenceSourceId>건내:387</tile:evidenceSourceId>
+    <tile:evidenceSourceId>건내:421</tile:evidenceSourceId>
+    <tile:researchOrigin>LLM_document_proposal</tile:researchOrigin>
+    <tile:validationStatus>provisional</tile:validationStatus>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#PorcelainTilePressureBondingCostItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment xml:lang="ko">포세린타일 압착붙임 작업의 비용대상.</rdfs:comment>
+    <rdfs:label xml:lang="ko">포세린타일 압착붙임 비용</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/tile/final#TileInstallationCostItem" />
+    <tile:evidenceSourceId>건내:388</tile:evidenceSourceId>
+    <tile:releaseCuration>identifier normalised from PorcelainTileAdhesiveCostItem</tile:releaseCuration>
+    <tile:researchOrigin>LLM_document_proposal</tile:researchOrigin>
+    <tile:validationStatus>provisional</tile:validationStatus>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#ProgressDocument">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment xml:lang="ko">철근콘크리트 기성금액 산정에 직접 사용하는 서류의 최상위 클래스</rdfs:comment>
+    <rdfs:label xml:lang="ko">기성서류</rdfs:label>
+    <owl:disjointUnionOf rdf:nodeID="cb1d811a12d71bd0398f399e3c9ee2811a0f4b9d9d0af74bde3c59f1c9673801816" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#ProgressPaymentItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment xml:lang="ko">공사기성부분내역서에서 전회·금회·누계·잔여 수량과 금액을 산정하는 항목</rdfs:comment>
+    <rdfs:label xml:lang="ko">기성내역항목</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="cb19d00372acaef3b6494832506bb7fc41390c6d673359e5856896c3c778dd3c01b" />
+    <rdfs:subClassOf rdf:nodeID="cb1e2fd805a351ea96f21bcd0ba9e0a172e278e6f315ad0774e680a0f480e64cd31" />
+    <rdfs:subClassOf rdf:nodeID="cb2163160d785db7ef6ad2e2e03f1fda888f181bd14a14c5d685c3c8c50379765bb" />
+    <rdfs:subClassOf rdf:nodeID="cb2174c011efe81020a0586e5ad376e12669b0e74bdbe930b76dfeda0d0f43129dc" />
+    <rdfs:subClassOf rdf:nodeID="cb222cae9cb7fc3d01a152c0a476db909ea1f60cc442f72c3f82bed3d9b31d629db" />
+    <rdfs:subClassOf rdf:nodeID="cb23185ea71f27f0a9af12d1a386c48f2144cc3db5cce92e9957890891cb41502a5" />
+    <rdfs:subClassOf rdf:nodeID="cb266c579408be9e6716d88bf0f2a1756fbaafd8ffa37dd92457c4a964739725f2d" />
+    <rdfs:subClassOf rdf:nodeID="cb26b4cd6e95f231deb7d9b7cd2fcd3406a974eeea0b337c8e8659ea1fbbeb0dd4c" />
+    <rdfs:subClassOf rdf:nodeID="cb26d379248102abc3c314b642fad652ab195a80bcc4b3fab5458d5a812ec1ec8a1" />
+    <rdfs:subClassOf rdf:nodeID="cb27e74b6e12d95cf530225450066cbb282c4bd52e2d083f75d286e822caafaa6fa" />
+    <rdfs:subClassOf rdf:nodeID="cb28b3d7669315a5505372cb2b57751c8c11beee306ca967f68db54a02efa2003fd" />
+    <rdfs:subClassOf rdf:nodeID="cb28e20bc01c5f5842b358c2f1e03fbdbec620174594b38f08e3235e46de2c2ad45" />
+    <rdfs:subClassOf rdf:nodeID="cb29335c79156f0ba4632b2149a0340c79de114f12ea0b734c7f4393e126cadd160" />
+    <rdfs:subClassOf rdf:nodeID="cb295de88a92b94a68563060c647ed5944e0ccc3ad563fc8565cb3e789b997b4c76" />
+    <rdfs:subClassOf rdf:nodeID="cb2e4b387f28c5699869c757e22f23f749a03ea7931b5f3bac13e5964b5b5a023b6" />
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/tile/final#DetailItem" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#ProgressPaymentRound">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment xml:lang="ko">기성 산정과 청구의 시간 단위</rdfs:comment>
+    <rdfs:label xml:lang="ko">기성회차</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#ProgressPaymentStatement">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment xml:lang="ko">회차별 기성수량과 기성금액을 산정해 제시하는 유일한 산출서류</rdfs:comment>
+    <rdfs:label xml:lang="ko">공사기성부분내역서</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="cb1776120d2e8e72e33b056e1ad5e8736dc936a66950f4196f9c1e74c5018190d2e" />
+    <rdfs:subClassOf rdf:nodeID="cb2865836da3f2fc13b876f4b677ea854444233be5fa127afa7f9a6b53be0b10be8" />
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/tile/final#OutputDocument" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#ProgressPaymentSummaryItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment xml:lang="ko">기성금액항목의 금회금액을 공종별로 합산한 공사기성부분내역서 항목</rdfs:comment>
+    <rdfs:label xml:lang="ko">기성집계항목</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="cb2674851a5b61ce1e7cbfe39be4ae66b5472267a6d212c517833eb5ee42528481a" />
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/tile/final#SummaryItem" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#QuantityCalculationSheet">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment xml:lang="ko">계약수량의 산출 근거를 제공하는 근거서류</rdfs:comment>
+    <rdfs:label xml:lang="ko">수량산출서</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="cb22673c67b3d628d8502add2cfd7a9d1c072805bb4489ee709559536dd894258aa" />
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/tile/final#EvidenceDocument" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#StoneTilePressureBondingCostItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment xml:lang="ko">석재타일 압착붙임 작업의 비용대상.</rdfs:comment>
+    <rdfs:label xml:lang="ko">석재타일 압착붙임 비용</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/tile/final#TileInstallationCostItem" />
+    <tile:evidenceSourceId>건내:386</tile:evidenceSourceId>
+    <tile:releaseCuration>identifier normalised from StoneTileAdhesiveCostItem</tile:releaseCuration>
+    <tile:researchOrigin>LLM_document_proposal</tile:researchOrigin>
+    <tile:validationStatus>provisional</tile:validationStatus>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#SummaryItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment xml:lang="ko">계약 또는 기성 상세항목의 금액을 동일 공종별로 합산한 항목</rdfs:comment>
+    <rdfs:label xml:lang="ko">집계항목</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="cb2270affb3371fdd6c7654c46ca32b6da3b1eb52b45a11dd5c4d85c7ff1829dd36" />
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/tile/final#DocumentItem" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#TileInspection">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment xml:lang="ko">타일 시공 후 품질을 확인하기 위한 검사 작업으로, 시공 중 검사 및 접착력 시험 등을 포함합니다.</rdfs:comment>
+    <rdfs:label xml:lang="ko">타일 검사</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/tile/final#WorkTask" />
+    <tile:evidenceSourceId>WBS:3.6</tile:evidenceSourceId>
+    <tile:researchOrigin>LLM_WBS_proposal</tile:researchOrigin>
+    <tile:validationStatus>provisional</tile:validationStatus>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#TileInstallation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment xml:lang="ko">타일을 설치하는 작업으로, 벽, 바닥, 천장 등 다양한 표면에 타일을 붙이는 작업을 포함합니다.</rdfs:comment>
+    <rdfs:label xml:lang="ko">타일 시공</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/tile/final#WorkTask" />
+    <tile:evidenceSourceId>WBS:3.2</tile:evidenceSourceId>
+    <tile:researchOrigin>LLM_WBS_proposal</tile:researchOrigin>
+    <tile:validationStatus>provisional</tile:validationStatus>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#TileInstallationCostItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment xml:lang="ko">타일 설치 작업의 비용대상.</rdfs:comment>
+    <rdfs:label xml:lang="ko">타일 설치 비용대상</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/tile/final#CostItem" />
+    <tile:researchOrigin>researcher_schema_adapter</tile:researchOrigin>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#TileMaterial">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment xml:lang="ko">타일공사에서 사용하는 재료의 유형.</rdfs:comment>
+    <rdfs:label xml:lang="ko">타일 재료</rdfs:label>
+    <tile:researchOrigin>researcher_schema_adapter</tile:researchOrigin>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#TileMaterialCostItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment xml:lang="ko">타일 자재 공급의 비용대상.</rdfs:comment>
+    <rdfs:label xml:lang="ko">타일 자재 비용대상</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/tile/final#CostItem" />
+    <tile:researchOrigin>researcher_schema_adapter</tile:researchOrigin>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#Unit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment xml:lang="ko">비용항목 수량을 측정하는 단위</rdfs:comment>
+    <rdfs:label xml:lang="ko">단위</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#WallTileInstallation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment xml:lang="ko">벽면에 타일을 설치하는 작업 활동.</rdfs:comment>
+    <rdfs:label xml:lang="ko">벽 타일 시공</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/tile/final#TileInstallation" />
+    <tile:evidenceSourceId>WBS:3.2.1</tile:evidenceSourceId>
+    <tile:evidenceSourceId>WBS:3.2.4</tile:evidenceSourceId>
+    <tile:evidenceSourceId>WBS:3.2.6</tile:evidenceSourceId>
+    <tile:evidenceSourceId>WBS:3.2.7</tile:evidenceSourceId>
+    <tile:releaseCuration>identifier normalised from TA_ac621fe07583</tile:releaseCuration>
+    <tile:releaseCuration>parent refined to TileInstallation</tile:releaseCuration>
+    <tile:researchOrigin>TaxoAdapt</tile:researchOrigin>
+    <tile:validationStatus>provisional</tile:validationStatus>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#WorkCategory">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment xml:lang="ko">철근콘크리트공사와 그 하위 네 공종을 표현하는 통제 분류</rdfs:comment>
+    <rdfs:label xml:lang="ko">공종</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#WorkCategoryDetailItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment xml:lang="ko">공종별내역서에 수량·단가·금액을 나타내는 항목</rdfs:comment>
+    <rdfs:label xml:lang="ko">공종별내역항목</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="cb1daa8c82cb36b5f24d166690f1f160ed61a2413446691a5c03562c8459044cab8" />
+    <rdfs:subClassOf rdf:nodeID="cb260737acd683ff3da520f4e4fd14f54aca8be091560661161d7e3c96934473478" />
+    <rdfs:subClassOf rdf:nodeID="cb2a8f567eb479f41abba7ec0db60698b2d20ac2b71e42b165211952dc9c121e7e9" />
+    <rdfs:subClassOf rdf:nodeID="cb2aae02349f8a6dffc6e2ea83810fb75741f05489d7c32f8be04cc33e0ee8fd33e" />
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/tile/final#DetailItem" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#WorkCategoryDetailStatement">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment xml:lang="ko">공종별 비용항목의 수량·단가·금액을 제시하는 근거서류</rdfs:comment>
+    <rdfs:label xml:lang="ko">공종별내역서</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="cb164c0a54b857d9d80e09f6b977e8d1de51cd8f0ac63e0001ae6c7e885316092a1" />
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/tile/final#EvidenceDocument" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#WorkCategorySummaryStatement">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment xml:lang="ko">공종별 상세 비용을 합산해 제시하는 근거서류</rdfs:comment>
+    <rdfs:label xml:lang="ko">공종별집계표</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="cb2ad83f75e4ba9bbdfb796f4d62cb563825669a5e0e41fdf69750cb757202cc27d" />
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/tile/final#EvidenceDocument" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#WorkTask">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment xml:lang="ko">타일공사의 작업 활동 유형.</rdfs:comment>
+    <rdfs:label xml:lang="ko">타일 작업 활동</rdfs:label>
+    <tile:researchOrigin>researcher_schema_adapter</tile:researchOrigin>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#appliesToWBS">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:comment xml:lang="ko">비용대상이 관련된 WBS 작업 활동.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://example.org/kicem/tile/final#CostItem" />
+    <rdfs:label xml:lang="ko">관련 작업</rdfs:label>
+    <rdfs:range rdf:resource="https://example.org/kicem/tile/final#WorkTask" />
+    <tile:researchOrigin>researcher_relation_adapter</tile:researchOrigin>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#belongsToProgressRound">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:comment xml:lang="ko">공사기성부분내역서가 적용되는 기성회차</rdfs:comment>
+    <rdfs:domain rdf:resource="https://example.org/kicem/tile/final#ProgressPaymentStatement" />
+    <rdfs:label xml:lang="ko">기성회차 소속</rdfs:label>
+    <rdfs:range rdf:resource="https://example.org/kicem/tile/final#ProgressPaymentRound" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#belongsToWorkCategory">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:comment xml:lang="ko">비용항목 또는 집계항목을 철근·콘크리트·거푸집·동바리 중 하나로 분류</rdfs:comment>
+    <rdfs:label xml:lang="ko">공종 소속</rdfs:label>
+    <rdfs:range rdf:resource="https://example.org/kicem/tile/final#WorkCategory" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#calculatedQuantity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:comment xml:lang="ko">수량산출서에서 계산된 계약수량 근거값</rdfs:comment>
+    <rdfs:label xml:lang="ko">산출수량</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#calculatedUnitPrice">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:comment xml:lang="ko">단위당 재료비·노무비·경비 합계로 산출된 단가</rdfs:comment>
+    <rdfs:domain rdf:resource="https://example.org/kicem/tile/final#CostCalculationItem" />
+    <rdfs:label xml:lang="ko">산출단가</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#containsItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:comment xml:lang="ko">기성서류가 포함하는 비용정보 항목</rdfs:comment>
+    <rdfs:domain rdf:resource="https://example.org/kicem/tile/final#ProgressDocument" />
+    <rdfs:label xml:lang="ko">항목 포함</rdfs:label>
+    <rdfs:range rdf:resource="https://example.org/kicem/tile/final#DocumentItem" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#contractAmount">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:comment xml:lang="ko">계약내역서에 확정된 금액</rdfs:comment>
+    <rdfs:label xml:lang="ko">계약금액</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#contractQuantity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:comment xml:lang="ko">계약내역서에 확정된 수량</rdfs:comment>
+    <rdfs:label xml:lang="ko">계약수량</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#contractUnitPrice">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:comment xml:lang="ko">계약내역서에 확정된 단가</rdfs:comment>
+    <rdfs:label xml:lang="ko">계약단가</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#contributesContractAmountTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:comment xml:lang="ko">공종별내역항목의 계약금액을 계약집계항목으로 합산</rdfs:comment>
+    <rdfs:domain rdf:resource="https://example.org/kicem/tile/final#WorkCategoryDetailItem" />
+    <rdfs:label xml:lang="ko">계약금액 → 공종별 계약집계</rdfs:label>
+    <rdfs:range rdf:resource="https://example.org/kicem/tile/final#ContractSummaryItem" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#contributesCurrentAmountTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:comment xml:lang="ko">기성내역항목의 금회금액을 기성집계항목으로 합산</rdfs:comment>
+    <rdfs:domain rdf:resource="https://example.org/kicem/tile/final#ProgressPaymentItem" />
+    <rdfs:label xml:lang="ko">금회금액 → 공종별 기성집계</rdfs:label>
+    <rdfs:range rdf:resource="https://example.org/kicem/tile/final#ProgressPaymentSummaryItem" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#cumulativeAmount">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:comment xml:lang="ko">전회누계금액과 금회금액의 합</rdfs:comment>
+    <rdfs:label xml:lang="ko">누계금액</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#cumulativeQuantity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:comment xml:lang="ko">전회누계수량과 금회수량의 합</rdfs:comment>
+    <rdfs:label xml:lang="ko">누계수량</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#currentAmount">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:comment xml:lang="ko">현재 기성회차에서 인정되며 누계기성금액 산정에 반영되는 금액</rdfs:comment>
+    <rdfs:label xml:lang="ko">금회금액</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#currentQuantity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:comment xml:lang="ko">기성내역 한 행에서 현재 회차에 인정된 수량</rdfs:comment>
+    <rdfs:domain rdf:resource="https://example.org/kicem/tile/final#ProgressPaymentItem" />
+    <rdfs:label xml:lang="ko">금회수량</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#documentIdentifier">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:comment xml:lang="ko">업무에서 서류를 식별하는 문자열</rdfs:comment>
+    <rdfs:domain rdf:resource="https://example.org/kicem/tile/final#ProgressDocument" />
+    <rdfs:label xml:lang="ko">서류 식별자</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#evidenceSourceId">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty" />
+    <rdfs:label xml:lang="ko">근거 출처 식별자</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#expenseUnitCost">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:comment xml:lang="ko">비용항목 한 단위당 경비</rdfs:comment>
+    <rdfs:domain rdf:resource="https://example.org/kicem/tile/final#CostCalculationItem" />
+    <rdfs:label xml:lang="ko">단위당 경비</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#itemCode">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:comment xml:lang="ko">비용항목의 식별 코드</rdfs:comment>
+    <rdfs:domain rdf:resource="https://example.org/kicem/tile/final#CostItem" />
+    <rdfs:label xml:lang="ko">항목 코드</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#itemName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:comment xml:lang="ko">서류항목과 비용항목에서 공통으로 사용하는 품명</rdfs:comment>
+    <rdfs:label xml:lang="ko">항목명</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#laborUnitCost">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:comment xml:lang="ko">비용항목 한 단위당 노무비</rdfs:comment>
+    <rdfs:domain rdf:resource="https://example.org/kicem/tile/final#CostCalculationItem" />
+    <rdfs:label xml:lang="ko">단위당 노무비</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#materialUnitCost">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:comment xml:lang="ko">비용항목 한 단위당 재료비</rdfs:comment>
+    <rdfs:domain rdf:resource="https://example.org/kicem/tile/final#CostCalculationItem" />
+    <rdfs:label xml:lang="ko">단위당 재료비</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#partOfWorkTask">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:comment xml:lang="ko">세부 작업이 상위 작업에 포함되는 관계.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://example.org/kicem/tile/final#WorkTask" />
+    <rdfs:label xml:lang="ko">작업 구성 관계</rdfs:label>
+    <rdfs:range rdf:resource="https://example.org/kicem/tile/final#WorkTask" />
+    <tile:researchOrigin>researcher_relation_adapter</tile:researchOrigin>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#previousCumulativeAmount">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:comment xml:lang="ko">직전 회차까지 인정된 누계금액</rdfs:comment>
+    <rdfs:label xml:lang="ko">전회누계금액</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#previousCumulativeQuantity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:comment xml:lang="ko">직전 회차까지 인정된 누계수량</rdfs:comment>
+    <rdfs:label xml:lang="ko">전회누계수량</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#previousProgressRound">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:comment xml:lang="ko">현재 회차가 이월값을 참조하는 직전 회차</rdfs:comment>
+    <rdfs:domain rdf:resource="https://example.org/kicem/tile/final#ProgressPaymentRound" />
+    <rdfs:label xml:lang="ko">이전 기성회차</rdfs:label>
+    <rdfs:range rdf:resource="https://example.org/kicem/tile/final#ProgressPaymentRound" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#providesCalculatedQuantityTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:comment xml:lang="ko">수량산출항목의 calculatedQuantity를 계약항목의 contractQuantity 근거로 전달</rdfs:comment>
+    <rdfs:domain rdf:resource="https://example.org/kicem/tile/final#CalculatedQuantityItem" />
+    <rdfs:label xml:lang="ko">산출수량 → 계약수량</rdfs:label>
+    <rdfs:range rdf:resource="https://example.org/kicem/tile/final#ContractItem" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#providesContractAmountTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:comment xml:lang="ko">계약항목의 contractAmount를 공종별내역항목의 contractAmount로 전달</rdfs:comment>
+    <rdfs:domain rdf:resource="https://example.org/kicem/tile/final#ContractItem" />
+    <rdfs:label xml:lang="ko">계약금액 → 공종별내역 계약금액</rdfs:label>
+    <rdfs:range rdf:resource="https://example.org/kicem/tile/final#WorkCategoryDetailItem" />
+    <rdfs:subPropertyOf rdf:resource="https://example.org/kicem/tile/final#providesContractValueTo" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#providesContractAmountToProgressPaymentItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:comment xml:lang="ko">계약항목의 contractAmount를 기성내역항목의 contractAmount로 전달</rdfs:comment>
+    <rdfs:domain rdf:resource="https://example.org/kicem/tile/final#ContractItem" />
+    <rdfs:label xml:lang="ko">계약금액 → 기성내역 계약금액</rdfs:label>
+    <rdfs:range rdf:resource="https://example.org/kicem/tile/final#ProgressPaymentItem" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#providesContractQuantityTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:comment xml:lang="ko">계약항목의 contractQuantity를 공종별내역항목의 contractQuantity로 전달</rdfs:comment>
+    <rdfs:domain rdf:resource="https://example.org/kicem/tile/final#ContractItem" />
+    <rdfs:label xml:lang="ko">계약수량 → 공종별내역 계약수량</rdfs:label>
+    <rdfs:range rdf:resource="https://example.org/kicem/tile/final#WorkCategoryDetailItem" />
+    <rdfs:subPropertyOf rdf:resource="https://example.org/kicem/tile/final#providesContractValueTo" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#providesContractQuantityToProgressPaymentItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:comment xml:lang="ko">계약항목의 contractQuantity를 기성내역항목의 contractQuantity로 전달</rdfs:comment>
+    <rdfs:domain rdf:resource="https://example.org/kicem/tile/final#ContractItem" />
+    <rdfs:label xml:lang="ko">계약수량 → 기성내역 계약수량</rdfs:label>
+    <rdfs:range rdf:resource="https://example.org/kicem/tile/final#ProgressPaymentItem" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#providesContractUnitPriceTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:comment xml:lang="ko">계약항목의 contractUnitPrice를 공종별내역항목의 contractUnitPrice로 전달</rdfs:comment>
+    <rdfs:domain rdf:resource="https://example.org/kicem/tile/final#ContractItem" />
+    <rdfs:label xml:lang="ko">계약단가 → 공종별내역 계약단가</rdfs:label>
+    <rdfs:range rdf:resource="https://example.org/kicem/tile/final#WorkCategoryDetailItem" />
+    <rdfs:subPropertyOf rdf:resource="https://example.org/kicem/tile/final#providesContractValueTo" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#providesContractUnitPriceToProgressPaymentItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:comment xml:lang="ko">계약항목의 contractUnitPrice를 기성내역항목의 contractUnitPrice로 전달</rdfs:comment>
+    <rdfs:domain rdf:resource="https://example.org/kicem/tile/final#ContractItem" />
+    <rdfs:label xml:lang="ko">계약단가 → 기성내역 계약단가</rdfs:label>
+    <rdfs:range rdf:resource="https://example.org/kicem/tile/final#ProgressPaymentItem" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#providesContractValueTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:comment xml:lang="ko">계약항목의 수량·단가·금액을 공종별내역항목으로 전달</rdfs:comment>
+    <rdfs:domain rdf:resource="https://example.org/kicem/tile/final#ContractItem" />
+    <rdfs:label xml:lang="ko">계약값 전달</rdfs:label>
+    <rdfs:range rdf:resource="https://example.org/kicem/tile/final#WorkCategoryDetailItem" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#providesCumulativeValuesTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:comment xml:lang="ko">이전 기성내역항목의 누계수량·누계금액을 현재 기성내역항목의 전회누계값으로 전달</rdfs:comment>
+    <rdfs:domain rdf:resource="https://example.org/kicem/tile/final#ProgressPaymentItem" />
+    <rdfs:label xml:lang="ko">이전 누계 → 현재 전회값</rdfs:label>
+    <rdfs:range rdf:resource="https://example.org/kicem/tile/final#ProgressPaymentItem" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#releaseCuration">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty" />
+    <rdfs:label xml:lang="ko">최종본 교정 내역</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#remainingAmount">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:comment xml:lang="ko">계약금액에서 누계금액을 뺀 값</rdfs:comment>
+    <rdfs:label xml:lang="ko">잔여금액</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#remainingQuantity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:comment xml:lang="ko">계약수량에서 누계수량을 뺀 값</rdfs:comment>
+    <rdfs:label xml:lang="ko">잔여수량</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#representsCostItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:comment xml:lang="ko">서류항목이 의미하는 표준 비용항목</rdfs:comment>
+    <rdfs:domain rdf:resource="https://example.org/kicem/tile/final#DocumentItem" />
+    <rdfs:label xml:lang="ko">비용항목 표현</rdfs:label>
+    <rdfs:range rdf:resource="https://example.org/kicem/tile/final#CostItem" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#researchOrigin">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty" />
+    <rdfs:label xml:lang="ko">생성 출처</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#roundNumber">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:comment xml:lang="ko">기성회차의 순번</rdfs:comment>
+    <rdfs:domain rdf:resource="https://example.org/kicem/tile/final#ProgressPaymentRound" />
+    <rdfs:label xml:lang="ko">회차 번호</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#specification">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:comment xml:lang="ko">공종 다음에 비용항목을 구분하는 규격 문자열</rdfs:comment>
+    <rdfs:domain rdf:resource="https://example.org/kicem/tile/final#CostItem" />
+    <rdfs:label xml:lang="ko">규격</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#subWorkCategoryOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:comment xml:lang="ko">세부 공종이 속하는 상위 공종</rdfs:comment>
+    <rdfs:domain rdf:resource="https://example.org/kicem/tile/final#WorkCategory" />
+    <rdfs:label xml:lang="ko">상위 공종</rdfs:label>
+    <rdfs:range rdf:resource="https://example.org/kicem/tile/final#WorkCategory" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#tileDimensionsText">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:comment xml:lang="ko">원본 품명/규격에 명시된 타일 치수 표현. 단위나 수치의 추정 변환 없이 보존한다.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://example.org/kicem/tile/final#CostItem" />
+    <rdfs:label xml:lang="ko">타일 치수 표현</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+    <tile:researchOrigin>researcher_evidence_field_adapter</tile:researchOrigin>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#tileMaterialText">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:comment xml:lang="ko">원본 품명/규격에 명시된 타일 재질 표현. 단위나 수치의 추정 변환 없이 보존한다.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://example.org/kicem/tile/final#CostItem" />
+    <rdfs:label xml:lang="ko">타일 재질 표현</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+    <tile:researchOrigin>researcher_evidence_field_adapter</tile:researchOrigin>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#tileMethodText">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:comment xml:lang="ko">원본 품명에 명시된 시공방법 토큰</rdfs:comment>
+    <rdfs:domain rdf:resource="https://example.org/kicem/tile/final#CostItem" />
+    <rdfs:label xml:lang="ko">타일 시공방법 표현</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+    <tile:researchOrigin>researcher_evidence_field_adapter</tile:researchOrigin>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#tileSurfaceText">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:comment xml:lang="ko">원본 품명/규격에 명시된 타일 적용부위 표현. 단위나 수치의 추정 변환 없이 보존한다.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://example.org/kicem/tile/final#CostItem" />
+    <rdfs:label xml:lang="ko">타일 적용부위 표현</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+    <tile:researchOrigin>researcher_evidence_field_adapter</tile:researchOrigin>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#tileThicknessText">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:comment xml:lang="ko">원본 품명/규격에 명시된 타일 두께 표현. 단위나 수치의 추정 변환 없이 보존한다.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://example.org/kicem/tile/final#CostItem" />
+    <rdfs:label xml:lang="ko">타일 두께 표현</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+    <tile:researchOrigin>researcher_evidence_field_adapter</tile:researchOrigin>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#usesUnit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:comment xml:lang="ko">비용 수량에 적용되는 측정 단위</rdfs:comment>
+    <rdfs:domain rdf:resource="https://example.org/kicem/tile/final#DetailItem" />
+    <rdfs:label xml:lang="ko">단위 사용</rdfs:label>
+    <rdfs:range rdf:resource="https://example.org/kicem/tile/final#Unit" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/tile/final#validationStatus">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty" />
+    <rdfs:label xml:lang="ko">검증 상태</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>

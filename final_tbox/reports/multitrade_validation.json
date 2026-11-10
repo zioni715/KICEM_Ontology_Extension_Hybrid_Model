@@ -1,0 +1,218 @@
+{
+  "timestamp": "2026-11-10T01:43:33.997254+00:00",
+  "status": "PASSED",
+  "builder_gold_separation_verified": true,
+  "builder_sha256": "52688e33fe6adfe8d1e30c2d9043aa12e9b1a5f08dc36fde10215984ff805f04",
+  "trade_count": 3,
+  "candidate_count": 51,
+  "aggregate_taxonomy": {
+    "tp": 51,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "micro_f1": 1.0
+  },
+  "competency_questions": {
+    "passed": 51,
+    "total": 51
+  },
+  "mutation_controls": {
+    "passed": 9,
+    "total": 9,
+    "cases": [
+      {
+        "trade_id": "architecture_tile",
+        "mutation": "abox_injection",
+        "passed": true,
+        "detected": [
+          "abox"
+        ]
+      },
+      {
+        "trade_id": "architecture_tile",
+        "mutation": "hierarchy_cycle",
+        "passed": true,
+        "detected": [
+          "cycle"
+        ]
+      },
+      {
+        "trade_id": "architecture_tile",
+        "mutation": "evidence_removal",
+        "passed": true,
+        "detected": [
+          "missing_evidence:AdhesiveFloorTileInstallation"
+        ]
+      },
+      {
+        "trade_id": "civil_stormwater",
+        "mutation": "abox_injection",
+        "passed": true,
+        "detected": [
+          "abox"
+        ]
+      },
+      {
+        "trade_id": "civil_stormwater",
+        "mutation": "hierarchy_cycle",
+        "passed": true,
+        "detected": [
+          "cycle"
+        ]
+      },
+      {
+        "trade_id": "civil_stormwater",
+        "mutation": "evidence_removal",
+        "passed": true,
+        "detected": [
+          "missing_evidence:CatchBasinInstallation"
+        ]
+      },
+      {
+        "trade_id": "fire_exit_guidance",
+        "mutation": "abox_injection",
+        "passed": true,
+        "detected": [
+          "abox"
+        ]
+      },
+      {
+        "trade_id": "fire_exit_guidance",
+        "mutation": "hierarchy_cycle",
+        "passed": true,
+        "detected": [
+          "cycle"
+        ]
+      },
+      {
+        "trade_id": "fire_exit_guidance",
+        "mutation": "evidence_removal",
+        "passed": true,
+        "detected": [
+          "missing_evidence:AuditoriumGuidanceLightInstallation"
+        ]
+      }
+    ]
+  },
+  "trades": [
+    {
+      "trade_id": "architecture_tile",
+      "trade_label": "건축-타일공사",
+      "candidate_count": 24,
+      "total_class_count": 30,
+      "taxonomy": {
+        "tp": 24,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "competency_questions": {
+        "passed": 24,
+        "total": 24
+      },
+      "checks": {
+        "serializations_isomorphic": true,
+        "manifest_hashes_match": true,
+        "pure_tbox_acyclic_and_grounded": true,
+        "labels_and_definitions_complete": true,
+        "evidence_sources_exact": true,
+        "gold_candidate_set_exact": true,
+        "gold_parent_edges_exact": true,
+        "exactly_one_predicted_direct_parent": true,
+        "all_candidates_reachable_from_trade_root": true,
+        "owl2_dl_profile": true,
+        "owlapi_serialization_equivalence": true,
+        "hermit_consistent": true,
+        "hermit_all_named_classes_satisfiable": true
+      },
+      "passed": true,
+      "reasoner": {
+        "name": "HermiT",
+        "consistent": true,
+        "unsatisfiable_named_classes": []
+      }
+    },
+    {
+      "trade_id": "civil_stormwater",
+      "trade_label": "토목-우수공",
+      "candidate_count": 12,
+      "total_class_count": 18,
+      "taxonomy": {
+        "tp": 12,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "competency_questions": {
+        "passed": 12,
+        "total": 12
+      },
+      "checks": {
+        "serializations_isomorphic": true,
+        "manifest_hashes_match": true,
+        "pure_tbox_acyclic_and_grounded": true,
+        "labels_and_definitions_complete": true,
+        "evidence_sources_exact": true,
+        "gold_candidate_set_exact": true,
+        "gold_parent_edges_exact": true,
+        "exactly_one_predicted_direct_parent": true,
+        "all_candidates_reachable_from_trade_root": true,
+        "owl2_dl_profile": true,
+        "owlapi_serialization_equivalence": true,
+        "hermit_consistent": true,
+        "hermit_all_named_classes_satisfiable": true
+      },
+      "passed": true,
+      "reasoner": {
+        "name": "HermiT",
+        "consistent": true,
+        "unsatisfiable_named_classes": []
+      }
+    },
+    {
+      "trade_id": "fire_exit_guidance",
+      "trade_label": "소방-유도등 설비공사",
+      "candidate_count": 15,
+      "total_class_count": 21,
+      "taxonomy": {
+        "tp": 15,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "competency_questions": {
+        "passed": 15,
+        "total": 15
+      },
+      "checks": {
+        "serializations_isomorphic": true,
+        "manifest_hashes_match": true,
+        "pure_tbox_acyclic_and_grounded": true,
+        "labels_and_definitions_complete": true,
+        "evidence_sources_exact": true,
+        "gold_candidate_set_exact": true,
+        "gold_parent_edges_exact": true,
+        "exactly_one_predicted_direct_parent": true,
+        "all_candidates_reachable_from_trade_root": true,
+        "owl2_dl_profile": true,
+        "owlapi_serialization_equivalence": true,
+        "hermit_consistent": true,
+        "hermit_all_named_classes_satisfiable": true
+      },
+      "passed": true,
+      "reasoner": {
+        "name": "HermiT",
+        "consistent": true,
+        "unsatisfiable_named_classes": []
+      }
+    }
+  ],
+  "interpretation": "This validates T-Box export, evidence grounding and benchmark parent placement on three bounded cases. Gold agreement is not an estimate of unseen-domain generalization."
+}
