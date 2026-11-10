@@ -76,6 +76,8 @@ id_ed25519*
 *.pt
 *.pth
 *.ckpt
+*.class
+hs_err_pid*
 *.log
 *.log.*
 *.bak
@@ -87,14 +89,27 @@ __pycache__/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
 .ipynb_checkpoints/
 .cache/
 .venv/
 venv/
 .conda/
+condaenv.*.requirements.txt
+build/
+dist/
+*.egg-info/
+pip-wheel-metadata/
+.python-version
 .vscode/
 .idea/
 .DS_Store
+Thumbs.db
 
 # Reproducible release scratch space and local presentation builds.
 /.codex_ppt_build/
@@ -108,13 +123,9 @@ venv/
 !/KO/OWL2/**/*.trig
 !/KO/OWL2/**/*.nt
 
-# Sanitized, reproducible T-Box release artifacts (no workbook values/quotes).
+# Sanitized, reproducible T-Box ontology exports override the general rules.
 !/final_tbox/outputs/multitrade/*.owl
 !/final_tbox/outputs/multitrade/*.ttl
-!/final_tbox/outputs/multitrade/manifest.json
-!/final_tbox/reports/multitrade_validation.json
-!/final_tbox/reports/multitrade_closed_loop.json
-!/final_tbox/reports/multitrade_stress_validation.json
-!/final_tbox/reports/multitrade_adversarial_validation.json
-!/final_tbox/reports/multitrade_release_gate.json
-/final_tbox/reports/multitrade_expert_review.json
+
+# Reviewer-entered answers and notes stay local; aggregate score reports may be tracked.
+/final_tbox/reports/*expert_review*.json
