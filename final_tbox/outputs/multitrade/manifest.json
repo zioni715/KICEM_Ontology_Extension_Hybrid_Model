@@ -5,7 +5,7 @@
   "candidate_input_contains_parent": false,
   "predictor_version": "lexical-taxonomic-v1",
   "input_sha256": {
-    "benchmarks/multitrade_candidates.json": "a8ae929c3a61ae50c21a917a719ccd536c88bc420607718807fcbee192fd8767"
+    "benchmarks/multitrade_candidates.json": "427f298c2e281e56cd8f88f51cb841784c10140c793740ae35c7755e55246261"
   },
   "cases": [
     {
@@ -31,14 +31,16 @@
       "candidate_classes": 12,
       "total_classes": 18,
       "source_ids": [
+        "KCS-11-20-25",
+        "KCS-11-40-15",
         "KCS-11-40-25",
         "KCS-12-20-10"
       ],
       "predictor_version": "lexical-taxonomic-v1",
       "candidate_input_contains_parent": false,
       "outputs": {
-        "civil_stormwater.ttl": "f15e3e4b9a5ba2f41f2379f3f4aad672366ac8f1d2954a63cfab985a2fba6862",
-        "civil_stormwater.owl": "6bc91ef4600a2018c0106f1fda78a58095fda0635414a04f8ca8d7295035ff92"
+        "civil_stormwater.ttl": "0780547a6570c00e77dfb0d4880692a83552e4abd96fe5cc718351bba65f5743",
+        "civil_stormwater.owl": "e9ae0cdef74325f10e5e907dbe76959e9a2a33300c27275550392a624946c7e4"
       }
     },
     {
@@ -48,14 +50,15 @@
       "candidate_classes": 15,
       "total_classes": 21,
       "source_ids": [
+        "FIRE-SELF-INSPECTION-2022",
         "NFPC-303",
         "NFTC-303"
       ],
       "predictor_version": "lexical-taxonomic-v1",
       "candidate_input_contains_parent": false,
       "outputs": {
-        "fire_exit_guidance.ttl": "df9e278457051cef885a8db206c4ed4b33a332d6e96b84e9a4bc74724bc5ce81",
-        "fire_exit_guidance.owl": "8a53c0d256eb5d3f86b73de3f9fced6d32e257a35448db9e4b8f10bbc43f409f"
+        "fire_exit_guidance.ttl": "a900bb99ed684cdee3e60af51654390c7e2f821947ed6ac878c2837025d40a95",
+        "fire_exit_guidance.owl": "b370e578f6c5b106f4892f2bd30ad454fffda9a87f3bd89264af639e5b28dee2"
       }
     }
   ]

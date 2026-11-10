@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-10T05:39:33.332101+00:00",
+  "timestamp": "2026-11-10T05:53:29.105796+00:00",
   "status": "CONVERGED",
   "converged": true,
   "cycles_executed": 2,
@@ -17,12 +17,12 @@
             "architecture_tile.owl": "ad8ee9e923b99b38a47e8f44f3f275ca63dcf01de76c601c6f7803a5ccc50118"
           },
           "civil_stormwater": {
-            "civil_stormwater.ttl": "f15e3e4b9a5ba2f41f2379f3f4aad672366ac8f1d2954a63cfab985a2fba6862",
-            "civil_stormwater.owl": "6bc91ef4600a2018c0106f1fda78a58095fda0635414a04f8ca8d7295035ff92"
+            "civil_stormwater.ttl": "0780547a6570c00e77dfb0d4880692a83552e4abd96fe5cc718351bba65f5743",
+            "civil_stormwater.owl": "e9ae0cdef74325f10e5e907dbe76959e9a2a33300c27275550392a624946c7e4"
           },
           "fire_exit_guidance": {
-            "fire_exit_guidance.ttl": "df9e278457051cef885a8db206c4ed4b33a332d6e96b84e9a4bc74724bc5ce81",
-            "fire_exit_guidance.owl": "8a53c0d256eb5d3f86b73de3f9fced6d32e257a35448db9e4b8f10bbc43f409f"
+            "fire_exit_guidance.ttl": "a900bb99ed684cdee3e60af51654390c7e2f821947ed6ac878c2837025d40a95",
+            "fire_exit_guidance.owl": "b370e578f6c5b106f4892f2bd30ad454fffda9a87f3bd89264af639e5b28dee2"
           }
         },
         "candidate_count": 51,
@@ -62,12 +62,12 @@
             "architecture_tile.owl": "ad8ee9e923b99b38a47e8f44f3f275ca63dcf01de76c601c6f7803a5ccc50118"
           },
           "civil_stormwater": {
-            "civil_stormwater.ttl": "f15e3e4b9a5ba2f41f2379f3f4aad672366ac8f1d2954a63cfab985a2fba6862",
-            "civil_stormwater.owl": "6bc91ef4600a2018c0106f1fda78a58095fda0635414a04f8ca8d7295035ff92"
+            "civil_stormwater.ttl": "0780547a6570c00e77dfb0d4880692a83552e4abd96fe5cc718351bba65f5743",
+            "civil_stormwater.owl": "e9ae0cdef74325f10e5e907dbe76959e9a2a33300c27275550392a624946c7e4"
           },
           "fire_exit_guidance": {
-            "fire_exit_guidance.ttl": "df9e278457051cef885a8db206c4ed4b33a332d6e96b84e9a4bc74724bc5ce81",
-            "fire_exit_guidance.owl": "8a53c0d256eb5d3f86b73de3f9fced6d32e257a35448db9e4b8f10bbc43f409f"
+            "fire_exit_guidance.ttl": "a900bb99ed684cdee3e60af51654390c7e2f821947ed6ac878c2837025d40a95",
+            "fire_exit_guidance.owl": "b370e578f6c5b106f4892f2bd30ad454fffda9a87f3bd89264af639e5b28dee2"
           }
         },
         "candidate_count": 51,

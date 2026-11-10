@@ -193,13 +193,25 @@
       "sources": [
         {
           "source_id": "KCS-11-40-25",
-          "title": "KCS 11 40 25 배수공사",
+          "title": "KCS 11 40 25 노면배수",
           "effective_date": "2025-12-30",
           "url": "https://www.kcsc.re.kr/standardCode/viewer/KCS%2011%2040%2025%3A2025-12-30"
         },
         {
+          "source_id": "KCS-11-40-15",
+          "title": "KCS 11 40 15 배수관",
+          "effective_date": "2025-12-30",
+          "url": "https://www.kcsc.re.kr/standardCode/viewer/KCS%2011%2040%2015%3A2025-12-30"
+        },
+        {
+          "source_id": "KCS-11-20-25",
+          "title": "KCS 11 20 25 되메우기 및 뒤채움",
+          "effective_date": "2025-12-24",
+          "url": "https://www.kcsc.re.kr/standardCode/viewer/KCS%2011%2020%2025%3A2025-12-24"
+        },
+        {
           "source_id": "KCS-12-20-10",
-          "title": "KCS 12 20 10 건설공사 측량",
+          "title": "KCS 12 20 10 배수공사 측량",
           "effective_date": "2024-11-15",
           "url": "https://www.kcsc.re.kr/standardCode/viewer/KCS%2012%2020%2010%3A2024-11-15"
         }
@@ -215,7 +227,7 @@
         {
           "id": "StormwaterPipelineSurvey",
           "label": "우수관로 중심선 및 수준 측량",
-          "section": "3.2.2(1)",
+          "section": "3.2(5), 3.3(1)-(6)",
           "definition": "우수관로의 위치와 계획고를 확인하는 측량 작업.",
           "source_id": "KCS-12-20-10"
         },
@@ -243,14 +255,14 @@
         {
           "id": "StormDrainPipeInstallation",
           "label": "우수 배수관 설치",
-          "section": "3.1.1(9)",
+          "section": "3.1(2)-(4), 3.2.5",
           "definition": "계획 경사를 유지하여 우수 배수관을 설치하는 작업.",
-          "source_id": "KCS-11-40-25"
+          "source_id": "KCS-11-40-15"
         },
         {
           "id": "StormwaterManholeInstallation",
           "label": "우수 맨홀 설치",
-          "section": "2.5, 3.1",
+          "section": "2.5, 3.1.5",
           "definition": "우수관로 점검을 위한 맨홀과 뚜껑을 설치하는 작업.",
           "source_id": "KCS-11-40-25"
         },
@@ -264,30 +276,30 @@
         {
           "id": "DrainageWatertightJointConstruction",
           "label": "배수관 접합부 수밀 시공",
-          "section": "3.1.1",
+          "section": "3.2.5(2), 3.2.6",
           "definition": "배수관 접합부를 수밀하게 마감하는 작업.",
-          "source_id": "KCS-11-40-25"
+          "source_id": "KCS-11-40-15"
         },
         {
           "id": "StormwaterBackfillingCompaction",
           "label": "우수 구조물 되메우기 및 다짐",
-          "section": "3.1.3(3)④",
+          "section": "3.3.2(5)-(8)",
           "definition": "우수 구조물 주위를 되메우고 다지는 작업.",
-          "source_id": "KCS-11-40-25"
+          "source_id": "KCS-11-20-25"
         },
         {
           "id": "DrainageSlopeControl",
           "label": "배수 경사 관리",
-          "section": "3.1.1(9)",
+          "section": "3.1(2), 3.3(4), 3.3(6)",
           "definition": "측구와 관로의 계획 경사가 유지되는지 확인하는 검사.",
-          "source_id": "KCS-11-40-25"
+          "source_id": "KCS-12-20-10"
         },
         {
           "id": "StormwaterInstallationInspection",
           "label": "우수시설 설치 검사",
-          "section": "3.1.3(1)",
+          "section": "3.2(2)-(5), 3.3(7)",
           "definition": "기초면·철근·매설물과 설치 상태를 확인하는 검사.",
-          "source_id": "KCS-11-40-25"
+          "source_id": "KCS-12-20-10"
         }
       ],
       "trade_root_id": "StormwaterWork"
@@ -307,7 +319,13 @@
           "source_id": "NFTC-303",
           "title": "유도등 및 유도표지의 화재안전기술기준(NFTC 303)",
           "effective_date": "2024-07-01",
-          "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000233434&chrClsCd=010201"
+          "url": "https://www.law.go.kr/admRulLsInfoP.do?admRulId=83636&efYd=0"
+        },
+        {
+          "source_id": "FIRE-SELF-INSPECTION-2022",
+          "title": "소방시설 자체점검사항 등에 관한 고시",
+          "effective_date": "2022-12-01",
+          "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000216342&chrClsCd=010202&lsId=31146"
         }
       ],
       "candidates": [
@@ -342,21 +360,21 @@
         {
           "id": "CorridorGuidanceLightInstallation",
           "label": "복도통로유도등 설치",
-          "section": "2.3.1",
+          "section": "2.3.1.1",
           "definition": "복도와 구부러진 모퉁이에 통로유도등을 설치하는 작업.",
           "source_id": "NFTC-303"
         },
         {
           "id": "RoomPassageGuidanceLightInstallation",
           "label": "거실통로유도등 설치",
-          "section": "2.3.2",
+          "section": "2.3.1.2",
           "definition": "거실의 피난 통로에 유도등을 설치하는 작업.",
           "source_id": "NFTC-303"
         },
         {
           "id": "StairPassageGuidanceLightInstallation",
           "label": "계단통로유도등 설치",
-          "section": "2.3.3",
+          "section": "2.3.1.3",
           "definition": "계단과 경사로의 바닥면을 비추도록 유도등을 설치하는 작업.",
           "source_id": "NFTC-303"
         },
@@ -384,7 +402,7 @@
         {
           "id": "PassageGuidanceSignInstallation",
           "label": "통로유도표지 설치",
-          "section": "2.5.1",
+          "section": "2.5.1.1-2.5.1.2",
           "definition": "피난 통로에 통로유도표지를 설치하는 작업.",
           "source_id": "NFTC-303"
         },
@@ -412,9 +430,9 @@
         {
           "id": "GuidanceEquipmentFunctionalInspection",
           "label": "유도설비 기능 검사",
-          "section": "제10조/2.7",
+          "section": "제5조, 별지 제4호서식",
           "definition": "점등·전원·배선과 피난 유도 기능을 확인하는 검사.",
-          "source_id": "NFPC-303"
+          "source_id": "FIRE-SELF-INSPECTION-2022"
         }
       ],
       "trade_root_id": "ExitGuidanceEquipmentWork"

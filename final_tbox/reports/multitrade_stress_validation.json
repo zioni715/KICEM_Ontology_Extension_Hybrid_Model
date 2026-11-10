@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-10T05:40:19.064696+00:00",
+  "timestamp": "2026-11-10T05:54:04.946821+00:00",
   "status": "PASSED",
   "cold_process_cycles": 10,
   "all_cycles_identical": true,
@@ -8,10 +8,10 @@
     "artifact_hashes": {
       "architecture_tile.owl": "ad8ee9e923b99b38a47e8f44f3f275ca63dcf01de76c601c6f7803a5ccc50118",
       "architecture_tile.ttl": "55500a8fc8ca6bab337fed7779a13eba02547cdb15e7c8dde031a64985fca7e3",
-      "civil_stormwater.owl": "6bc91ef4600a2018c0106f1fda78a58095fda0635414a04f8ca8d7295035ff92",
-      "civil_stormwater.ttl": "f15e3e4b9a5ba2f41f2379f3f4aad672366ac8f1d2954a63cfab985a2fba6862",
-      "fire_exit_guidance.owl": "8a53c0d256eb5d3f86b73de3f9fced6d32e257a35448db9e4b8f10bbc43f409f",
-      "fire_exit_guidance.ttl": "df9e278457051cef885a8db206c4ed4b33a332d6e96b84e9a4bc74724bc5ce81"
+      "civil_stormwater.owl": "e9ae0cdef74325f10e5e907dbe76959e9a2a33300c27275550392a624946c7e4",
+      "civil_stormwater.ttl": "0780547a6570c00e77dfb0d4880692a83552e4abd96fe5cc718351bba65f5743",
+      "fire_exit_guidance.owl": "b370e578f6c5b106f4892f2bd30ad454fffda9a87f3bd89264af639e5b28dee2",
+      "fire_exit_guidance.ttl": "a900bb99ed684cdee3e60af51654390c7e2f821947ed6ac878c2837025d40a95"
     },
     "validation": {
       "status": "PASSED",
@@ -137,6 +137,30 @@
   ],
   "authoritative_source_audit": [
     {
+      "source_id": "FIRE-SELF-INSPECTION-2022",
+      "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000216342&chrClsCd=010202&lsId=31146",
+      "http_status": 200,
+      "final_url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000216342&chrClsCd=010202&lsId=31146",
+      "reachable": true,
+      "error": null
+    },
+    {
+      "source_id": "KCS-11-20-25",
+      "url": "https://www.kcsc.re.kr/standardCode/viewer/KCS%2011%2020%2025%3A2025-12-24",
+      "http_status": 200,
+      "final_url": "https://www.kcsc.re.kr/standardCode/viewer/KCS%2011%2020%2025%3A2025-12-24",
+      "reachable": true,
+      "error": null
+    },
+    {
+      "source_id": "KCS-11-40-15",
+      "url": "https://www.kcsc.re.kr/standardCode/viewer/KCS%2011%2040%2015%3A2025-12-30",
+      "http_status": 200,
+      "final_url": "https://www.kcsc.re.kr/standardCode/viewer/KCS%2011%2040%2015%3A2025-12-30",
+      "reachable": true,
+      "error": null
+    },
+    {
       "source_id": "KCS-11-40-25",
       "url": "https://www.kcsc.re.kr/standardCode/viewer/KCS%2011%2040%2025%3A2025-12-30",
       "http_status": 200,
@@ -170,9 +194,9 @@
     },
     {
       "source_id": "NFTC-303",
-      "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000233434&chrClsCd=010201",
+      "url": "https://www.law.go.kr/admRulLsInfoP.do?admRulId=83636&efYd=0",
       "http_status": 200,
-      "final_url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000233434&chrClsCd=010201",
+      "final_url": "https://www.law.go.kr/admRulLsInfoP.do?admRulId=83636&efYd=0",
       "reachable": true,
       "error": null
     }

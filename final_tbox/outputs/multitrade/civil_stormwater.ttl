@@ -32,8 +32,8 @@ tbox:DrainageSlopeControl a owl:Class ;
     rdfs:comment "측구와 관로의 계획 경사가 유지되는지 확인하는 검사."@ko ;
     rdfs:subClassOf tbox:InspectionTask,
         tbox:StormwaterWork ;
-    tbox:evidenceSection "3.1.1(9)" ;
-    tbox:evidenceSourceId "KCS-11-40-25" ;
+    tbox:evidenceSection "3.1(2), 3.3(4), 3.3(6)" ;
+    tbox:evidenceSourceId "KCS-12-20-10" ;
     tbox:predictedDirectParent tbox:InspectionTask ;
     tbox:predictionMethod "lexical-taxonomic-v1:upper-tbox-lifecycle" ;
     tbox:validationStatus "candidate" .
@@ -43,8 +43,8 @@ tbox:DrainageWatertightJointConstruction a owl:Class ;
     rdfs:comment "배수관 접합부를 수밀하게 마감하는 작업."@ko ;
     rdfs:subClassOf tbox:InstallationTask,
         tbox:StormwaterWork ;
-    tbox:evidenceSection "3.1.1" ;
-    tbox:evidenceSourceId "KCS-11-40-25" ;
+    tbox:evidenceSection "3.2.5(2), 3.2.6" ;
+    tbox:evidenceSourceId "KCS-11-40-15" ;
     tbox:predictedDirectParent tbox:InstallationTask ;
     tbox:predictionMethod "lexical-taxonomic-v1:upper-tbox-lifecycle" ;
     tbox:validationStatus "candidate" .
@@ -65,8 +65,8 @@ tbox:StormDrainPipeInstallation a owl:Class ;
     rdfs:comment "계획 경사를 유지하여 우수 배수관을 설치하는 작업."@ko ;
     rdfs:subClassOf tbox:InstallationTask,
         tbox:StormwaterWork ;
-    tbox:evidenceSection "3.1.1(9)" ;
-    tbox:evidenceSourceId "KCS-11-40-25" ;
+    tbox:evidenceSection "3.1(2)-(4), 3.2.5" ;
+    tbox:evidenceSourceId "KCS-11-40-15" ;
     tbox:predictedDirectParent tbox:InstallationTask ;
     tbox:predictionMethod "lexical-taxonomic-v1:upper-tbox-lifecycle" ;
     tbox:validationStatus "candidate" .
@@ -76,8 +76,8 @@ tbox:StormwaterBackfillingCompaction a owl:Class ;
     rdfs:comment "우수 구조물 주위를 되메우고 다지는 작업."@ko ;
     rdfs:subClassOf tbox:FinishingTask,
         tbox:StormwaterWork ;
-    tbox:evidenceSection "3.1.3(3)④" ;
-    tbox:evidenceSourceId "KCS-11-40-25" ;
+    tbox:evidenceSection "3.3.2(5)-(8)" ;
+    tbox:evidenceSourceId "KCS-11-20-25" ;
     tbox:predictedDirectParent tbox:FinishingTask ;
     tbox:predictionMethod "lexical-taxonomic-v1:upper-tbox-lifecycle" ;
     tbox:validationStatus "candidate" .
@@ -98,8 +98,8 @@ tbox:StormwaterInstallationInspection a owl:Class ;
     rdfs:comment "기초면·철근·매설물과 설치 상태를 확인하는 검사."@ko ;
     rdfs:subClassOf tbox:InspectionTask,
         tbox:StormwaterWork ;
-    tbox:evidenceSection "3.1.3(1)" ;
-    tbox:evidenceSourceId "KCS-11-40-25" ;
+    tbox:evidenceSection "3.2(2)-(5), 3.3(7)" ;
+    tbox:evidenceSourceId "KCS-12-20-10" ;
     tbox:predictedDirectParent tbox:InspectionTask ;
     tbox:predictionMethod "lexical-taxonomic-v1:upper-tbox-lifecycle" ;
     tbox:validationStatus "candidate" .
@@ -109,7 +109,7 @@ tbox:StormwaterManholeInstallation a owl:Class ;
     rdfs:comment "우수관로 점검을 위한 맨홀과 뚜껑을 설치하는 작업."@ko ;
     rdfs:subClassOf tbox:InstallationTask,
         tbox:StormwaterWork ;
-    tbox:evidenceSection "2.5, 3.1" ;
+    tbox:evidenceSection "2.5, 3.1.5" ;
     tbox:evidenceSourceId "KCS-11-40-25" ;
     tbox:predictedDirectParent tbox:InstallationTask ;
     tbox:predictionMethod "lexical-taxonomic-v1:upper-tbox-lifecycle" ;
@@ -120,7 +120,7 @@ tbox:StormwaterPipelineSurvey a owl:Class ;
     rdfs:comment "우수관로의 위치와 계획고를 확인하는 측량 작업."@ko ;
     rdfs:subClassOf tbox:PreparationTask,
         tbox:StormwaterWork ;
-    tbox:evidenceSection "3.2.2(1)" ;
+    tbox:evidenceSection "3.2(5), 3.3(1)-(6)" ;
     tbox:evidenceSourceId "KCS-12-20-10" ;
     tbox:predictedDirectParent tbox:PreparationTask ;
     tbox:predictionMethod "lexical-taxonomic-v1:upper-tbox-lifecycle" ;

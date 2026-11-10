@@ -30,7 +30,7 @@
     <rdfs:comment xml:lang="ko">복도와 구부러진 모퉁이에 통로유도등을 설치하는 작업.</rdfs:comment>
     <rdfs:label xml:lang="ko">복도통로유도등 설치</rdfs:label>
     <rdfs:subClassOf rdf:resource="https://example.org/kicem/fire/exit-guidance#PassageGuidanceLightInstallation" />
-    <tbox:evidenceSection>2.3.1</tbox:evidenceSection>
+    <tbox:evidenceSection>2.3.1.1</tbox:evidenceSection>
     <tbox:evidenceSourceId>NFTC-303</tbox:evidenceSourceId>
     <tbox:predictedDirectParent rdf:resource="https://example.org/kicem/fire/exit-guidance#PassageGuidanceLightInstallation" />
     <tbox:predictionMethod>lexical-taxonomic-v1:label-containment</tbox:predictionMethod>
@@ -108,8 +108,8 @@
     <rdfs:label xml:lang="ko">유도설비 기능 검사</rdfs:label>
     <rdfs:subClassOf rdf:resource="https://example.org/kicem/fire/exit-guidance#ExitGuidanceEquipmentWork" />
     <rdfs:subClassOf rdf:resource="https://example.org/kicem/fire/exit-guidance#InspectionTask" />
-    <tbox:evidenceSection>제10조/2.7</tbox:evidenceSection>
-    <tbox:evidenceSourceId>NFPC-303</tbox:evidenceSourceId>
+    <tbox:evidenceSection>제5조, 별지 제4호서식</tbox:evidenceSection>
+    <tbox:evidenceSourceId>FIRE-SELF-INSPECTION-2022</tbox:evidenceSourceId>
     <tbox:predictedDirectParent rdf:resource="https://example.org/kicem/fire/exit-guidance#InspectionTask" />
     <tbox:predictionMethod>lexical-taxonomic-v1:upper-tbox-lifecycle</tbox:predictionMethod>
     <tbox:validationStatus>candidate</tbox:validationStatus>
@@ -185,7 +185,7 @@
     <rdfs:comment xml:lang="ko">피난 통로에 통로유도표지를 설치하는 작업.</rdfs:comment>
     <rdfs:label xml:lang="ko">통로유도표지 설치</rdfs:label>
     <rdfs:subClassOf rdf:resource="https://example.org/kicem/fire/exit-guidance#GuidanceSignInstallation" />
-    <tbox:evidenceSection>2.5.1</tbox:evidenceSection>
+    <tbox:evidenceSection>2.5.1.1-2.5.1.2</tbox:evidenceSection>
     <tbox:evidenceSourceId>NFTC-303</tbox:evidenceSourceId>
     <tbox:predictedDirectParent rdf:resource="https://example.org/kicem/fire/exit-guidance#GuidanceSignInstallation" />
     <tbox:predictionMethod>lexical-taxonomic-v1:identifier-suffix</tbox:predictionMethod>
@@ -205,7 +205,7 @@
     <rdfs:comment xml:lang="ko">거실의 피난 통로에 유도등을 설치하는 작업.</rdfs:comment>
     <rdfs:label xml:lang="ko">거실통로유도등 설치</rdfs:label>
     <rdfs:subClassOf rdf:resource="https://example.org/kicem/fire/exit-guidance#PassageGuidanceLightInstallation" />
-    <tbox:evidenceSection>2.3.2</tbox:evidenceSection>
+    <tbox:evidenceSection>2.3.1.2</tbox:evidenceSection>
     <tbox:evidenceSourceId>NFTC-303</tbox:evidenceSourceId>
     <tbox:predictedDirectParent rdf:resource="https://example.org/kicem/fire/exit-guidance#PassageGuidanceLightInstallation" />
     <tbox:predictionMethod>lexical-taxonomic-v1:identifier-suffix</tbox:predictionMethod>
@@ -216,7 +216,7 @@
     <rdfs:comment xml:lang="ko">계단과 경사로의 바닥면을 비추도록 유도등을 설치하는 작업.</rdfs:comment>
     <rdfs:label xml:lang="ko">계단통로유도등 설치</rdfs:label>
     <rdfs:subClassOf rdf:resource="https://example.org/kicem/fire/exit-guidance#PassageGuidanceLightInstallation" />
-    <tbox:evidenceSection>2.3.3</tbox:evidenceSection>
+    <tbox:evidenceSection>2.3.1.3</tbox:evidenceSection>
     <tbox:evidenceSourceId>NFTC-303</tbox:evidenceSourceId>
     <tbox:predictedDirectParent rdf:resource="https://example.org/kicem/fire/exit-guidance#PassageGuidanceLightInstallation" />
     <tbox:predictionMethod>lexical-taxonomic-v1:identifier-suffix</tbox:predictionMethod>

@@ -100,6 +100,40 @@ class MultitradeReleaseTests(unittest.TestCase):
                     frontier.extend(edges.get(node, ()))
                 self.assertIn(root, seen)
 
+    def test_stormwater_and_exit_guidance_wbs_sources_are_current_and_documented(self) -> None:
+        by_id = {case["trade_id"]: case for case in self.candidates["cases"]}
+        civil = by_id["civil_stormwater"]
+        fire = by_id["fire_exit_guidance"]
+        civil_sources = {source["source_id"]: source for source in civil["sources"]}
+        fire_sources = {source["source_id"]: source for source in fire["sources"]}
+
+        self.assertEqual(
+            civil_sources["KCS-11-40-25"]["title"],
+            "KCS 11 40 25 노면배수",
+        )
+        self.assertEqual(
+            civil_sources["KCS-12-20-10"]["title"],
+            "KCS 12 20 10 배수공사 측량",
+        )
+        self.assertIn("KCS-11-40-15", civil_sources)
+        self.assertIn("KCS-11-20-25", civil_sources)
+        self.assertEqual(
+            fire_sources["NFTC-303"]["url"],
+            "https://www.law.go.kr/admRulLsInfoP.do?admRulId=83636&efYd=0",
+        )
+        fire_candidates = {row["id"]: row for row in fire["candidates"]}
+        self.assertEqual(
+            fire_candidates["GuidanceEquipmentFunctionalInspection"]["source_id"],
+            "FIRE-SELF-INSPECTION-2022",
+        )
+
+        evidence = (HERE / "WBS_EVIDENCE.md").read_text(encoding="utf-8")
+        for case in (civil, fire):
+            for source in case["sources"]:
+                self.assertIn(source["url"], evidence)
+            for row in case["candidates"]:
+                self.assertIn(row["label"], evidence)
+
     def test_release_gate_rejects_artifact_hash_mismatch(self) -> None:
         with tempfile.TemporaryDirectory(prefix="tbox-gate-") as name:
             report = Path(name) / "gate.json"
