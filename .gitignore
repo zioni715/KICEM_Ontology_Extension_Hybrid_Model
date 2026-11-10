@@ -109,17 +109,6 @@ venv/
 !/KO/OWL2/**/*.nt
 
 # Sanitized, reproducible T-Box release artifacts (no workbook values/quotes).
-!/final_tbox/outputs/tile_tbox_final.owl
-!/final_tbox/outputs/tile_tbox_final.ttl
-!/final_tbox/outputs/manifest.json
-!/final_tbox/reports/validation.json
-!/final_tbox/reports/evaluation.json
-!/final_tbox/reports/mutation_tests.json
-!/final_tbox/reports/environment_audit.json
-!/final_tbox/reports/expert_score.json
-!/final_tbox/reports/release_gate.json
-!/final_tbox/reports/internal_semantic_validation.json
-!/final_tbox/reports/closed_loop.json
 !/final_tbox/outputs/multitrade/*.owl
 !/final_tbox/outputs/multitrade/*.ttl
 !/final_tbox/outputs/multitrade/manifest.json
@@ -128,5 +117,4 @@ venv/
 !/final_tbox/reports/multitrade_stress_validation.json
 !/final_tbox/reports/multitrade_adversarial_validation.json
 !/final_tbox/reports/multitrade_release_gate.json
-/final_tbox/reports/expert_review.json
 /final_tbox/reports/multitrade_expert_review.json

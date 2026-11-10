@@ -17,7 +17,6 @@ python final_tbox/release_multitrade.py --stress-cycles 10
 `INTERNAL_RELEASE_READY_EXTERNAL_REVIEW_PENDING`이다. 이는 독립 외부 전문가
 정확도 또는 보지 않은 공종의 일반화 정확도 100%를 뜻하지 않는다. 세부 내용은
 [`final_tbox/FINAL_REPORT.md`](final_tbox/FINAL_REPORT.md),
-[`final_tbox/MODEL_CARD.md`](final_tbox/MODEL_CARD.md),
 [`final_tbox/WBS_EVIDENCE.md`](final_tbox/WBS_EVIDENCE.md)를 참조한다.
 
 ## 1. 프로젝트
