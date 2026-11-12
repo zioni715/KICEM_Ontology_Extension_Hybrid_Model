@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-11-12T03:50:46.783432+00:00",
+  "status": "COMPLETED_TBOX",
+  "hybrid_experiment_complete": true,
+  "output_scope": "TBOX_ONLY",
+  "completed_trades": 3,
+  "architecture": "single shared parameterized pipeline",
+  "trades": {
+    "architecture_tile": "COMPLETED_TBOX",
+    "civil_stormwater": "COMPLETED_TBOX",
+    "fire_exit_guidance": "COMPLETED_TBOX"
+  },
+  "active_trade": null,
+  "error_type": null,
+  "accuracy": null,
+  "expert_validated": false,
+  "scope": "Frozen hybrid algorithms on public standards-derived descriptions; no independent expert gold scores"
+}

@@ -1,4 +1,4 @@
-name: kicem-tbox-validation
+name: hybrid-v1
 channels:
   - conda-forge
 dependencies:
@@ -6,7 +6,4 @@ dependencies:
   - openjdk=17
   - pip
   - pip:
-      - rdflib==7.0.0
-      - owlready2==0.48
-      - networkx==3.3
-      - pip-audit==2.10.1
+      - -r requirements.txt

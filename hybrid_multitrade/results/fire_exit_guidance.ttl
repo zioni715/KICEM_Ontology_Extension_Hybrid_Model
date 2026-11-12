@@ -1,0 +1,244 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tbox: <https://example.org/kicem/hybrid/fire_exit_guidance#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.org/kicem/hybrid/fire_exit_guidance> a owl:Ontology ;
+    owl:versionInfo "Provisional hybrid T-Box; no independent expert gold validation" .
+
+tbox:ApplicationSurface a owl:Class ;
+    rdfs:label "ApplicationSurface" ;
+    rdfs:comment "유도등 적용 표면" ;
+    tbox:origin "researcher_anchor" .
+
+tbox:AudienceLightInstallationCostItem a owl:Class ;
+    rdfs:label "객석유도등 설치 비용" ;
+    rdfs:comment "객석의 통로·바닥 또는 벽에 유도등을 설치하는 작업에 소요되는 비용." ;
+    rdfs:subClassOf tbox:ExitGuidanceInstallationCostItem ;
+    tbox:evidence "[{\"source_id\": \"STD:008\", \"quote\": \"객석유도등 설치 객석의 통로·바닥 또는 벽에 유도등을 설치하는 작업.\"}]" ;
+    tbox:origin "LLM_document_proposal" .
+
+tbox:CalculatedQuantityItem a owl:Class ;
+    rdfs:label "수량산출항목" ;
+    rdfs:comment "수량산출서에서 계약수량의 근거가 되는 산출수량 항목" ;
+    rdfs:subClassOf tbox:DetailItem ;
+    tbox:origin "seed" .
+
+tbox:ContractItem a owl:Class ;
+    rdfs:label "계약항목" ;
+    rdfs:comment "계약수량·계약단가·계약금액을 제공하는 계약내역서 항목" ;
+    rdfs:subClassOf tbox:DetailItem ;
+    tbox:origin "seed" .
+
+tbox:ContractStatement a owl:Class ;
+    rdfs:label "계약내역서" ;
+    rdfs:comment "확정된 계약수량·계약단가·계약금액을 제공하는 근거서류" ;
+    rdfs:subClassOf tbox:EvidenceDocument ;
+    tbox:origin "seed" .
+
+tbox:ContractSummaryItem a owl:Class ;
+    rdfs:label "계약집계항목" ;
+    rdfs:comment "공종별내역항목의 계약금액을 공종별로 합산한 공종별집계표 항목" ;
+    rdfs:subClassOf tbox:SummaryItem ;
+    tbox:origin "seed" .
+
+tbox:CostCalculationItem a owl:Class ;
+    rdfs:label "원가계산항목" ;
+    rdfs:comment "원가계산서에서 비용 산정 근거를 제공하는 항목" ;
+    rdfs:subClassOf tbox:DetailItem ;
+    tbox:origin "seed" .
+
+tbox:CostCalculationStatement a owl:Class ;
+    rdfs:label "원가계산서" ;
+    rdfs:comment "비용항목의 원가 구성과 산정금액을 제공하는 근거서류" ;
+    rdfs:subClassOf tbox:EvidenceDocument ;
+    tbox:origin "seed" .
+
+tbox:ElectricalWorkType a owl:Class ;
+    rdfs:label "전기 작업" ;
+    rdfs:comment "유도등의 전원 및 배선을 설치하는 작업 유형." ;
+    rdfs:subClassOf tbox:WorkTask ;
+    tbox:evidence "[{\"source_id\": \"WBS:W013\", \"quote\": \"유도등 전원 설치: 유도등의 상용전원과 비상전원을 설치하는 작업. [NFTC-303 § 2.7.1-2.7.2]\"}, {\"source_id\": \"WBS:W014\", \"quote\": \"유도등 배선: 유도등 인입선과 옥내배선을 설치·연결하는 작업. [NFTC-303 § 2.7.3]\"}]" ;
+    tbox:origin "LLM_WBS_proposal" .
+
+tbox:EvacuationLightMountingCostItem a owl:Class ;
+    rdfs:label "피난구유도등 부착 비용" ;
+    rdfs:comment "피난구유도등을 출입구에 인접한 규정 높이에 부착하는 작업에 소요되는 비용." ;
+    rdfs:subClassOf tbox:ExitGuidanceInstallationCostItem ;
+    tbox:evidence "[{\"source_id\": \"STD:003\", \"quote\": \"피난구유도등 부착 출입구에 인접한 규정 높이에 피난구유도등을 부착하는 작업.\"}]" ;
+    tbox:origin "LLM_document_proposal" .
+
+tbox:ExitGuidanceMaterial a owl:Class ;
+    rdfs:label "ExitGuidanceMaterial" ;
+    rdfs:comment "유도등 재료 유형" ;
+    tbox:origin "researcher_anchor" .
+
+tbox:ExitGuidanceMaterialCostItem a owl:Class ;
+    rdfs:label "유도등 자재 비용항목" ;
+    rdfs:comment "유도등 자재의 공급·구매에 대한 비용대상. 자재 자체나 설치 작업 비용은 아니다." ;
+    rdfs:subClassOf tbox:CostItem ;
+    tbox:origin "researcher_cost_role_bridge" .
+
+tbox:GuidanceSignInstallationCostItem a owl:Class ;
+    rdfs:label "유도표지 설치 비용" ;
+    rdfs:comment "피난구 또는 통로에 유도표지를 설치하는 작업에 소요되는 비용." ;
+    rdfs:subClassOf tbox:ExitGuidanceInstallationCostItem ;
+    tbox:evidence "[{\"source_id\": \"STD:009\", \"quote\": \"유도표지 설치 피난구 또는 통로에 유도표지를 설치하는 작업.\"}]" ;
+    tbox:origin "LLM_document_proposal" .
+
+tbox:InstallationMethod a owl:Class ;
+    rdfs:label "InstallationMethod" ;
+    rdfs:comment "유도등 시공 방법" ;
+    tbox:origin "researcher_anchor" .
+
+tbox:ProgressPaymentItem a owl:Class ;
+    rdfs:label "기성내역항목" ;
+    rdfs:comment "공사기성부분내역서에서 전회·금회·누계·잔여 수량과 금액을 산정하는 항목" ;
+    rdfs:subClassOf tbox:DetailItem ;
+    tbox:origin "seed" .
+
+tbox:ProgressPaymentRound a owl:Class ;
+    rdfs:label "기성회차" ;
+    rdfs:comment "기성 산정과 청구의 시간 단위" ;
+    tbox:origin "seed" .
+
+tbox:ProgressPaymentStatement a owl:Class ;
+    rdfs:label "공사기성부분내역서" ;
+    rdfs:comment "회차별 기성수량과 기성금액을 산정해 제시하는 유일한 산출서류" ;
+    rdfs:subClassOf tbox:OutputDocument ;
+    tbox:origin "seed" .
+
+tbox:ProgressPaymentSummaryItem a owl:Class ;
+    rdfs:label "기성집계항목" ;
+    rdfs:comment "기성금액항목의 금회금액을 공종별로 합산한 공사기성부분내역서 항목" ;
+    rdfs:subClassOf tbox:SummaryItem ;
+    tbox:origin "seed" .
+
+tbox:QuantityCalculationSheet a owl:Class ;
+    rdfs:label "수량산출서" ;
+    rdfs:comment "계약수량의 산출 근거를 제공하는 근거서류" ;
+    rdfs:subClassOf tbox:EvidenceDocument ;
+    tbox:origin "seed" .
+
+tbox:StairwayLightInstallationCostItem a owl:Class ;
+    rdfs:label "계단통로유도등 설치 비용" ;
+    rdfs:comment "계단과 경사로의 바닥면을 비추도록 유도등을 설치하는 작업에 소요되는 비용." ;
+    rdfs:subClassOf tbox:ExitGuidanceInstallationCostItem ;
+    tbox:evidence "[{\"source_id\": \"STD:007\", \"quote\": \"계단통로유도등 설치 계단과 경사로의 바닥면을 비추도록 유도등을 설치하는 작업.\"}]" ;
+    tbox:origin "LLM_document_proposal" .
+
+tbox:TA_9dad05cf739f a owl:Class ;
+    rdfs:label "emergency_light_installation" ;
+    rdfs:comment "비상 조명 및 관련 설비 설치 작업 유형." ;
+    rdfs:subClassOf tbox:InstallationWorkType ;
+    tbox:evidence "[{\"source_id\": \"WBS:W001\", \"quote\": \"유도등 및 유도표지 설비공사: 유도등·유도표지·피난유도선의 설치 및 관리 작업. [NFTC-303 § 1.1]\"}, {\"source_id\": \"WBS:W002\", \"quote\": \"피난구유도등 설치: 피난구에 유도등을 설치하는 작업. [NFTC-303 § 2.2]\"}, {\"source_id\": \"WBS:W004\", \"quote\": \"통로유도등 설치: 피난 통로에 유도등을 설치하는 작업. [NFTC-303 § 2.3]\"}, {\"source_id\": \"WBS:W006\", \"quote\": \"거실통로유도등 설치: 거실의 피난 통로에 유도등을 설치하는 작업. [NFTC-303 § 2.3.1.2]\"}, {\"source_id\": \"WBS:W007\", \"quote\": \"계단통로유도등 설치: 계단과 경사로의 바닥면을 비추도록 유도등을 설치하는 작업. [NFTC-303 § 2.3.1.3]\"}, {\"source_id\": \"WBS:W008\", \"quote\": \"객석유도등 설치: 객석의 통로·바닥 또는 벽에 유도등을 설치하는 작업. [NFTC-303 § 2.4]\"}, {\"source_id\": \"WBS:W010\", \"quote\": \"피난구유도표지 설치: 출입구 상단에 피난구유도표지를 설치하는 작업. [NFTC-303 § 2.5.1.2]\"}, {\"source_id\": \"WBS:W011\", \"quote\": \"통로유도표지 설치: 피난 통로에 통로유도표지를 설치하는 작업. [NFTC-303 § 2.5.1.1-2.5.1.2]\"}, {\"source_id\": \"WBS:W012\", \"quote\": \"피난유도선 설치: 피난 경로에 띠 형태의 피난유도선을 설치하는 작업. [NFTC-303 § 2.6]\"}, {\"source_id\": \"WBS:W013\", \"quote\": \"유도등 전원 설치: 유도등의 상용전원과 비상전원을 설치하는 작업. [NFTC-303 § 2.7.1-2.7.2]\"}, {\"source_id\": \"WBS:W014\", \"quote\": \"유도등 배선: 유도등 인입선과 옥내배선을 설치·연결하는 작업. [NFTC-303 § 2.7.3]\"}]" ;
+    tbox:origin "TaxoAdapt" .
+
+tbox:TA_dcc9889caa47 a owl:Class ;
+    rdfs:label "corridor_and_step_light_installation" ;
+    rdfs:comment "복도 및 계단 조명 설치 작업 유형." ;
+    rdfs:subClassOf tbox:InstallationWorkType ;
+    tbox:evidence "[{\"source_id\": \"WBS:W005\", \"quote\": \"복도통로유도등 설치: 복도와 구부러진 모퉁이에 통로유도등을 설치하는 작업. [NFTC-303 § 2.3.1.1]\"}, {\"source_id\": \"WBS:W007\", \"quote\": \"계단통로유도등 설치: 계단과 경사로의 바닥면을 비추도록 유도등을 설치하는 작업. [NFTC-303 § 2.3.1.3]\"}]" ;
+    tbox:origin "TaxoAdapt" .
+
+tbox:Unit a owl:Class ;
+    rdfs:label "단위" ;
+    rdfs:comment "비용항목 수량을 측정하는 단위" ;
+    tbox:origin "seed" .
+
+tbox:WorkCategory a owl:Class ;
+    rdfs:label "공종" ;
+    rdfs:comment "철근콘크리트공사와 그 하위 네 공종을 표현하는 통제 분류" ;
+    tbox:origin "seed" .
+
+tbox:WorkCategoryDetailItem a owl:Class ;
+    rdfs:label "공종별내역항목" ;
+    rdfs:comment "공종별내역서에 수량·단가·금액을 나타내는 항목" ;
+    rdfs:subClassOf tbox:DetailItem ;
+    tbox:origin "seed" .
+
+tbox:WorkCategoryDetailStatement a owl:Class ;
+    rdfs:label "공종별내역서" ;
+    rdfs:comment "공종별 비용항목의 수량·단가·금액을 제시하는 근거서류" ;
+    rdfs:subClassOf tbox:EvidenceDocument ;
+    tbox:origin "seed" .
+
+tbox:WorkCategorySummaryStatement a owl:Class ;
+    rdfs:label "공종별집계표" ;
+    rdfs:comment "공종별 상세 비용을 합산해 제시하는 근거서류" ;
+    rdfs:subClassOf tbox:EvidenceDocument ;
+    tbox:origin "seed" .
+
+tbox:evidence a owl:AnnotationProperty .
+
+tbox:exit_guidanceMaterialText a owl:DatatypeProperty ;
+    rdfs:label "유도등 재질 표현" ;
+    rdfs:comment "원본 품명/규격에 명시된 유도등 재질 표현. 단위나 수치의 추정 변환 없이 보존한다." ;
+    rdfs:domain tbox:CostItem ;
+    rdfs:range xsd:string .
+
+tbox:exit_guidanceMethodText a owl:DatatypeProperty ;
+    rdfs:label "유도등 시공방법 표현" ;
+    rdfs:comment "원본 품명/규격에 명시된 유도등 시공방법 표현. 단위나 수치의 추정 변환 없이 보존한다." ;
+    rdfs:domain tbox:CostItem ;
+    rdfs:range xsd:string .
+
+tbox:origin a owl:AnnotationProperty .
+
+tbox:OutputDocument a owl:Class ;
+    rdfs:label "산출서류" ;
+    rdfs:comment "근거서류의 정보를 사용해 기성금액 산정 결과를 제시하는 서류" ;
+    rdfs:subClassOf tbox:ProgressDocument ;
+    tbox:origin "seed" .
+
+tbox:DocumentItem a owl:Class ;
+    rdfs:label "기성서류항목" ;
+    rdfs:comment "기성서류에 포함되는 비용정보의 의미 단위" ;
+    tbox:origin "seed" .
+
+tbox:InstallationWorkType a owl:Class ;
+    rdfs:label "설치 작업" ;
+    rdfs:comment "유도등 및 관련 설비를 설치하는 작업 유형." ;
+    rdfs:subClassOf tbox:WorkTask ;
+    tbox:evidence "[{\"source_id\": \"WBS:W001\", \"quote\": \"유도등 및 유도표지 설비공사: 유도등·유도표지·피난유도선의 설치 및 관리 작업. [NFTC-303 § 1.1]\"}, {\"source_id\": \"WBS:W002\", \"quote\": \"피난구유도등 설치: 피난구에 유도등을 설치하는 작업. [NFTC-303 § 2.2]\"}, {\"source_id\": \"WBS:W004\", \"quote\": \"통로유도등 설치: 피난 통로에 유도등을 설치하는 작업. [NFTC-303 § 2.3]\"}, {\"source_id\": \"WBS:W008\", \"quote\": \"객석유도등 설치: 객석의 통로·바닥 또는 벽에 유도등을 설치하는 작업. [NFTC-303 § 2.4]\"}, {\"source_id\": \"WBS:W010\", \"quote\": \"피난구유도표지 설치: 출입구 상단에 피난구유도표지를 설치하는 작업. [NFTC-303 § 2.5.1.2]\"}, {\"source_id\": \"WBS:W012\", \"quote\": \"피난유도선 설치: 피난 경로에 띠 형태의 피난유도선을 설치하는 작업. [NFTC-303 § 2.6]\"}]" ;
+    tbox:origin "LLM_WBS_proposal" .
+
+tbox:ProgressDocument a owl:Class ;
+    rdfs:label "기성서류" ;
+    rdfs:comment "철근콘크리트 기성금액 산정에 직접 사용하는 서류의 최상위 클래스" ;
+    tbox:origin "seed" .
+
+tbox:SummaryItem a owl:Class ;
+    rdfs:label "집계항목" ;
+    rdfs:comment "계약 또는 기성 상세항목의 금액을 동일 공종별로 합산한 항목" ;
+    rdfs:subClassOf tbox:DocumentItem ;
+    tbox:origin "seed" .
+
+tbox:WorkTask a owl:Class ;
+    rdfs:label "WorkTask" ;
+    rdfs:comment "유도등 시공 작업 활동" ;
+    tbox:origin "researcher_anchor" .
+
+tbox:CostItem a owl:Class ;
+    rdfs:label "비용항목" ;
+    rdfs:comment "서류별 항목이 공통으로 나타내는 표준 비용 대상" ;
+    tbox:origin "seed" .
+
+tbox:ExitGuidanceInstallationCostItem a owl:Class ;
+    rdfs:label "유도등 설치 비용항목" ;
+    rdfs:comment "유도등 설치 시공 작업에 대한 비용대상. 작업 활동 자체나 자재 공급 비용은 아니다." ;
+    rdfs:subClassOf tbox:CostItem ;
+    tbox:origin "researcher_cost_role_bridge" .
+
+tbox:DetailItem a owl:Class ;
+    rdfs:label "상세비용항목" ;
+    rdfs:comment "집계 전 개별 비용항목" ;
+    rdfs:subClassOf tbox:DocumentItem ;
+    tbox:origin "seed" .
+
+tbox:EvidenceDocument a owl:Class ;
+    rdfs:label "근거서류" ;
+    rdfs:comment "기성금액 산정에 필요한 수량·단가·금액의 근거를 제공하는 서류" ;
+    rdfs:subClassOf tbox:ProgressDocument ;
+    tbox:origin "seed" .
+

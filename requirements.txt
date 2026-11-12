@@ -1,18 +1,8 @@
-# ============================================================
-# Hybrid-v1
-# End-to-End Hybrid Pipeline for Domestic Conference Experiment
-#
-# Python: 3.11 (conda environment: hybrid-v1)
-# Linux x86_64 / RTX 3090 24 GiB / NVIDIA driver 550.163.01
-# CUDA runtime: 12.1 (PyPI torch wheel); nvidia-smi reports driver support 12.4.
-# Install from the project root. See docs/dependency-compatibility.md.
-# ============================================================
+# Three-trade hybrid T-Box pipeline. Tested: Linux x86_64, Python 3.11,
+# RTX 3090, torch CUDA 12.1 wheels. Java 17 and local models/sources required.
+# Runtime compatibility pins, not a complete transitive environment lock.
 
-# Apply the known compatibility boundaries. This is not a complete historical
-# transitive lock; see docs/dependency-compatibility.md.
--c constraints.txt
-
-# ----- Deep Learning / Hugging Face -----
+# GPU training and inference
 torch==2.4.0
 torchvision==0.19.0
 xformers==0.0.27.post2
@@ -22,35 +12,35 @@ tokenizers==0.20.3
 huggingface-hub==0.26.2
 sentence-transformers==3.0.1
 vllm==0.6.3.post1
-# Standard PEFT for the hybrid pipeline. TaxoPro must use its bundled
-# TaxoPro/TaxoPro/peft package (MultitaskLoraConfig / PeftModelForBasic).
+# TaxoPro imports its bundled custom PEFT instead of this standard package.
 peft==0.13.2
 accelerate==1.0.1
 sentencepiece==0.2.0
 safetensors==0.4.5
 
-# ----- Numerical / ML -----
-# mistral-common (vLLM) requires >=1.25 on Python 3.11; vLLM requires <2.
+# Numerical and training utilities, including TaxoPro import dependencies
 numpy==1.26.4
 scipy==1.10.1
 scikit-learn==1.3.2
 joblib==1.4.2
+wandb==0.18.5
+tensorboardX==2.6.2.2
 
-# ----- LLM / API -----
+# API and configuration
 openai==1.52.2
-# OpenAI 1.52.2 passes proxies=, removed by httpx 0.28.
 httpx==0.27.2
-ollama==0.4.7
-tiktoken==0.7.0
-outlines==0.0.46
-# Outlines imports pyairports.airports; PyPI's current 0.0.1 is a different
-# distribution. Use the original 2.1.1 source at an immutable commit.
-pyairports @ https://github.com/ozeliger/pyairports/archive/f611ee5a5a82b4e98b22641bb99693d862c802e4.zip
+python-dotenv==1.2.3
 pydantic==2.11.7
-aiohttp==3.10.5
+PyYAML==6.0.2
+tqdm==4.66.5
+Unidecode==1.3.8
+typing-extensions==4.14.1
+setuptools==75.3.0
 
-# ----- vLLM / Outlines compatibility dependencies -----
-# Keep the 2024 inference stack away from incompatible newer APIs / NumPy 2.
+# vLLM / Outlines compatibility
+outlines==0.0.46
+# Outlines needs pyairports.airports; unrelated PyPI 0.0.1 is incompatible.
+pyairports @ https://github.com/ozeliger/pyairports/archive/f611ee5a5a82b4e98b22641bb99693d862c802e4.zip
 mistral-common==1.4.4
 opencv-python-headless==4.10.0.84
 numba==0.60.0
@@ -62,32 +52,14 @@ starlette==0.41.2
 uvicorn==0.32.0
 protobuf==5.28.3
 sympy==1.13.3
+aiohttp==3.10.5
+tiktoken==0.7.0
 
-# ----- Ontology / Taxonomy -----
-owlready2==0.48
-rdflib==7.0.0
-networkx==3.3
-
-# ----- Document / Construction Data -----
-PyMuPDF==1.24.10
-pypdf==5.8.0
+# MILA tables and Excel intermediate artifacts
 pandas==2.2.3
 openpyxl==3.1.5
-datasets==2.21.0
-pyarrow==17.0.0
 
-# ----- TaxoPro training / graph preprocessing -----
-torch-geometric==2.6.1
-spacy==3.7.5
-more-itertools==10.5.0
-wandb==0.18.5
-tensorboardX==2.6.2.2
-
-# ----- NLP / Utility -----
-nltk==3.9.1
-Unidecode==1.3.8
-PyYAML==6.0.2
-tqdm==4.66.5
-typing-extensions==4.14.1
-# Older runtime dependencies still use pkg_resources.
-setuptools==75.3.0
+# OWL serialization and validation (also selected by CPU CI)
+rdflib==7.0.0
+owlready2==0.48
+networkx==3.3

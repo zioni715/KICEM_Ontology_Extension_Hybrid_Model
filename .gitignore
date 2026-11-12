@@ -24,6 +24,7 @@ id_ed25519*
 
 # Private research inputs; keep the OWL2 baseline available for version control.
 /Datasets/
+/Documents/
 /KO/*
 !/KO/OWL2/
 /Papers/
@@ -38,9 +39,9 @@ id_ed25519*
 **/source_documents/
 **/raw_documents/
 /KCS*.md
-/WBS*
+/WBS*.md
 /CBS*
-/wbs*
+/wbs*.md
 /cbs*
 
 # Experiments contain source excerpts, prices, prompts, caches, and reports.
@@ -49,6 +50,8 @@ id_ed25519*
 /test[0-9]*/
 /TEST/
 /TEST[0-9]*/
+/hybrid_pipeline/
+/tile_case_study/
 
 # Local reference clones; keep original repositories untouched.
 /TaxoPro/
@@ -65,10 +68,22 @@ id_ed25519*
 *.parquet
 *.jsonl
 *.pdf
+*.PDF
 *.doc
 *.docx
+*.DOC
+*.DOCX
+*.ppt
+*.pptx
+*.PPT
+*.PPTX
+*.XLS
+*.XLSX
+*.XLSM
 *.hwp
 *.hwpx
+*.HWP
+*.HWPX
 *.odt
 *.ods
 *.odp
@@ -131,7 +146,6 @@ Thumbs.db
 # Reproducible release scratch space and local presentation builds.
 /.codex_ppt_build/
 /deliverables/
-/final_tbox/.runtime/
 
 # Baseline ontology files: override the general ontology-export exclusions.
 !/KO/OWL2/**/*.owl
@@ -140,9 +154,7 @@ Thumbs.db
 !/KO/OWL2/**/*.trig
 !/KO/OWL2/**/*.nt
 
-# Sanitized, reproducible T-Box ontology exports override the general rules.
-!/final_tbox/outputs/multitrade/*.owl
-!/final_tbox/outputs/multitrade/*.ttl
-
-# Reviewer-entered answers and notes stay local; aggregate score reports may be tracked.
-/final_tbox/reports/*expert_review*.json
+# Hybrid reruns: raw prompts, logs, model checkpoints and generated workspaces.
+/hybrid_multitrade/.runs/
+!/hybrid_multitrade/results/*.ttl
+!/hybrid_multitrade/results/*.owl

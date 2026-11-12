@@ -1,0 +1,18 @@
+{
+  "repo_id": "meta-llama/Llama-3.1-8B-Instruct",
+  "revision": "0e9e39f249a16976918f6564b8830bc894c89659",
+  "local_path": "tile_case_study/runtime/models/llama-3.1-8b-instruct",
+  "status": "downloaded",
+  "allow_patterns": [
+    "*.json",
+    "*.safetensors",
+    "tokenizer.model",
+    "*.txt",
+    "LICENSE*",
+    "USE_POLICY*",
+    "README.md"
+  ],
+  "ignore_patterns": [
+    "original/*"
+  ]
+}

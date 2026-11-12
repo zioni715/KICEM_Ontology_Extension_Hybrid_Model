@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:tbox="https://example.org/kicem/hybrid/architecture_tile#"
+>
+  <rdf:Description rdf:about="https://example.org/kicem/hybrid/architecture_tile#tileOtherText">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/kicem/hybrid/architecture_tile#CostItem"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>기타 타일 특성 표현</rdfs:label>
+    <rdfs:comment>원본 품명/규격에 명시된 기타 타일 특성 표현. 단위나 수치의 추정 변환 없이 보존한다.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/hybrid/architecture_tile#FloorTileInstallationCostItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>바닥타일 설치 비용</rdfs:label>
+    <rdfs:comment>바닥면에 타일을 붙이는 작업에 소요되는 비용 항목.</rdfs:comment>
+    <tbox:origin>LLM_document_proposal</tbox:origin>
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/hybrid/architecture_tile#TileInstallationCostItem"/>
+    <tbox:evidence>[{"source_id": "STD:012", "quote": "바닥 타일 붙이기 바닥면에 타일을 붙이는 작업."}, {"source_id": "STD:014", "quote": "바닥타일 압착 붙이기 압착 공법으로 바닥타일을 붙이는 작업."}]</tbox:evidence>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/hybrid/architecture_tile#WallTileInstallationCostItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>벽타일 설치 비용</rdfs:label>
+    <rdfs:comment>벽면에 타일을 붙이는 작업에 소요되는 비용 항목.</rdfs:comment>
+    <tbox:origin>LLM_document_proposal</tbox:origin>
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/hybrid/architecture_tile#CostItem"/>
+    <tbox:evidence>[{"source_id": "STD:004", "quote": "벽타일 붙이기 벽면에 타일을 붙이는 작업."}, {"source_id": "STD:010", "quote": "벽타일 동시 줄눈 붙이기 붙임과 줄눈을 함께 수행하는 벽타일 작업."}]</tbox:evidence>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/hybrid/architecture_tile#TA_5bc89013b30a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>tile_installation_inspection</rdfs:label>
+    <rdfs:comment>타일 설치 중 및 후의 검사 작업을 포함합니다.</rdfs:comment>
+    <tbox:origin>TaxoAdapt</tbox:origin>
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/hybrid/architecture_tile#TileInspectionWorkType"/>
+    <tbox:evidence>[{"source_id": "WBS:W022", "quote": "타일 시공 중 검사: 타일 시공 중 수행하는 검사. [KCS-41-48-01 § 3.6.1]"}, {"source_id": "WBS:W023", "quote": "타일 두들김 검사: 두들김으로 타일 붙임 상태를 확인하는 검사. [KCS-41-48-01 § 3.6.2]"}, {"source_id": "WBS:W024", "quote": "타일 접착력 시험: 타일의 접착 성능을 확인하는 시험. [KCS-41-48-01 § 3.6.3]"}]</tbox:evidence>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/hybrid/architecture_tile#TA_26766b373d3a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>wall_tile_installation</rdfs:label>
+    <rdfs:comment>벽 타일 설치와 관련된 모든 작업을 포함합니다.</rdfs:comment>
+    <tbox:origin>TaxoAdapt</tbox:origin>
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/hybrid/architecture_tile#TileInstallationWorkType"/>
+    <tbox:evidence>[{"source_id": "WBS:W004", "quote": "벽타일 붙이기: 벽면에 타일을 붙이는 작업. [KCS-41-48-01 § 3.2]"}]</tbox:evidence>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/hybrid/architecture_tile#SummaryItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>집계항목</rdfs:label>
+    <rdfs:comment>계약 또는 기성 상세항목의 금액을 동일 공종별로 합산한 항목</rdfs:comment>
+    <tbox:origin>seed</tbox:origin>
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/hybrid/architecture_tile#DocumentItem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/hybrid/architecture_tile#InstallationMethod">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>InstallationMethod</rdfs:label>
+    <rdfs:comment>타일 시공 방법</rdfs:comment>
+    <tbox:origin>researcher_anchor</tbox:origin>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/hybrid/architecture_tile#TileMaterialCostItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>타일 자재 비용항목</rdfs:label>
+    <rdfs:comment>타일 자재의 공급·구매에 대한 비용대상. 자재 자체나 설치 작업 비용은 아니다.</rdfs:comment>
+    <tbox:origin>researcher_cost_role_bridge</tbox:origin>
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/hybrid/architecture_tile#CostItem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/hybrid/architecture_tile#TileInstallationWorkType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>타일 시공 작업</rdfs:label>
+    <rdfs:comment>타일을 설치하는 모든 작업을 포함하는 상위 유형.</rdfs:comment>
+    <tbox:origin>LLM_WBS_proposal</tbox:origin>
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/hybrid/architecture_tile#WorkTask"/>
+    <tbox:evidence>[{"source_id": "WBS:W002", "quote": "타일 붙이기: 바탕에 타일을 붙이는 설치 작업 유형. [KCS-41-48-01 § 3.1-3.4]"}, {"source_id": "WBS:W004", "quote": "벽타일 붙이기: 벽면에 타일을 붙이는 작업. [KCS-41-48-01 § 3.2]"}, {"source_id": "WBS:W012", "quote": "바닥 타일 붙이기: 바닥면에 타일을 붙이는 작업. [KCS-41-48-01 § 3.3]"}, {"source_id": "WBS:W017", "quote": "천장 타일 붙이기: 천장면에 타일을 붙이는 작업. [KCS-41-48-01 § 3.4]"}]</tbox:evidence>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/hybrid/architecture_tile#TA_27bf40da5108">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>wall_tile_installation</rdfs:label>
+    <rdfs:comment>벽 타일 설치와 관련된 비용 및 작업 항목을 포함합니다.</rdfs:comment>
+    <tbox:origin>TaxoAdapt</tbox:origin>
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/hybrid/architecture_tile#WallTileInstallationCostItem"/>
+    <tbox:evidence>[{"source_id": "STD:004", "quote": "벽타일 붙이기 벽면에 타일을 붙이는 작업."}, {"source_id": "STD:010", "quote": "벽타일 동시 줄눈 붙이기 붙임과 줄눈을 함께 수행하는 벽타일 작업."}]</tbox:evidence>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/hybrid/architecture_tile#ProgressPaymentItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>기성내역항목</rdfs:label>
+    <rdfs:comment>공사기성부분내역서에서 전회·금회·누계·잔여 수량과 금액을 산정하는 항목</rdfs:comment>
+    <tbox:origin>seed</tbox:origin>
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/hybrid/architecture_tile#DetailItem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/hybrid/architecture_tile#OutputDocument">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>산출서류</rdfs:label>
+    <rdfs:comment>근거서류의 정보를 사용해 기성금액 산정 결과를 제시하는 서류</rdfs:comment>
+    <tbox:origin>seed</tbox:origin>
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/hybrid/architecture_tile#ProgressDocument"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/hybrid/architecture_tile#TA_47796916aa60">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>floor_tile_installation</rdfs:label>
+    <rdfs:comment>바닥 타일 설치와 관련된 모든 작업을 포함합니다.</rdfs:comment>
+    <tbox:origin>TaxoAdapt</tbox:origin>
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/hybrid/architecture_tile#TileInstallationWorkType"/>
+    <tbox:evidence>[{"source_id": "WBS:W012", "quote": "바닥 타일 붙이기: 바닥면에 타일을 붙이는 작업. [KCS-41-48-01 § 3.3]"}, {"source_id": "WBS:W013", "quote": "바닥타일 시멘트 페이스트 붙이기: 시멘트 페이스트로 바닥타일을 붙이는 작업. [KCS-41-48-01 § 3.3.1]"}, {"source_id": "WBS:W014", "quote": "바닥타일 압착 붙이기: 압착 공법으로 바닥타일을 붙이는 작업. [KCS-41-48-01 § 3.3.2]"}, {"source_id": "WBS:W015", "quote": "바닥타일 개량압착 붙이기: 개량압착 공법으로 바닥타일을 붙이는 작업. [KCS-41-48-01 § 3.3.3]"}, {"source_id": "WBS:W016", "quote": "바닥타일 접착 붙이기: 접착제로 바닥타일을 붙이는 작업. [KCS-41-48-01 § 3.3.4]"}]</tbox:evidence>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/hybrid/architecture_tile#tileMethodText">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/kicem/hybrid/architecture_tile#CostItem"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>타일 시공방법 표현</rdfs:label>
+    <rdfs:comment>원본 품명/규격에 명시된 타일 시공방법 표현. 단위나 수치의 추정 변환 없이 보존한다.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/hybrid/architecture_tile#CostItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>비용항목</rdfs:label>
+    <rdfs:comment>서류별 항목이 공통으로 나타내는 표준 비용 대상</rdfs:comment>
+    <tbox:origin>seed</tbox:origin>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/hybrid/architecture_tile#TileInspectionWorkType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>타일 검사 작업</rdfs:label>
+    <rdfs:comment>타일 시공 결과 및 상태를 검사하는 작업을 포함하는 상위 유형.</rdfs:comment>
+    <tbox:origin>LLM_WBS_proposal</tbox:origin>
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/hybrid/architecture_tile#WorkTask"/>
+    <tbox:evidence>[{"source_id": "WBS:W021", "quote": "타일 검사: 타일 시공 결과를 검사하는 작업. [KCS-41-48-01 § 3.6]"}, {"source_id": "WBS:W022", "quote": "타일 시공 중 검사: 타일 시공 중 수행하는 검사. [KCS-41-48-01 § 3.6.1]"}, {"source_id": "WBS:W023", "quote": "타일 두들김 검사: 두들김으로 타일 붙임 상태를 확인하는 검사. [KCS-41-48-01 § 3.6.2]"}, {"source_id": "WBS:W024", "quote": "타일 접착력 시험: 타일의 접착 성능을 확인하는 시험. [KCS-41-48-01 § 3.6.3]"}]</tbox:evidence>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/hybrid/architecture_tile#WorkCategoryDetailItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>공종별내역항목</rdfs:label>
+    <rdfs:comment>공종별내역서에 수량·단가·금액을 나타내는 항목</rdfs:comment>
+    <tbox:origin>seed</tbox:origin>
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/hybrid/architecture_tile#DetailItem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/hybrid/architecture_tile#ContractSummaryItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>계약집계항목</rdfs:label>
+    <rdfs:comment>공종별내역항목의 계약금액을 공종별로 합산한 공종별집계표 항목</rdfs:comment>
+    <tbox:origin>seed</tbox:origin>
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/hybrid/architecture_tile#SummaryItem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/hybrid/architecture_tile#ContractItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>계약항목</rdfs:label>
+    <rdfs:comment>계약수량·계약단가·계약금액을 제공하는 계약내역서 항목</rdfs:comment>
+    <tbox:origin>seed</tbox:origin>
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/hybrid/architecture_tile#DetailItem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/hybrid/architecture_tile#CostCalculationItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>원가계산항목</rdfs:label>
+    <rdfs:comment>원가계산서에서 비용 산정 근거를 제공하는 항목</rdfs:comment>
+    <tbox:origin>seed</tbox:origin>
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/hybrid/architecture_tile#DetailItem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/hybrid/architecture_tile#tileMaterialText">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/kicem/hybrid/architecture_tile#CostItem"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>타일 재질 표현</rdfs:label>
+    <rdfs:comment>원본 품명/규격에 명시된 타일 재질 표현. 단위나 수치의 추정 변환 없이 보존한다.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/hybrid/architecture_tile#QuantityCalculationSheet">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>수량산출서</rdfs:label>
+    <rdfs:comment>계약수량의 산출 근거를 제공하는 근거서류</rdfs:comment>
+    <tbox:origin>seed</tbox:origin>
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/hybrid/architecture_tile#EvidenceDocument"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/hybrid/architecture_tile#TileInstallationCostItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>타일 설치 비용항목</rdfs:label>
+    <rdfs:comment>타일 설치 시공 작업에 대한 비용대상. 작업 활동 자체나 자재 공급 비용은 아니다.</rdfs:comment>
+    <tbox:origin>researcher_cost_role_bridge</tbox:origin>
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/hybrid/architecture_tile#CostItem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/hybrid/architecture_tile#TileMaterial">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>TileMaterial</rdfs:label>
+    <rdfs:comment>타일 재료 유형</rdfs:comment>
+    <tbox:origin>researcher_anchor</tbox:origin>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/hybrid/architecture_tile#DocumentItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>기성서류항목</rdfs:label>
+    <rdfs:comment>기성서류에 포함되는 비용정보의 의미 단위</rdfs:comment>
+    <tbox:origin>seed</tbox:origin>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/hybrid/architecture_tile#ProgressPaymentStatement">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>공사기성부분내역서</rdfs:label>
+    <rdfs:comment>회차별 기성수량과 기성금액을 산정해 제시하는 유일한 산출서류</rdfs:comment>
+    <tbox:origin>seed</tbox:origin>
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/hybrid/architecture_tile#OutputDocument"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/hybrid/architecture_tile#Unit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>단위</rdfs:label>
+    <rdfs:comment>비용항목 수량을 측정하는 단위</rdfs:comment>
+    <tbox:origin>seed</tbox:origin>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/hybrid/architecture_tile#DetailItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>상세비용항목</rdfs:label>
+    <rdfs:comment>집계 전 개별 비용항목</rdfs:comment>
+    <tbox:origin>seed</tbox:origin>
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/hybrid/architecture_tile#DocumentItem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/hybrid/architecture_tile#ProgressDocument">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>기성서류</rdfs:label>
+    <rdfs:comment>철근콘크리트 기성금액 산정에 직접 사용하는 서류의 최상위 클래스</rdfs:comment>
+    <tbox:origin>seed</tbox:origin>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/hybrid/architecture_tile#MosaicTileInstallationCostItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>모자이크 타일 설치 비용</rdfs:label>
+    <rdfs:comment>모자이크 벽타일을 붙이는 작업에 소요되는 비용 항목.</rdfs:comment>
+    <tbox:origin>LLM_document_proposal</tbox:origin>
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/hybrid/architecture_tile#CostItem"/>
+    <tbox:evidence>[{"source_id": "STD:011", "quote": "모자이크 타일 붙이기 모자이크 벽타일을 붙이는 작업."}]</tbox:evidence>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/hybrid/architecture_tile#origin">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/hybrid/architecture_tile#WorkCategoryDetailStatement">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>공종별내역서</rdfs:label>
+    <rdfs:comment>공종별 비용항목의 수량·단가·금액을 제시하는 근거서류</rdfs:comment>
+    <tbox:origin>seed</tbox:origin>
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/hybrid/architecture_tile#EvidenceDocument"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/hybrid/architecture_tile#WorkTask">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>WorkTask</rdfs:label>
+    <rdfs:comment>타일 시공 작업 활동</rdfs:comment>
+    <tbox:origin>researcher_anchor</tbox:origin>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/hybrid/architecture_tile#ApplicationSurface">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>ApplicationSurface</rdfs:label>
+    <rdfs:comment>타일 적용 표면</rdfs:comment>
+    <tbox:origin>researcher_anchor</tbox:origin>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/hybrid/architecture_tile">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <owl:versionInfo>Provisional hybrid T-Box; no independent expert gold validation</owl:versionInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/hybrid/architecture_tile#tileSurfaceText">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/kicem/hybrid/architecture_tile#CostItem"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>타일 적용부위 표현</rdfs:label>
+    <rdfs:comment>원본 품명/규격에 명시된 타일 적용부위 표현. 단위나 수치의 추정 변환 없이 보존한다.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/hybrid/architecture_tile#CalculatedQuantityItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>수량산출항목</rdfs:label>
+    <rdfs:comment>수량산출서에서 계약수량의 근거가 되는 산출수량 항목</rdfs:comment>
+    <tbox:origin>seed</tbox:origin>
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/hybrid/architecture_tile#DetailItem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/hybrid/architecture_tile#TileGroutCostItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>타일 그라우트 비용</rdfs:label>
+    <rdfs:comment>타일 사이의 간격을 메우기 위해 필요한 그라우트의 비용.</rdfs:comment>
+    <tbox:origin>LLM_document_proposal</tbox:origin>
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/hybrid/architecture_tile#TileMaterialCostItem"/>
+    <tbox:evidence>[{"source_id": "STD:001", "quote": "타일공사 타일 시공 전반을 포괄하는 작업 유형."}]</tbox:evidence>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/hybrid/architecture_tile#WorkCategorySummaryStatement">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>공종별집계표</rdfs:label>
+    <rdfs:comment>공종별 상세 비용을 합산해 제시하는 근거서류</rdfs:comment>
+    <tbox:origin>seed</tbox:origin>
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/hybrid/architecture_tile#EvidenceDocument"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/hybrid/architecture_tile#ProgressPaymentRound">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>기성회차</rdfs:label>
+    <rdfs:comment>기성 산정과 청구의 시간 단위</rdfs:comment>
+    <tbox:origin>seed</tbox:origin>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/hybrid/architecture_tile#EvidenceDocument">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>근거서류</rdfs:label>
+    <rdfs:comment>기성금액 산정에 필요한 수량·단가·금액의 근거를 제공하는 서류</rdfs:comment>
+    <tbox:origin>seed</tbox:origin>
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/hybrid/architecture_tile#ProgressDocument"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/hybrid/architecture_tile#ProgressPaymentSummaryItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>기성집계항목</rdfs:label>
+    <rdfs:comment>기성금액항목의 금회금액을 공종별로 합산한 공사기성부분내역서 항목</rdfs:comment>
+    <tbox:origin>seed</tbox:origin>
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/hybrid/architecture_tile#SummaryItem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/hybrid/architecture_tile#evidence">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/hybrid/architecture_tile#WorkCategory">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>공종</rdfs:label>
+    <rdfs:comment>철근콘크리트공사와 그 하위 네 공종을 표현하는 통제 분류</rdfs:comment>
+    <tbox:origin>seed</tbox:origin>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/hybrid/architecture_tile#CostCalculationStatement">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>원가계산서</rdfs:label>
+    <rdfs:comment>비용항목의 원가 구성과 산정금액을 제공하는 근거서류</rdfs:comment>
+    <tbox:origin>seed</tbox:origin>
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/hybrid/architecture_tile#EvidenceDocument"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/kicem/hybrid/architecture_tile#ContractStatement">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>계약내역서</rdfs:label>
+    <rdfs:comment>확정된 계약수량·계약단가·계약금액을 제공하는 근거서류</rdfs:comment>
+    <tbox:origin>seed</tbox:origin>
+    <rdfs:subClassOf rdf:resource="https://example.org/kicem/hybrid/architecture_tile#EvidenceDocument"/>
+  </rdf:Description>
+</rdf:RDF>

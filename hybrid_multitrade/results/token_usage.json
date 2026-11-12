@@ -1,0 +1,34 @@
+{
+  "model": "gpt-4o-mini-2024-07-18",
+  "scope": "Provider-reported OpenAI usage across original and unified runs, deduplicated by response_id; local Llama/BERT/E5 tokens excluded",
+  "trades": {
+    "architecture_tile": {
+      "prompt_tokens": 94645,
+      "completion_tokens": 14152,
+      "total_tokens": 108797,
+      "provider_cached_prompt_tokens": 0,
+      "successful_api_calls": 97
+    },
+    "civil_stormwater": {
+      "prompt_tokens": 82387,
+      "completion_tokens": 12933,
+      "total_tokens": 95320,
+      "provider_cached_prompt_tokens": 0,
+      "successful_api_calls": 93
+    },
+    "fire_exit_guidance": {
+      "prompt_tokens": 88651,
+      "completion_tokens": 13752,
+      "total_tokens": 102403,
+      "provider_cached_prompt_tokens": 0,
+      "successful_api_calls": 94
+    }
+  },
+  "total": {
+    "prompt_tokens": 265683,
+    "completion_tokens": 40837,
+    "total_tokens": 306520,
+    "provider_cached_prompt_tokens": 0,
+    "successful_api_calls": 284
+  }
+}

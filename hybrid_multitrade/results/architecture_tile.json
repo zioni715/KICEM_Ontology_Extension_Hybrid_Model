@@ -1,0 +1,603 @@
+{
+  "status": "COMPLETED_TBOX",
+  "output_scope": "TBOX_ONLY",
+  "trade_id": "architecture_tile",
+  "stages": {
+    "module1/run.py": {
+      "returncode": 0,
+      "seconds": 0.38,
+      "source_sha256": "c3f3d77bd8f40dec1a4d4983dddc0afe4655dd13c2c69648e77c934b8eeef511",
+      "pipeline_sha256": "ccaeee4539dd9be5c310f382dc1f4f4d7dc135fa803fd1699983077076c5fad8"
+    },
+    "module2/run.py": {
+      "returncode": 0,
+      "seconds": 36.71,
+      "source_sha256": "ffd7de7a73be6a113fd83242ea2cb5f78962ca45f82e669e2ea2724c71168cf6",
+      "pipeline_sha256": "ccaeee4539dd9be5c310f382dc1f4f4d7dc135fa803fd1699983077076c5fad8"
+    },
+    "module3/run.py": {
+      "returncode": 0,
+      "seconds": 8.22,
+      "source_sha256": "cb0ad4dd1545874cbcc9037ee60ea7b3adf42f0cba7c7396598a11de81b3977b",
+      "pipeline_sha256": "ccaeee4539dd9be5c310f382dc1f4f4d7dc135fa803fd1699983077076c5fad8"
+    },
+    "module4/run.py": {
+      "returncode": 0,
+      "seconds": 107.22,
+      "source_sha256": "84a2f13a9b05539c341963b691afd3aae4fec223a7ea3f76ec983c76b3553764",
+      "pipeline_sha256": "ccaeee4539dd9be5c310f382dc1f4f4d7dc135fa803fd1699983077076c5fad8"
+    },
+    "module5/rank.py": {
+      "returncode": 0,
+      "seconds": 15.95,
+      "source_sha256": "e5981cc9fdd1f397dce0926dfbf105a6daab29c3953aef1c8e93dc8fd8e568a1",
+      "pipeline_sha256": "ccaeee4539dd9be5c310f382dc1f4f4d7dc135fa803fd1699983077076c5fad8"
+    },
+    "module5/run.py": {
+      "returncode": 0,
+      "seconds": 112.49,
+      "source_sha256": "f3ab57f1072bd1bf169a7ed224f7f87f04d6e3a84ac0a4dea8ac8f4ecf534853",
+      "pipeline_sha256": "ccaeee4539dd9be5c310f382dc1f4f4d7dc135fa803fd1699983077076c5fad8"
+    },
+    "module5/audit.py": {
+      "returncode": 0,
+      "seconds": 0.36,
+      "source_sha256": "ff1f165f15eed8b3b960947d6dbf9792bb4f8193ffa2ee18fcba014b9def5327",
+      "pipeline_sha256": "ccaeee4539dd9be5c310f382dc1f4f4d7dc135fa803fd1699983077076c5fad8"
+    },
+    "module5/grounding_rules.py": {
+      "returncode": 0,
+      "seconds": 0.13,
+      "source_sha256": "1a403e0f44b1ef101859ba6e76c17ad922e96c06a199b07ae4f5ac97039aa844",
+      "pipeline_sha256": "ccaeee4539dd9be5c310f382dc1f4f4d7dc135fa803fd1699983077076c5fad8"
+    }
+  },
+  "runtime_versions": {
+    "python": "3.11.15",
+    "torch": "2.4.0",
+    "transformers": "4.46.3",
+    "vllm": "0.6.3.post1",
+    "sentence-transformers": "3.0.1",
+    "peft": "0.13.2",
+    "numpy": "1.26.4",
+    "openai": "1.52.2",
+    "httpx": "0.27.2",
+    "rdflib": "7.0.0",
+    "owlready2": "0.48",
+    "networkx": "3.3"
+  },
+  "input_rows": 24,
+  "proposal_count": 18,
+  "evidence_input_coverage_count": 15,
+  "evidence_input_coverage_note": "Unique input descriptions cited by final candidates; not semantic recall or accuracy",
+  "accepted_provisional": 10,
+  "held": 8,
+  "classes": 39,
+  "data_properties": 4,
+  "subclass_axioms": 29,
+  "object_properties": 0,
+  "retained_seed_classes": 23,
+  "researcher_anchor_classes": 6,
+  "exported_accepted": 10,
+  "dropped_classes": [],
+  "excluded_properties": [],
+  "pure_tbox": {
+    "passed": true,
+    "violations": []
+  },
+  "acyclic": true,
+  "checks": {
+    "pure_tbox": {
+      "passed": true,
+      "violations": []
+    },
+    "acyclic": true,
+    "serializations_equal": true,
+    "owlapi_hermit": {
+      "profile": {
+        "java_version": "17.0.18-internal",
+        "reasoner_invoked": false,
+        "ontology_id": "OntologyID(OntologyIRI(<https://example.org/kicem/hybrid/architecture_tile>))",
+        "counts": {
+          "axioms": 217,
+          "logical_axioms": 37,
+          "classes": 39,
+          "object_properties": 0,
+          "data_properties": 4,
+          "named_individuals": 0,
+          "import_declarations": 0
+        },
+        "serialization_validation": {
+          "rdfxml_loaded": true,
+          "turtle_loaded": true,
+          "rdfxml_vs_turtle": {
+            "equal_axiom_sets": true,
+            "equal_logical_axiom_sets": true,
+            "equal_ontology_annotations": true,
+            "equal_import_declarations": true,
+            "equal_ontology_id": true,
+            "lost_axioms": [],
+            "added_axioms": [],
+            "equal_signature": true,
+            "additions_are_declarations_only": true,
+            "preserved_except_added_declarations": true,
+            "passed": true
+          },
+          "rdfxml_roundtrip": {
+            "equal_axiom_sets": true,
+            "equal_logical_axiom_sets": true,
+            "equal_ontology_annotations": true,
+            "equal_import_declarations": true,
+            "equal_ontology_id": true,
+            "lost_axioms": [],
+            "added_axioms": [],
+            "equal_signature": true,
+            "additions_are_declarations_only": true,
+            "preserved_except_added_declarations": true,
+            "passed": true
+          },
+          "passed": true
+        },
+        "owl2_dl_profile": {
+          "profile": "OWL 2 DL",
+          "in_profile": true,
+          "violation_count": 0,
+          "violations": []
+        },
+        "controls": {
+          "positive": {
+            "profile": "OWL 2 DL",
+            "in_profile": true,
+            "violation_count": 0,
+            "violations": []
+          },
+          "negative_non_simple_asymmetric_property": {
+            "profile": "OWL 2 DL",
+            "in_profile": false,
+            "violation_count": 1,
+            "violations": [
+              {
+                "type": "UseOfNonSimplePropertyInAsymmetricObjectPropertyAxiom",
+                "message": "Use of non-simple property in AsymmetricObjectProperty axiom: [AsymmetricObjectProperty(<urn:owlapi-control:property>) in OntologyID(Anonymous-9)]",
+                "axiom": "AsymmetricObjectProperty(<urn:owlapi-control:property>)"
+              }
+            ]
+          },
+          "passed": true
+        }
+      },
+      "hermit": {
+        "input": "/home/sil-jiwon/KICEM_Ontology_Extension_Hybrid_Model/hybrid_multitrade/.runs/unified/architecture_tile/reasoner/architecture_tile.owl",
+        "invocation": "HermiT Java OWLReasoner API",
+        "java_version": "17.0.18-internal",
+        "error": null,
+        "consistent": true,
+        "unsatisfiable_named_classes": [],
+        "reasoner_name": "HermiT",
+        "reasoner_version": "1.3.8.1099",
+        "classes_in_signature": 39,
+        "logical_axioms": 37,
+        "imports_count": 0,
+        "unsatisfiable_named_class_count": 0,
+        "class_hierarchy_precomputed": true,
+        "seconds_including_load_and_reasoning": 0.29293792
+      }
+    },
+    "passed": true
+  },
+  "gold_accuracy": null,
+  "expert_validated": false,
+  "input_kind": "standards-derived normalized descriptions",
+  "module2": {
+    "heldout_top1": 2,
+    "heldout_count": 4,
+    "target_supervision": "LLM provisional initial class hierarchy, not independent ground truth"
+  },
+  "module3": {
+    "source_classes": 34,
+    "target_classes": 31,
+    "matched": 15,
+    "llm_checks": 29,
+    "deviation": "Original bidirectional candidate traversal preserved; HCB auto-accept replaced with same semantic callback; multilingual E5 and OpenAI callback replace sample encoder/Ollama setup."
+  },
+  "module4": {
+    "generated_candidates": 6
+  },
+  "module5": {
+    "strict_lorex_accepted": 8,
+    "taxoadapt_generated": 6,
+    "taxoadapt_accepted": 4,
+    "before_final_evidence_gate": {
+      "accepted_provisional": 14,
+      "held": 4,
+      "taxoadapt_accepted": 5
+    },
+    "before_grounding_rules": {
+      "accepted_provisional": 11,
+      "held": 7,
+      "taxoadapt_accepted": 4
+    },
+    "deviations": [
+      "No official LOREx code; paper-based implementation",
+      "top two relevant chunks and two alternative verification paths per chunk",
+      "Llama teacher-forced mean token logprob implements path scoring",
+      "source-supported semantic verification may retain logprob-disagreed candidates provisionally; paper-strict count separately reported",
+      "Separate final evidence gate: explicit material mention, per-source semantic support, duplicate and part-of checks; no new candidate or parent invented; not expert gold validation",
+      "Researcher-defined final lexical/context evidence rules remove unsupported activity assignments; LLM review alone did not establish reliable grounding. No parent or candidate invented."
+    ]
+  },
+  "api_calls": 97,
+  "api_successful_calls": 0,
+  "api_cache_hits": 97,
+  "api_failed_calls": 0,
+  "api_total_tokens": 0,
+  "provenance": {
+    "trade_id": "architecture_tile",
+    "source_files": [
+      {
+        "path": "module1/run.py",
+        "sha256": "c3f3d77bd8f40dec1a4d4983dddc0afe4655dd13c2c69648e77c934b8eeef511"
+      },
+      {
+        "path": "module1/schema.py",
+        "sha256": "9c7580964731b6834f5b7c6cc586bee72a754b2357ae7661facddb6eee6be652"
+      },
+      {
+        "path": "module2/run.py",
+        "sha256": "ffd7de7a73be6a113fd83242ea2cb5f78962ca45f82e669e2ea2724c71168cf6"
+      },
+      {
+        "path": "module3/run.py",
+        "sha256": "cb0ad4dd1545874cbcc9037ee60ea7b3adf42f0cba7c7396598a11de81b3977b"
+      },
+      {
+        "path": "module4/adapters/local_runtime.py",
+        "sha256": "4134fc6aba3ab461b0dac571bdb33ab5b50779ae86f2d8c305f1e4f09cbdc6fe"
+      },
+      {
+        "path": "module4/run.py",
+        "sha256": "84a2f13a9b05539c341963b691afd3aae4fec223a7ea3f76ec983c76b3553764"
+      },
+      {
+        "path": "module5/audit.py",
+        "sha256": "ff1f165f15eed8b3b960947d6dbf9792bb4f8193ffa2ee18fcba014b9def5327"
+      },
+      {
+        "path": "module5/grounding_rules.py",
+        "sha256": "1a403e0f44b1ef101859ba6e76c17ad922e96c06a199b07ae4f5ac97039aa844"
+      },
+      {
+        "path": "module5/rank.py",
+        "sha256": "e5981cc9fdd1f397dce0926dfbf105a6daab29c3953aef1c8e93dc8fd8e568a1"
+      },
+      {
+        "path": "module5/run.py",
+        "sha256": "f3ab57f1072bd1bf169a7ed224f7f87f04d6e3a84ac0a4dea8ac8f4ecf534853"
+      },
+      {
+        "path": "shared/common.py",
+        "sha256": "f43df09a2b994dc2da1b6e99c9f40322db3fb4d264e86d94035f3b4eb893ece1"
+      },
+      {
+        "path": "shared/domain.py",
+        "sha256": "74cb4f099509a226256a07cede93b7e594b5b8d5aaaa6c01f697d76a6052a1ad"
+      }
+    ],
+    "architecture": "single shared parameterized pipeline",
+    "input_kind": "public standard-derived normalized descriptions; not private workbook rows",
+    "input_sha256": "4f3d4b4af2dd5f3a89358ce9d1711d9e0402c3eaebad19c9a6d055e89a118d86",
+    "model_parameters_changed": false,
+    "seed_sha256": "d0d011aa4a8c7117a060c926c94539bc2a6c8a289dae2649940f4a18a9a48c82",
+    "configuration_sha256": {
+      "experiment.json": "280bdf0f53762c1a0d6ddf28e53ae56b08ac3807d496c2ca522c8cfc1e20a85c",
+      "llama_model.json": "1422ba25ef4363b6278159854c2e3825c676fbebf4192267cee865805a648803",
+      "llama_runtime.json": "c92f862b0f6b6b9d51f4e954198a5121a1fb815ce54dfa08bf740fcd54c6b230",
+      "llama_scoring_runtime.json": "f7de7218f91f1b454c44bd92b14a44cac948fc6a5a4e5f815bc3630e6b1f9a33",
+      "trade.json": "cc20e5aa58c1eddc62eddcb84bbbb8600fb4c0bd9e63dd737e9919f7e2c444ce"
+    },
+    "adaptations": [
+      "runtime trade configuration",
+      "public WBS input adapter",
+      "T-Box-only export"
+    ],
+    "gold_used": false,
+    "source_count": 1,
+    "input_rows": 24
+  },
+  "candidate_outcomes": [
+    {
+      "id": "TileAdhesiveCostItem",
+      "label": "타일 접착제 비용",
+      "origin": "LLM_document_proposal",
+      "status": "held",
+      "selected_parent": "TileMaterialCostItem",
+      "reason": "Final evidence gate: The selected parent 'TileMaterialCostItem' specifies costs related to tile materials and does not encompass costs associated with adhesive, which is a specific type of material cost. The definition of '타일 접착제 비용' focuses on the cost of adhesive for tile installation, which is not directly supported by the parent definition that excludes installation costs.",
+      "verified_quotes": [],
+      "exported": false
+    },
+    {
+      "id": "TileGroutCostItem",
+      "label": "타일 그라우트 비용",
+      "origin": "LLM_document_proposal",
+      "status": "accepted_provisional",
+      "selected_parent": "TileMaterialCostItem",
+      "reason": "source-supported semantic verification; lineage agreement recorded separately",
+      "verified_quotes": [
+        {
+          "source_id": "STD:001",
+          "quote": "타일공사 타일 시공 전반을 포괄하는 작업 유형."
+        }
+      ],
+      "exported": true
+    },
+    {
+      "id": "TileUnderlaymentCostItem",
+      "label": "타일 하부재 비용",
+      "origin": "LLM_document_proposal",
+      "status": "held",
+      "selected_parent": "TileMaterialCostItem",
+      "reason": "Final evidence gate: The query class 'TileUnderlaymentCostItem' is a specific type of cost associated with tile installation, which aligns with the broader category of 'TileMaterialCostItem'. The definition of the parent class indicates it encompasses costs related to tile materials, which includes underlayment as a necessary component for installation. The evidence supports the concept of a cost item related to tile work, although it does not explicitly mention underlayment. However, it does not contradict the relationship as it refers to the overall tile installation process.",
+      "verified_quotes": [],
+      "exported": false
+    },
+    {
+      "id": "WallTileInstallationCostItem",
+      "label": "벽타일 설치 비용",
+      "origin": "LLM_document_proposal",
+      "status": "accepted_provisional",
+      "selected_parent": "CostItem",
+      "reason": "source-supported semantic verification; lineage agreement recorded separately",
+      "verified_quotes": [
+        {
+          "source_id": "STD:004",
+          "quote": "벽타일 붙이기 벽면에 타일을 붙이는 작업."
+        },
+        {
+          "source_id": "STD:010",
+          "quote": "벽타일 동시 줄눈 붙이기 붙임과 줄눈을 함께 수행하는 벽타일 작업."
+        }
+      ],
+      "exported": true
+    },
+    {
+      "id": "FloorTileInstallationCostItem",
+      "label": "바닥타일 설치 비용",
+      "origin": "LLM_document_proposal",
+      "status": "accepted_provisional",
+      "selected_parent": "TileInstallationCostItem",
+      "reason": "source-supported semantic verification; lineage agreement recorded separately",
+      "verified_quotes": [
+        {
+          "source_id": "STD:012",
+          "quote": "바닥 타일 붙이기 바닥면에 타일을 붙이는 작업."
+        },
+        {
+          "source_id": "STD:014",
+          "quote": "바닥타일 압착 붙이기 압착 공법으로 바닥타일을 붙이는 작업."
+        }
+      ],
+      "exported": true
+    },
+    {
+      "id": "MosaicTileInstallationCostItem",
+      "label": "모자이크 타일 설치 비용",
+      "origin": "LLM_document_proposal",
+      "status": "accepted_provisional",
+      "selected_parent": "CostItem",
+      "reason": "source-supported semantic verification; lineage agreement recorded separately",
+      "verified_quotes": [
+        {
+          "source_id": "STD:011",
+          "quote": "모자이크 타일 붙이기 모자이크 벽타일을 붙이는 작업."
+        }
+      ],
+      "exported": true
+    },
+    {
+      "id": "TileInstallationWorkType",
+      "label": "타일 시공 작업",
+      "origin": "LLM_WBS_proposal",
+      "status": "accepted_provisional",
+      "selected_parent": "WorkTask",
+      "reason": "source-supported semantic verification; lineage agreement recorded separately",
+      "verified_quotes": [
+        {
+          "source_id": "WBS:W002",
+          "quote": "타일 붙이기: 바탕에 타일을 붙이는 설치 작업 유형. [KCS-41-48-01 § 3.1-3.4]"
+        },
+        {
+          "source_id": "WBS:W004",
+          "quote": "벽타일 붙이기: 벽면에 타일을 붙이는 작업. [KCS-41-48-01 § 3.2]"
+        },
+        {
+          "source_id": "WBS:W012",
+          "quote": "바닥 타일 붙이기: 바닥면에 타일을 붙이는 작업. [KCS-41-48-01 § 3.3]"
+        },
+        {
+          "source_id": "WBS:W017",
+          "quote": "천장 타일 붙이기: 천장면에 타일을 붙이는 작업. [KCS-41-48-01 § 3.4]"
+        }
+      ],
+      "exported": true
+    },
+    {
+      "id": "TileMaintenanceWorkType",
+      "label": "타일 유지보수 작업",
+      "origin": "LLM_WBS_proposal",
+      "status": "held",
+      "selected_parent": "WorkTask",
+      "reason": "Explicit grounding rules: source does not state the defining activity/material/role",
+      "verified_quotes": [],
+      "exported": false
+    },
+    {
+      "id": "TileInspectionWorkType",
+      "label": "타일 검사 작업",
+      "origin": "LLM_WBS_proposal",
+      "status": "accepted_provisional",
+      "selected_parent": "WorkTask",
+      "reason": "source-supported semantic verification; lineage agreement recorded separately",
+      "verified_quotes": [
+        {
+          "source_id": "WBS:W021",
+          "quote": "타일 검사: 타일 시공 결과를 검사하는 작업. [KCS-41-48-01 § 3.6]"
+        },
+        {
+          "source_id": "WBS:W022",
+          "quote": "타일 시공 중 검사: 타일 시공 중 수행하는 검사. [KCS-41-48-01 § 3.6.1]"
+        },
+        {
+          "source_id": "WBS:W023",
+          "quote": "타일 두들김 검사: 두들김으로 타일 붙임 상태를 확인하는 검사. [KCS-41-48-01 § 3.6.2]"
+        },
+        {
+          "source_id": "WBS:W024",
+          "quote": "타일 접착력 시험: 타일의 접착 성능을 확인하는 시험. [KCS-41-48-01 § 3.6.3]"
+        }
+      ],
+      "exported": true
+    },
+    {
+      "id": "TA_27bf40da5108",
+      "label": "wall_tile_installation",
+      "origin": "TaxoAdapt",
+      "status": "accepted_provisional",
+      "selected_parent": "WallTileInstallationCostItem",
+      "reason": "source-supported semantic verification; lineage agreement recorded separately",
+      "verified_quotes": [
+        {
+          "source_id": "STD:004",
+          "quote": "벽타일 붙이기 벽면에 타일을 붙이는 작업."
+        },
+        {
+          "source_id": "STD:010",
+          "quote": "벽타일 동시 줄눈 붙이기 붙임과 줄눈을 함께 수행하는 벽타일 작업."
+        }
+      ],
+      "exported": true
+    },
+    {
+      "id": "TA_d831c177a4ab",
+      "label": "floor_tile_installation",
+      "origin": "TaxoAdapt",
+      "status": "held",
+      "selected_parent": null,
+      "reason": "LLM hypothesis has no verified documentary/WBS support",
+      "verified_quotes": [],
+      "exported": false
+    },
+    {
+      "id": "TA_6bb123b9c08a",
+      "label": "tile_maintenance",
+      "origin": "TaxoAdapt",
+      "status": "held",
+      "selected_parent": "CostItem",
+      "reason": "Final evidence gate: The concept 'tile_maintenance' is a specific type of cost item related to tile maintenance activities, which aligns with the broader category of 'CostItem'.",
+      "verified_quotes": [],
+      "exported": false
+    },
+    {
+      "id": "TA_26766b373d3a",
+      "label": "wall_tile_installation",
+      "origin": "TaxoAdapt",
+      "status": "accepted_provisional",
+      "selected_parent": "TileInstallationWorkType",
+      "reason": "source-supported semantic verification; lineage agreement recorded separately",
+      "verified_quotes": [
+        {
+          "source_id": "WBS:W004",
+          "quote": "벽타일 붙이기: 벽면에 타일을 붙이는 작업. [KCS-41-48-01 § 3.2]"
+        }
+      ],
+      "exported": true
+    },
+    {
+      "id": "TA_47796916aa60",
+      "label": "floor_tile_installation",
+      "origin": "TaxoAdapt",
+      "status": "accepted_provisional",
+      "selected_parent": "TileInstallationWorkType",
+      "reason": "source-supported semantic verification; lineage agreement recorded separately",
+      "verified_quotes": [
+        {
+          "source_id": "WBS:W012",
+          "quote": "바닥 타일 붙이기: 바닥면에 타일을 붙이는 작업. [KCS-41-48-01 § 3.3]"
+        },
+        {
+          "source_id": "WBS:W013",
+          "quote": "바닥타일 시멘트 페이스트 붙이기: 시멘트 페이스트로 바닥타일을 붙이는 작업. [KCS-41-48-01 § 3.3.1]"
+        },
+        {
+          "source_id": "WBS:W014",
+          "quote": "바닥타일 압착 붙이기: 압착 공법으로 바닥타일을 붙이는 작업. [KCS-41-48-01 § 3.3.2]"
+        },
+        {
+          "source_id": "WBS:W015",
+          "quote": "바닥타일 개량압착 붙이기: 개량압착 공법으로 바닥타일을 붙이는 작업. [KCS-41-48-01 § 3.3.3]"
+        },
+        {
+          "source_id": "WBS:W016",
+          "quote": "바닥타일 접착 붙이기: 접착제로 바닥타일을 붙이는 작업. [KCS-41-48-01 § 3.3.4]"
+        }
+      ],
+      "exported": true
+    },
+    {
+      "id": "TA_5bc89013b30a",
+      "label": "tile_installation_inspection",
+      "origin": "TaxoAdapt",
+      "status": "accepted_provisional",
+      "selected_parent": "TileInspectionWorkType",
+      "reason": "source-supported semantic verification; lineage agreement recorded separately",
+      "verified_quotes": [
+        {
+          "source_id": "WBS:W022",
+          "quote": "타일 시공 중 검사: 타일 시공 중 수행하는 검사. [KCS-41-48-01 § 3.6.1]"
+        },
+        {
+          "source_id": "WBS:W023",
+          "quote": "타일 두들김 검사: 두들김으로 타일 붙임 상태를 확인하는 검사. [KCS-41-48-01 § 3.6.2]"
+        },
+        {
+          "source_id": "WBS:W024",
+          "quote": "타일 접착력 시험: 타일의 접착 성능을 확인하는 시험. [KCS-41-48-01 § 3.6.3]"
+        }
+      ],
+      "exported": true
+    },
+    {
+      "id": "H_TileSurfacePreparation",
+      "label": "타일 표면 준비",
+      "origin": "LLM_hypothesis",
+      "status": "held",
+      "selected_parent": null,
+      "reason": "LLM hypothesis has no verified documentary/WBS support",
+      "verified_quotes": [],
+      "exported": false
+    },
+    {
+      "id": "H_TileAdhesiveSelection",
+      "label": "타일 접착제 선택",
+      "origin": "LLM_hypothesis",
+      "status": "held",
+      "selected_parent": null,
+      "reason": "LLM hypothesis has no verified documentary/WBS support",
+      "verified_quotes": [],
+      "exported": false
+    },
+    {
+      "id": "H_TileMaintenancePlan",
+      "label": "타일 유지보수 계획",
+      "origin": "LLM_hypothesis",
+      "status": "held",
+      "selected_parent": null,
+      "reason": "LLM hypothesis has no verified documentary/WBS support",
+      "verified_quotes": [],
+      "exported": false
+    }
+  ],
+  "output_sha256": {
+    "architecture_tile.owl": "1de85099f386671041ef3c034cc83b62bc3fb889c8527983cbbd0591ba2ccea3",
+    "architecture_tile.ttl": "bb6fae487ba9b7adae08257523dbb5636de562ead014db501b940e034bebc2e7"
+  }
+}

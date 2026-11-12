@@ -1,0 +1,1254 @@
+[
+  {
+    "id": "CalculatedQuantityItem",
+    "iri": "https://zioni715.github.io/ontology/rcpp#CalculatedQuantityItem",
+    "type": "Class",
+    "labels": [
+      "수량산출항목"
+    ],
+    "comments": [
+      "수량산출서에서 계약수량의 근거가 되는 산출수량 항목"
+    ],
+    "parents": [
+      "DetailItem"
+    ],
+    "domains": []
+  },
+  {
+    "id": "ConcreteCostItem",
+    "iri": "https://zioni715.github.io/ontology/rcpp#ConcreteCostItem",
+    "type": "Class",
+    "labels": [
+      "콘크리트 비용항목"
+    ],
+    "comments": [
+      "레미콘 재료와 콘크리트 타설 단가를 구분하는 비용항목"
+    ],
+    "parents": [
+      "CostItem"
+    ],
+    "domains": []
+  },
+  {
+    "id": "ConcretePlacementCostItem",
+    "iri": "https://zioni715.github.io/ontology/rcpp#ConcretePlacementCostItem",
+    "type": "Class",
+    "labels": [
+      "콘크리트 타설비항목"
+    ],
+    "comments": [
+      "타설방법과 구조물 유형으로 구분하는 콘크리트 시공 단가 항목"
+    ],
+    "parents": [
+      "ConcreteCostItem"
+    ],
+    "domains": []
+  },
+  {
+    "id": "ContractItem",
+    "iri": "https://zioni715.github.io/ontology/rcpp#ContractItem",
+    "type": "Class",
+    "labels": [
+      "계약항목"
+    ],
+    "comments": [
+      "계약수량·계약단가·계약금액을 제공하는 계약내역서 항목"
+    ],
+    "parents": [
+      "DetailItem"
+    ],
+    "domains": []
+  },
+  {
+    "id": "ContractStatement",
+    "iri": "https://zioni715.github.io/ontology/rcpp#ContractStatement",
+    "type": "Class",
+    "labels": [
+      "계약내역서"
+    ],
+    "comments": [
+      "확정된 계약수량·계약단가·계약금액을 제공하는 근거서류"
+    ],
+    "parents": [
+      "EvidenceDocument"
+    ],
+    "domains": []
+  },
+  {
+    "id": "ContractSummaryItem",
+    "iri": "https://zioni715.github.io/ontology/rcpp#ContractSummaryItem",
+    "type": "Class",
+    "labels": [
+      "계약집계항목"
+    ],
+    "comments": [
+      "공종별내역항목의 계약금액을 공종별로 합산한 공종별집계표 항목"
+    ],
+    "parents": [
+      "SummaryItem"
+    ],
+    "domains": []
+  },
+  {
+    "id": "CostCalculationItem",
+    "iri": "https://zioni715.github.io/ontology/rcpp#CostCalculationItem",
+    "type": "Class",
+    "labels": [
+      "원가계산항목"
+    ],
+    "comments": [
+      "원가계산서에서 비용 산정 근거를 제공하는 항목"
+    ],
+    "parents": [
+      "DetailItem"
+    ],
+    "domains": []
+  },
+  {
+    "id": "CostCalculationStatement",
+    "iri": "https://zioni715.github.io/ontology/rcpp#CostCalculationStatement",
+    "type": "Class",
+    "labels": [
+      "원가계산서"
+    ],
+    "comments": [
+      "비용항목의 원가 구성과 산정금액을 제공하는 근거서류"
+    ],
+    "parents": [
+      "EvidenceDocument"
+    ],
+    "domains": []
+  },
+  {
+    "id": "CostItem",
+    "iri": "https://zioni715.github.io/ontology/rcpp#CostItem",
+    "type": "Class",
+    "labels": [
+      "비용항목"
+    ],
+    "comments": [
+      "서류별 항목이 공통으로 나타내는 표준 비용 대상"
+    ],
+    "parents": [],
+    "domains": []
+  },
+  {
+    "id": "DetailItem",
+    "iri": "https://zioni715.github.io/ontology/rcpp#DetailItem",
+    "type": "Class",
+    "labels": [
+      "상세비용항목"
+    ],
+    "comments": [
+      "집계 전 개별 비용항목"
+    ],
+    "parents": [
+      "DocumentItem"
+    ],
+    "domains": []
+  },
+  {
+    "id": "DocumentItem",
+    "iri": "https://zioni715.github.io/ontology/rcpp#DocumentItem",
+    "type": "Class",
+    "labels": [
+      "기성서류항목"
+    ],
+    "comments": [
+      "기성서류에 포함되는 비용정보의 의미 단위"
+    ],
+    "parents": [],
+    "domains": []
+  },
+  {
+    "id": "EvidenceDocument",
+    "iri": "https://zioni715.github.io/ontology/rcpp#EvidenceDocument",
+    "type": "Class",
+    "labels": [
+      "근거서류"
+    ],
+    "comments": [
+      "기성금액 산정에 필요한 수량·단가·금액의 근거를 제공하는 서류"
+    ],
+    "parents": [
+      "ProgressDocument"
+    ],
+    "domains": []
+  },
+  {
+    "id": "FormworkCostItem",
+    "iri": "https://zioni715.github.io/ontology/rcpp#FormworkCostItem",
+    "type": "Class",
+    "labels": [
+      "거푸집 비용항목"
+    ],
+    "comments": [
+      "거푸집 설치·해체 단가를 구분하는 비용항목"
+    ],
+    "parents": [
+      "CostItem"
+    ],
+    "domains": []
+  },
+  {
+    "id": "OutputDocument",
+    "iri": "https://zioni715.github.io/ontology/rcpp#OutputDocument",
+    "type": "Class",
+    "labels": [
+      "산출서류"
+    ],
+    "comments": [
+      "근거서류의 정보를 사용해 기성금액 산정 결과를 제시하는 서류"
+    ],
+    "parents": [
+      "ProgressDocument"
+    ],
+    "domains": []
+  },
+  {
+    "id": "ProgressDocument",
+    "iri": "https://zioni715.github.io/ontology/rcpp#ProgressDocument",
+    "type": "Class",
+    "labels": [
+      "기성서류"
+    ],
+    "comments": [
+      "철근콘크리트 기성금액 산정에 직접 사용하는 서류의 최상위 클래스"
+    ],
+    "parents": [],
+    "domains": []
+  },
+  {
+    "id": "ProgressPaymentItem",
+    "iri": "https://zioni715.github.io/ontology/rcpp#ProgressPaymentItem",
+    "type": "Class",
+    "labels": [
+      "기성내역항목"
+    ],
+    "comments": [
+      "공사기성부분내역서에서 전회·금회·누계·잔여 수량과 금액을 산정하는 항목"
+    ],
+    "parents": [
+      "DetailItem"
+    ],
+    "domains": []
+  },
+  {
+    "id": "ProgressPaymentRound",
+    "iri": "https://zioni715.github.io/ontology/rcpp#ProgressPaymentRound",
+    "type": "Class",
+    "labels": [
+      "기성회차"
+    ],
+    "comments": [
+      "기성 산정과 청구의 시간 단위"
+    ],
+    "parents": [],
+    "domains": []
+  },
+  {
+    "id": "ProgressPaymentStatement",
+    "iri": "https://zioni715.github.io/ontology/rcpp#ProgressPaymentStatement",
+    "type": "Class",
+    "labels": [
+      "공사기성부분내역서"
+    ],
+    "comments": [
+      "회차별 기성수량과 기성금액을 산정해 제시하는 유일한 산출서류"
+    ],
+    "parents": [
+      "OutputDocument"
+    ],
+    "domains": []
+  },
+  {
+    "id": "ProgressPaymentSummaryItem",
+    "iri": "https://zioni715.github.io/ontology/rcpp#ProgressPaymentSummaryItem",
+    "type": "Class",
+    "labels": [
+      "기성집계항목"
+    ],
+    "comments": [
+      "기성금액항목의 금회금액을 공종별로 합산한 공사기성부분내역서 항목"
+    ],
+    "parents": [
+      "SummaryItem"
+    ],
+    "domains": []
+  },
+  {
+    "id": "QuantityCalculationSheet",
+    "iri": "https://zioni715.github.io/ontology/rcpp#QuantityCalculationSheet",
+    "type": "Class",
+    "labels": [
+      "수량산출서"
+    ],
+    "comments": [
+      "계약수량의 산출 근거를 제공하는 근거서류"
+    ],
+    "parents": [
+      "EvidenceDocument"
+    ],
+    "domains": []
+  },
+  {
+    "id": "ReadyMixedConcreteMaterialCostItem",
+    "iri": "https://zioni715.github.io/ontology/rcpp#ReadyMixedConcreteMaterialCostItem",
+    "type": "Class",
+    "labels": [
+      "레디믹스트콘크리트 재료비항목"
+    ],
+    "comments": [
+      "골재크기·강도·슬럼프로 구분하는 레디믹스트콘크리트 재료 단가 항목"
+    ],
+    "parents": [
+      "ConcreteCostItem"
+    ],
+    "domains": []
+  },
+  {
+    "id": "RebarCostItem",
+    "iri": "https://zioni715.github.io/ontology/rcpp#RebarCostItem",
+    "type": "Class",
+    "labels": [
+      "철근 비용항목"
+    ],
+    "comments": [
+      "철근 재료 또는 가공·조립 단가를 구분하는 비용항목"
+    ],
+    "parents": [
+      "CostItem"
+    ],
+    "domains": []
+  },
+  {
+    "id": "RebarFabricationAssemblyCostItem",
+    "iri": "https://zioni715.github.io/ontology/rcpp#RebarFabricationAssemblyCostItem",
+    "type": "Class",
+    "labels": [
+      "철근 가공·조립비항목"
+    ],
+    "comments": [
+      "가공·조립 유형과 가공 장소로 구분하는 철근 시공 단가 항목"
+    ],
+    "parents": [
+      "RebarCostItem"
+    ],
+    "domains": []
+  },
+  {
+    "id": "RebarMaterialCostItem",
+    "iri": "https://zioni715.github.io/ontology/rcpp#RebarMaterialCostItem",
+    "type": "Class",
+    "labels": [
+      "철근 재료비항목"
+    ],
+    "comments": [
+      "강종과 지름으로 구분하는 철근 재료 단가 항목"
+    ],
+    "parents": [
+      "RebarCostItem"
+    ],
+    "domains": []
+  },
+  {
+    "id": "ShoringCostItem",
+    "iri": "https://zioni715.github.io/ontology/rcpp#ShoringCostItem",
+    "type": "Class",
+    "labels": [
+      "동바리 비용항목"
+    ],
+    "comments": [
+      "동바리 설치·해체 단가를 구분하는 비용항목"
+    ],
+    "parents": [
+      "CostItem"
+    ],
+    "domains": []
+  },
+  {
+    "id": "SummaryItem",
+    "iri": "https://zioni715.github.io/ontology/rcpp#SummaryItem",
+    "type": "Class",
+    "labels": [
+      "집계항목"
+    ],
+    "comments": [
+      "계약 또는 기성 상세항목의 금액을 동일 공종별로 합산한 항목"
+    ],
+    "parents": [
+      "DocumentItem"
+    ],
+    "domains": []
+  },
+  {
+    "id": "Unit",
+    "iri": "https://zioni715.github.io/ontology/rcpp#Unit",
+    "type": "Class",
+    "labels": [
+      "단위"
+    ],
+    "comments": [
+      "비용항목 수량을 측정하는 단위"
+    ],
+    "parents": [],
+    "domains": []
+  },
+  {
+    "id": "WorkCategory",
+    "iri": "https://zioni715.github.io/ontology/rcpp#WorkCategory",
+    "type": "Class",
+    "labels": [
+      "공종"
+    ],
+    "comments": [
+      "철근콘크리트공사와 그 하위 네 공종을 표현하는 통제 분류"
+    ],
+    "parents": [],
+    "domains": []
+  },
+  {
+    "id": "WorkCategoryDetailItem",
+    "iri": "https://zioni715.github.io/ontology/rcpp#WorkCategoryDetailItem",
+    "type": "Class",
+    "labels": [
+      "공종별내역항목"
+    ],
+    "comments": [
+      "공종별내역서에 수량·단가·금액을 나타내는 항목"
+    ],
+    "parents": [
+      "DetailItem"
+    ],
+    "domains": []
+  },
+  {
+    "id": "WorkCategoryDetailStatement",
+    "iri": "https://zioni715.github.io/ontology/rcpp#WorkCategoryDetailStatement",
+    "type": "Class",
+    "labels": [
+      "공종별내역서"
+    ],
+    "comments": [
+      "공종별 비용항목의 수량·단가·금액을 제시하는 근거서류"
+    ],
+    "parents": [
+      "EvidenceDocument"
+    ],
+    "domains": []
+  },
+  {
+    "id": "WorkCategorySummaryStatement",
+    "iri": "https://zioni715.github.io/ontology/rcpp#WorkCategorySummaryStatement",
+    "type": "Class",
+    "labels": [
+      "공종별집계표"
+    ],
+    "comments": [
+      "공종별 상세 비용을 합산해 제시하는 근거서류"
+    ],
+    "parents": [
+      "EvidenceDocument"
+    ],
+    "domains": []
+  },
+  {
+    "id": "belongsToProgressRound",
+    "iri": "https://zioni715.github.io/ontology/rcpp#belongsToProgressRound",
+    "type": "ObjectProperty",
+    "labels": [
+      "기성회차 소속"
+    ],
+    "comments": [
+      "공사기성부분내역서가 적용되는 기성회차"
+    ],
+    "parents": [],
+    "domains": [
+      "ProgressPaymentStatement"
+    ]
+  },
+  {
+    "id": "belongsToWorkCategory",
+    "iri": "https://zioni715.github.io/ontology/rcpp#belongsToWorkCategory",
+    "type": "ObjectProperty",
+    "labels": [
+      "공종 소속"
+    ],
+    "comments": [
+      "비용항목 또는 집계항목을 철근·콘크리트·거푸집·동바리 중 하나로 분류"
+    ],
+    "parents": [],
+    "domains": []
+  },
+  {
+    "id": "containsItem",
+    "iri": "https://zioni715.github.io/ontology/rcpp#containsItem",
+    "type": "ObjectProperty",
+    "labels": [
+      "항목 포함"
+    ],
+    "comments": [
+      "기성서류가 포함하는 비용정보 항목"
+    ],
+    "parents": [],
+    "domains": [
+      "ProgressDocument"
+    ]
+  },
+  {
+    "id": "contributesContractAmountTo",
+    "iri": "https://zioni715.github.io/ontology/rcpp#contributesContractAmountTo",
+    "type": "ObjectProperty",
+    "labels": [
+      "계약금액 → 공종별 계약집계"
+    ],
+    "comments": [
+      "공종별내역항목의 계약금액을 계약집계항목으로 합산"
+    ],
+    "parents": [],
+    "domains": [
+      "WorkCategoryDetailItem"
+    ]
+  },
+  {
+    "id": "contributesCurrentAmountTo",
+    "iri": "https://zioni715.github.io/ontology/rcpp#contributesCurrentAmountTo",
+    "type": "ObjectProperty",
+    "labels": [
+      "금회금액 → 공종별 기성집계"
+    ],
+    "comments": [
+      "기성내역항목의 금회금액을 기성집계항목으로 합산"
+    ],
+    "parents": [],
+    "domains": [
+      "ProgressPaymentItem"
+    ]
+  },
+  {
+    "id": "previousProgressRound",
+    "iri": "https://zioni715.github.io/ontology/rcpp#previousProgressRound",
+    "type": "ObjectProperty",
+    "labels": [
+      "이전 기성회차"
+    ],
+    "comments": [
+      "현재 회차가 이월값을 참조하는 직전 회차"
+    ],
+    "parents": [],
+    "domains": [
+      "ProgressPaymentRound"
+    ]
+  },
+  {
+    "id": "providesCalculatedQuantityTo",
+    "iri": "https://zioni715.github.io/ontology/rcpp#providesCalculatedQuantityTo",
+    "type": "ObjectProperty",
+    "labels": [
+      "산출수량 → 계약수량"
+    ],
+    "comments": [
+      "수량산출항목의 calculatedQuantity를 계약항목의 contractQuantity 근거로 전달"
+    ],
+    "parents": [],
+    "domains": [
+      "CalculatedQuantityItem"
+    ]
+  },
+  {
+    "id": "providesContractAmountTo",
+    "iri": "https://zioni715.github.io/ontology/rcpp#providesContractAmountTo",
+    "type": "ObjectProperty",
+    "labels": [
+      "계약금액 → 공종별내역 계약금액"
+    ],
+    "comments": [
+      "계약항목의 contractAmount를 공종별내역항목의 contractAmount로 전달"
+    ],
+    "parents": [],
+    "domains": [
+      "ContractItem"
+    ]
+  },
+  {
+    "id": "providesContractAmountToProgressPaymentItem",
+    "iri": "https://zioni715.github.io/ontology/rcpp#providesContractAmountToProgressPaymentItem",
+    "type": "ObjectProperty",
+    "labels": [
+      "계약금액 → 기성내역 계약금액"
+    ],
+    "comments": [
+      "계약항목의 contractAmount를 기성내역항목의 contractAmount로 전달"
+    ],
+    "parents": [],
+    "domains": [
+      "ContractItem"
+    ]
+  },
+  {
+    "id": "providesContractQuantityTo",
+    "iri": "https://zioni715.github.io/ontology/rcpp#providesContractQuantityTo",
+    "type": "ObjectProperty",
+    "labels": [
+      "계약수량 → 공종별내역 계약수량"
+    ],
+    "comments": [
+      "계약항목의 contractQuantity를 공종별내역항목의 contractQuantity로 전달"
+    ],
+    "parents": [],
+    "domains": [
+      "ContractItem"
+    ]
+  },
+  {
+    "id": "providesContractQuantityToProgressPaymentItem",
+    "iri": "https://zioni715.github.io/ontology/rcpp#providesContractQuantityToProgressPaymentItem",
+    "type": "ObjectProperty",
+    "labels": [
+      "계약수량 → 기성내역 계약수량"
+    ],
+    "comments": [
+      "계약항목의 contractQuantity를 기성내역항목의 contractQuantity로 전달"
+    ],
+    "parents": [],
+    "domains": [
+      "ContractItem"
+    ]
+  },
+  {
+    "id": "providesContractUnitPriceTo",
+    "iri": "https://zioni715.github.io/ontology/rcpp#providesContractUnitPriceTo",
+    "type": "ObjectProperty",
+    "labels": [
+      "계약단가 → 공종별내역 계약단가"
+    ],
+    "comments": [
+      "계약항목의 contractUnitPrice를 공종별내역항목의 contractUnitPrice로 전달"
+    ],
+    "parents": [],
+    "domains": [
+      "ContractItem"
+    ]
+  },
+  {
+    "id": "providesContractUnitPriceToProgressPaymentItem",
+    "iri": "https://zioni715.github.io/ontology/rcpp#providesContractUnitPriceToProgressPaymentItem",
+    "type": "ObjectProperty",
+    "labels": [
+      "계약단가 → 기성내역 계약단가"
+    ],
+    "comments": [
+      "계약항목의 contractUnitPrice를 기성내역항목의 contractUnitPrice로 전달"
+    ],
+    "parents": [],
+    "domains": [
+      "ContractItem"
+    ]
+  },
+  {
+    "id": "providesContractValueTo",
+    "iri": "https://zioni715.github.io/ontology/rcpp#providesContractValueTo",
+    "type": "ObjectProperty",
+    "labels": [
+      "계약값 전달"
+    ],
+    "comments": [
+      "계약항목의 수량·단가·금액을 공종별내역항목으로 전달"
+    ],
+    "parents": [],
+    "domains": [
+      "ContractItem"
+    ]
+  },
+  {
+    "id": "providesCumulativeValuesTo",
+    "iri": "https://zioni715.github.io/ontology/rcpp#providesCumulativeValuesTo",
+    "type": "ObjectProperty",
+    "labels": [
+      "이전 누계 → 현재 전회값"
+    ],
+    "comments": [
+      "이전 기성내역항목의 누계수량·누계금액을 현재 기성내역항목의 전회누계값으로 전달"
+    ],
+    "parents": [],
+    "domains": [
+      "ProgressPaymentItem"
+    ]
+  },
+  {
+    "id": "representsCostItem",
+    "iri": "https://zioni715.github.io/ontology/rcpp#representsCostItem",
+    "type": "ObjectProperty",
+    "labels": [
+      "비용항목 표현"
+    ],
+    "comments": [
+      "서류항목이 의미하는 표준 비용항목"
+    ],
+    "parents": [],
+    "domains": [
+      "DocumentItem"
+    ]
+  },
+  {
+    "id": "subWorkCategoryOf",
+    "iri": "https://zioni715.github.io/ontology/rcpp#subWorkCategoryOf",
+    "type": "ObjectProperty",
+    "labels": [
+      "상위 공종"
+    ],
+    "comments": [
+      "세부 공종이 속하는 상위 공종"
+    ],
+    "parents": [],
+    "domains": [
+      "WorkCategory"
+    ]
+  },
+  {
+    "id": "usesUnit",
+    "iri": "https://zioni715.github.io/ontology/rcpp#usesUnit",
+    "type": "ObjectProperty",
+    "labels": [
+      "단위 사용"
+    ],
+    "comments": [
+      "비용 수량에 적용되는 측정 단위"
+    ],
+    "parents": [],
+    "domains": [
+      "DetailItem"
+    ]
+  },
+  {
+    "id": "applicationPart",
+    "iri": "https://zioni715.github.io/ontology/rcpp#applicationPart",
+    "type": "DatatypeProperty",
+    "labels": [
+      "적용부위"
+    ],
+    "comments": [
+      "거푸집 비용항목의 구조 적용부위"
+    ],
+    "parents": [],
+    "domains": [
+      "FormworkCostItem"
+    ]
+  },
+  {
+    "id": "calculatedQuantity",
+    "iri": "https://zioni715.github.io/ontology/rcpp#calculatedQuantity",
+    "type": "DatatypeProperty",
+    "labels": [
+      "산출수량"
+    ],
+    "comments": [
+      "수량산출서에서 계산된 계약수량 근거값"
+    ],
+    "parents": [],
+    "domains": []
+  },
+  {
+    "id": "calculatedUnitPrice",
+    "iri": "https://zioni715.github.io/ontology/rcpp#calculatedUnitPrice",
+    "type": "DatatypeProperty",
+    "labels": [
+      "산출단가"
+    ],
+    "comments": [
+      "단위당 재료비·노무비·경비 합계로 산출된 단가"
+    ],
+    "parents": [],
+    "domains": [
+      "CostCalculationItem"
+    ]
+  },
+  {
+    "id": "complexityClass",
+    "iri": "https://zioni715.github.io/ontology/rcpp#complexityClass",
+    "type": "DatatypeProperty",
+    "labels": [
+      "복잡도 구분"
+    ],
+    "comments": [
+      "거푸집 품을 구분하는 작업 복잡도"
+    ],
+    "parents": [],
+    "domains": [
+      "FormworkCostItem"
+    ]
+  },
+  {
+    "id": "contractAmount",
+    "iri": "https://zioni715.github.io/ontology/rcpp#contractAmount",
+    "type": "DatatypeProperty",
+    "labels": [
+      "계약금액"
+    ],
+    "comments": [
+      "계약내역서에 확정된 금액"
+    ],
+    "parents": [],
+    "domains": []
+  },
+  {
+    "id": "contractQuantity",
+    "iri": "https://zioni715.github.io/ontology/rcpp#contractQuantity",
+    "type": "DatatypeProperty",
+    "labels": [
+      "계약수량"
+    ],
+    "comments": [
+      "계약내역서에 확정된 수량"
+    ],
+    "parents": [],
+    "domains": []
+  },
+  {
+    "id": "contractUnitPrice",
+    "iri": "https://zioni715.github.io/ontology/rcpp#contractUnitPrice",
+    "type": "DatatypeProperty",
+    "labels": [
+      "계약단가"
+    ],
+    "comments": [
+      "계약내역서에 확정된 단가"
+    ],
+    "parents": [],
+    "domains": []
+  },
+  {
+    "id": "cumulativeAmount",
+    "iri": "https://zioni715.github.io/ontology/rcpp#cumulativeAmount",
+    "type": "DatatypeProperty",
+    "labels": [
+      "누계금액"
+    ],
+    "comments": [
+      "전회누계금액과 금회금액의 합"
+    ],
+    "parents": [],
+    "domains": []
+  },
+  {
+    "id": "cumulativeQuantity",
+    "iri": "https://zioni715.github.io/ontology/rcpp#cumulativeQuantity",
+    "type": "DatatypeProperty",
+    "labels": [
+      "누계수량"
+    ],
+    "comments": [
+      "전회누계수량과 금회수량의 합"
+    ],
+    "parents": [],
+    "domains": []
+  },
+  {
+    "id": "currentAmount",
+    "iri": "https://zioni715.github.io/ontology/rcpp#currentAmount",
+    "type": "DatatypeProperty",
+    "labels": [
+      "금회금액"
+    ],
+    "comments": [
+      "현재 기성회차에서 인정되며 누계기성금액 산정에 반영되는 금액"
+    ],
+    "parents": [],
+    "domains": []
+  },
+  {
+    "id": "currentQuantity",
+    "iri": "https://zioni715.github.io/ontology/rcpp#currentQuantity",
+    "type": "DatatypeProperty",
+    "labels": [
+      "금회수량"
+    ],
+    "comments": [
+      "기성내역 한 행에서 현재 회차에 인정된 수량"
+    ],
+    "parents": [],
+    "domains": [
+      "ProgressPaymentItem"
+    ]
+  },
+  {
+    "id": "documentIdentifier",
+    "iri": "https://zioni715.github.io/ontology/rcpp#documentIdentifier",
+    "type": "DatatypeProperty",
+    "labels": [
+      "서류 식별자"
+    ],
+    "comments": [
+      "업무에서 서류를 식별하는 문자열"
+    ],
+    "parents": [],
+    "domains": [
+      "ProgressDocument"
+    ]
+  },
+  {
+    "id": "expenseUnitCost",
+    "iri": "https://zioni715.github.io/ontology/rcpp#expenseUnitCost",
+    "type": "DatatypeProperty",
+    "labels": [
+      "단위당 경비"
+    ],
+    "comments": [
+      "비용항목 한 단위당 경비"
+    ],
+    "parents": [],
+    "domains": [
+      "CostCalculationItem"
+    ]
+  },
+  {
+    "id": "fabricationAssemblyType",
+    "iri": "https://zioni715.github.io/ontology/rcpp#fabricationAssemblyType",
+    "type": "DatatypeProperty",
+    "labels": [
+      "가공·조립 유형"
+    ],
+    "comments": [
+      "철근 가공·조립 품을 구분하는 작업 유형"
+    ],
+    "parents": [],
+    "domains": [
+      "RebarFabricationAssemblyCostItem"
+    ]
+  },
+  {
+    "id": "formworkType",
+    "iri": "https://zioni715.github.io/ontology/rcpp#formworkType",
+    "type": "DatatypeProperty",
+    "labels": [
+      "거푸집 종류"
+    ],
+    "comments": [
+      "거푸집 비용을 구분하는 형식 또는 재료"
+    ],
+    "parents": [],
+    "domains": [
+      "FormworkCostItem"
+    ]
+  },
+  {
+    "id": "itemCode",
+    "iri": "https://zioni715.github.io/ontology/rcpp#itemCode",
+    "type": "DatatypeProperty",
+    "labels": [
+      "항목 코드"
+    ],
+    "comments": [
+      "비용항목의 식별 코드"
+    ],
+    "parents": [],
+    "domains": [
+      "CostItem"
+    ]
+  },
+  {
+    "id": "itemName",
+    "iri": "https://zioni715.github.io/ontology/rcpp#itemName",
+    "type": "DatatypeProperty",
+    "labels": [
+      "항목명"
+    ],
+    "comments": [
+      "서류항목과 비용항목에서 공통으로 사용하는 품명"
+    ],
+    "parents": [],
+    "domains": []
+  },
+  {
+    "id": "laborUnitCost",
+    "iri": "https://zioni715.github.io/ontology/rcpp#laborUnitCost",
+    "type": "DatatypeProperty",
+    "labels": [
+      "단위당 노무비"
+    ],
+    "comments": [
+      "비용항목 한 단위당 노무비"
+    ],
+    "parents": [],
+    "domains": [
+      "CostCalculationItem"
+    ]
+  },
+  {
+    "id": "materialUnitCost",
+    "iri": "https://zioni715.github.io/ontology/rcpp#materialUnitCost",
+    "type": "DatatypeProperty",
+    "labels": [
+      "단위당 재료비"
+    ],
+    "comments": [
+      "비용항목 한 단위당 재료비"
+    ],
+    "parents": [],
+    "domains": [
+      "CostCalculationItem"
+    ]
+  },
+  {
+    "id": "maximumAggregateSizeMm",
+    "iri": "https://zioni715.github.io/ontology/rcpp#maximumAggregateSizeMm",
+    "type": "DatatypeProperty",
+    "labels": [
+      "굵은골재 최대치수(mm)"
+    ],
+    "comments": [
+      "레미콘 규격의 굵은골재 최대치수"
+    ],
+    "parents": [],
+    "domains": [
+      "ReadyMixedConcreteMaterialCostItem"
+    ]
+  },
+  {
+    "id": "maximumInstallationHeightM",
+    "iri": "https://zioni715.github.io/ontology/rcpp#maximumInstallationHeightM",
+    "type": "DatatypeProperty",
+    "labels": [
+      "최대 설치높이(m)"
+    ],
+    "comments": [
+      "동바리 비용을 구분하는 최대 설치높이 수치"
+    ],
+    "parents": [],
+    "domains": [
+      "ShoringCostItem"
+    ]
+  },
+  {
+    "id": "nominalDiameterMm",
+    "iri": "https://zioni715.github.io/ontology/rcpp#nominalDiameterMm",
+    "type": "DatatypeProperty",
+    "labels": [
+      "호칭지름(mm)"
+    ],
+    "comments": [
+      "철근 규격의 호칭지름 수치"
+    ],
+    "parents": [],
+    "domains": [
+      "RebarCostItem"
+    ]
+  },
+  {
+    "id": "nominalStrengthMPa",
+    "iri": "https://zioni715.github.io/ontology/rcpp#nominalStrengthMPa",
+    "type": "DatatypeProperty",
+    "labels": [
+      "호칭강도(MPa)"
+    ],
+    "comments": [
+      "레미콘 규격의 호칭강도"
+    ],
+    "parents": [],
+    "domains": [
+      "ReadyMixedConcreteMaterialCostItem"
+    ]
+  },
+  {
+    "id": "placementMethod",
+    "iri": "https://zioni715.github.io/ontology/rcpp#placementMethod",
+    "type": "DatatypeProperty",
+    "labels": [
+      "타설방법"
+    ],
+    "comments": [
+      "콘크리트 타설비를 구분하는 장비 또는 시공방법"
+    ],
+    "parents": [],
+    "domains": [
+      "ConcretePlacementCostItem"
+    ]
+  },
+  {
+    "id": "previousCumulativeAmount",
+    "iri": "https://zioni715.github.io/ontology/rcpp#previousCumulativeAmount",
+    "type": "DatatypeProperty",
+    "labels": [
+      "전회누계금액"
+    ],
+    "comments": [
+      "직전 회차까지 인정된 누계금액"
+    ],
+    "parents": [],
+    "domains": []
+  },
+  {
+    "id": "previousCumulativeQuantity",
+    "iri": "https://zioni715.github.io/ontology/rcpp#previousCumulativeQuantity",
+    "type": "DatatypeProperty",
+    "labels": [
+      "전회누계수량"
+    ],
+    "comments": [
+      "직전 회차까지 인정된 누계수량"
+    ],
+    "parents": [],
+    "domains": []
+  },
+  {
+    "id": "processingLocation",
+    "iri": "https://zioni715.github.io/ontology/rcpp#processingLocation",
+    "type": "DatatypeProperty",
+    "labels": [
+      "가공 장소"
+    ],
+    "comments": [
+      "현장가공 또는 공장가공 구분"
+    ],
+    "parents": [],
+    "domains": [
+      "RebarFabricationAssemblyCostItem"
+    ]
+  },
+  {
+    "id": "quantityBasis",
+    "iri": "https://zioni715.github.io/ontology/rcpp#quantityBasis",
+    "type": "DatatypeProperty",
+    "labels": [
+      "수량산정 기준"
+    ],
+    "comments": [
+      "면적 또는 공간체적으로 한정한 동바리 수량산정 기준"
+    ],
+    "parents": [],
+    "domains": [
+      "ShoringCostItem"
+    ]
+  },
+  {
+    "id": "rebarGrade",
+    "iri": "https://zioni715.github.io/ontology/rcpp#rebarGrade",
+    "type": "DatatypeProperty",
+    "labels": [
+      "철근 강종"
+    ],
+    "comments": [
+      "철근 비용항목을 구분하는 강종"
+    ],
+    "parents": [],
+    "domains": [
+      "RebarCostItem"
+    ]
+  },
+  {
+    "id": "remainingAmount",
+    "iri": "https://zioni715.github.io/ontology/rcpp#remainingAmount",
+    "type": "DatatypeProperty",
+    "labels": [
+      "잔여금액"
+    ],
+    "comments": [
+      "계약금액에서 누계금액을 뺀 값"
+    ],
+    "parents": [],
+    "domains": []
+  },
+  {
+    "id": "remainingQuantity",
+    "iri": "https://zioni715.github.io/ontology/rcpp#remainingQuantity",
+    "type": "DatatypeProperty",
+    "labels": [
+      "잔여수량"
+    ],
+    "comments": [
+      "계약수량에서 누계수량을 뺀 값"
+    ],
+    "parents": [],
+    "domains": []
+  },
+  {
+    "id": "reuseCount",
+    "iri": "https://zioni715.github.io/ontology/rcpp#reuseCount",
+    "type": "DatatypeProperty",
+    "labels": [
+      "전용횟수"
+    ],
+    "comments": [
+      "거푸집 비용을 구분하는 전용횟수"
+    ],
+    "parents": [],
+    "domains": [
+      "FormworkCostItem"
+    ]
+  },
+  {
+    "id": "roundNumber",
+    "iri": "https://zioni715.github.io/ontology/rcpp#roundNumber",
+    "type": "DatatypeProperty",
+    "labels": [
+      "회차 번호"
+    ],
+    "comments": [
+      "기성회차의 순번"
+    ],
+    "parents": [],
+    "domains": [
+      "ProgressPaymentRound"
+    ]
+  },
+  {
+    "id": "shoringType",
+    "iri": "https://zioni715.github.io/ontology/rcpp#shoringType",
+    "type": "DatatypeProperty",
+    "labels": [
+      "동바리 종류"
+    ],
+    "comments": [
+      "동바리 비용을 구분하는 형식"
+    ],
+    "parents": [],
+    "domains": [
+      "ShoringCostItem"
+    ]
+  },
+  {
+    "id": "slumpMm",
+    "iri": "https://zioni715.github.io/ontology/rcpp#slumpMm",
+    "type": "DatatypeProperty",
+    "labels": [
+      "슬럼프(mm)"
+    ],
+    "comments": [
+      "레미콘 규격의 슬럼프"
+    ],
+    "parents": [],
+    "domains": [
+      "ReadyMixedConcreteMaterialCostItem"
+    ]
+  },
+  {
+    "id": "specification",
+    "iri": "https://zioni715.github.io/ontology/rcpp#specification",
+    "type": "DatatypeProperty",
+    "labels": [
+      "규격"
+    ],
+    "comments": [
+      "공종 다음에 비용항목을 구분하는 규격 문자열"
+    ],
+    "parents": [],
+    "domains": [
+      "CostItem"
+    ]
+  },
+  {
+    "id": "structureType",
+    "iri": "https://zioni715.github.io/ontology/rcpp#structureType",
+    "type": "DatatypeProperty",
+    "labels": [
+      "구조물 유형"
+    ],
+    "comments": [
+      "콘크리트 타설비를 구분하는 구조물 유형"
+    ],
+    "parents": [],
+    "domains": [
+      "ConcretePlacementCostItem"
+    ]
+  }
+]

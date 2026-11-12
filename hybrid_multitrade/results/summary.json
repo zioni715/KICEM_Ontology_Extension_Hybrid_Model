@@ -1,0 +1,1758 @@
+{
+  "timestamp": "2026-11-12T03:50:46.783538+00:00",
+  "architecture": "single shared parameterized pipeline",
+  "scope": "Frozen pilot algorithms with domain/input adapters; no independent expert gold scores",
+  "trades": [
+    {
+      "status": "COMPLETED_TBOX",
+      "output_scope": "TBOX_ONLY",
+      "trade_id": "architecture_tile",
+      "stages": {
+        "module1/run.py": {
+          "returncode": 0,
+          "seconds": 0.38,
+          "source_sha256": "c3f3d77bd8f40dec1a4d4983dddc0afe4655dd13c2c69648e77c934b8eeef511",
+          "pipeline_sha256": "ccaeee4539dd9be5c310f382dc1f4f4d7dc135fa803fd1699983077076c5fad8"
+        },
+        "module2/run.py": {
+          "returncode": 0,
+          "seconds": 36.71,
+          "source_sha256": "ffd7de7a73be6a113fd83242ea2cb5f78962ca45f82e669e2ea2724c71168cf6",
+          "pipeline_sha256": "ccaeee4539dd9be5c310f382dc1f4f4d7dc135fa803fd1699983077076c5fad8"
+        },
+        "module3/run.py": {
+          "returncode": 0,
+          "seconds": 8.22,
+          "source_sha256": "cb0ad4dd1545874cbcc9037ee60ea7b3adf42f0cba7c7396598a11de81b3977b",
+          "pipeline_sha256": "ccaeee4539dd9be5c310f382dc1f4f4d7dc135fa803fd1699983077076c5fad8"
+        },
+        "module4/run.py": {
+          "returncode": 0,
+          "seconds": 107.22,
+          "source_sha256": "84a2f13a9b05539c341963b691afd3aae4fec223a7ea3f76ec983c76b3553764",
+          "pipeline_sha256": "ccaeee4539dd9be5c310f382dc1f4f4d7dc135fa803fd1699983077076c5fad8"
+        },
+        "module5/rank.py": {
+          "returncode": 0,
+          "seconds": 15.95,
+          "source_sha256": "e5981cc9fdd1f397dce0926dfbf105a6daab29c3953aef1c8e93dc8fd8e568a1",
+          "pipeline_sha256": "ccaeee4539dd9be5c310f382dc1f4f4d7dc135fa803fd1699983077076c5fad8"
+        },
+        "module5/run.py": {
+          "returncode": 0,
+          "seconds": 112.49,
+          "source_sha256": "f3ab57f1072bd1bf169a7ed224f7f87f04d6e3a84ac0a4dea8ac8f4ecf534853",
+          "pipeline_sha256": "ccaeee4539dd9be5c310f382dc1f4f4d7dc135fa803fd1699983077076c5fad8"
+        },
+        "module5/audit.py": {
+          "returncode": 0,
+          "seconds": 0.36,
+          "source_sha256": "ff1f165f15eed8b3b960947d6dbf9792bb4f8193ffa2ee18fcba014b9def5327",
+          "pipeline_sha256": "ccaeee4539dd9be5c310f382dc1f4f4d7dc135fa803fd1699983077076c5fad8"
+        },
+        "module5/grounding_rules.py": {
+          "returncode": 0,
+          "seconds": 0.13,
+          "source_sha256": "1a403e0f44b1ef101859ba6e76c17ad922e96c06a199b07ae4f5ac97039aa844",
+          "pipeline_sha256": "ccaeee4539dd9be5c310f382dc1f4f4d7dc135fa803fd1699983077076c5fad8"
+        }
+      },
+      "runtime_versions": {
+        "python": "3.11.15",
+        "torch": "2.4.0",
+        "transformers": "4.46.3",
+        "vllm": "0.6.3.post1",
+        "sentence-transformers": "3.0.1",
+        "peft": "0.13.2",
+        "numpy": "1.26.4",
+        "openai": "1.52.2",
+        "httpx": "0.27.2",
+        "rdflib": "7.0.0",
+        "owlready2": "0.48",
+        "networkx": "3.3"
+      },
+      "input_rows": 24,
+      "proposal_count": 18,
+      "evidence_input_coverage_count": 15,
+      "evidence_input_coverage_note": "Unique input descriptions cited by final candidates; not semantic recall or accuracy",
+      "accepted_provisional": 10,
+      "held": 8,
+      "classes": 39,
+      "data_properties": 4,
+      "subclass_axioms": 29,
+      "object_properties": 0,
+      "retained_seed_classes": 23,
+      "researcher_anchor_classes": 6,
+      "exported_accepted": 10,
+      "dropped_classes": [],
+      "excluded_properties": [],
+      "pure_tbox": {
+        "passed": true,
+        "violations": []
+      },
+      "acyclic": true,
+      "checks": {
+        "pure_tbox": {
+          "passed": true,
+          "violations": []
+        },
+        "acyclic": true,
+        "serializations_equal": true,
+        "owlapi_hermit": {
+          "profile": {
+            "java_version": "17.0.18-internal",
+            "reasoner_invoked": false,
+            "ontology_id": "OntologyID(OntologyIRI(<https://example.org/kicem/hybrid/architecture_tile>))",
+            "counts": {
+              "axioms": 217,
+              "logical_axioms": 37,
+              "classes": 39,
+              "object_properties": 0,
+              "data_properties": 4,
+              "named_individuals": 0,
+              "import_declarations": 0
+            },
+            "serialization_validation": {
+              "rdfxml_loaded": true,
+              "turtle_loaded": true,
+              "rdfxml_vs_turtle": {
+                "equal_axiom_sets": true,
+                "equal_logical_axiom_sets": true,
+                "equal_ontology_annotations": true,
+                "equal_import_declarations": true,
+                "equal_ontology_id": true,
+                "lost_axioms": [],
+                "added_axioms": [],
+                "equal_signature": true,
+                "additions_are_declarations_only": true,
+                "preserved_except_added_declarations": true,
+                "passed": true
+              },
+              "rdfxml_roundtrip": {
+                "equal_axiom_sets": true,
+                "equal_logical_axiom_sets": true,
+                "equal_ontology_annotations": true,
+                "equal_import_declarations": true,
+                "equal_ontology_id": true,
+                "lost_axioms": [],
+                "added_axioms": [],
+                "equal_signature": true,
+                "additions_are_declarations_only": true,
+                "preserved_except_added_declarations": true,
+                "passed": true
+              },
+              "passed": true
+            },
+            "owl2_dl_profile": {
+              "profile": "OWL 2 DL",
+              "in_profile": true,
+              "violation_count": 0,
+              "violations": []
+            },
+            "controls": {
+              "positive": {
+                "profile": "OWL 2 DL",
+                "in_profile": true,
+                "violation_count": 0,
+                "violations": []
+              },
+              "negative_non_simple_asymmetric_property": {
+                "profile": "OWL 2 DL",
+                "in_profile": false,
+                "violation_count": 1,
+                "violations": [
+                  {
+                    "type": "UseOfNonSimplePropertyInAsymmetricObjectPropertyAxiom",
+                    "message": "Use of non-simple property in AsymmetricObjectProperty axiom: [AsymmetricObjectProperty(<urn:owlapi-control:property>) in OntologyID(Anonymous-9)]",
+                    "axiom": "AsymmetricObjectProperty(<urn:owlapi-control:property>)"
+                  }
+                ]
+              },
+              "passed": true
+            }
+          },
+          "hermit": {
+            "input": "/home/sil-jiwon/KICEM_Ontology_Extension_Hybrid_Model/hybrid_multitrade/.runs/unified/architecture_tile/reasoner/architecture_tile.owl",
+            "invocation": "HermiT Java OWLReasoner API",
+            "java_version": "17.0.18-internal",
+            "error": null,
+            "consistent": true,
+            "unsatisfiable_named_classes": [],
+            "reasoner_name": "HermiT",
+            "reasoner_version": "1.3.8.1099",
+            "classes_in_signature": 39,
+            "logical_axioms": 37,
+            "imports_count": 0,
+            "unsatisfiable_named_class_count": 0,
+            "class_hierarchy_precomputed": true,
+            "seconds_including_load_and_reasoning": 0.29293792
+          }
+        },
+        "passed": true
+      },
+      "gold_accuracy": null,
+      "expert_validated": false,
+      "input_kind": "standards-derived normalized descriptions",
+      "module2": {
+        "heldout_top1": 2,
+        "heldout_count": 4,
+        "target_supervision": "LLM provisional initial class hierarchy, not independent ground truth"
+      },
+      "module3": {
+        "source_classes": 34,
+        "target_classes": 31,
+        "matched": 15,
+        "llm_checks": 29,
+        "deviation": "Original bidirectional candidate traversal preserved; HCB auto-accept replaced with same semantic callback; multilingual E5 and OpenAI callback replace sample encoder/Ollama setup."
+      },
+      "module4": {
+        "generated_candidates": 6
+      },
+      "module5": {
+        "strict_lorex_accepted": 8,
+        "taxoadapt_generated": 6,
+        "taxoadapt_accepted": 4,
+        "before_final_evidence_gate": {
+          "accepted_provisional": 14,
+          "held": 4,
+          "taxoadapt_accepted": 5
+        },
+        "before_grounding_rules": {
+          "accepted_provisional": 11,
+          "held": 7,
+          "taxoadapt_accepted": 4
+        },
+        "deviations": [
+          "No official LOREx code; paper-based implementation",
+          "top two relevant chunks and two alternative verification paths per chunk",
+          "Llama teacher-forced mean token logprob implements path scoring",
+          "source-supported semantic verification may retain logprob-disagreed candidates provisionally; paper-strict count separately reported",
+          "Separate final evidence gate: explicit material mention, per-source semantic support, duplicate and part-of checks; no new candidate or parent invented; not expert gold validation",
+          "Researcher-defined final lexical/context evidence rules remove unsupported activity assignments; LLM review alone did not establish reliable grounding. No parent or candidate invented."
+        ]
+      },
+      "api_calls": 97,
+      "api_successful_calls": 0,
+      "api_cache_hits": 97,
+      "api_failed_calls": 0,
+      "api_total_tokens": 0,
+      "provenance": {
+        "trade_id": "architecture_tile",
+        "source_files": [
+          {
+            "path": "module1/run.py",
+            "sha256": "c3f3d77bd8f40dec1a4d4983dddc0afe4655dd13c2c69648e77c934b8eeef511"
+          },
+          {
+            "path": "module1/schema.py",
+            "sha256": "9c7580964731b6834f5b7c6cc586bee72a754b2357ae7661facddb6eee6be652"
+          },
+          {
+            "path": "module2/run.py",
+            "sha256": "ffd7de7a73be6a113fd83242ea2cb5f78962ca45f82e669e2ea2724c71168cf6"
+          },
+          {
+            "path": "module3/run.py",
+            "sha256": "cb0ad4dd1545874cbcc9037ee60ea7b3adf42f0cba7c7396598a11de81b3977b"
+          },
+          {
+            "path": "module4/adapters/local_runtime.py",
+            "sha256": "4134fc6aba3ab461b0dac571bdb33ab5b50779ae86f2d8c305f1e4f09cbdc6fe"
+          },
+          {
+            "path": "module4/run.py",
+            "sha256": "84a2f13a9b05539c341963b691afd3aae4fec223a7ea3f76ec983c76b3553764"
+          },
+          {
+            "path": "module5/audit.py",
+            "sha256": "ff1f165f15eed8b3b960947d6dbf9792bb4f8193ffa2ee18fcba014b9def5327"
+          },
+          {
+            "path": "module5/grounding_rules.py",
+            "sha256": "1a403e0f44b1ef101859ba6e76c17ad922e96c06a199b07ae4f5ac97039aa844"
+          },
+          {
+            "path": "module5/rank.py",
+            "sha256": "e5981cc9fdd1f397dce0926dfbf105a6daab29c3953aef1c8e93dc8fd8e568a1"
+          },
+          {
+            "path": "module5/run.py",
+            "sha256": "f3ab57f1072bd1bf169a7ed224f7f87f04d6e3a84ac0a4dea8ac8f4ecf534853"
+          },
+          {
+            "path": "shared/common.py",
+            "sha256": "f43df09a2b994dc2da1b6e99c9f40322db3fb4d264e86d94035f3b4eb893ece1"
+          },
+          {
+            "path": "shared/domain.py",
+            "sha256": "74cb4f099509a226256a07cede93b7e594b5b8d5aaaa6c01f697d76a6052a1ad"
+          }
+        ],
+        "architecture": "single shared parameterized pipeline",
+        "input_kind": "public standard-derived normalized descriptions; not private workbook rows",
+        "input_sha256": "4f3d4b4af2dd5f3a89358ce9d1711d9e0402c3eaebad19c9a6d055e89a118d86",
+        "model_parameters_changed": false,
+        "seed_sha256": "d0d011aa4a8c7117a060c926c94539bc2a6c8a289dae2649940f4a18a9a48c82",
+        "configuration_sha256": {
+          "experiment.json": "280bdf0f53762c1a0d6ddf28e53ae56b08ac3807d496c2ca522c8cfc1e20a85c",
+          "llama_model.json": "1422ba25ef4363b6278159854c2e3825c676fbebf4192267cee865805a648803",
+          "llama_runtime.json": "c92f862b0f6b6b9d51f4e954198a5121a1fb815ce54dfa08bf740fcd54c6b230",
+          "llama_scoring_runtime.json": "f7de7218f91f1b454c44bd92b14a44cac948fc6a5a4e5f815bc3630e6b1f9a33",
+          "trade.json": "cc20e5aa58c1eddc62eddcb84bbbb8600fb4c0bd9e63dd737e9919f7e2c444ce"
+        },
+        "adaptations": [
+          "runtime trade configuration",
+          "public WBS input adapter",
+          "T-Box-only export"
+        ],
+        "gold_used": false,
+        "source_count": 1,
+        "input_rows": 24
+      },
+      "candidate_outcomes": [
+        {
+          "id": "TileAdhesiveCostItem",
+          "label": "타일 접착제 비용",
+          "origin": "LLM_document_proposal",
+          "status": "held",
+          "selected_parent": "TileMaterialCostItem",
+          "reason": "Final evidence gate: The selected parent 'TileMaterialCostItem' specifies costs related to tile materials and does not encompass costs associated with adhesive, which is a specific type of material cost. The definition of '타일 접착제 비용' focuses on the cost of adhesive for tile installation, which is not directly supported by the parent definition that excludes installation costs.",
+          "verified_quotes": [],
+          "exported": false
+        },
+        {
+          "id": "TileGroutCostItem",
+          "label": "타일 그라우트 비용",
+          "origin": "LLM_document_proposal",
+          "status": "accepted_provisional",
+          "selected_parent": "TileMaterialCostItem",
+          "reason": "source-supported semantic verification; lineage agreement recorded separately",
+          "verified_quotes": [
+            {
+              "source_id": "STD:001",
+              "quote": "타일공사 타일 시공 전반을 포괄하는 작업 유형."
+            }
+          ],
+          "exported": true
+        },
+        {
+          "id": "TileUnderlaymentCostItem",
+          "label": "타일 하부재 비용",
+          "origin": "LLM_document_proposal",
+          "status": "held",
+          "selected_parent": "TileMaterialCostItem",
+          "reason": "Final evidence gate: The query class 'TileUnderlaymentCostItem' is a specific type of cost associated with tile installation, which aligns with the broader category of 'TileMaterialCostItem'. The definition of the parent class indicates it encompasses costs related to tile materials, which includes underlayment as a necessary component for installation. The evidence supports the concept of a cost item related to tile work, although it does not explicitly mention underlayment. However, it does not contradict the relationship as it refers to the overall tile installation process.",
+          "verified_quotes": [],
+          "exported": false
+        },
+        {
+          "id": "WallTileInstallationCostItem",
+          "label": "벽타일 설치 비용",
+          "origin": "LLM_document_proposal",
+          "status": "accepted_provisional",
+          "selected_parent": "CostItem",
+          "reason": "source-supported semantic verification; lineage agreement recorded separately",
+          "verified_quotes": [
+            {
+              "source_id": "STD:004",
+              "quote": "벽타일 붙이기 벽면에 타일을 붙이는 작업."
+            },
+            {
+              "source_id": "STD:010",
+              "quote": "벽타일 동시 줄눈 붙이기 붙임과 줄눈을 함께 수행하는 벽타일 작업."
+            }
+          ],
+          "exported": true
+        },
+        {
+          "id": "FloorTileInstallationCostItem",
+          "label": "바닥타일 설치 비용",
+          "origin": "LLM_document_proposal",
+          "status": "accepted_provisional",
+          "selected_parent": "TileInstallationCostItem",
+          "reason": "source-supported semantic verification; lineage agreement recorded separately",
+          "verified_quotes": [
+            {
+              "source_id": "STD:012",
+              "quote": "바닥 타일 붙이기 바닥면에 타일을 붙이는 작업."
+            },
+            {
+              "source_id": "STD:014",
+              "quote": "바닥타일 압착 붙이기 압착 공법으로 바닥타일을 붙이는 작업."
+            }
+          ],
+          "exported": true
+        },
+        {
+          "id": "MosaicTileInstallationCostItem",
+          "label": "모자이크 타일 설치 비용",
+          "origin": "LLM_document_proposal",
+          "status": "accepted_provisional",
+          "selected_parent": "CostItem",
+          "reason": "source-supported semantic verification; lineage agreement recorded separately",
+          "verified_quotes": [
+            {
+              "source_id": "STD:011",
+              "quote": "모자이크 타일 붙이기 모자이크 벽타일을 붙이는 작업."
+            }
+          ],
+          "exported": true
+        },
+        {
+          "id": "TileInstallationWorkType",
+          "label": "타일 시공 작업",
+          "origin": "LLM_WBS_proposal",
+          "status": "accepted_provisional",
+          "selected_parent": "WorkTask",
+          "reason": "source-supported semantic verification; lineage agreement recorded separately",
+          "verified_quotes": [
+            {
+              "source_id": "WBS:W002",
+              "quote": "타일 붙이기: 바탕에 타일을 붙이는 설치 작업 유형. [KCS-41-48-01 § 3.1-3.4]"
+            },
+            {
+              "source_id": "WBS:W004",
+              "quote": "벽타일 붙이기: 벽면에 타일을 붙이는 작업. [KCS-41-48-01 § 3.2]"
+            },
+            {
+              "source_id": "WBS:W012",
+              "quote": "바닥 타일 붙이기: 바닥면에 타일을 붙이는 작업. [KCS-41-48-01 § 3.3]"
+            },
+            {
+              "source_id": "WBS:W017",
+              "quote": "천장 타일 붙이기: 천장면에 타일을 붙이는 작업. [KCS-41-48-01 § 3.4]"
+            }
+          ],
+          "exported": true
+        },
+        {
+          "id": "TileMaintenanceWorkType",
+          "label": "타일 유지보수 작업",
+          "origin": "LLM_WBS_proposal",
+          "status": "held",
+          "selected_parent": "WorkTask",
+          "reason": "Explicit grounding rules: source does not state the defining activity/material/role",
+          "verified_quotes": [],
+          "exported": false
+        },
+        {
+          "id": "TileInspectionWorkType",
+          "label": "타일 검사 작업",
+          "origin": "LLM_WBS_proposal",
+          "status": "accepted_provisional",
+          "selected_parent": "WorkTask",
+          "reason": "source-supported semantic verification; lineage agreement recorded separately",
+          "verified_quotes": [
+            {
+              "source_id": "WBS:W021",
+              "quote": "타일 검사: 타일 시공 결과를 검사하는 작업. [KCS-41-48-01 § 3.6]"
+            },
+            {
+              "source_id": "WBS:W022",
+              "quote": "타일 시공 중 검사: 타일 시공 중 수행하는 검사. [KCS-41-48-01 § 3.6.1]"
+            },
+            {
+              "source_id": "WBS:W023",
+              "quote": "타일 두들김 검사: 두들김으로 타일 붙임 상태를 확인하는 검사. [KCS-41-48-01 § 3.6.2]"
+            },
+            {
+              "source_id": "WBS:W024",
+              "quote": "타일 접착력 시험: 타일의 접착 성능을 확인하는 시험. [KCS-41-48-01 § 3.6.3]"
+            }
+          ],
+          "exported": true
+        },
+        {
+          "id": "TA_27bf40da5108",
+          "label": "wall_tile_installation",
+          "origin": "TaxoAdapt",
+          "status": "accepted_provisional",
+          "selected_parent": "WallTileInstallationCostItem",
+          "reason": "source-supported semantic verification; lineage agreement recorded separately",
+          "verified_quotes": [
+            {
+              "source_id": "STD:004",
+              "quote": "벽타일 붙이기 벽면에 타일을 붙이는 작업."
+            },
+            {
+              "source_id": "STD:010",
+              "quote": "벽타일 동시 줄눈 붙이기 붙임과 줄눈을 함께 수행하는 벽타일 작업."
+            }
+          ],
+          "exported": true
+        },
+        {
+          "id": "TA_d831c177a4ab",
+          "label": "floor_tile_installation",
+          "origin": "TaxoAdapt",
+          "status": "held",
+          "selected_parent": null,
+          "reason": "LLM hypothesis has no verified documentary/WBS support",
+          "verified_quotes": [],
+          "exported": false
+        },
+        {
+          "id": "TA_6bb123b9c08a",
+          "label": "tile_maintenance",
+          "origin": "TaxoAdapt",
+          "status": "held",
+          "selected_parent": "CostItem",
+          "reason": "Final evidence gate: The concept 'tile_maintenance' is a specific type of cost item related to tile maintenance activities, which aligns with the broader category of 'CostItem'.",
+          "verified_quotes": [],
+          "exported": false
+        },
+        {
+          "id": "TA_26766b373d3a",
+          "label": "wall_tile_installation",
+          "origin": "TaxoAdapt",
+          "status": "accepted_provisional",
+          "selected_parent": "TileInstallationWorkType",
+          "reason": "source-supported semantic verification; lineage agreement recorded separately",
+          "verified_quotes": [
+            {
+              "source_id": "WBS:W004",
+              "quote": "벽타일 붙이기: 벽면에 타일을 붙이는 작업. [KCS-41-48-01 § 3.2]"
+            }
+          ],
+          "exported": true
+        },
+        {
+          "id": "TA_47796916aa60",
+          "label": "floor_tile_installation",
+          "origin": "TaxoAdapt",
+          "status": "accepted_provisional",
+          "selected_parent": "TileInstallationWorkType",
+          "reason": "source-supported semantic verification; lineage agreement recorded separately",
+          "verified_quotes": [
+            {
+              "source_id": "WBS:W012",
+              "quote": "바닥 타일 붙이기: 바닥면에 타일을 붙이는 작업. [KCS-41-48-01 § 3.3]"
+            },
+            {
+              "source_id": "WBS:W013",
+              "quote": "바닥타일 시멘트 페이스트 붙이기: 시멘트 페이스트로 바닥타일을 붙이는 작업. [KCS-41-48-01 § 3.3.1]"
+            },
+            {
+              "source_id": "WBS:W014",
+              "quote": "바닥타일 압착 붙이기: 압착 공법으로 바닥타일을 붙이는 작업. [KCS-41-48-01 § 3.3.2]"
+            },
+            {
+              "source_id": "WBS:W015",
+              "quote": "바닥타일 개량압착 붙이기: 개량압착 공법으로 바닥타일을 붙이는 작업. [KCS-41-48-01 § 3.3.3]"
+            },
+            {
+              "source_id": "WBS:W016",
+              "quote": "바닥타일 접착 붙이기: 접착제로 바닥타일을 붙이는 작업. [KCS-41-48-01 § 3.3.4]"
+            }
+          ],
+          "exported": true
+        },
+        {
+          "id": "TA_5bc89013b30a",
+          "label": "tile_installation_inspection",
+          "origin": "TaxoAdapt",
+          "status": "accepted_provisional",
+          "selected_parent": "TileInspectionWorkType",
+          "reason": "source-supported semantic verification; lineage agreement recorded separately",
+          "verified_quotes": [
+            {
+              "source_id": "WBS:W022",
+              "quote": "타일 시공 중 검사: 타일 시공 중 수행하는 검사. [KCS-41-48-01 § 3.6.1]"
+            },
+            {
+              "source_id": "WBS:W023",
+              "quote": "타일 두들김 검사: 두들김으로 타일 붙임 상태를 확인하는 검사. [KCS-41-48-01 § 3.6.2]"
+            },
+            {
+              "source_id": "WBS:W024",
+              "quote": "타일 접착력 시험: 타일의 접착 성능을 확인하는 시험. [KCS-41-48-01 § 3.6.3]"
+            }
+          ],
+          "exported": true
+        },
+        {
+          "id": "H_TileSurfacePreparation",
+          "label": "타일 표면 준비",
+          "origin": "LLM_hypothesis",
+          "status": "held",
+          "selected_parent": null,
+          "reason": "LLM hypothesis has no verified documentary/WBS support",
+          "verified_quotes": [],
+          "exported": false
+        },
+        {
+          "id": "H_TileAdhesiveSelection",
+          "label": "타일 접착제 선택",
+          "origin": "LLM_hypothesis",
+          "status": "held",
+          "selected_parent": null,
+          "reason": "LLM hypothesis has no verified documentary/WBS support",
+          "verified_quotes": [],
+          "exported": false
+        },
+        {
+          "id": "H_TileMaintenancePlan",
+          "label": "타일 유지보수 계획",
+          "origin": "LLM_hypothesis",
+          "status": "held",
+          "selected_parent": null,
+          "reason": "LLM hypothesis has no verified documentary/WBS support",
+          "verified_quotes": [],
+          "exported": false
+        }
+      ],
+      "output_sha256": {
+        "architecture_tile.owl": "1de85099f386671041ef3c034cc83b62bc3fb889c8527983cbbd0591ba2ccea3",
+        "architecture_tile.ttl": "bb6fae487ba9b7adae08257523dbb5636de562ead014db501b940e034bebc2e7"
+      }
+    },
+    {
+      "status": "COMPLETED_TBOX",
+      "output_scope": "TBOX_ONLY",
+      "trade_id": "civil_stormwater",
+      "stages": {
+        "module1/run.py": {
+          "returncode": 0,
+          "seconds": 0.35,
+          "source_sha256": "c3f3d77bd8f40dec1a4d4983dddc0afe4655dd13c2c69648e77c934b8eeef511",
+          "pipeline_sha256": "ccaeee4539dd9be5c310f382dc1f4f4d7dc135fa803fd1699983077076c5fad8"
+        },
+        "module2/run.py": {
+          "returncode": 0,
+          "seconds": 35.72,
+          "source_sha256": "ffd7de7a73be6a113fd83242ea2cb5f78962ca45f82e669e2ea2724c71168cf6",
+          "pipeline_sha256": "ccaeee4539dd9be5c310f382dc1f4f4d7dc135fa803fd1699983077076c5fad8"
+        },
+        "module3/run.py": {
+          "returncode": 0,
+          "seconds": 6.37,
+          "source_sha256": "cb0ad4dd1545874cbcc9037ee60ea7b3adf42f0cba7c7396598a11de81b3977b",
+          "pipeline_sha256": "ccaeee4539dd9be5c310f382dc1f4f4d7dc135fa803fd1699983077076c5fad8"
+        },
+        "module4/run.py": {
+          "returncode": 0,
+          "seconds": 111.91,
+          "source_sha256": "84a2f13a9b05539c341963b691afd3aae4fec223a7ea3f76ec983c76b3553764",
+          "pipeline_sha256": "ccaeee4539dd9be5c310f382dc1f4f4d7dc135fa803fd1699983077076c5fad8"
+        },
+        "module5/rank.py": {
+          "returncode": 0,
+          "seconds": 15.7,
+          "source_sha256": "e5981cc9fdd1f397dce0926dfbf105a6daab29c3953aef1c8e93dc8fd8e568a1",
+          "pipeline_sha256": "ccaeee4539dd9be5c310f382dc1f4f4d7dc135fa803fd1699983077076c5fad8"
+        },
+        "module5/run.py": {
+          "returncode": 0,
+          "seconds": 112.89,
+          "source_sha256": "f3ab57f1072bd1bf169a7ed224f7f87f04d6e3a84ac0a4dea8ac8f4ecf534853",
+          "pipeline_sha256": "ccaeee4539dd9be5c310f382dc1f4f4d7dc135fa803fd1699983077076c5fad8"
+        },
+        "module5/audit.py": {
+          "returncode": 0,
+          "seconds": 0.57,
+          "source_sha256": "ff1f165f15eed8b3b960947d6dbf9792bb4f8193ffa2ee18fcba014b9def5327",
+          "pipeline_sha256": "ccaeee4539dd9be5c310f382dc1f4f4d7dc135fa803fd1699983077076c5fad8"
+        },
+        "module5/grounding_rules.py": {
+          "returncode": 0,
+          "seconds": 0.16,
+          "source_sha256": "1a403e0f44b1ef101859ba6e76c17ad922e96c06a199b07ae4f5ac97039aa844",
+          "pipeline_sha256": "ccaeee4539dd9be5c310f382dc1f4f4d7dc135fa803fd1699983077076c5fad8"
+        }
+      },
+      "runtime_versions": {
+        "python": "3.11.15",
+        "torch": "2.4.0",
+        "transformers": "4.46.3",
+        "vllm": "0.6.3.post1",
+        "sentence-transformers": "3.0.1",
+        "peft": "0.13.2",
+        "numpy": "1.26.4",
+        "openai": "1.52.2",
+        "httpx": "0.27.2",
+        "rdflib": "7.0.0",
+        "owlready2": "0.48",
+        "networkx": "3.3"
+      },
+      "input_rows": 12,
+      "proposal_count": 17,
+      "evidence_input_coverage_count": 6,
+      "evidence_input_coverage_note": "Unique input descriptions cited by final candidates; not semantic recall or accuracy",
+      "accepted_provisional": 6,
+      "held": 11,
+      "classes": 35,
+      "data_properties": 2,
+      "subclass_axioms": 25,
+      "object_properties": 0,
+      "retained_seed_classes": 23,
+      "researcher_anchor_classes": 6,
+      "exported_accepted": 6,
+      "dropped_classes": [],
+      "excluded_properties": [],
+      "pure_tbox": {
+        "passed": true,
+        "violations": []
+      },
+      "acyclic": true,
+      "checks": {
+        "pure_tbox": {
+          "passed": true,
+          "violations": []
+        },
+        "acyclic": true,
+        "serializations_equal": true,
+        "owlapi_hermit": {
+          "profile": {
+            "java_version": "17.0.18-internal",
+            "reasoner_invoked": false,
+            "ontology_id": "OntologyID(OntologyIRI(<https://example.org/kicem/hybrid/civil_stormwater>))",
+            "counts": {
+              "axioms": 183,
+              "logical_axioms": 29,
+              "classes": 35,
+              "object_properties": 0,
+              "data_properties": 2,
+              "named_individuals": 0,
+              "import_declarations": 0
+            },
+            "serialization_validation": {
+              "rdfxml_loaded": true,
+              "turtle_loaded": true,
+              "rdfxml_vs_turtle": {
+                "equal_axiom_sets": true,
+                "equal_logical_axiom_sets": true,
+                "equal_ontology_annotations": true,
+                "equal_import_declarations": true,
+                "equal_ontology_id": true,
+                "lost_axioms": [],
+                "added_axioms": [],
+                "equal_signature": true,
+                "additions_are_declarations_only": true,
+                "preserved_except_added_declarations": true,
+                "passed": true
+              },
+              "rdfxml_roundtrip": {
+                "equal_axiom_sets": true,
+                "equal_logical_axiom_sets": true,
+                "equal_ontology_annotations": true,
+                "equal_import_declarations": true,
+                "equal_ontology_id": true,
+                "lost_axioms": [],
+                "added_axioms": [],
+                "equal_signature": true,
+                "additions_are_declarations_only": true,
+                "preserved_except_added_declarations": true,
+                "passed": true
+              },
+              "passed": true
+            },
+            "owl2_dl_profile": {
+              "profile": "OWL 2 DL",
+              "in_profile": true,
+              "violation_count": 0,
+              "violations": []
+            },
+            "controls": {
+              "positive": {
+                "profile": "OWL 2 DL",
+                "in_profile": true,
+                "violation_count": 0,
+                "violations": []
+              },
+              "negative_non_simple_asymmetric_property": {
+                "profile": "OWL 2 DL",
+                "in_profile": false,
+                "violation_count": 1,
+                "violations": [
+                  {
+                    "type": "UseOfNonSimplePropertyInAsymmetricObjectPropertyAxiom",
+                    "message": "Use of non-simple property in AsymmetricObjectProperty axiom: [AsymmetricObjectProperty(<urn:owlapi-control:property>) in OntologyID(Anonymous-9)]",
+                    "axiom": "AsymmetricObjectProperty(<urn:owlapi-control:property>)"
+                  }
+                ]
+              },
+              "passed": true
+            }
+          },
+          "hermit": {
+            "input": "/home/sil-jiwon/KICEM_Ontology_Extension_Hybrid_Model/hybrid_multitrade/.runs/unified/civil_stormwater/reasoner/civil_stormwater.owl",
+            "invocation": "HermiT Java OWLReasoner API",
+            "java_version": "17.0.18-internal",
+            "error": null,
+            "consistent": true,
+            "unsatisfiable_named_classes": [],
+            "reasoner_name": "HermiT",
+            "reasoner_version": "1.3.8.1099",
+            "classes_in_signature": 35,
+            "logical_axioms": 29,
+            "imports_count": 0,
+            "unsatisfiable_named_class_count": 0,
+            "class_hierarchy_precomputed": true,
+            "seconds_including_load_and_reasoning": 0.269878157
+          }
+        },
+        "passed": true
+      },
+      "gold_accuracy": null,
+      "expert_validated": false,
+      "input_kind": "standards-derived normalized descriptions",
+      "module2": {
+        "heldout_top1": 1,
+        "heldout_count": 4,
+        "target_supervision": "LLM provisional initial class hierarchy, not independent ground truth"
+      },
+      "module3": {
+        "source_classes": 33,
+        "target_classes": 31,
+        "matched": 13,
+        "llm_checks": 30,
+        "deviation": "Original bidirectional candidate traversal preserved; HCB auto-accept replaced with same semantic callback; multilingual E5 and OpenAI callback replace sample encoder/Ollama setup."
+      },
+      "module4": {
+        "generated_candidates": 6
+      },
+      "module5": {
+        "strict_lorex_accepted": 0,
+        "taxoadapt_generated": 6,
+        "taxoadapt_accepted": 1,
+        "before_final_evidence_gate": {
+          "accepted_provisional": 12,
+          "held": 5,
+          "taxoadapt_accepted": 4
+        },
+        "before_grounding_rules": {
+          "accepted_provisional": 10,
+          "held": 7,
+          "taxoadapt_accepted": 4
+        },
+        "deviations": [
+          "No official LOREx code; paper-based implementation",
+          "top two relevant chunks and two alternative verification paths per chunk",
+          "Llama teacher-forced mean token logprob implements path scoring",
+          "source-supported semantic verification may retain logprob-disagreed candidates provisionally; paper-strict count separately reported",
+          "Separate final evidence gate: explicit material mention, per-source semantic support, duplicate and part-of checks; no new candidate or parent invented; not expert gold validation",
+          "Researcher-defined final lexical/context evidence rules remove unsupported activity assignments; LLM review alone did not establish reliable grounding. No parent or candidate invented."
+        ]
+      },
+      "api_calls": 93,
+      "api_successful_calls": 0,
+      "api_cache_hits": 93,
+      "api_failed_calls": 0,
+      "api_total_tokens": 0,
+      "provenance": {
+        "trade_id": "civil_stormwater",
+        "source_files": [
+          {
+            "path": "module1/run.py",
+            "sha256": "c3f3d77bd8f40dec1a4d4983dddc0afe4655dd13c2c69648e77c934b8eeef511"
+          },
+          {
+            "path": "module1/schema.py",
+            "sha256": "9c7580964731b6834f5b7c6cc586bee72a754b2357ae7661facddb6eee6be652"
+          },
+          {
+            "path": "module2/run.py",
+            "sha256": "ffd7de7a73be6a113fd83242ea2cb5f78962ca45f82e669e2ea2724c71168cf6"
+          },
+          {
+            "path": "module3/run.py",
+            "sha256": "cb0ad4dd1545874cbcc9037ee60ea7b3adf42f0cba7c7396598a11de81b3977b"
+          },
+          {
+            "path": "module4/adapters/local_runtime.py",
+            "sha256": "4134fc6aba3ab461b0dac571bdb33ab5b50779ae86f2d8c305f1e4f09cbdc6fe"
+          },
+          {
+            "path": "module4/run.py",
+            "sha256": "84a2f13a9b05539c341963b691afd3aae4fec223a7ea3f76ec983c76b3553764"
+          },
+          {
+            "path": "module5/audit.py",
+            "sha256": "ff1f165f15eed8b3b960947d6dbf9792bb4f8193ffa2ee18fcba014b9def5327"
+          },
+          {
+            "path": "module5/grounding_rules.py",
+            "sha256": "1a403e0f44b1ef101859ba6e76c17ad922e96c06a199b07ae4f5ac97039aa844"
+          },
+          {
+            "path": "module5/rank.py",
+            "sha256": "e5981cc9fdd1f397dce0926dfbf105a6daab29c3953aef1c8e93dc8fd8e568a1"
+          },
+          {
+            "path": "module5/run.py",
+            "sha256": "f3ab57f1072bd1bf169a7ed224f7f87f04d6e3a84ac0a4dea8ac8f4ecf534853"
+          },
+          {
+            "path": "shared/common.py",
+            "sha256": "f43df09a2b994dc2da1b6e99c9f40322db3fb4d264e86d94035f3b4eb893ece1"
+          },
+          {
+            "path": "shared/domain.py",
+            "sha256": "74cb4f099509a226256a07cede93b7e594b5b8d5aaaa6c01f697d76a6052a1ad"
+          }
+        ],
+        "architecture": "single shared parameterized pipeline",
+        "input_kind": "public standard-derived normalized descriptions; not private workbook rows",
+        "input_sha256": "321d34f26fe729214061de9a94384a6ccddf0fddf35604da7b4b5f9a189b7400",
+        "model_parameters_changed": false,
+        "seed_sha256": "d0d011aa4a8c7117a060c926c94539bc2a6c8a289dae2649940f4a18a9a48c82",
+        "configuration_sha256": {
+          "experiment.json": "280bdf0f53762c1a0d6ddf28e53ae56b08ac3807d496c2ca522c8cfc1e20a85c",
+          "llama_model.json": "1422ba25ef4363b6278159854c2e3825c676fbebf4192267cee865805a648803",
+          "llama_runtime.json": "c92f862b0f6b6b9d51f4e954198a5121a1fb815ce54dfa08bf740fcd54c6b230",
+          "llama_scoring_runtime.json": "f7de7218f91f1b454c44bd92b14a44cac948fc6a5a4e5f815bc3630e6b1f9a33",
+          "trade.json": "839db05b06b2e9ba3b3985f26169a7afdb4a275f0b03a9498cc7da3b6b428b2d"
+        },
+        "adaptations": [
+          "runtime trade configuration",
+          "public WBS input adapter",
+          "T-Box-only export"
+        ],
+        "gold_used": false,
+        "source_count": 4,
+        "input_rows": 12
+      },
+      "candidate_outcomes": [
+        {
+          "id": "StormwaterCollectionCostItem",
+          "label": "우수 집수 비용 항목",
+          "origin": "LLM_document_proposal",
+          "status": "held",
+          "selected_parent": "StormwaterMaterialCostItem",
+          "reason": "Final evidence gate: The selected parent 'StormwaterMaterialCostItem' is defined as costs related to the supply and purchase of stormwater materials, which does not encompass costs associated with the collection of stormwater as described in the query definition. The query focuses on costs for civil works related to stormwater collection, which is not covered by the parent definition.",
+          "verified_quotes": [],
+          "exported": false
+        },
+        {
+          "id": "StormwaterSurveyCostItem",
+          "label": "우수관로 측량 비용 항목",
+          "origin": "LLM_document_proposal",
+          "status": "held",
+          "selected_parent": "StormwaterMaterialCostItem",
+          "reason": "Final evidence gate: The selected parent 'StormwaterMaterialCostItem' is broader than the query 'StormwaterSurveyCostItem', but the definition of the query refers specifically to surveying costs, which do not align with the material purchase costs described in the parent. The evidence provided does not support the core concept of the query as a subclass of the parent.",
+          "verified_quotes": [],
+          "exported": false
+        },
+        {
+          "id": "DrainageGutterInstallationCostItem",
+          "label": "배수 측구 설치 비용",
+          "origin": "LLM_document_proposal",
+          "status": "accepted_provisional",
+          "selected_parent": "StormwaterInstallationCostItem",
+          "reason": "source-supported semantic verification; lineage agreement recorded separately",
+          "verified_quotes": [
+            {
+              "source_id": "STD:003",
+              "quote": "배수 측구 시공 설계 선형과 경사에 따라 측구를 시공하는 작업."
+            }
+          ],
+          "exported": true
+        },
+        {
+          "id": "CatchBasinInstallationCostItem",
+          "label": "우수받이 설치 비용",
+          "origin": "LLM_document_proposal",
+          "status": "accepted_provisional",
+          "selected_parent": "StormwaterInstallationCostItem",
+          "reason": "source-supported semantic verification; lineage agreement recorded separately",
+          "verified_quotes": [
+            {
+              "source_id": "STD:004",
+              "quote": "우수받이 설치 우수받이를 계획 위치와 높이에 설치하는 작업."
+            }
+          ],
+          "exported": true
+        },
+        {
+          "id": "SumpPitInstallationCostItem",
+          "label": "집수정 설치 비용",
+          "origin": "LLM_document_proposal",
+          "status": "accepted_provisional",
+          "selected_parent": "StormwaterInstallationCostItem",
+          "reason": "source-supported semantic verification; lineage agreement recorded separately",
+          "verified_quotes": [
+            {
+              "source_id": "STD:005",
+              "quote": "집수정 설치 집수정을 계획 위치와 높이에 설치하는 작업."
+            }
+          ],
+          "exported": true
+        },
+        {
+          "id": "DrainagePipeInstallationCostItem",
+          "label": "우수 배수관 설치 비용",
+          "origin": "LLM_document_proposal",
+          "status": "accepted_provisional",
+          "selected_parent": "StormwaterInstallationCostItem",
+          "reason": "source-supported semantic verification; lineage agreement recorded separately",
+          "verified_quotes": [
+            {
+              "source_id": "STD:006",
+              "quote": "우수 배수관 설치 계획 경사를 유지하여 우수 배수관을 설치하는 작업."
+            }
+          ],
+          "exported": true
+        },
+        {
+          "id": "DrainageConstruction",
+          "label": "배수공사",
+          "origin": "LLM_WBS_proposal",
+          "status": "accepted_provisional",
+          "selected_parent": "WorkTask",
+          "reason": "source-supported semantic verification; lineage agreement recorded separately",
+          "verified_quotes": [
+            {
+              "source_id": "WBS:W004",
+              "quote": "우수받이 설치: 우수받이를 계획 위치와 높이에 설치하는 작업. [KCS-11-40-25 § 3.1.3]"
+            },
+            {
+              "source_id": "WBS:W005",
+              "quote": "집수정 설치: 집수정을 계획 위치와 높이에 설치하는 작업. [KCS-11-40-25 § 3.1.3]"
+            },
+            {
+              "source_id": "WBS:W006",
+              "quote": "우수 배수관 설치: 계획 경사를 유지하여 우수 배수관을 설치하는 작업. [KCS-11-40-15 § 3.1(2)-(4), 3.2.5]"
+            },
+            {
+              "source_id": "WBS:W007",
+              "quote": "우수 맨홀 설치: 우수관로 점검을 위한 맨홀과 뚜껑을 설치하는 작업. [KCS-11-40-25 § 2.5, 3.1.5]"
+            },
+            {
+              "source_id": "WBS:W008",
+              "quote": "스틸그레이팅 설치: 우수받이 또는 집수정에 스틸그레이팅을 설치하는 작업. [KCS-11-40-25 § 3.1.3(3)③]"
+            }
+          ],
+          "exported": true
+        },
+        {
+          "id": "DrainageSurvey",
+          "label": "배수 측량",
+          "origin": "LLM_WBS_proposal",
+          "status": "held",
+          "selected_parent": "WorkTask",
+          "reason": "Explicit grounding rules: source does not state the defining activity/material/role",
+          "verified_quotes": [],
+          "exported": false
+        },
+        {
+          "id": "TA_d9dd077952dd",
+          "label": "stormwater_construction_cost_item",
+          "origin": "TaxoAdapt",
+          "status": "held",
+          "selected_parent": null,
+          "reason": "No grounded, semantically valid parent found in reviewed chunks",
+          "verified_quotes": [],
+          "exported": false
+        },
+        {
+          "id": "TA_e4c5500c7e40",
+          "label": "stormwater_survey_cost_item",
+          "origin": "TaxoAdapt",
+          "status": "held",
+          "selected_parent": "StormwaterInstallationCostItem",
+          "reason": "Explicit grounding rules: source does not state the defining activity/material/role",
+          "verified_quotes": [],
+          "exported": false
+        },
+        {
+          "id": "TA_9ff1cb4d484f",
+          "label": "stormwater_installation_cost_item",
+          "origin": "TaxoAdapt",
+          "status": "held",
+          "selected_parent": null,
+          "reason": "No grounded, semantically valid parent found in reviewed chunks",
+          "verified_quotes": [],
+          "exported": false
+        },
+        {
+          "id": "TA_1dc814da5101",
+          "label": "stormwater_installation",
+          "origin": "TaxoAdapt",
+          "status": "accepted_provisional",
+          "selected_parent": "DrainageConstruction",
+          "reason": "source-supported semantic verification; lineage agreement recorded separately",
+          "verified_quotes": [
+            {
+              "source_id": "WBS:W004",
+              "quote": "우수받이 설치: 우수받이를 계획 위치와 높이에 설치하는 작업. [KCS-11-40-25 § 3.1.3]"
+            },
+            {
+              "source_id": "WBS:W005",
+              "quote": "집수정 설치: 집수정을 계획 위치와 높이에 설치하는 작업. [KCS-11-40-25 § 3.1.3]"
+            },
+            {
+              "source_id": "WBS:W006",
+              "quote": "우수 배수관 설치: 계획 경사를 유지하여 우수 배수관을 설치하는 작업. [KCS-11-40-15 § 3.1(2)-(4), 3.2.5]"
+            }
+          ],
+          "exported": true
+        },
+        {
+          "id": "TA_b98afeb0071c",
+          "label": "stormwater_survey",
+          "origin": "TaxoAdapt",
+          "status": "held",
+          "selected_parent": "DrainageConstruction",
+          "reason": "Explicit grounding rules: source does not state the defining activity/material/role",
+          "verified_quotes": [],
+          "exported": false
+        },
+        {
+          "id": "TA_a62e1c8580b6",
+          "label": "slope_construction",
+          "origin": "TaxoAdapt",
+          "status": "held",
+          "selected_parent": "DrainageConstruction",
+          "reason": "Explicit grounding rules: source does not state the defining activity/material/role",
+          "verified_quotes": [],
+          "exported": false
+        },
+        {
+          "id": "H_StormwaterQualityMonitoring",
+          "label": "우수 품질 모니터링",
+          "origin": "LLM_hypothesis",
+          "status": "held",
+          "selected_parent": null,
+          "reason": "LLM hypothesis has no verified documentary/WBS support",
+          "verified_quotes": [],
+          "exported": false
+        },
+        {
+          "id": "H_DrainageSystemMaintenance",
+          "label": "배수 시스템 유지보수",
+          "origin": "LLM_hypothesis",
+          "status": "held",
+          "selected_parent": null,
+          "reason": "LLM hypothesis has no verified documentary/WBS support",
+          "verified_quotes": [],
+          "exported": false
+        },
+        {
+          "id": "H_FloodRiskAssessment",
+          "label": "홍수 위험 평가",
+          "origin": "LLM_hypothesis",
+          "status": "held",
+          "selected_parent": null,
+          "reason": "LLM hypothesis has no verified documentary/WBS support",
+          "verified_quotes": [],
+          "exported": false
+        }
+      ],
+      "output_sha256": {
+        "civil_stormwater.owl": "932b649cd3c00a7e86788d6ab7cb4f183b2f4334a0519ee819c0120c60d3bbba",
+        "civil_stormwater.ttl": "0a625f6a57ef32aa21c90e781a6e8843ffba4641dbdd4745e59c151bc1dfaec3"
+      }
+    },
+    {
+      "status": "COMPLETED_TBOX",
+      "output_scope": "TBOX_ONLY",
+      "trade_id": "fire_exit_guidance",
+      "stages": {
+        "module1/run.py": {
+          "returncode": 0,
+          "seconds": 0.35,
+          "source_sha256": "c3f3d77bd8f40dec1a4d4983dddc0afe4655dd13c2c69648e77c934b8eeef511",
+          "pipeline_sha256": "ccaeee4539dd9be5c310f382dc1f4f4d7dc135fa803fd1699983077076c5fad8"
+        },
+        "module2/run.py": {
+          "returncode": 0,
+          "seconds": 39.21,
+          "source_sha256": "ffd7de7a73be6a113fd83242ea2cb5f78962ca45f82e669e2ea2724c71168cf6",
+          "pipeline_sha256": "ccaeee4539dd9be5c310f382dc1f4f4d7dc135fa803fd1699983077076c5fad8"
+        },
+        "module3/run.py": {
+          "returncode": 0,
+          "seconds": 8.96,
+          "source_sha256": "cb0ad4dd1545874cbcc9037ee60ea7b3adf42f0cba7c7396598a11de81b3977b",
+          "pipeline_sha256": "ccaeee4539dd9be5c310f382dc1f4f4d7dc135fa803fd1699983077076c5fad8"
+        },
+        "module4/run.py": {
+          "returncode": 0,
+          "seconds": 109.53,
+          "source_sha256": "84a2f13a9b05539c341963b691afd3aae4fec223a7ea3f76ec983c76b3553764",
+          "pipeline_sha256": "ccaeee4539dd9be5c310f382dc1f4f4d7dc135fa803fd1699983077076c5fad8"
+        },
+        "module5/rank.py": {
+          "returncode": 0,
+          "seconds": 16.51,
+          "source_sha256": "e5981cc9fdd1f397dce0926dfbf105a6daab29c3953aef1c8e93dc8fd8e568a1",
+          "pipeline_sha256": "ccaeee4539dd9be5c310f382dc1f4f4d7dc135fa803fd1699983077076c5fad8"
+        },
+        "module5/run.py": {
+          "returncode": 0,
+          "seconds": 112.08,
+          "source_sha256": "f3ab57f1072bd1bf169a7ed224f7f87f04d6e3a84ac0a4dea8ac8f4ecf534853",
+          "pipeline_sha256": "ccaeee4539dd9be5c310f382dc1f4f4d7dc135fa803fd1699983077076c5fad8"
+        },
+        "module5/audit.py": {
+          "returncode": 0,
+          "seconds": 0.4,
+          "source_sha256": "ff1f165f15eed8b3b960947d6dbf9792bb4f8193ffa2ee18fcba014b9def5327",
+          "pipeline_sha256": "ccaeee4539dd9be5c310f382dc1f4f4d7dc135fa803fd1699983077076c5fad8"
+        },
+        "module5/grounding_rules.py": {
+          "returncode": 0,
+          "seconds": 0.12,
+          "source_sha256": "1a403e0f44b1ef101859ba6e76c17ad922e96c06a199b07ae4f5ac97039aa844",
+          "pipeline_sha256": "ccaeee4539dd9be5c310f382dc1f4f4d7dc135fa803fd1699983077076c5fad8"
+        }
+      },
+      "runtime_versions": {
+        "python": "3.11.15",
+        "torch": "2.4.0",
+        "transformers": "4.46.3",
+        "vllm": "0.6.3.post1",
+        "sentence-transformers": "3.0.1",
+        "peft": "0.13.2",
+        "numpy": "1.26.4",
+        "openai": "1.52.2",
+        "httpx": "0.27.2",
+        "rdflib": "7.0.0",
+        "owlready2": "0.48",
+        "networkx": "3.3"
+      },
+      "input_rows": 15,
+      "proposal_count": 19,
+      "evidence_input_coverage_count": 14,
+      "evidence_input_coverage_note": "Unique input descriptions cited by final candidates; not semantic recall or accuracy",
+      "accepted_provisional": 8,
+      "held": 11,
+      "classes": 37,
+      "data_properties": 2,
+      "subclass_axioms": 27,
+      "object_properties": 0,
+      "retained_seed_classes": 23,
+      "researcher_anchor_classes": 6,
+      "exported_accepted": 8,
+      "dropped_classes": [],
+      "excluded_properties": [],
+      "pure_tbox": {
+        "passed": true,
+        "violations": []
+      },
+      "acyclic": true,
+      "checks": {
+        "pure_tbox": {
+          "passed": true,
+          "violations": []
+        },
+        "acyclic": true,
+        "serializations_equal": true,
+        "owlapi_hermit": {
+          "profile": {
+            "java_version": "17.0.18-internal",
+            "reasoner_invoked": false,
+            "ontology_id": "OntologyID(OntologyIRI(<https://example.org/kicem/hybrid/fire_exit_guidance>))",
+            "counts": {
+              "axioms": 195,
+              "logical_axioms": 31,
+              "classes": 37,
+              "object_properties": 0,
+              "data_properties": 2,
+              "named_individuals": 0,
+              "import_declarations": 0
+            },
+            "serialization_validation": {
+              "rdfxml_loaded": true,
+              "turtle_loaded": true,
+              "rdfxml_vs_turtle": {
+                "equal_axiom_sets": true,
+                "equal_logical_axiom_sets": true,
+                "equal_ontology_annotations": true,
+                "equal_import_declarations": true,
+                "equal_ontology_id": true,
+                "lost_axioms": [],
+                "added_axioms": [],
+                "equal_signature": true,
+                "additions_are_declarations_only": true,
+                "preserved_except_added_declarations": true,
+                "passed": true
+              },
+              "rdfxml_roundtrip": {
+                "equal_axiom_sets": true,
+                "equal_logical_axiom_sets": true,
+                "equal_ontology_annotations": true,
+                "equal_import_declarations": true,
+                "equal_ontology_id": true,
+                "lost_axioms": [],
+                "added_axioms": [],
+                "equal_signature": true,
+                "additions_are_declarations_only": true,
+                "preserved_except_added_declarations": true,
+                "passed": true
+              },
+              "passed": true
+            },
+            "owl2_dl_profile": {
+              "profile": "OWL 2 DL",
+              "in_profile": true,
+              "violation_count": 0,
+              "violations": []
+            },
+            "controls": {
+              "positive": {
+                "profile": "OWL 2 DL",
+                "in_profile": true,
+                "violation_count": 0,
+                "violations": []
+              },
+              "negative_non_simple_asymmetric_property": {
+                "profile": "OWL 2 DL",
+                "in_profile": false,
+                "violation_count": 1,
+                "violations": [
+                  {
+                    "type": "UseOfNonSimplePropertyInAsymmetricObjectPropertyAxiom",
+                    "message": "Use of non-simple property in AsymmetricObjectProperty axiom: [AsymmetricObjectProperty(<urn:owlapi-control:property>) in OntologyID(Anonymous-9)]",
+                    "axiom": "AsymmetricObjectProperty(<urn:owlapi-control:property>)"
+                  }
+                ]
+              },
+              "passed": true
+            }
+          },
+          "hermit": {
+            "input": "/home/sil-jiwon/KICEM_Ontology_Extension_Hybrid_Model/hybrid_multitrade/.runs/unified/fire_exit_guidance/reasoner/fire_exit_guidance.owl",
+            "invocation": "HermiT Java OWLReasoner API",
+            "java_version": "17.0.18-internal",
+            "error": null,
+            "consistent": true,
+            "unsatisfiable_named_classes": [],
+            "reasoner_name": "HermiT",
+            "reasoner_version": "1.3.8.1099",
+            "classes_in_signature": 37,
+            "logical_axioms": 31,
+            "imports_count": 0,
+            "unsatisfiable_named_class_count": 0,
+            "class_hierarchy_precomputed": true,
+            "seconds_including_load_and_reasoning": 0.259960275
+          }
+        },
+        "passed": true
+      },
+      "gold_accuracy": null,
+      "expert_validated": false,
+      "input_kind": "standards-derived normalized descriptions",
+      "module2": {
+        "heldout_top1": 1,
+        "heldout_count": 4,
+        "target_supervision": "LLM provisional initial class hierarchy, not independent ground truth"
+      },
+      "module3": {
+        "source_classes": 35,
+        "target_classes": 31,
+        "matched": 11,
+        "llm_checks": 26,
+        "deviation": "Original bidirectional candidate traversal preserved; HCB auto-accept replaced with same semantic callback; multilingual E5 and OpenAI callback replace sample encoder/Ollama setup."
+      },
+      "module4": {
+        "generated_candidates": 6
+      },
+      "module5": {
+        "strict_lorex_accepted": 5,
+        "taxoadapt_generated": 6,
+        "taxoadapt_accepted": 2,
+        "before_final_evidence_gate": {
+          "accepted_provisional": 10,
+          "held": 9,
+          "taxoadapt_accepted": 2
+        },
+        "before_grounding_rules": {
+          "accepted_provisional": 9,
+          "held": 10,
+          "taxoadapt_accepted": 2
+        },
+        "deviations": [
+          "No official LOREx code; paper-based implementation",
+          "top two relevant chunks and two alternative verification paths per chunk",
+          "Llama teacher-forced mean token logprob implements path scoring",
+          "source-supported semantic verification may retain logprob-disagreed candidates provisionally; paper-strict count separately reported",
+          "Separate final evidence gate: explicit material mention, per-source semantic support, duplicate and part-of checks; no new candidate or parent invented; not expert gold validation",
+          "Researcher-defined final lexical/context evidence rules remove unsupported activity assignments; LLM review alone did not establish reliable grounding. No parent or candidate invented."
+        ]
+      },
+      "api_calls": 94,
+      "api_successful_calls": 0,
+      "api_cache_hits": 94,
+      "api_failed_calls": 0,
+      "api_total_tokens": 0,
+      "provenance": {
+        "trade_id": "fire_exit_guidance",
+        "source_files": [
+          {
+            "path": "module1/run.py",
+            "sha256": "c3f3d77bd8f40dec1a4d4983dddc0afe4655dd13c2c69648e77c934b8eeef511"
+          },
+          {
+            "path": "module1/schema.py",
+            "sha256": "9c7580964731b6834f5b7c6cc586bee72a754b2357ae7661facddb6eee6be652"
+          },
+          {
+            "path": "module2/run.py",
+            "sha256": "ffd7de7a73be6a113fd83242ea2cb5f78962ca45f82e669e2ea2724c71168cf6"
+          },
+          {
+            "path": "module3/run.py",
+            "sha256": "cb0ad4dd1545874cbcc9037ee60ea7b3adf42f0cba7c7396598a11de81b3977b"
+          },
+          {
+            "path": "module4/adapters/local_runtime.py",
+            "sha256": "4134fc6aba3ab461b0dac571bdb33ab5b50779ae86f2d8c305f1e4f09cbdc6fe"
+          },
+          {
+            "path": "module4/run.py",
+            "sha256": "84a2f13a9b05539c341963b691afd3aae4fec223a7ea3f76ec983c76b3553764"
+          },
+          {
+            "path": "module5/audit.py",
+            "sha256": "ff1f165f15eed8b3b960947d6dbf9792bb4f8193ffa2ee18fcba014b9def5327"
+          },
+          {
+            "path": "module5/grounding_rules.py",
+            "sha256": "1a403e0f44b1ef101859ba6e76c17ad922e96c06a199b07ae4f5ac97039aa844"
+          },
+          {
+            "path": "module5/rank.py",
+            "sha256": "e5981cc9fdd1f397dce0926dfbf105a6daab29c3953aef1c8e93dc8fd8e568a1"
+          },
+          {
+            "path": "module5/run.py",
+            "sha256": "f3ab57f1072bd1bf169a7ed224f7f87f04d6e3a84ac0a4dea8ac8f4ecf534853"
+          },
+          {
+            "path": "shared/common.py",
+            "sha256": "f43df09a2b994dc2da1b6e99c9f40322db3fb4d264e86d94035f3b4eb893ece1"
+          },
+          {
+            "path": "shared/domain.py",
+            "sha256": "74cb4f099509a226256a07cede93b7e594b5b8d5aaaa6c01f697d76a6052a1ad"
+          }
+        ],
+        "architecture": "single shared parameterized pipeline",
+        "input_kind": "public standard-derived normalized descriptions; not private workbook rows",
+        "input_sha256": "fc59ad63828271bb3b2d104c41d0df2c149708ed0c8ac2f356d5384305afff9e",
+        "model_parameters_changed": false,
+        "seed_sha256": "d0d011aa4a8c7117a060c926c94539bc2a6c8a289dae2649940f4a18a9a48c82",
+        "configuration_sha256": {
+          "experiment.json": "280bdf0f53762c1a0d6ddf28e53ae56b08ac3807d496c2ca522c8cfc1e20a85c",
+          "llama_model.json": "1422ba25ef4363b6278159854c2e3825c676fbebf4192267cee865805a648803",
+          "llama_runtime.json": "c92f862b0f6b6b9d51f4e954198a5121a1fb815ce54dfa08bf740fcd54c6b230",
+          "llama_scoring_runtime.json": "f7de7218f91f1b454c44bd92b14a44cac948fc6a5a4e5f815bc3630e6b1f9a33",
+          "trade.json": "00e0c5771cf0abdb85750e08ec36305b1affda28f86ab979255dbdfca6d82579"
+        },
+        "adaptations": [
+          "runtime trade configuration",
+          "public WBS input adapter",
+          "T-Box-only export"
+        ],
+        "gold_used": false,
+        "source_count": 3,
+        "input_rows": 15
+      },
+      "candidate_outcomes": [
+        {
+          "id": "InstallationCostForExitGuidanceLights",
+          "label": "유도등 설치 비용",
+          "origin": "LLM_document_proposal",
+          "status": "held",
+          "selected_parent": "MaterialCostForExitGuidanceLights",
+          "reason": "Selected parent not accepted",
+          "verified_quotes": [],
+          "exported": false
+        },
+        {
+          "id": "MaintenanceCostForExitGuidanceLights",
+          "label": "유도등 유지보수 비용",
+          "origin": "LLM_document_proposal",
+          "status": "held",
+          "selected_parent": "ExitGuidanceMaterialCostItem",
+          "reason": "Final evidence gate: The selected parent 'ExitGuidanceMaterialCostItem' is defined as costs related to the supply and purchase of exit guidance materials, which does not encompass maintenance costs. The query focuses on maintenance costs, which are not covered by the parent definition.",
+          "verified_quotes": [],
+          "exported": false
+        },
+        {
+          "id": "MaterialCostForExitGuidanceLights",
+          "label": "유도등 자재 비용",
+          "origin": "LLM_document_proposal",
+          "status": "held",
+          "selected_parent": null,
+          "reason": "No grounded, semantically valid parent found in reviewed chunks",
+          "verified_quotes": [],
+          "exported": false
+        },
+        {
+          "id": "EvacuationLightMountingCostItem",
+          "label": "피난구유도등 부착 비용",
+          "origin": "LLM_document_proposal",
+          "status": "accepted_provisional",
+          "selected_parent": "ExitGuidanceInstallationCostItem",
+          "reason": "source-supported semantic verification; lineage agreement recorded separately",
+          "verified_quotes": [
+            {
+              "source_id": "STD:003",
+              "quote": "피난구유도등 부착 출입구에 인접한 규정 높이에 피난구유도등을 부착하는 작업."
+            }
+          ],
+          "exported": true
+        },
+        {
+          "id": "StairwayLightInstallationCostItem",
+          "label": "계단통로유도등 설치 비용",
+          "origin": "LLM_document_proposal",
+          "status": "accepted_provisional",
+          "selected_parent": "ExitGuidanceInstallationCostItem",
+          "reason": "source-supported semantic verification; lineage agreement recorded separately",
+          "verified_quotes": [
+            {
+              "source_id": "STD:007",
+              "quote": "계단통로유도등 설치 계단과 경사로의 바닥면을 비추도록 유도등을 설치하는 작업."
+            }
+          ],
+          "exported": true
+        },
+        {
+          "id": "AudienceLightInstallationCostItem",
+          "label": "객석유도등 설치 비용",
+          "origin": "LLM_document_proposal",
+          "status": "accepted_provisional",
+          "selected_parent": "ExitGuidanceInstallationCostItem",
+          "reason": "source-supported semantic verification; lineage agreement recorded separately",
+          "verified_quotes": [
+            {
+              "source_id": "STD:008",
+              "quote": "객석유도등 설치 객석의 통로·바닥 또는 벽에 유도등을 설치하는 작업."
+            }
+          ],
+          "exported": true
+        },
+        {
+          "id": "GuidanceSignInstallationCostItem",
+          "label": "유도표지 설치 비용",
+          "origin": "LLM_document_proposal",
+          "status": "accepted_provisional",
+          "selected_parent": "ExitGuidanceInstallationCostItem",
+          "reason": "source-supported semantic verification; lineage agreement recorded separately",
+          "verified_quotes": [
+            {
+              "source_id": "STD:009",
+              "quote": "유도표지 설치 피난구 또는 통로에 유도표지를 설치하는 작업."
+            }
+          ],
+          "exported": true
+        },
+        {
+          "id": "InstallationWorkType",
+          "label": "설치 작업",
+          "origin": "LLM_WBS_proposal",
+          "status": "accepted_provisional",
+          "selected_parent": "WorkTask",
+          "reason": "source-supported semantic verification; lineage agreement recorded separately",
+          "verified_quotes": [
+            {
+              "source_id": "WBS:W001",
+              "quote": "유도등 및 유도표지 설비공사: 유도등·유도표지·피난유도선의 설치 및 관리 작업. [NFTC-303 § 1.1]"
+            },
+            {
+              "source_id": "WBS:W002",
+              "quote": "피난구유도등 설치: 피난구에 유도등을 설치하는 작업. [NFTC-303 § 2.2]"
+            },
+            {
+              "source_id": "WBS:W004",
+              "quote": "통로유도등 설치: 피난 통로에 유도등을 설치하는 작업. [NFTC-303 § 2.3]"
+            },
+            {
+              "source_id": "WBS:W008",
+              "quote": "객석유도등 설치: 객석의 통로·바닥 또는 벽에 유도등을 설치하는 작업. [NFTC-303 § 2.4]"
+            },
+            {
+              "source_id": "WBS:W010",
+              "quote": "피난구유도표지 설치: 출입구 상단에 피난구유도표지를 설치하는 작업. [NFTC-303 § 2.5.1.2]"
+            },
+            {
+              "source_id": "WBS:W012",
+              "quote": "피난유도선 설치: 피난 경로에 띠 형태의 피난유도선을 설치하는 작업. [NFTC-303 § 2.6]"
+            }
+          ],
+          "exported": true
+        },
+        {
+          "id": "AttachmentWorkType",
+          "label": "부착 작업",
+          "origin": "LLM_WBS_proposal",
+          "status": "held",
+          "selected_parent": "WorkTask",
+          "reason": "Explicit grounding rules: source does not state the defining activity/material/role",
+          "verified_quotes": [],
+          "exported": false
+        },
+        {
+          "id": "ElectricalWorkType",
+          "label": "전기 작업",
+          "origin": "LLM_WBS_proposal",
+          "status": "accepted_provisional",
+          "selected_parent": "WorkTask",
+          "reason": "source-supported semantic verification; lineage agreement recorded separately",
+          "verified_quotes": [
+            {
+              "source_id": "WBS:W013",
+              "quote": "유도등 전원 설치: 유도등의 상용전원과 비상전원을 설치하는 작업. [NFTC-303 § 2.7.1-2.7.2]"
+            },
+            {
+              "source_id": "WBS:W014",
+              "quote": "유도등 배선: 유도등 인입선과 옥내배선을 설치·연결하는 작업. [NFTC-303 § 2.7.3]"
+            }
+          ],
+          "exported": true
+        },
+        {
+          "id": "TA_cb5b479b9f61",
+          "label": "installation_specification",
+          "origin": "TaxoAdapt",
+          "status": "held",
+          "selected_parent": null,
+          "reason": "No grounded, semantically valid parent found in reviewed chunks",
+          "verified_quotes": [],
+          "exported": false
+        },
+        {
+          "id": "TA_0cc82e58d93d",
+          "label": "evacuation_light_cost",
+          "origin": "TaxoAdapt",
+          "status": "held",
+          "selected_parent": null,
+          "reason": "No grounded, semantically valid parent found in reviewed chunks",
+          "verified_quotes": [],
+          "exported": false
+        },
+        {
+          "id": "TA_b73d3a8a30e8",
+          "label": "sign_and_power_supply_cost",
+          "origin": "TaxoAdapt",
+          "status": "held",
+          "selected_parent": null,
+          "reason": "No grounded, semantically valid parent found in reviewed chunks",
+          "verified_quotes": [],
+          "exported": false
+        },
+        {
+          "id": "TA_9dad05cf739f",
+          "label": "emergency_light_installation",
+          "origin": "TaxoAdapt",
+          "status": "accepted_provisional",
+          "selected_parent": "InstallationWorkType",
+          "reason": "source-supported semantic verification; lineage agreement recorded separately",
+          "verified_quotes": [
+            {
+              "source_id": "WBS:W001",
+              "quote": "유도등 및 유도표지 설비공사: 유도등·유도표지·피난유도선의 설치 및 관리 작업. [NFTC-303 § 1.1]"
+            },
+            {
+              "source_id": "WBS:W002",
+              "quote": "피난구유도등 설치: 피난구에 유도등을 설치하는 작업. [NFTC-303 § 2.2]"
+            },
+            {
+              "source_id": "WBS:W004",
+              "quote": "통로유도등 설치: 피난 통로에 유도등을 설치하는 작업. [NFTC-303 § 2.3]"
+            },
+            {
+              "source_id": "WBS:W006",
+              "quote": "거실통로유도등 설치: 거실의 피난 통로에 유도등을 설치하는 작업. [NFTC-303 § 2.3.1.2]"
+            },
+            {
+              "source_id": "WBS:W007",
+              "quote": "계단통로유도등 설치: 계단과 경사로의 바닥면을 비추도록 유도등을 설치하는 작업. [NFTC-303 § 2.3.1.3]"
+            },
+            {
+              "source_id": "WBS:W008",
+              "quote": "객석유도등 설치: 객석의 통로·바닥 또는 벽에 유도등을 설치하는 작업. [NFTC-303 § 2.4]"
+            },
+            {
+              "source_id": "WBS:W010",
+              "quote": "피난구유도표지 설치: 출입구 상단에 피난구유도표지를 설치하는 작업. [NFTC-303 § 2.5.1.2]"
+            },
+            {
+              "source_id": "WBS:W011",
+              "quote": "통로유도표지 설치: 피난 통로에 통로유도표지를 설치하는 작업. [NFTC-303 § 2.5.1.1-2.5.1.2]"
+            },
+            {
+              "source_id": "WBS:W012",
+              "quote": "피난유도선 설치: 피난 경로에 띠 형태의 피난유도선을 설치하는 작업. [NFTC-303 § 2.6]"
+            },
+            {
+              "source_id": "WBS:W013",
+              "quote": "유도등 전원 설치: 유도등의 상용전원과 비상전원을 설치하는 작업. [NFTC-303 § 2.7.1-2.7.2]"
+            },
+            {
+              "source_id": "WBS:W014",
+              "quote": "유도등 배선: 유도등 인입선과 옥내배선을 설치·연결하는 작업. [NFTC-303 § 2.7.3]"
+            }
+          ],
+          "exported": true
+        },
+        {
+          "id": "TA_a0d157f8a2a3",
+          "label": "led_light_installation",
+          "origin": "TaxoAdapt",
+          "status": "held",
+          "selected_parent": null,
+          "reason": "LLM hypothesis has no verified documentary/WBS support",
+          "verified_quotes": [],
+          "exported": false
+        },
+        {
+          "id": "TA_dcc9889caa47",
+          "label": "corridor_and_step_light_installation",
+          "origin": "TaxoAdapt",
+          "status": "accepted_provisional",
+          "selected_parent": "InstallationWorkType",
+          "reason": "source-supported semantic verification; lineage agreement recorded separately",
+          "verified_quotes": [
+            {
+              "source_id": "WBS:W005",
+              "quote": "복도통로유도등 설치: 복도와 구부러진 모퉁이에 통로유도등을 설치하는 작업. [NFTC-303 § 2.3.1.1]"
+            },
+            {
+              "source_id": "WBS:W007",
+              "quote": "계단통로유도등 설치: 계단과 경사로의 바닥면을 비추도록 유도등을 설치하는 작업. [NFTC-303 § 2.3.1.3]"
+            }
+          ],
+          "exported": true
+        },
+        {
+          "id": "H_EmergencyLightingMaintenance",
+          "label": "유도등 유지보수",
+          "origin": "LLM_hypothesis",
+          "status": "held",
+          "selected_parent": null,
+          "reason": "LLM hypothesis has no verified documentary/WBS support",
+          "verified_quotes": [],
+          "exported": false
+        },
+        {
+          "id": "H_EmergencyLightingTraining",
+          "label": "유도등 사용 교육",
+          "origin": "LLM_hypothesis",
+          "status": "held",
+          "selected_parent": null,
+          "reason": "LLM hypothesis has no verified documentary/WBS support",
+          "verified_quotes": [],
+          "exported": false
+        },
+        {
+          "id": "H_EmergencyLightingComplianceAudit",
+          "label": "유도등 규정 준수 감사",
+          "origin": "LLM_hypothesis",
+          "status": "held",
+          "selected_parent": null,
+          "reason": "LLM hypothesis has no verified documentary/WBS support",
+          "verified_quotes": [],
+          "exported": false
+        }
+      ],
+      "output_sha256": {
+        "fire_exit_guidance.owl": "d5bef125c8b9fcfc5b84171da706f2575f186328d5f3ed76d7e5e885d15c6ec4",
+        "fire_exit_guidance.ttl": "bceb156afe434cfad93d47637478e2cf457ca069b3d6527d92af2cdef78d0761"
+      }
+    }
+  ]
+}

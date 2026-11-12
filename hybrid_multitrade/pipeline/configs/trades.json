@@ -1,0 +1,5 @@
+{
+  "architecture_tile": {"class_prefix": "Tile", "identifier": "tile", "term_ko": "타일"},
+  "civil_stormwater": {"class_prefix": "Stormwater", "identifier": "stormwater", "term_ko": "우수"},
+  "fire_exit_guidance": {"class_prefix": "ExitGuidance", "identifier": "exit_guidance", "term_ko": "유도등"}
+}

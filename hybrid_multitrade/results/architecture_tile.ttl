@@ -1,0 +1,270 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tbox: <https://example.org/kicem/hybrid/architecture_tile#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.org/kicem/hybrid/architecture_tile> a owl:Ontology ;
+    owl:versionInfo "Provisional hybrid T-Box; no independent expert gold validation" .
+
+tbox:ApplicationSurface a owl:Class ;
+    rdfs:label "ApplicationSurface" ;
+    rdfs:comment "타일 적용 표면" ;
+    tbox:origin "researcher_anchor" .
+
+tbox:CalculatedQuantityItem a owl:Class ;
+    rdfs:label "수량산출항목" ;
+    rdfs:comment "수량산출서에서 계약수량의 근거가 되는 산출수량 항목" ;
+    rdfs:subClassOf tbox:DetailItem ;
+    tbox:origin "seed" .
+
+tbox:ContractItem a owl:Class ;
+    rdfs:label "계약항목" ;
+    rdfs:comment "계약수량·계약단가·계약금액을 제공하는 계약내역서 항목" ;
+    rdfs:subClassOf tbox:DetailItem ;
+    tbox:origin "seed" .
+
+tbox:ContractStatement a owl:Class ;
+    rdfs:label "계약내역서" ;
+    rdfs:comment "확정된 계약수량·계약단가·계약금액을 제공하는 근거서류" ;
+    rdfs:subClassOf tbox:EvidenceDocument ;
+    tbox:origin "seed" .
+
+tbox:ContractSummaryItem a owl:Class ;
+    rdfs:label "계약집계항목" ;
+    rdfs:comment "공종별내역항목의 계약금액을 공종별로 합산한 공종별집계표 항목" ;
+    rdfs:subClassOf tbox:SummaryItem ;
+    tbox:origin "seed" .
+
+tbox:CostCalculationItem a owl:Class ;
+    rdfs:label "원가계산항목" ;
+    rdfs:comment "원가계산서에서 비용 산정 근거를 제공하는 항목" ;
+    rdfs:subClassOf tbox:DetailItem ;
+    tbox:origin "seed" .
+
+tbox:CostCalculationStatement a owl:Class ;
+    rdfs:label "원가계산서" ;
+    rdfs:comment "비용항목의 원가 구성과 산정금액을 제공하는 근거서류" ;
+    rdfs:subClassOf tbox:EvidenceDocument ;
+    tbox:origin "seed" .
+
+tbox:FloorTileInstallationCostItem a owl:Class ;
+    rdfs:label "바닥타일 설치 비용" ;
+    rdfs:comment "바닥면에 타일을 붙이는 작업에 소요되는 비용 항목." ;
+    rdfs:subClassOf tbox:TileInstallationCostItem ;
+    tbox:evidence "[{\"source_id\": \"STD:012\", \"quote\": \"바닥 타일 붙이기 바닥면에 타일을 붙이는 작업.\"}, {\"source_id\": \"STD:014\", \"quote\": \"바닥타일 압착 붙이기 압착 공법으로 바닥타일을 붙이는 작업.\"}]" ;
+    tbox:origin "LLM_document_proposal" .
+
+tbox:InstallationMethod a owl:Class ;
+    rdfs:label "InstallationMethod" ;
+    rdfs:comment "타일 시공 방법" ;
+    tbox:origin "researcher_anchor" .
+
+tbox:MosaicTileInstallationCostItem a owl:Class ;
+    rdfs:label "모자이크 타일 설치 비용" ;
+    rdfs:comment "모자이크 벽타일을 붙이는 작업에 소요되는 비용 항목." ;
+    rdfs:subClassOf tbox:CostItem ;
+    tbox:evidence "[{\"source_id\": \"STD:011\", \"quote\": \"모자이크 타일 붙이기 모자이크 벽타일을 붙이는 작업.\"}]" ;
+    tbox:origin "LLM_document_proposal" .
+
+tbox:ProgressPaymentItem a owl:Class ;
+    rdfs:label "기성내역항목" ;
+    rdfs:comment "공사기성부분내역서에서 전회·금회·누계·잔여 수량과 금액을 산정하는 항목" ;
+    rdfs:subClassOf tbox:DetailItem ;
+    tbox:origin "seed" .
+
+tbox:ProgressPaymentRound a owl:Class ;
+    rdfs:label "기성회차" ;
+    rdfs:comment "기성 산정과 청구의 시간 단위" ;
+    tbox:origin "seed" .
+
+tbox:ProgressPaymentStatement a owl:Class ;
+    rdfs:label "공사기성부분내역서" ;
+    rdfs:comment "회차별 기성수량과 기성금액을 산정해 제시하는 유일한 산출서류" ;
+    rdfs:subClassOf tbox:OutputDocument ;
+    tbox:origin "seed" .
+
+tbox:ProgressPaymentSummaryItem a owl:Class ;
+    rdfs:label "기성집계항목" ;
+    rdfs:comment "기성금액항목의 금회금액을 공종별로 합산한 공사기성부분내역서 항목" ;
+    rdfs:subClassOf tbox:SummaryItem ;
+    tbox:origin "seed" .
+
+tbox:QuantityCalculationSheet a owl:Class ;
+    rdfs:label "수량산출서" ;
+    rdfs:comment "계약수량의 산출 근거를 제공하는 근거서류" ;
+    rdfs:subClassOf tbox:EvidenceDocument ;
+    tbox:origin "seed" .
+
+tbox:TA_26766b373d3a a owl:Class ;
+    rdfs:label "wall_tile_installation" ;
+    rdfs:comment "벽 타일 설치와 관련된 모든 작업을 포함합니다." ;
+    rdfs:subClassOf tbox:TileInstallationWorkType ;
+    tbox:evidence "[{\"source_id\": \"WBS:W004\", \"quote\": \"벽타일 붙이기: 벽면에 타일을 붙이는 작업. [KCS-41-48-01 § 3.2]\"}]" ;
+    tbox:origin "TaxoAdapt" .
+
+tbox:TA_27bf40da5108 a owl:Class ;
+    rdfs:label "wall_tile_installation" ;
+    rdfs:comment "벽 타일 설치와 관련된 비용 및 작업 항목을 포함합니다." ;
+    rdfs:subClassOf tbox:WallTileInstallationCostItem ;
+    tbox:evidence "[{\"source_id\": \"STD:004\", \"quote\": \"벽타일 붙이기 벽면에 타일을 붙이는 작업.\"}, {\"source_id\": \"STD:010\", \"quote\": \"벽타일 동시 줄눈 붙이기 붙임과 줄눈을 함께 수행하는 벽타일 작업.\"}]" ;
+    tbox:origin "TaxoAdapt" .
+
+tbox:TA_47796916aa60 a owl:Class ;
+    rdfs:label "floor_tile_installation" ;
+    rdfs:comment "바닥 타일 설치와 관련된 모든 작업을 포함합니다." ;
+    rdfs:subClassOf tbox:TileInstallationWorkType ;
+    tbox:evidence "[{\"source_id\": \"WBS:W012\", \"quote\": \"바닥 타일 붙이기: 바닥면에 타일을 붙이는 작업. [KCS-41-48-01 § 3.3]\"}, {\"source_id\": \"WBS:W013\", \"quote\": \"바닥타일 시멘트 페이스트 붙이기: 시멘트 페이스트로 바닥타일을 붙이는 작업. [KCS-41-48-01 § 3.3.1]\"}, {\"source_id\": \"WBS:W014\", \"quote\": \"바닥타일 압착 붙이기: 압착 공법으로 바닥타일을 붙이는 작업. [KCS-41-48-01 § 3.3.2]\"}, {\"source_id\": \"WBS:W015\", \"quote\": \"바닥타일 개량압착 붙이기: 개량압착 공법으로 바닥타일을 붙이는 작업. [KCS-41-48-01 § 3.3.3]\"}, {\"source_id\": \"WBS:W016\", \"quote\": \"바닥타일 접착 붙이기: 접착제로 바닥타일을 붙이는 작업. [KCS-41-48-01 § 3.3.4]\"}]" ;
+    tbox:origin "TaxoAdapt" .
+
+tbox:TA_5bc89013b30a a owl:Class ;
+    rdfs:label "tile_installation_inspection" ;
+    rdfs:comment "타일 설치 중 및 후의 검사 작업을 포함합니다." ;
+    rdfs:subClassOf tbox:TileInspectionWorkType ;
+    tbox:evidence "[{\"source_id\": \"WBS:W022\", \"quote\": \"타일 시공 중 검사: 타일 시공 중 수행하는 검사. [KCS-41-48-01 § 3.6.1]\"}, {\"source_id\": \"WBS:W023\", \"quote\": \"타일 두들김 검사: 두들김으로 타일 붙임 상태를 확인하는 검사. [KCS-41-48-01 § 3.6.2]\"}, {\"source_id\": \"WBS:W024\", \"quote\": \"타일 접착력 시험: 타일의 접착 성능을 확인하는 시험. [KCS-41-48-01 § 3.6.3]\"}]" ;
+    tbox:origin "TaxoAdapt" .
+
+tbox:TileGroutCostItem a owl:Class ;
+    rdfs:label "타일 그라우트 비용" ;
+    rdfs:comment "타일 사이의 간격을 메우기 위해 필요한 그라우트의 비용." ;
+    rdfs:subClassOf tbox:TileMaterialCostItem ;
+    tbox:evidence "[{\"source_id\": \"STD:001\", \"quote\": \"타일공사 타일 시공 전반을 포괄하는 작업 유형.\"}]" ;
+    tbox:origin "LLM_document_proposal" .
+
+tbox:TileMaterial a owl:Class ;
+    rdfs:label "TileMaterial" ;
+    rdfs:comment "타일 재료 유형" ;
+    tbox:origin "researcher_anchor" .
+
+tbox:Unit a owl:Class ;
+    rdfs:label "단위" ;
+    rdfs:comment "비용항목 수량을 측정하는 단위" ;
+    tbox:origin "seed" .
+
+tbox:WorkCategory a owl:Class ;
+    rdfs:label "공종" ;
+    rdfs:comment "철근콘크리트공사와 그 하위 네 공종을 표현하는 통제 분류" ;
+    tbox:origin "seed" .
+
+tbox:WorkCategoryDetailItem a owl:Class ;
+    rdfs:label "공종별내역항목" ;
+    rdfs:comment "공종별내역서에 수량·단가·금액을 나타내는 항목" ;
+    rdfs:subClassOf tbox:DetailItem ;
+    tbox:origin "seed" .
+
+tbox:WorkCategoryDetailStatement a owl:Class ;
+    rdfs:label "공종별내역서" ;
+    rdfs:comment "공종별 비용항목의 수량·단가·금액을 제시하는 근거서류" ;
+    rdfs:subClassOf tbox:EvidenceDocument ;
+    tbox:origin "seed" .
+
+tbox:WorkCategorySummaryStatement a owl:Class ;
+    rdfs:label "공종별집계표" ;
+    rdfs:comment "공종별 상세 비용을 합산해 제시하는 근거서류" ;
+    rdfs:subClassOf tbox:EvidenceDocument ;
+    tbox:origin "seed" .
+
+tbox:evidence a owl:AnnotationProperty .
+
+tbox:origin a owl:AnnotationProperty .
+
+tbox:tileMaterialText a owl:DatatypeProperty ;
+    rdfs:label "타일 재질 표현" ;
+    rdfs:comment "원본 품명/규격에 명시된 타일 재질 표현. 단위나 수치의 추정 변환 없이 보존한다." ;
+    rdfs:domain tbox:CostItem ;
+    rdfs:range xsd:string .
+
+tbox:tileMethodText a owl:DatatypeProperty ;
+    rdfs:label "타일 시공방법 표현" ;
+    rdfs:comment "원본 품명/규격에 명시된 타일 시공방법 표현. 단위나 수치의 추정 변환 없이 보존한다." ;
+    rdfs:domain tbox:CostItem ;
+    rdfs:range xsd:string .
+
+tbox:tileOtherText a owl:DatatypeProperty ;
+    rdfs:label "기타 타일 특성 표현" ;
+    rdfs:comment "원본 품명/규격에 명시된 기타 타일 특성 표현. 단위나 수치의 추정 변환 없이 보존한다." ;
+    rdfs:domain tbox:CostItem ;
+    rdfs:range xsd:string .
+
+tbox:tileSurfaceText a owl:DatatypeProperty ;
+    rdfs:label "타일 적용부위 표현" ;
+    rdfs:comment "원본 품명/규격에 명시된 타일 적용부위 표현. 단위나 수치의 추정 변환 없이 보존한다." ;
+    rdfs:domain tbox:CostItem ;
+    rdfs:range xsd:string .
+
+tbox:OutputDocument a owl:Class ;
+    rdfs:label "산출서류" ;
+    rdfs:comment "근거서류의 정보를 사용해 기성금액 산정 결과를 제시하는 서류" ;
+    rdfs:subClassOf tbox:ProgressDocument ;
+    tbox:origin "seed" .
+
+tbox:TileInspectionWorkType a owl:Class ;
+    rdfs:label "타일 검사 작업" ;
+    rdfs:comment "타일 시공 결과 및 상태를 검사하는 작업을 포함하는 상위 유형." ;
+    rdfs:subClassOf tbox:WorkTask ;
+    tbox:evidence "[{\"source_id\": \"WBS:W021\", \"quote\": \"타일 검사: 타일 시공 결과를 검사하는 작업. [KCS-41-48-01 § 3.6]\"}, {\"source_id\": \"WBS:W022\", \"quote\": \"타일 시공 중 검사: 타일 시공 중 수행하는 검사. [KCS-41-48-01 § 3.6.1]\"}, {\"source_id\": \"WBS:W023\", \"quote\": \"타일 두들김 검사: 두들김으로 타일 붙임 상태를 확인하는 검사. [KCS-41-48-01 § 3.6.2]\"}, {\"source_id\": \"WBS:W024\", \"quote\": \"타일 접착력 시험: 타일의 접착 성능을 확인하는 시험. [KCS-41-48-01 § 3.6.3]\"}]" ;
+    tbox:origin "LLM_WBS_proposal" .
+
+tbox:TileInstallationCostItem a owl:Class ;
+    rdfs:label "타일 설치 비용항목" ;
+    rdfs:comment "타일 설치 시공 작업에 대한 비용대상. 작업 활동 자체나 자재 공급 비용은 아니다." ;
+    rdfs:subClassOf tbox:CostItem ;
+    tbox:origin "researcher_cost_role_bridge" .
+
+tbox:TileMaterialCostItem a owl:Class ;
+    rdfs:label "타일 자재 비용항목" ;
+    rdfs:comment "타일 자재의 공급·구매에 대한 비용대상. 자재 자체나 설치 작업 비용은 아니다." ;
+    rdfs:subClassOf tbox:CostItem ;
+    tbox:origin "researcher_cost_role_bridge" .
+
+tbox:WallTileInstallationCostItem a owl:Class ;
+    rdfs:label "벽타일 설치 비용" ;
+    rdfs:comment "벽면에 타일을 붙이는 작업에 소요되는 비용 항목." ;
+    rdfs:subClassOf tbox:CostItem ;
+    tbox:evidence "[{\"source_id\": \"STD:004\", \"quote\": \"벽타일 붙이기 벽면에 타일을 붙이는 작업.\"}, {\"source_id\": \"STD:010\", \"quote\": \"벽타일 동시 줄눈 붙이기 붙임과 줄눈을 함께 수행하는 벽타일 작업.\"}]" ;
+    tbox:origin "LLM_document_proposal" .
+
+tbox:DocumentItem a owl:Class ;
+    rdfs:label "기성서류항목" ;
+    rdfs:comment "기성서류에 포함되는 비용정보의 의미 단위" ;
+    tbox:origin "seed" .
+
+tbox:ProgressDocument a owl:Class ;
+    rdfs:label "기성서류" ;
+    rdfs:comment "철근콘크리트 기성금액 산정에 직접 사용하는 서류의 최상위 클래스" ;
+    tbox:origin "seed" .
+
+tbox:SummaryItem a owl:Class ;
+    rdfs:label "집계항목" ;
+    rdfs:comment "계약 또는 기성 상세항목의 금액을 동일 공종별로 합산한 항목" ;
+    rdfs:subClassOf tbox:DocumentItem ;
+    tbox:origin "seed" .
+
+tbox:TileInstallationWorkType a owl:Class ;
+    rdfs:label "타일 시공 작업" ;
+    rdfs:comment "타일을 설치하는 모든 작업을 포함하는 상위 유형." ;
+    rdfs:subClassOf tbox:WorkTask ;
+    tbox:evidence "[{\"source_id\": \"WBS:W002\", \"quote\": \"타일 붙이기: 바탕에 타일을 붙이는 설치 작업 유형. [KCS-41-48-01 § 3.1-3.4]\"}, {\"source_id\": \"WBS:W004\", \"quote\": \"벽타일 붙이기: 벽면에 타일을 붙이는 작업. [KCS-41-48-01 § 3.2]\"}, {\"source_id\": \"WBS:W012\", \"quote\": \"바닥 타일 붙이기: 바닥면에 타일을 붙이는 작업. [KCS-41-48-01 § 3.3]\"}, {\"source_id\": \"WBS:W017\", \"quote\": \"천장 타일 붙이기: 천장면에 타일을 붙이는 작업. [KCS-41-48-01 § 3.4]\"}]" ;
+    tbox:origin "LLM_WBS_proposal" .
+
+tbox:WorkTask a owl:Class ;
+    rdfs:label "WorkTask" ;
+    rdfs:comment "타일 시공 작업 활동" ;
+    tbox:origin "researcher_anchor" .
+
+tbox:DetailItem a owl:Class ;
+    rdfs:label "상세비용항목" ;
+    rdfs:comment "집계 전 개별 비용항목" ;
+    rdfs:subClassOf tbox:DocumentItem ;
+    tbox:origin "seed" .
+
+tbox:EvidenceDocument a owl:Class ;
+    rdfs:label "근거서류" ;
+    rdfs:comment "기성금액 산정에 필요한 수량·단가·금액의 근거를 제공하는 서류" ;
+    rdfs:subClassOf tbox:ProgressDocument ;
+    tbox:origin "seed" .
+
+tbox:CostItem a owl:Class ;
+    rdfs:label "비용항목" ;
+    rdfs:comment "서류별 항목이 공통으로 나타내는 표준 비용 대상" ;
+    tbox:origin "seed" .
+
